@@ -2,3 +2,13 @@
 .DS_Store
 node_modules/
 dist/
+
+# local-only artifacts (not part of the project)
+2/
+.understand-anything/
+.workbuddy/
+nul
+AGENTS.md
+PROJECT_OVERVIEW.md
+STUDY_LOG.md
+STUDY_PLAN.md

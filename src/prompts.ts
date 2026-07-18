@@ -1,5 +1,16 @@
 /**
  * LLM prompt builders and item formatting.
+ *
+ * LEARNING NOTES:
+ * - This module constructs the prompts sent to the LLM for repo-level reports.
+ * - Each function takes raw data (issues, PRs, releases) and returns a prompt string.
+ * - Prompts are bilingual — each builder has a `lang` parameter that selects ZH or EN text.
+ * - The prompt structure follows a pattern: context → data → instructions → output format.
+ *
+ * KEY CONCEPTS:
+ * - Prompt engineering: structuring the input to get consistent, high-quality LLM output.
+ * - Sampling: we don't send ALL items to the LLM — we select the top N by comment count.
+ *   This keeps prompts within token limits while surfacing the most important items.
  */
 
 import type { RepoConfig, GitHubItem, GitHubRelease } from "./github.ts";
@@ -9,6 +20,17 @@ import type { Lang } from "./i18n.ts";
 // Types
 // ---------------------------------------------------------------------------
 
+/**
+ * A repo digest bundles the fetched data with its LLM summary.
+ * This is the data structure passed from Phase 2 (summarize) to Phase 4 (save).
+ *
+ * PROPERTIES:
+ * - config: The repo configuration (id, name, repo slug)
+ * - issues: The raw issues array (for metadata like count)
+ * - prs: The raw PRs array
+ * - releases: The raw releases array
+ * - summary: The LLM-generated summary text
+ */
 export interface RepoDigest {
   config: RepoConfig;
   issues: GitHubItem[];
@@ -21,11 +43,29 @@ export interface RepoDigest {
 // Formatting
 // ---------------------------------------------------------------------------
 
+/**
+ * Format a single GitHub Issue or PR as a structured text block.
+ *
+ * HOW IT WORKS:
+ * - Extracts labels, truncates body to 300 chars, formats metadata.
+ * - The output is a multi-line string with: title line, metadata line, URL line, summary line.
+ *
+ * EXAMPLE OUTPUT:
+ * #123 [OPEN] [bug, enhancement] Fix memory leak in parser
+ *   Author: user123 | Created: 2026-03-10 | Updated: 2026-03-11 | Comments: 5 | 👍: 12
+ *   URL: owner/repo Issue #123
+ *   Summary: When parsing large files, the process runs out of memory...
+ *
+ * @param item - The GitHub item to format
+ * @param lang - Language for labels ("zh" or "en")
+ * @returns A formatted multi-line string
+ */
 export function formatItem(item: GitHubItem, lang: Lang = "zh"): string {
   const labels = item.labels.map((l) => l.name).join(", ");
   const labelStr = labels ? ` [${labels}]` : "";
   const body = (item.body ?? "").replace(/\n/g, " ").trim().slice(0, 300);
   const ellipsis = (item.body ?? "").length > 300 ? "..." : "";
+  // Translation map for metadata labels
   const t =
     lang === "en"
       ? {
@@ -53,14 +93,37 @@ export function formatItem(item: GitHubItem, lang: Lang = "zh"): string {
 // Sampling helpers (shared)
 // ---------------------------------------------------------------------------
 
+/** Max issues to include in CLI prompts (prevents token overflow). */
 const CLI_ISSUE_LIMIT = 30;
+/** Max PRs to include in CLI prompts. */
 const CLI_PR_LIMIT = 20;
 
-/** Sort by comment count desc, take top N. */
+/**
+ * Sort items by comment count descending, take the top N.
+ *
+ * HOW IT WORKS:
+ * - `[...items]` creates a shallow copy (avoids mutating the original array).
+ * - `.sort((a, b) => b.comments - a.comments)` sorts descending by comment count.
+ * - `.slice(0, n)` takes the first N elements.
+ *
+ * @param items - Array of GitHub items
+ * @param n - Number of top items to return
+ * @returns Top N items by comment count
+ */
 export function topN(items: GitHubItem[], n: number): GitHubItem[] {
   return [...items].sort((a, b) => b.comments - a.comments).slice(0, n);
 }
 
+/**
+ * Generate a note explaining how many items are shown vs total.
+ *
+ * EXAMPLE: "（共 45 条，以下展示评论数最多的 30 条）" or "(Total: 45 items; showing top 30 by comment count)"
+ *
+ * @param total - Total number of items
+ * @param sampled - Number of items shown
+ * @param lang - Language
+ * @returns A note string
+ */
 export function sampleNote(total: number, sampled: number, lang: Lang = "zh"): string {
   if (lang === "en") {
     return total > sampled
@@ -71,9 +134,27 @@ export function sampleNote(total: number, sampled: number, lang: Lang = "zh"): s
 }
 
 // ---------------------------------------------------------------------------
-// Prompts
+// Prompts — these build the full prompt strings sent to the LLM
 // ---------------------------------------------------------------------------
 
+/**
+ * Build the prompt for a CLI tool's daily digest.
+ *
+ * PROMPT STRUCTURE:
+ * 1. Role: "You are a technical analyst focused on AI developer tools."
+ * 2. Context: Repo name, date, data source URL.
+ * 3. Data: Releases, Issues (sampled), PRs (sampled) — each formatted with formatItem().
+ * 4. Instructions: 6 sections (highlights, releases, hot issues, PR progress, trends, pain points).
+ * 5. Style: "concise and professional, suited for technical developers."
+ *
+ * @param cfg - Repository config
+ * @param issues - Recent issues
+ * @param prs - Recent PRs
+ * @param releases - Recent releases
+ * @param dateStr - Date string like "2026-03-11"
+ * @param lang - Language
+ * @returns The complete prompt string
+ */
 export function buildCliPrompt(
   cfg: RepoConfig,
   issues: GitHubItem[],
@@ -154,9 +235,22 @@ ${prsText}
 `;
 }
 
+/** Max issues for peer project prompts. */
 const PEER_ISSUE_LIMIT = 30;
+/** Max PRs for peer project prompts. */
 const PEER_PR_LIMIT = 20;
 
+/**
+ * Build the prompt for an AI agent project's daily digest.
+ *
+ * Similar to buildCliPrompt but with 8 sections instead of 6, adding:
+ * - Bugs & Stability analysis
+ * - Feature Requests & Roadmap Signals
+ * - User Feedback Summary
+ * - Backlog Watch
+ *
+ * Also includes activity statistics (open/closed counts).
+ */
 export function buildPeerPrompt(
   cfg: RepoConfig,
   issues: GitHubItem[],
@@ -180,6 +274,7 @@ export function buildPeerPrompt(
     ? releases.map((r) => `- ${r.tag_name}: ${r.name}\n  ${(r.body ?? "").slice(0, 300)}`).join("\n")
     : noneStr;
 
+  // Calculate activity stats
   const openIssues = issues.filter((i) => i.state === "open").length;
   const closedIssues = issues.filter((i) => i.state === "closed").length;
   const openPrs = prs.filter((p) => p.state === "open").length;
@@ -255,6 +350,10 @@ ${prsText}
 `;
 }
 
+/**
+ * Build the prompt for cross-ecosystem comparison (OpenClaw + peers).
+ * Takes the already-generated summaries and asks the LLM to compare them.
+ */
 export function buildPeersComparisonPrompt(
   openclawDigest: RepoDigest,
   peerDigests: RepoDigest[],
@@ -325,6 +424,10 @@ ${peerSections}
 `;
 }
 
+/**
+ * Build the prompt for Claude Code Skills community highlights.
+ * Sorted by popularity (comment count), not recency.
+ */
 export function buildSkillsPrompt(
   prs: GitHubItem[],
   issues: GitHubItem[],
@@ -387,6 +490,10 @@ ${issuesText}
 `;
 }
 
+/**
+ * Build the prompt for cross-tool comparison (CLI tools).
+ * Takes already-generated per-tool summaries and asks the LLM to compare them.
+ */
 export function buildComparisonPrompt(digests: RepoDigest[], dateStr: string, lang: Lang = "zh"): string {
   const noActivityStr = lang === "en" ? "No activity in the last 24 hours." : "过去24小时无活动。";
 
@@ -436,3 +543,25 @@ ${sections}
 语言要求：简洁专业，有数据支撑，适合技术决策者和开发者阅读。
 `;
 }
+
+// ── SUMMARY ──────────────────────────────────────────────────────────────────
+// This module builds LLM prompts for repo-level reports. Key patterns:
+// 1. formatItem() — converts a GitHub item to a structured text block
+// 2. topN() — samples the most active items by comment count
+// 3. sampleNote() — generates a "(showing top N of M)" disclaimer
+// 4. Each build*Prompt() function follows the same structure:
+//    context → data → instructions → output format
+//
+// All prompts are bilingual — the `lang` parameter selects ZH or EN.
+//
+// QUESTIONS:
+// Q1: Why sample by comment count instead of recency?
+//     (Answer: Comment count correlates with community interest — the most
+//      discussed items are the most important, even if they're older)
+// Q2: Why separate buildCliPrompt and buildPeerPrompt?
+//     (Answer: CLI tools have 6 output sections; peer projects have 8 sections
+//      including Bugs & Stability, Feature Requests, User Feedback, and Backlog)
+// Q3: What's the pattern for building comparison prompts?
+//     (Answer: Take already-generated summaries as input, concatenate them,
+//      and ask the LLM to produce a comparative analysis)
+// ─────────────────────────────────────────────────────────────────────────────
