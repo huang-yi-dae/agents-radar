@@ -1,4 +1,5 @@
 .env
+.env.local
 .DS_Store
 node_modules/
 dist/
@@ -9,6 +10,8 @@ dist/
 .workbuddy/
 nul
 AGENTS.md
-PROJECT_OVERVIEW.md
-STUDY_LOG.md
-STUDY_PLAN.md
+
+# local-only teaching notes
+/docs/PROJECT_OVERVIEW.md
+/docs/STUDY_LOG.md
+/docs/STUDY_PLAN.md
