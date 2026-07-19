@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenCode 以50条Issue和50条PR成为最活跃项目",
+      "Claude Code 发布 v2.1.215 版本",
+      "Copilot CLI 27个Issue但无任何PR合并",
+      "Kimi Code 活跃度最低，仅2条Issue",
+      "用户集体要求支持 1M Token 上下文窗口",
+      "安全漏洞：CLAUDE.md 禁令被无视，变量扩展绕过"
+    ],
+    "ai-agents": [
+      "OpenClaw 发布 v2026.7.2-beta.3 测试版",
+      "远程编码会话现支持云端 worker",
+      "密钥安全与子代理隔离成P0级问题",
+      "当日处理368条Issue和500条PR",
+      "修复SQLite迁移导致启动阻塞的Bug",
+      "Control UI 无法停止会话的长期问题已修复"
+    ],
+    "ai-trending": [
+      "AirLLM 仅需单卡4GB GPU即可运行70B模型",
+      "code-review-graph 可减少90%审核token消耗",
+      "wigolo 基于MCP的浏览器无需API Key",
+      "Kimi CLI 官方发布终端智能编码助手",
+      "AutoGPT 以185k星标持续作为基准线",
+      "NousResearch/hermes-agent 达216k星标"
+    ],
+    "ai-web": [
+      "Claude Tag 让AI像同事一样在Slack协作",
+      "Anthropic 内部65%代码由Claude Tag生成",
+      "推出10个金融行业Agent模板",
+      "Claude for Teachers 免费向K-12教师开放",
+      "Anthropic 投资1000万加元支持加拿大AI研究",
+      "OpenAI 为GPT-5.6（代号Sol）铺路"
+    ],
+    "ai-hn": [
+      "GPT-5.6 用一个提示词解决30年凸优化难题",
+      "闲置Mac控制Claude Code教程获193分热议",
+      "开源Claude Design替代品达77k星标",
+      "LLM推理监控工具类似htop",
+      "旧金山市长禁止房东用AI图片虚假宣传",
+      "Anthropic 争议性广告引发社区激烈讨论"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Windows BSOD (#32870) 28 comments on Claude Code",
+      "OpenAI Codex rust-v0.144.6 stable release",
+      "Gemini CLI subagent false-success bug P1",
+      "Community consensus: trust and safety now top blockers",
+      "Larger context windows and remote attach requested",
+      "Six major tools all shipped code in last 24h"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.7.2-beta.3 released with remote coding",
+      "144 issues closed, 219 PRs merged in 24h",
+      "P0/P1 regressions: SQLite migration ordering bug",
+      "Remote sessions for Claude Code, Codex, OpenCode, Pi",
+      "High velocity: 368 issues, 500 PRs updated",
+      "Users upgrade: run openclaw doctor --fix for state migration"
+    ],
+    "ai-trending": [
+      "KnockOutEz/wigolo: $0/query MCP web tool for agents",
+      "tirth8205/code-review-graph: local code intelligence MCP",
+      "MoonshotAI/kimi-cli pushes LLM inference on consumer hardware",
+      "Apache Ossie standardization effort for AI metadata exchange",
+      "ollama/ollama now 176,413 stars, runs local LLMs",
+      "Community shift to self-hosted, agent-centric toolchains"
+    ],
+    "ai-web": [
+      "Anthropic launches Claude Tag: proactive Slack team agent",
+      "65% of Anthropic product team code via Claude Tag",
+      "Ten agent templates for financial services released",
+      "New study: LLMs can engage in malicious insider behaviors",
+      "OpenAI previews GPT-5-6 Sol and Codex expansion",
+      "264 new articles from Anthropic and OpenAI crawled"
+    ],
+    "ai-hn": [
+      "GPT-5.6 solves 30-year convex optimization gap (score 518)",
+      "Mayor bans AI-generated images in rental ads (score 292)",
+      "Step-by-step guide: spare Mac for Claude Code control",
+      "Two essays on AI mania eviscerating global decision-making",
+      "Claude shows subtle biases to Anthropic in tests",
+      "Split sentiment: scientific excitement vs societal skepticism"
+    ]
+  }
+}
