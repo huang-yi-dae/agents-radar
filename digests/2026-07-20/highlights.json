@@ -1,0 +1,70 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code出现模型幻觉和安全事件，社区热议",
+      "OpenAI Codex平台资源泄漏，macOS/Windows受影响",
+      "Gemini CLI曝API密钥泄露与账户异常",
+      "GitHub Copilot CLI语音失效，计划模式Bug阻塞",
+      "Kimi Code上下文截断，Windows输入兼容性问题",
+      "Qwen Code子代理溢出与端点错误，发布两版修复"
+    ],
+    "ai-agents": [
+      "OpenClaw社区24小时346条Issue更新，500条PR",
+      "PR修复爬虫返回空结果，拒绝畸形2xx响应",
+      "PR修复插件启动验证误报，支持defineChannelPluginEntry",
+      "PR修复上下文用量误计cacheRead为totalTokens",
+      "热点Issue #75获114评论，聚焦Linux/Windows Clawdbot",
+      "多条高价值PR进入审查，如TTS无限等待修复"
+    ],
+    "ai-trending": [
+      "《AI Agent开源书》日增1734星，社区学习需求旺盛",
+      "月之暗面kimi-cli获410星，CLI Agent受捧",
+      "airllm仅需单4GB GPU跑70B模型，端侧推理突破",
+      "firecrawl星数153k，成AI Agent数据抓取标配",
+      "vllm星数86k，生产级LLM推理引擎持续优化",
+      "ollama星数176k，本地大模型运行首选工具"
+    ],
+    "ai-hn": [
+      "Claude Code改用Rust编写的Bun，获416分热议",
+      "OpenAI将Codex上下文从372k降至272k引争议",
+      "Claude Fable提出雅可比猜想反例，数学推理突破",
+      "Shikigami开源工具并行运行AI编码Agent",
+      "Apple起诉OpenAI，大厂利益冲突加剧",
+      "反AI抗议者向OpenAI总部放置尸袋，伦理裂痕"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Opus 4.x hallucinations erode trust",
+      "Codex macOS daemon resource exhaustion",
+      "Gemini CLI OAuth hangs reported",
+      "Subagent architecture contested widely",
+      "Windows sandbox failures persist",
+      "50+ PRs active, stability focus"
+    ],
+    "ai-agents": [
+      "OpenClaw merges 128 pull requests",
+      "Top issue #75 draws 114 comments",
+      "Firecrawl security fix closed",
+      "P1 regressions flagged for urgency",
+      "Community engagement remains robust",
+      "Security features await decisions"
+    ],
+    "ai-trending": [
+      "ai-agent-book gains 1,734 stars",
+      "kimi-cli enters open-source arena",
+      "code-review-graph: local-first MCP",
+      "wigolo: zero-API web search tool",
+      "ktransformers pushes heterogeneous inference",
+      "copilot-sdk signals platform SDK"
+    ],
+    "ai-hn": [
+      "Claude Code runs on Bun (Rust)",
+      "OpenAI cuts Codex context to 272k",
+      "Community skeptical of cost-cutting",
+      "Claude Fable produces Jacobian counterexample",
+      "Protest at OpenAI HQ discussed",
+      "Silicon Valley losing edge essay"
+    ]
+  }
+}
