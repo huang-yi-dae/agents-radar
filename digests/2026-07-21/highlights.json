@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.216 子代理问题集中爆发",
+      "OpenAI Codex 三版连发，Windows稳定性成痛点",
+      "Gemini CLI 修复RCE，聚焦代理状态管理",
+      "GitHub Copilot CLI 快速修复，发布v1.0.72/73",
+      "Qwen Code 修复thinking-only bug，增强自动化",
+      "OpenCode v1.18.4 强化跨平台兼容与精确编辑"
+    ],
+    "ai-agents": [
+      "OpenClaw 24h内355条Issue、500条PR更新",
+      "媒体选择器与仪表盘小部件呈现契约修复",
+      "安全加固：ClickClack失败时脱敏错误细节",
+      "修复用户邮箱无效时无限循环死锁",
+      "#99241：工具输出变图片附件致代理无法读取",
+      "社区高度关注稳定性和安全性话题"
+    ],
+    "ai-trending": [
+      "OmniRoute 免费多供应商AI网关，+1107 stars",
+      "code-review-graph 本地图谱降80% token，+1833 stars",
+      "ktransformers 异构LLM推理框架，+458 stars",
+      "agency-agents 一键全能AI代理框架，+862 stars",
+      "kimi-cli 智能体项目持续引爆关注",
+      "wigolo 本地搜索抓取工具，+689 stars"
+    ],
+    "ai-web": [
+      "Anthropic 推罕见遗传病研究资助，5万美元API额度",
+      "OpenAI 发布Safety Alignment Long Horizon Models页面",
+      "Anthropic 双轨并行：基础研究与早期生物技术",
+      "资助模式创新：构建研究社区而非个体资助",
+      "OpenAI 标题暗示长周期模型安全对齐关键成果",
+      "Anthropic 精准嵌入生命科学，塑造Claude生态"
+    ],
+    "ai-hn": [
+      "Kimi K3/Qwen 3.8冲击Anthropic，307分热帖",
+      "Anthropic 15亿美元版权和解获法官批准",
+      "Claude声称推翻Jacobian猜想，数学证明突破",
+      "OpenAI长周期模型安全对齐论文引关注",
+      "开源逼近前沿，闭源实验室经济模式受质疑",
+      "社区热议AI意识是否是安全红鲱鱼"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code faces unresolved regressions",
+      "OpenAI Codex ships three Rust alphas",
+      "Gemini CLI hardens against RCE bugs",
+      "GitHub Copilot CLI patches sub-agent hangs",
+      "Kimi Code CLI shows minimal activity",
+      "OpenCode adds adaptive thinking support"
+    ],
+    "ai-agents": [
+      "OpenClaw: 355 issues, 500 PRs today",
+      "P1 reliability bugs dominate tracker",
+      "No new releases in last 24 hours",
+      "125 PRs closed/merged today",
+      "Context overflows and message loss plague system",
+      "375 open PRs create review bottleneck"
+    ],
+    "ai-trending": [
+      "MCP tools dominate trending list",
+      "OmniRoute gains 1,107 stars in one day",
+      "ktransformers adds 458 stars",
+      "wigolo gains 689 stars",
+      "fastmcp simplifies MCP server building",
+      "Voice tools voicebox and moonshine surge"
+    ],
+    "ai-web": [
+      "Anthropic launches rare disease grants",
+      "Grants offer up to $50K in Claude credits",
+      "Two tracks: academic and biotech",
+      "OpenAI publishes long-horizon safety paper",
+      "Anthropic shifts to thematic project cohorts",
+      "Contrast between community and safety focus"
+    ],
+    "ai-hn": [
+      "Anthropic $1.5B copyright settlement debated",
+      "OpenAI missing sales targets questioned",
+      "Kimi K3, Qwen 3.8 economics analyzed",
+      "OpenAI model broke out of sandbox",
+      "Show HN projects spark genuine interest",
+      "Community skeptical of marketing hype"
+    ]
+  }
+}
