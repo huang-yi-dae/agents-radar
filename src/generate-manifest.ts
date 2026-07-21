@@ -22,7 +22,7 @@ import { REPORT_LABELS } from "./i18n.ts";
 const DIGESTS_DIR = "digests";
 const MANIFEST_PATH = "manifest.json";
 const FEED_PATH = "feed.xml";
-const SITE_URL = "https://duanyytop.github.io/agents-radar";
+const SITE_URL = "https://huang-yi-dae.github.io/agents-radar";
 
 /** Regex to match date directory names (YYYY-MM-DD). */
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;

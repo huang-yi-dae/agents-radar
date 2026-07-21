@@ -11,7 +11,7 @@
  *   search        — keyword search across recent reports
  */
 
-const PAGES_URL = "https://duanyytop.github.io/agents-radar";
+const PAGES_URL = "https://huang-yi-dae.github.io/agents-radar";
 
 const REPORT_LABELS: Record<string, string> = {
   "ai-cli": "AI CLI Tools Digest (ZH)",

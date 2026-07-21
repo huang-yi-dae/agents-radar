@@ -25,7 +25,7 @@ export interface Highlights {
   en: ReportHighlights;
 }
 
-const PAGES_URL_DEFAULT = "https://duanyytop.github.io/agents-radar";
+const PAGES_URL_DEFAULT = "https://huang-yi-dae.github.io/agents-radar";
 
 /**
  * Send a message via the Telegram Bot API.

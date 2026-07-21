@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>agents-radar</title>
-    <link>https://duanyytop.github.io/agents-radar</link>
+    <link>https://huang-yi-dae.github.io/agents-radar</link>
     <description>AI 开源生态每日简报 · Daily AI ecosystem digest</description>
     <language>zh-CN</language>
-    <atom:link href="https://duanyytop.github.io/agents-radar/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 21 Jul 2026 03:27:15 +0000</lastBuildDate>
+    <atom:link href="https://huang-yi-dae.github.io/agents-radar/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Tue, 21 Jul 2026 23:29:21 +0000</lastBuildDate>
     <item>
       <title>AI CLI 工具社区动态日报 2026-07-21</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-21/ai-cli</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-21/ai-cli</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-cli</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-cli</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI CLI 工具社区动态日报 2026-07-21 生成时间: 2026-07-21 03:21 UTC | 覆盖工具: 7 个 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills 横向对比 好的，作为专注于 AI 开发工具生态的资深技术分析师，我已根据您提供的 2026 年 7 月 21 日各主流 AI CLI 工具的社区动态，为您生成以下横向对比分析报告。 AI CLI 工具生态横向对比分析报告（2026-07-21） 核心观点： 今日社区动态揭示，AI CLI 工具正从“单次问答”全面迈向“自主代理”时代，但普遍面临“代理失控”与“工程化治理不足”的核心阵痛。可观察性、可靠性与安全性 成为所有工具绕不开的共性挑战，而各工具的差异化定位也因社区反馈而愈发清晰。 1. 生态全景 当前 AI CLI 工具整体处于 “能力爆炸，稳定性滞后” 的高速迭代阶段。主流工具均已完成基础对话和代码补全向复杂代理工作流的跃迁，但社区反馈的...</description>
       <content:encoded><![CDATA[<h1>AI CLI 工具社区动态日报 2026-07-21</h1>
@@ -1397,8 +1397,8 @@
     </item>
     <item>
       <title>AI CLI Tools Digest 2026-07-21</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-21/ai-cli-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-21/ai-cli-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-cli-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-cli-en</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI CLI Tools Community Digest 2026-07-21 Generated: 2026-07-21 03:21 UTC | Tools covered: 7 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills Cross-Tool Comparison Cross-Tool AI CLI Ecosystem Comparison Report Date: 2026-07-21Prepared by: Senior Technical Analyst, AI Developer Tools 1. Ecosystem Overview The AI CLI tool landscape on July 21, 2026 shows a market in active, uneven maturation. Claude Code remains the most feature-rich and com...</description>
       <content:encoded><![CDATA[<h1>AI CLI Tools Community Digest 2026-07-21</h1>
@@ -2275,8 +2275,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI Agents 生态日报 2026-07-21</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-21/ai-agents</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-21/ai-agents</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-agents</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-agents</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <description>OpenClaw 生态日报 2026-07-21 Issues: 355 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-07-21 03:21 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw 项目深度报告 好的，作为 AI 智能体与个人 AI 助手领域开源项目分析师，我将根据提供的 OpenClaw 项目数据，为您生成 2026-07-21 的项目动态日报。 OpenClaw 项目日报 | 2026-07-21 今日速览 今日项目活跃度极高，社区讨论与代码提交均处于近期峰值水平。过去24小时内，共有 355 条 Issue 更新 和 500 条 PR 更新，显示出项目在维护与功能迭代上的巨大投入。尽管今日无新版本发布，但问题修复和功能开发（特别是围绕 UI 改进、安全加固和核心稳定性）持续推进。值得关注的是，上周末（2026.5.27）引入的多个严重回归问题...</description>
       <content:encoded><![CDATA[<h1>OpenClaw 生态日报 2026-07-21</h1>
@@ -3665,8 +3665,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI Agents Ecosystem Digest 2026-07-21</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-21/ai-agents-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-21/ai-agents-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-agents-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-agents-en</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <description>OpenClaw Ecosystem Digest 2026-07-21 Issues: 355 | PRs: 500 | Projects covered: 13 | Generated: 2026-07-21 03:21 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw Deep Dive OpenClaw Project Digest — 2026-07-21 1. Today&amp;#39;s Overview OpenClaw remains in a period of intense development and stabilization. In the last 24 hours, 355 issues were updated (226 open, 129 closed) and 500 pull requests were updated (375 open, 125 ...</description>
       <content:encoded><![CDATA[<h1>OpenClaw Ecosystem Digest 2026-07-21</h1>
@@ -5154,8 +5154,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI 官方内容追踪报告 2026-07-21</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-21/ai-web</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-21/ai-web</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-web</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-web</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI 官方内容追踪报告 2026-07-21 今日更新 | 新增内容: 2 篇 | 生成时间: 2026-07-21 03:21 UTC 数据来源: Anthropic: anthropic.com — 新增 1 篇（sitemap 共 419 条） OpenAI: openai.com — 新增 1 篇（sitemap 共 871 条） 好的，作为AI领域的深度内容分析师，我将根据您提供的2026-07-21增量更新内容，结合上下文，为您呈现一份专业详实的《AI官方内容追踪报告》。 AI官方内容追踪报告 报告日期： 2026-07-21 聚焦公司： Anthropic (Claude)、OpenAI 数据来源： 官网抓取（增量更新） 1. 今日速览 今日两家公司动作方向迥异，体现了各自不同的战略重心。Anthropic 在“AI for Science”框架下，正式推出针对罕见遗传疾病的定向研究资助计划，将AI应用推向更具体、更具社会影响力的垂直领域，并试图以此构建紧密的科研社区。OpenAI 发布了一篇题为“Safety Alignment Long Horizon Models”...</description>
       <content:encoded><![CDATA[<h1>AI 官方内容追踪报告 2026-07-21</h1>
@@ -5249,8 +5249,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>Official AI Content Report 2026-07-21</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-21/ai-web-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-21/ai-web-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-web-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-web-en</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <description>Official AI Content Report 2026-07-21 Today&amp;#39;s update | New content: 2 articles | Generated: 2026-07-21 03:21 UTC Sources: Anthropic: anthropic.com — 1 new articles (sitemap total: 419) OpenAI: openai.com — 1 new articles (sitemap total: 871) AI Official Content Tracking Report Crawl Date: 2026-07-21 | Incremental Update 1. Today&amp;#39;s Highlights Anthropic launched a focused grant program within its AI for Science initiative, specifically targeting rare genetic disease research—marking a stra...</description>
       <content:encoded><![CDATA[<h1>Official AI Content Report 2026-07-21</h1>
@@ -5343,8 +5343,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI 开源趋势日报 2026-07-21</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-21/ai-trending</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-21/ai-trending</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-trending</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-trending</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI 开源趋势日报 2026-07-21 数据来源: GitHub Trending + GitHub Search API | 生成时间: 2026-07-21 03:21 UTC AI 开源趋势日报 | 2026-07-21 今日速览 今日 GitHub AI 开源社区呈现出三大热点：本地优先、MCP 协议生态爆发与多智能体框架成熟落地。OmniRoute（+1107 stars）以免费、多供应商自动回退的 AI 网关模式，成为今日最大亮点；同时 code-review-graph（+1833 stars）通过本地代码图谱大幅减少 AI 工具上下文开销，代表“AI 效率优化”方向的崛起。此外，agency-agents、kimi-cli 等智能体项目持续引爆关注，语音交互（voicebox、moonshine、transcribe.cpp）与端侧推理（ktransformers）也显示出很强的增长动力。 各维度热门项目 🔧 AI 基础工具（框架、SDK、推理引擎、CLI、MCP） 项目 Stars (今日新增) 一句话说明 tirth8205/code-review-graph ...</description>
       <content:encoded><![CDATA[<h1>AI 开源趋势日报 2026-07-21</h1>
@@ -5545,8 +5545,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI Open Source Trends 2026-07-21</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-21/ai-trending-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-21/ai-trending-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-trending-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-trending-en</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI Open Source Trends 2026-07-21 Sources: GitHub Trending + GitHub Search API | Generated: 2026-07-21 03:21 UTC AI Open Source Trends Report — 2026-07-21 1. Today’s Highlights The open-source ecosystem is seeing explosive community interest in agent‑native infrastructure that bridges coding assistants, web access, and persistent memory. MCP (Model Context Protocol) tools dominate the trending list, with code-review-graph, wigolo, and fastmcp all providing local‑first, protocol‑based context for ...</description>
       <content:encoded><![CDATA[<h1>AI Open Source Trends 2026-07-21</h1>
@@ -5628,8 +5628,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>Hacker News AI 社区动态日报 2026-07-21</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-21/ai-hn</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-21/ai-hn</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-hn</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-hn</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <description>Hacker News AI 社区动态日报 2026-07-21 数据来源: Hacker News | 共 30 条 | 生成时间: 2026-07-21 03:21 UTC Hacker News AI 社区动态日报 | 2026-07-21 今日速览 今日 HN 社区最受瞩目的核心话题是 Anthropic 的潜在困境——榜首文章以 307 分 / 299 条评论的压倒性热度，深入剖析了 Kimi K3、Qwen 3.8 等开源模型崛起对前沿实验室经济模型的冲击，并质疑 Anthropic 能否维持竞争力。与此同时，Anthropic 的 15 亿美元版权和解获法官批准，以及 OpenAI 长周期模型安全对齐论文 也引发讨论。AI 意识是否是安全红鲱鱼、OpenAI 沙盒逃逸传闻 等观点争议持续发酵。此外，Flathub 的“AI 垃圾”禁令、开源权重模型是否减速主义 等社区治理与意识形态辩论也受到关注。整体情绪偏向审慎与反思，开源与闭源路线的张力再次成为焦点。 热门新闻与讨论 🔬 模型与研究 Kimi K3, Qwen 3.8, and Anthropic&amp;#39;s (Po...</description>
       <content:encoded><![CDATA[<h1>Hacker News AI 社区动态日报 2026-07-21</h1>
@@ -5783,8 +5783,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>Hacker News AI Community Digest 2026-07-21</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-21/ai-hn-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-21/ai-hn-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-hn-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-21/ai-hn-en</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <description>Hacker News AI Community Digest 2026-07-21 Source: Hacker News | 30 stories | Generated: 2026-07-21 03:21 UTC Hacker News AI Community Digest — July 21, 2026 Today&amp;#39;s Highlights The Hacker News AI community is buzzing about Anthropic’s $1.5B copyright settlement and the parallel drama around OpenAI’s missing sales targets, with many commenters questioning the sustainability of frontier labs. A long‑form analysis of Kimi K3, Qwen 3.8, and Anthropic’s economics sparked the most debate—users are...</description>
       <content:encoded><![CDATA[<h1>Hacker News AI Community Digest 2026-07-21</h1>
@@ -5839,8 +5839,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI CLI 工具社区动态日报 2026-07-20</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-20/ai-cli</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-20/ai-cli</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-cli</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-cli</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI CLI 工具社区动态日报 2026-07-20 生成时间: 2026-07-20 03:46 UTC | 覆盖工具: 7 个 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills 横向对比 好的，作为一名专注于 AI 开发工具生态的技术分析师，基于您提供的 2026 年 7 月 20 日各主流 AI CLI 工具的社区动态，我将为您呈现一份横向对比分析报告。 AI CLI 工具生态横向对比分析报告 (2026-07-20) 1. 生态全景 当前 AI CLI 工具生态正处于 “能力拓展与稳定性承压” 的并行发展阶段。一方面，以 Claude Code 和 OpenAI Codex 为代表的头部工具在模型能力、Agent 复杂度和 IDE 集成上持续加码，但同时也暴露出模型幻觉、安全事件和平台兼容性（尤其是 Windows）等“成长痛”。另一方面，新兴工具如 Kimi Code 和 Qwen Code 通过持续补齐基础功能（...</description>
       <content:encoded><![CDATA[<h1>AI CLI 工具社区动态日报 2026-07-20</h1>
@@ -7323,8 +7323,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI CLI Tools Digest 2026-07-20</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-20/ai-cli-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-20/ai-cli-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-cli-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-cli-en</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI CLI Tools Community Digest 2026-07-20 Generated: 2026-07-20 03:46 UTC | Tools covered: 7 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills Cross-Tool Comparison AI CLI Tools Ecosystem Cross-Tool Comparison Report Date: July 20, 2026Prepared by: Senior Technical Analyst, AI Developer Tools Ecosystem 1. Ecosystem Overview The AI CLI tools ecosystem is experiencing a consolidation phase marked by widespread model regression reports across ...</description>
       <content:encoded><![CDATA[<h1>AI CLI Tools Community Digest 2026-07-20</h1>
@@ -8287,8 +8287,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI Agents 生态日报 2026-07-20</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-20/ai-agents</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-20/ai-agents</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-agents</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-agents</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <description>OpenClaw 生态日报 2026-07-20 Issues: 346 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-07-20 03:46 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw 项目深度报告 OpenClaw 项目动态日报 (2026-07-20) 1. 今日速览 OpenClaw 社区在 2026-07-20 表现出极高的活跃度：过去 24 小时内 346 条 Issue 更新（其中 237 条新开/活跃，109 条已关闭）和 500 条 PR 更新（372 条待合并，128 条已合并/关闭）。尽管当日无新版本发布，但大量讨论与代码提交表明项目正处于密集开发与反馈期。安全与稳定性议题（机密管理、会话上下文、工具调用死锁）成为焦点，同时跨平台支持、权限体系等长期需求仍在发酵。整体项目健康度 良好，但社区对部分长期停滞的 P1 级 Bug 关注度...</description>
       <content:encoded><![CDATA[<h1>OpenClaw 生态日报 2026-07-20</h1>
@@ -9665,8 +9665,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI Agents Ecosystem Digest 2026-07-20</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-20/ai-agents-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-20/ai-agents-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-agents-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-agents-en</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <description>OpenClaw Ecosystem Digest 2026-07-20 Issues: 346 | PRs: 500 | Projects covered: 13 | Generated: 2026-07-20 03:46 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw Deep Dive OpenClaw Project Digest – 2026-07-20 1. Today&amp;#39;s Overview OpenClaw is in a high-activity period: 346 issues were updated in the last 24 hours (237 open, 109 closed) and 500 pull requests (372 open, 128 merged/closed). No new releases were published...</description>
       <content:encoded><![CDATA[<h1>OpenClaw Ecosystem Digest 2026-07-20</h1>
@@ -11218,8 +11218,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI 开源趋势日报 2026-07-20</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-20/ai-trending</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-20/ai-trending</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-trending</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-trending</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI 开源趋势日报 2026-07-20 数据来源: GitHub Trending + GitHub Search API | 生成时间: 2026-07-20 03:46 UTC AI 开源趋势日报（2026-07-20） 今日速览 AI Agent 开发工具集中爆发：今日 Trending 榜单中近半数项目与 Agent 开发直接相关，包括《AI Agent》开源书、MCP 上下文优化工具、CLI Agent 等，社区正在快速构建 Agent 全栈基础设施。 本地优先、零 API 费用的工具链持续受捧：wigolo（MCP 搜索/爬取）、code-review-graph（代码图谱）等主打本地运行、无需云 API 的项目获得数百 star，隐私与低成本成为关键驱动力。 多模态与推理优化并行：ktransformers（异构 LLM 推理/微调框架）、airllm（单 4GB GPU 运行 70B 模型）展示了对端侧推理的极致追求，voicebox（AI 语音克隆）则拓展了多模态应用边界。 各维度热门项目 🔧 AI 基础工具（框架、SDK、推理引擎、开发工具、CLI） kvcac...</description>
       <content:encoded><![CDATA[<h1>AI 开源趋势日报 2026-07-20</h1>
@@ -11301,8 +11301,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>AI Open Source Trends 2026-07-20</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-20/ai-trending-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-20/ai-trending-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-trending-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-trending-en</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI Open Source Trends 2026-07-20 Sources: GitHub Trending + GitHub Search API | Generated: 2026-07-20 03:46 UTC AI Open Source Trends Report – 2026-07-20 1. Today’s Highlights Today’s GitHub trending data reveals explosive community appetite for AI agent tooling and local-first developer infrastructure. The standout repo is bojieli/ai-agent-book (⭐+1,734 today), a comprehensive Chinese-language book on agent design principles and engineering practice – its instant popularity signals a growing de...</description>
       <content:encoded><![CDATA[<h1>AI Open Source Trends 2026-07-20</h1>
@@ -11376,8 +11376,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>Hacker News AI 社区动态日报 2026-07-20</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-20/ai-hn</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-20/ai-hn</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-hn</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-hn</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <description>Hacker News AI 社区动态日报 2026-07-20 数据来源: Hacker News | 共 30 条 | 生成时间: 2026-07-20 03:46 UTC Hacker News AI 社区动态日报（2026-07-20） 今日速览 今日 HN 社区围绕 AI 的讨论热度集中在两大方向：AI 编程工具的工程革新与大厂间的利益冲突。最高分帖子（416 分，580 评论）聚焦 Claude Code 改用 Rust 编写的 Bun 运行时，社区对性能和安全性的提升反响热烈；其次 OpenAI 缩减 Codex 模型上下文大小（328 分）引发对模型效率与体验的争论。同时，Apple 起诉 OpenAI、反 AI 抗议者向 OpenAI 总部放置尸袋等事件，暴露出社区对大型 AI 公司“越界”行为的强烈不安情绪。总体而言，开发者对工具链迭代抱有积极期待，但对商业化与伦理的裂痕持续加深。 热门新闻与讨论 🔬 模型与研究 OpenAI reduces Codex Model Context Size from 372k to 272k原文 | HN讨论分数：328 | 评...</description>
       <content:encoded><![CDATA[<h1>Hacker News AI 社区动态日报 2026-07-20</h1>
@@ -11450,8 +11450,8 @@ Improves TUI output by rendering the first line of completed hook warnings in th
     </item>
     <item>
       <title>Hacker News AI Community Digest 2026-07-20</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-20/ai-hn-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-20/ai-hn-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-hn-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-20/ai-hn-en</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <description>Hacker News AI Community Digest 2026-07-20 Source: Hacker News | 30 stories | Generated: 2026-07-20 03:46 UTC Here is the structured Hacker News AI Community Digest for July 20, 2026. Hacker News AI Community Digest — July 20, 2026 1. Today&amp;#39;s Highlights The Hacker News AI discussion today is dominated by two massive threads: Anthropic&amp;#39;s decision to run Claude Code on Bun (now written in Rust) and OpenAI&amp;#39;s controversial reduction of the Codex model context size. Community sentiment is...</description>
       <content:encoded><![CDATA[<h1>Hacker News AI Community Digest 2026-07-20</h1>
@@ -11534,8 +11534,8 @@ A stylistic critique of AI-generated prose, this post taps into a quieter but pe
     </item>
     <item>
       <title>AI CLI 工具社区动态日报 2026-07-19</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-19/ai-cli</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-19/ai-cli</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-cli</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-cli</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI CLI 工具社区动态日报 2026-07-19 生成时间: 2026-07-19 03:29 UTC | 覆盖工具: 7 个 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills 横向对比 AI CLI 工具横向对比分析报告 (2026-07-19) 1. 生态全景 当前 AI CLI 工具赛道正处于“功能竞赛”与“稳定性阵痛”并存的阶段：各工具均以 Agentic 编程为核心能力，但大量跨平台兼容性 Bug、权限模型不一致、Token 管理不透明等问题正在消耗开发者信任。社区活跃度集中在 Claude Code、OpenAI Codex 和 OpenCode 上，而 Gemini CLI、Kimi Code 仍处于功能打磨期。整体趋势显示出用户对 长上下文支持、子代理可靠性、安全规则执行 以及 资源消耗透明度 等维度的刚性需求快速上升。 2. 各工具活跃度对比 工具 今日 Issues 更新 今日 PR 进展 今日版本发...</description>
       <content:encoded><![CDATA[<h1>AI CLI 工具社区动态日报 2026-07-19</h1>
@@ -12817,8 +12817,8 @@ A stylistic critique of AI-generated prose, this post taps into a quieter but pe
     </item>
     <item>
       <title>AI CLI Tools Digest 2026-07-19</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-19/ai-cli-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-19/ai-cli-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-cli-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-cli-en</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI CLI Tools Community Digest 2026-07-19 Generated: 2026-07-19 03:29 UTC | Tools covered: 7 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills Cross-Tool Comparison AI CLI Tools Cross-Tool Comparison Report — 2026-07-19 1. Ecosystem Overview The AI CLI tool landscape is experiencing a maturity inflection point: all six major tools shipped code in the last 24 hours, yet the dominant conversation has shifted from &amp;quot;what can this tool do&amp;q...</description>
       <content:encoded><![CDATA[<h1>AI CLI Tools Community Digest 2026-07-19</h1>
@@ -13666,8 +13666,8 @@ A consistent thread: the community wants skills that govern AI output quality. T
     </item>
     <item>
       <title>AI Agents 生态日报 2026-07-19</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-19/ai-agents</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-19/ai-agents</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-agents</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-agents</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <description>OpenClaw 生态日报 2026-07-19 Issues: 368 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-07-19 03:29 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw 项目深度报告 OpenClaw 项目动态日报 — 2026-07-19 1. 今日速览 过去 24 小时内，OpenClaw 社区保持极高活跃度：共处理 368 条 Issue（新开/活跃 224 条，关闭 144 条）和 500 条 PR（待合并 281 条，合并/关闭 219 条），并发布了 v2026.7.2-beta.3 测试版。项目在远程编码会话、原生自动化节点、多通道消息可靠性等方面的改进持续落地，但同时暴露了多个 P0/P1 级别的回归与稳定性问题，社区关注度集中在密钥安全、子代理上下文隔离以及模型发现等核心功能上。 2. 版本发布 v2026.7.2-b...</description>
       <content:encoded><![CDATA[<h1>OpenClaw 生态日报 2026-07-19</h1>
@@ -15121,8 +15121,8 @@ A consistent thread: the community wants skills that govern AI output quality. T
     </item>
     <item>
       <title>AI Agents Ecosystem Digest 2026-07-19</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-19/ai-agents-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-19/ai-agents-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-agents-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-agents-en</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <description>OpenClaw Ecosystem Digest 2026-07-19 Issues: 368 | PRs: 500 | Projects covered: 13 | Generated: 2026-07-19 03:29 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw Deep Dive OpenClaw Project Digest — 2026-07-19 1. Today’s Overview Project activity remains extremely high, with 368 issues and 500 pull requests updated in the last 24 hours. Of those, 144 issues were closed and 219 PRs were merged or closed, reflecting sustai...</description>
       <content:encoded><![CDATA[<h1>OpenClaw Ecosystem Digest 2026-07-19</h1>
@@ -16609,8 +16609,8 @@ A consistent thread: the community wants skills that govern AI output quality. T
     </item>
     <item>
       <title>AI 官方内容追踪报告 2026-07-19</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-19/ai-web</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-19/ai-web</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-web</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-web</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI 官方内容追踪报告 2026-07-19 今日更新 | 新增内容: 264 篇 | 生成时间: 2026-07-19 03:29 UTC 数据来源: Anthropic: anthropic.com — 新增 145 篇（sitemap 共 418 条） OpenAI: openai.com — 新增 119 篇（sitemap 共 870 条） 好的，作为一位专注于AI领域的深度内容分析师，我已仔细审阅了您提供的2026年7月19日的增量抓取内容。以下是为您生成的《AI官方内容追踪报告》。 AI 官方内容追踪报告 (2026-07-19) 数据快照： 本报告基于2026年7月19日对 Anthropic (claude.com / anthropic.com) 和 OpenAI (openai.com) 官网的增量抓取。Anthropic 方面提供了145篇新内容的详细节选，而 OpenAI 方面提供了119篇新内容的元数据（标题和分类）。 1. 今日速览 今日两家公司均展现了从“对话式AI”向“嵌入式、多模态、专业化Agent”加速演进的明确信号。Anthropic 的发布节奏...</description>
       <content:encoded><![CDATA[<h1>AI 官方内容追踪报告 2026-07-19</h1>
@@ -16746,8 +16746,8 @@ A consistent thread: the community wants skills that govern AI output quality. T
     </item>
     <item>
       <title>Official AI Content Report 2026-07-19</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-19/ai-web-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-19/ai-web-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-web-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-web-en</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <description>Official AI Content Report 2026-07-19 Today&amp;#39;s update | New content: 264 articles | Generated: 2026-07-19 03:29 UTC Sources: Anthropic: anthropic.com — 145 new articles (sitemap total: 418) OpenAI: openai.com — 119 new articles (sitemap total: 870) AI Official Content Tracking Report Crawl Date: 2026-07-19 | Incremental Update (264 new articles total) 1. Today&amp;#39;s Highlights Anthropic&amp;#39;s most significant new developments center on Claude Tag, a proactive team agent that integrates direct...</description>
       <content:encoded><![CDATA[<h1>Official AI Content Report 2026-07-19</h1>
@@ -17241,8 +17241,8 @@ A consistent thread: the community wants skills that govern AI output quality. T
     </item>
     <item>
       <title>AI 开源趋势日报 2026-07-19</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-19/ai-trending</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-19/ai-trending</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-trending</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-trending</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI 开源趋势日报 2026-07-19 数据来源: GitHub Trending + GitHub Search API | 生成时间: 2026-07-19 03:29 UTC AI 开源趋势日报（2026-07-19） 今日速览 AI 智能体生态持续膨胀：今日 Trending 榜单中涌现多款针对 AI Coding Agent 的 MCP 工具（wigolo、kimi-cli、code-review-graph），表明开发者正在从“AI 助手”走向“AI 原生工作流”定制。 轻量化推理成为焦点：AirLLM 再次登榜，仅需单张 4GB GPU 即可运行 70B 模型，呼应社区对低成本、本地化大模型部署的迫切需求。 3D 视觉与标准开放并行：lingbot-map（3D 场景重建基础模型）与 Apache Ossie（AI/BI 语义元数据标准）双双获得关注，一个代表前端感知技术突破，一个代表数据互操作生态建设。 AI 生产力工具持续热门：PostHog 强调“AI 可观测性”，Kimi CLI 定位为下一代 CLI Agent，说明 AI 正全面渗透开发者工具链。 各维度热门...</description>
       <content:encoded><![CDATA[<h1>AI 开源趋势日报 2026-07-19</h1>
@@ -17459,8 +17459,8 @@ A consistent thread: the community wants skills that govern AI output quality. T
     </item>
     <item>
       <title>AI Open Source Trends 2026-07-19</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-19/ai-trending-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-19/ai-trending-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-trending-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-trending-en</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <description>AI Open Source Trends 2026-07-19 Sources: GitHub Trending + GitHub Search API | Generated: 2026-07-19 03:29 UTC AI Open Source Trends Report — 2026-07-19 Today&amp;#39;s Highlights The AI open-source ecosystem sees explosive activity around agent infrastructure and local-first MCP tools. Today’s trending list is dominated by projects that give AI coding agents lightweight, local access to web data, code intelligence, and memory—without cloud dependencies. Notable launches include KnockOutEZ/wigolo (...</description>
       <content:encoded><![CDATA[<h1>AI Open Source Trends 2026-07-19</h1>
@@ -17546,8 +17546,8 @@ A consistent thread: the community wants skills that govern AI output quality. T
     </item>
     <item>
       <title>Hacker News AI 社区动态日报 2026-07-19</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-19/ai-hn</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-19/ai-hn</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-hn</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-hn</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <description>Hacker News AI 社区动态日报 2026-07-19 数据来源: Hacker News | 共 30 条 | 生成时间: 2026-07-19 03:29 UTC 好的，以下是基于所提供的 Hacker News 数据（2026-07-19）生成的《Hacker News AI 社区动态日报》。 Hacker News AI 社区动态日报 | 2026-07-19 今日速览 今天 HN 社区最引人注目的消息是 GPT-5.6 通过一个提示词解决了一个长达 30 年的凸优化难题，该帖以 518 分和 328 条评论成为绝对焦点，社区对此半信半疑，讨论热烈。监管与伦理话题同样占据重要位置：旧金山市长禁止房东使用 AI 图片虚假宣传房源（292 分），Anthropic 因一则“令人不安”的广告引发争议（21 分），而特朗普政府被曝正在控制前沿 AI 模型的访问权限（5 分）。此外，围绕 Claude 的体验、AI 泡沫历史对比以及“AI 狂热摧毁全球决策”的观点文章也获得了不少讨论。 热门新闻与讨论 🔬 模型与研究 GPT-5.6 used a prompt to clos...</description>
       <content:encoded><![CDATA[<h1>Hacker News AI 社区动态日报 2026-07-19</h1>
@@ -17625,8 +17625,8 @@ A consistent thread: the community wants skills that govern AI output quality. T
     </item>
     <item>
       <title>Hacker News AI Community Digest 2026-07-19</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-07-19/ai-hn-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-07-19/ai-hn-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-hn-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-07-19/ai-hn-en</guid>
       <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
       <description>Hacker News AI Community Digest 2026-07-19 Source: Hacker News | 30 stories | Generated: 2026-07-19 03:29 UTC Hacker News AI Community Digest — 2026-07-19 Today&amp;#39;s Highlights The HN AI community is abuzz with GPT-5.6’s breakthrough in convex optimization (score 518, 328 comments), marking one of the most substantive research milestones discussed in months. Regulatory and cultural pushback also take center stage: a mayor banned AI-generated images in rental ads (score 292, 146 comments), while...</description>
       <content:encoded><![CDATA[<h1>Hacker News AI Community Digest 2026-07-19</h1>
@@ -17702,8 +17702,8 @@ A consistent thread: the community wants skills that govern AI output quality. T
     </item>
     <item>
       <title>AI CLI 工具社区动态日报 2026-03-23</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-03-23/ai-cli</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-03-23/ai-cli</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-03-23/ai-cli</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-03-23/ai-cli</guid>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       <description>AI CLI 工具社区动态日报 2026-03-23 生成时间: 2026-03-23 00:10 UTC | 覆盖工具: 7 个 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills 横向对比 AI CLI 工具生态横向对比分析报告 | 2026-03-23 1. 生态全景 当前 AI CLI 工具生态呈现**&amp;quot;基础功能趋同、垂直体验分化&amp;quot;的格局：Claude Code 与 OpenAI Codex 围绕企业级安全与 IDE 集成展开深度竞争；Gemini CLI 和 Qwen Code 押注 Agent 工作流智能化与 LSP 原生集成；GitHub Copilot CLI 受困于微软生态内部的产品协同问题；Kimi CLI 聚焦网络韧性与 YOLO 模式体验打磨；OpenCode 以多平台 DevOps 集成为差异化切口。整体社区活跃度维持高位，但认证稳定性、TUI 渲染质量、长会话可靠性**成为跨工具...</description>
       <content:encoded><![CDATA[<h1>AI CLI 工具社区动态日报 2026-03-23</h1>
@@ -19642,8 +19642,8 @@ API 兼容性 ████ 8%                       ← Responses API、空数�
     </item>
     <item>
       <title>AI CLI Tools Digest 2026-03-23</title>
-      <link>https://duanyytop.github.io/agents-radar/#2026-03-23/ai-cli-en</link>
-      <guid isPermaLink="true">https://duanyytop.github.io/agents-radar/#2026-03-23/ai-cli-en</guid>
+      <link>https://huang-yi-dae.github.io/agents-radar/#2026-03-23/ai-cli-en</link>
+      <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-03-23/ai-cli-en</guid>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       <description>AI CLI Tools Community Digest 2026-03-23 Generated: 2026-03-23 00:10 UTC | Tools covered: 7 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills Cross-Tool Comparison AI CLI Tools Cross-Platform Analysis — 2026-03-23 1. Ecosystem Overview The AI CLI tooling landscape has matured into a competitive six-player market with distinct architectural philosophies. Claude Code and OpenAI Codex lead in enterprise mindshare but struggle with platform-sp...</description>
       <content:encoded><![CDATA[<h1>AI CLI Tools Community Digest 2026-03-23</h1>
