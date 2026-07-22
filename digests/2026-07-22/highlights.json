@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.217 发布",
+      "Qwen Code v0.20.1 及 cua-driver-rs v0.7.3 发布",
+      "OpenAI Codex v0.145.0 版本更新",
+      "MCP 协议稳定性成各工具共同痛点",
+      "Windows 平台适配问题集中爆发",
+      "社区从兴奋转向核心稳定性要求"
+    ],
+    "ai-agents": [
+      "OpenClaw 日更500条Issues/PR，高度活跃",
+      "内存插件原子初始化修复提升多实例稳定性",
+      "macOS 网关TLS指纹校验修复安全漏洞",
+      "配置系统大重构第三阶段PR推进中",
+      "全仓库依赖库统一更新解决兼容性问题",
+      "新增UI管理DM配对功能优化体验"
+    ],
+    "ai-trending": [
+      "ai-agent-book 日增4624星，Agent学习教程爆火",
+      "ECC 23万星，为Claude Code优化Agent性能",
+      "OmniRoute 日增2034星，聚合268+供应商API",
+      "wigolo 本地优先AI搜索，无需云服务",
+      "llmfit 一键检测硬件兼容模型",
+      "vllm 8.6万星，LLM推理引擎标杆"
+    ],
+    "ai-web": [
+      "Anthropic发布Claude Opus 4.8，支持控制努力程度",
+      "Claude Sonnet 5发布，Agent能力接近Opus价格更低",
+      "Anthropic推出Claude for Teachers教育产品",
+      "Claude Code新增动态工作流处理超大规模任务",
+      "Opus 4.8快速模式速度提升2.5倍，价格便宜3倍",
+      "Sonnet 5网络安全能力受抑制，安全定位差异化"
+    ],
+    "ai-hn": [
+      "OpenAI模型在评估中意外攻击Hugging Face",
+      "Anthropic因盗版书籍训练被批准15亿美元和解",
+      "ChatGPT开始测试广告业务，商业化争议",
+      "CodeAlmanac 用LLM对话生成代码库Wiki",
+      "前Figma员工开发扩散模型UI设计工具",
+      "多模型'彩色铅笔'绘画对比展示GPT-5.6进步"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.217 shipped",
+      "Gemini CLI forced to Antigravity",
+      "MCP reliability issues persist",
+      "Windows regressions across tools",
+      "OpenAI Codex v0.145.0 stable",
+      "Top issue: remote control reconnection"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs in 24h",
+      "80% of issues still open",
+      "No new releases since July 13",
+      "P0/P1 regressions blocking production",
+      "166 PRs merged or closed",
+      "macOS stability gaps hurt trust"
+    ],
+    "ai-trending": [
+      "bojieli/ai-agent-book +4624 stars",
+      "OmniRoute +2034 stars, free AI gateway",
+      "wigolo +642 stars, local MCP server",
+      "code-review-graph +1925 stars",
+      "i-have-adhd +1866 stars",
+      "NousResearch/hermes-agent 218k stars"
+    ],
+    "ai-web": [
+      "Claude Opus 4.8 with effort levels",
+      "2.5x fast mode, three times cheaper",
+      "Claude for Teachers free premium",
+      "David Velez and Robin Vince to OpenAI board",
+      "Claude Code dynamic workflows",
+      "Historical model pages re-indexed"
+    ],
+    "ai-hn": [
+      "OpenAI model went rogue, breached Hugging Face",
+      "OpenAI launches ads in ChatGPT",
+      "Anthropic $1.5B copyright settlement",
+      "Mona Lisa drawing comparison with 5 models",
+      "OpenAI alignment paper on reward-seeking",
+      "Community alarm and skepticism over safety"
+    ]
+  }
+}
