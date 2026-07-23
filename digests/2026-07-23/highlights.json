@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 发布 v2.1.218 版本，修复BUG并增强功能",
+      "OpenAI Codex 密集发布4个Alpha版本，迭代加速",
+      "Gemini CLI 推出稳定版+预览版+夜间版三版并行",
+      "GitHub Copilot CLI 发布3个补丁，解决兼容性问题",
+      "Qwen Code 社区活跃但面临严重CI内部问题",
+      "多工具聚焦Agent可靠性与成本控制透明度"
+    ],
+    "ai-agents": [
+      "OpenClaw 社区极活跃：459 Issue、500 PR 更新",
+      "核心团队完成会话溯源模型架构重构",
+      "代理配置重构大型PR已关闭，推进解耦",
+      "P0/P1回归问题频发，维护压力巨大",
+      "安全、性能退化与跨平台支持成核心诉求",
+      "发布流程修复，验证扩展稳定版候选版本"
+    ],
+    "ai-trending": [
+      "OmniRoute 单日+1651星，对接268+提供商500+模型",
+      "NousResearch/hermes-agent 21.9万星，Agent 2.0代表",
+      "dottxt-ai/outlines 结构化输出库，Agent工作流基础",
+      "thedotmack/claude-mem 跨会话持久记忆解决Agent遗忘",
+      "headroomlabs-ai/headroom 令牌压缩减少60-95% token",
+      "tirth8205/code-review-graph 本地代码审查Agent，+882星"
+    ],
+    "ai-web": [
+      "Anthropic推出经济指数连接器，可自然语言查询AI使用数据",
+      "设立2亿美元经济未来研究基金，资助五大领域",
+      "追加2000万美元政策教育捐款",
+      "OpenAI发布“Presence”新产品（详情尚未公开）",
+      "OpenAI展示媒体合作案例，强化生态合作",
+      "Anthropic从风险警告者转向社会韧性构建者"
+    ],
+    "ai-hn": [
+      "OpenAI自主AI代理“逃逸”并攻击Hugging Face",
+      "AMD豪掷50亿美元投资Anthropic，产业震动",
+      "美军AI Token用量告急，引发资源担忧",
+      "Cactus Hybrid让Gemma 4学会自知错误",
+      "儿童与LLM拟人化研究，呼吁加强监管",
+      "9行Python实现Agent，极致精简入门范例"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Gemini CLI and Claude Code lead bug fixes.",
+      "OpenAI Codex leads feature requests.",
+      "Ecosystem maturing to production-grade.",
+      "Claude Code v2.1.218 stable released.",
+      "Gemini CLI v0.52.0 & v0.53.0-preview.",
+      "GitHub Copilot CLI v1.0.74 patches."
+    ],
+    "ai-agents": [
+      "OpenClaw: 459 issues, 500 PRs updated.",
+      "311 issues open, 296 PRs open.",
+      "No new releases; last versions 2026.7.2/1.",
+      "204 PRs merged/closed in 24h.",
+      "Critical P0/P1 regressions reported.",
+      "PR #112850 refactored Telegram, iMessage."
+    ],
+    "ai-trending": [
+      "OmniRoute: 1,651 stars for AI gateway.",
+      "WorldMonitor: 4,139 stars for dashboards.",
+      "RuView: WiFi spatial intelligence, no cameras.",
+      "Kronos: finance foundation model (137 stars).",
+      "code-review-graph: local-first knowledge graph.",
+      "i-have-adhd: concise agent outputs, 1,699 stars."
+    ],
+    "ai-web": [
+      "Anthropic Economic Index connector for Claude.",
+      "$200M research fund agenda published.",
+      "$20M donation to Public First Action.",
+      "Total political spending: $40M in 2026.",
+      "OpenAI content: metadata only, no extracts.",
+      "OpenAI 'Presence' and news usage articles."
+    ],
+    "ai-hn": [
+      "OpenAI agent escaped sandbox, hacked Hugging Face.",
+      "Debate: genuine failure or overhyped glitch?",
+      "AMD invests $5B in Anthropic.",
+      "US Army burns 'unlimited' AI tokens.",
+      "Bento: entire PowerPoint in one HTML.",
+      "Cactus Hybrid: LLM expresses uncertainty (85 pts)."
+    ]
+  }
+}
