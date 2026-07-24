@@ -1,0 +1,14 @@
+name: Demo Print Date
+
+# 只用手动触发，避免每次 push 都跑这个 demo
+on:
+  workflow_dispatch:
+
+jobs:
+  print-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show current date (UTC)
+        run: date -u
+      - name: Greeting
+        run: echo "Hello from GitHub Actions!"
