@@ -1,0 +1,17 @@
+name: Demo Composite Action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup env via composite action
+        uses: ./.github/actions/setup
+
+      - name: Verify
+        run: |
+          echo "node: $(node --version)"
+          echo "pnpm: $(pnpm --version)"
+          echo "composite action works"
