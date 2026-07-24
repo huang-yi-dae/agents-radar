@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code网络中断ECONNRESET频发引焦躁",
+      "OpenAI Codex Windows性能差社区不满",
+      "Gemini CLI模型挂起修复进入收尾",
+      "Kimi Code聚焦Agent量化与Windows兼容",
+      "OpenCode V2大改社区期待兼忧虑",
+      "Qwen Code更新npm检查与MCP连接"
+    ],
+    "ai-agents": [
+      "会话稳定性：子代理结果丢失与Compaction超时",
+      "跨通道兼容：Telegram、Signal、Discord适配",
+      "安全权限：Exec策略与技能权限清单讨论",
+      "iOS发布修复签名验证构建号冲突",
+      "Novita LLM模型列表获取问题已关闭",
+      "架构重构统一代理终止状态消除矛盾"
+    ],
+    "ai-trending": [
+      "TradingAgents多智能体金融交易框架94k星",
+      "OmniRoute免费AI网关今日增长1929星",
+      "pi-web编码代理Web UI今日+315星",
+      "阿里开源open-code-review混合代码审查",
+      "browser-use浏览器代理106k星持续火热",
+      "ego-lite专为AI Agent设计的浏览器+247"
+    ],
+    "ai-web": [
+      "Anthropic推出Creative Work连接器进入创意行业",
+      "Claude Opus 4.7发布，强安全限制下的最强编码",
+      "Project Glasswing网络安全倡议首款模型",
+      "Opus 4.5作为背景，性价比编码Agent模型",
+      "Claude now可直接操作Ableton、Adobe等软件",
+      "OpenAI健康板块仅元数据无正文内容受限"
+    ],
+    "ai-hn": [
+      "Echo用开放模型1/3成本达Fable级别引热议",
+      "OneCLI开源凭证网关防止AI Agent泄露",
+      "Claude-thermos保持会话活跃解决重复登录",
+      "Screenpipe记录工作转Agent获YC支持",
+      "OpenAI与Anthropic呼吁限制开放权重遭反弹",
+      "安全事件：OpenAI被疑攻击HuggingFace发酵"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Windows stability crisis for OpenAI Codex",
+      "Claude Code billing/network bugs dominate",
+      "OpenAI Codex releases v0.146.0 alpha",
+      "Gemini CLI merges 7 feature PRs",
+      "Network reliability across all tools",
+      "MCP ecosystem expansion lags demand"
+    ],
+    "ai-agents": [
+      "OpenClaw: 298 issues, 500 PRs in 24h",
+      "183 PRs merged/closed today",
+      "PR #113201 refactors terminal outcomes",
+      "High-activity phase with 205 open issues",
+      "No new release; last is 2026.7.2-beta.3",
+      "Project health under pressure from regressions"
+    ],
+    "ai-trending": [
+      "OmniRoute gains +1,929 stars today",
+      "worldmonitor tops with +3,175 stars",
+      "RuView turns WiFi into spatial AI",
+      "pi-web adds 315 stars for coding agents",
+      "Kronos: financial foundation model (+401)",
+      "ego-lite: parallel browsing (+247 stars)"
+    ],
+    "ai-web": [
+      "Anthropic launches Claude Opus 4.7",
+      "Improved vision and coding in Opus 4.7",
+      "Claude for Creative Work announced",
+      "OpenAI publishes 'Health in ChatGPT'",
+      "Three new Anthropic articles today",
+      "OpenAI update opaque, no article text"
+    ],
+    "ai-hn": [
+      "OpenAI/Anthropic lobby against open-weight",
+      "Echo achieves Fable-level at 1/3 cost",
+      "OpenAI allegedly hacked HuggingFace",
+      "Run GLM-4.5-Air (110B) on 16GB RAM",
+      "Claude Opus 5 benchmark page surfaces",
+      "Community anti-corporate sentiment high"
+    ]
+  }
+}
