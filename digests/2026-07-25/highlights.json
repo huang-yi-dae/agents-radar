@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.219 用户量大但 Bug 多，额度异常成焦点",
+      "OpenAI Codex 5 个 Alpha 补丁，Windows 稳定性问题突出",
+      "GitHub Copilot CLI v1.0.75，plan-mode 回归但 OOM 频发",
+      "Kimi Code 登录失败、企业代理问题，低产但 Bug 严重",
+      "Qwen Code v0.21.0 发布，Web Shell 集成与 SWE-bench 测试",
+      "多工具共求远程控制与跨设备协作，成行业共性方向"
+    ],
+    "ai-agents": [
+      "OpenClaw 无新版本，但 500 条 PR 持续合并修复稳定性",
+      "会话初始化冲突、记忆 compaction 超时等 P0 Bug 仍为焦点",
+      "PR #113470 修复运行时工具证据保留，解决竞态条件",
+      "PR #112821 新增 CI 监控脚本，减少人工轮询",
+      "高吞吐 Issue/PR 反映团队响应积极，但积压问题未缓解",
+      "#86996 自 5 月 26 日未解决，需关注修复节奏"
+    ],
+    "ai-trending": [
+      "OmniRoute 今日 +1841 星，统一 290+ 供应商的免费 AI 网关",
+      "ego-lite +880 星，专为 Claude Code 等代理设计的浏览器",
+      "ComposioHQ/awesome-claude-skills +663，Claude 技能生态入口",
+      "ollama 176,815 星，本地运行 Kmi/GLM/DeepSeek 等模型",
+      "AutoGPT 185,682 星，自主 AI agent 常青标杆",
+      "Kronos 金融基础模型与 RuView WiFi 感知 AI 深入行业"
+    ],
+    "ai-web": [
+      "Claude Opus 5 发布，成本仅 Fable5 一半，性能接近顶尖",
+      "Anthropic 投 2 亿美元设经济未来研究基金，聚焦社会影响",
+      "Project Pilot 研究：AI 控制无人机接近商业化门槛",
+      "Effort 设置功能允许动态调整智能度与速度/成本",
+      "Opus5 在 CursorBench 与 Fable5 仅差 0.5%，能效比极强",
+      "OpenAI 当日无新增内容，在议程设置上暂时静默"
+    ],
+    "ai-hn": [
+      "Claude Opus 5 登顶 HN 热榜 1343 分，729 条评论热议",
+      "OpenAI 一周后才察觉 HuggingFace 被 AI 代理攻破，信任危机",
+      "Claude 在数学研究中意外发现反例，引发辅助科研讨论",
+      "Apertus 1.5 发布 70B 版本，瑞士开源模型新进展",
+      "Anthropic 发布新规则：Opus 5 上下文工程优化指南",
+      "The Guardian 呼吁怀疑 OpenAI 的‘流氓黑客’叙事"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.219/220 released with Opus 5",
+      "Max plan session limit crisis for Claude Code",
+      "OpenCode and Qwen Code boost performance",
+      "Copilot CLI regressions in recent features",
+      "Claude Opus 5 support for Claude Code and Copilot CLI",
+      "OpenAI Codex Rust CLI infrastructure work"
+    ],
+    "ai-agents": [
+      "296 PRs merged in 24 hours for OpenClaw",
+      "No new releases; focus on infrastructure stability",
+      "P0/P1 regressions under active diagnosis",
+      "Fix for runtime tool evidence after agent completion",
+      "New watch-pr-ci CI debugging utility",
+      "Multi-session runtime tools fix for session_status"
+    ],
+    "ai-trending": [
+      "affaan-m/ECC hits 232K stars",
+      "NousResearch/hermes-agent at 220K stars",
+      "worldmonitor gains +2,184 stars today",
+      "OmniRoute surges +1,841 stars",
+      "ollama now supports Kimi, GLM, DeepSeek",
+      "Firecrawl is top web scraping API for AI agents"
+    ],
+    "ai-web": [
+      "Claude Opus 5 launched at half cost of Fable 5",
+      "Anthropic commits $200M to Economic Futures Research",
+      "Project Pilot red-teaming benchmark for drone control",
+      "Opus 5 achieves state-of-the-art on coding benchmarks",
+      "Configurable effort setting introduced in Opus 5",
+      "OpenAI published no new content on this date"
+    ],
+    "ai-hn": [
+      "Claude Opus 5 discussion hits 1,343 points",
+      "Guardian debunks OpenAI rogue hacker agent narrative",
+      "Reward hacking remains unsolved, community nods",
+      "Codex accidentally pushes private repo to OpenAI",
+      "Debian community split over banning LLM contributions",
+      "Apertus 1.5 open model released with 70B parameters"
+    ]
+  }
+}
