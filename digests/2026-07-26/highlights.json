@@ -1,0 +1,70 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Qwen Code发布v0.21.0-nightly版本",
+      "OpenAI Codex发布rust-v0.146.0-alpha.10.1",
+      "Gemini CLI发布v0.54.0-nightly",
+      "Claude Code #6235获4400+👍力推AGENTS.md标准",
+      "Agent自主性控制成社区争议焦点",
+      "多智能体会话恢复与任务持久化受关注"
+    ],
+    "ai-agents": [
+      "OpenClaw日增350 issue,500 PR但无新版",
+      "待合并PR达282，合并流程承压",
+      "修复技能安装权限绕过安全漏洞",
+      "修复控制UI拖动分组稳定性",
+      "重构代码清理死代码提升质量",
+      "整体处于高产输入输出承压状态"
+    ],
+    "ai-trending": [
+      "mattpocock/skills日增1740星，Agent技能最热",
+      "ego-lite获986星，浏览器AI代理标杆",
+      "阿里巴巴开源open-code-review获431星",
+      "affaan-m/ECC获377星，Agent性能优化",
+      "andrewyng/aisuite统一多AI接口",
+      "ollama/ollama达176.9k星，本地推理首选"
+    ],
+    "ai-hn": [
+      "Claude 5上下文工程新规引热议(191分)",
+      "Debian社区激烈讨论LLM伦理(96分)",
+      "8美元微控制器跑LLM震惊社区(97分)",
+      "OpenAI服务多次宕机引忧虑",
+      "AMD开放GPU ISA让AI写内核",
+      "HotPin 50行代码实现120B模型推理"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code issue has 4,452 👍",
+      "OpenAI Codex released v0.146.0-alpha.10.1",
+      "Gemini CLI nightly v0.54.0 released",
+      "AGENTS.md spec emerging for standardization",
+      "MCP becomes critical integration layer",
+      "Windows stability issues frustrate developers"
+    ],
+    "ai-agents": [
+      "350 issues, 500 PRs in 24 hours",
+      "218 PRs merged or closed today",
+      "99 issues closed, high activity",
+      "No new releases in last 24h",
+      "Maintainer bandwidth remains stretched",
+      "PR #95359 fixes force install security"
+    ],
+    "ai-trending": [
+      "Agent skill frameworks gain stellar growth",
+      "obra/superpowers gained over 1,700 stars",
+      "mattpocock/skills also tops 1,700 stars",
+      "citrolabs/ego-lite: browser for AI agents",
+      "Alibaba open-sourced open-code-review",
+      "vllm project popular in AI infrastructure"
+    ],
+    "ai-hn": [
+      "Anthropic context engineering for Claude 5",
+      "Debian votes on LLM in packaging",
+      "28.9M param LLM runs on $8 MCU",
+      "AMD publishes ISA for GPU kernel writing",
+      "Claude 5 context engineering top story",
+      "Community skeptical about AI job hype"
+    ]
+  }
+}
