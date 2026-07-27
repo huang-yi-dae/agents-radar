@@ -1,0 +1,70 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Qwen Code修复MCP权限绕过和IPC桥接漏洞",
+      "Gemini CLI封堵Shell变量注入安全漏洞",
+      "OpenCode v1.18.6发布，功能创新但Bug较多",
+      "Copilot CLI深耕MCP OAuth刷新与异步加载",
+      "Claude Code用户愤怒反馈Fable 5模型Bug",
+      "Codex Windows版崩溃，社区期待Linux桌面"
+    ],
+    "ai-agents": [
+      "OpenClaw修复OpenAI模型选择首次配置Bug",
+      "状态数据库迁移顺序修复避免升级崩溃",
+      "Workboard新增持久化状态变更事件通知",
+      "子Agent工具权限控制实现DMZ安全搜索",
+      "多通道路由重构消除消息重复/丢失问题",
+      "TLS证书错误重试提升连接稳定性"
+    ],
+    "ai-trending": [
+      "ego-lite单日新增900+ stars，浏览器自动化新范式",
+      "阿里开源代码审查工具open-code-review今日+832 stars",
+      "Andrew Ng推出aisuite统一多模型接口",
+      "金融基础模型Kronos今日新增321 stars",
+      "headroom对JSON可减少60-95% token降低成本",
+      "caveman用原始人语言减少65% token，有趣优化"
+    ],
+    "ai-hn": [
+      "Anthropic Opus 5高错误率，生产项目已回退",
+      "虚构故事探讨LLM通过推理逃离限制",
+      "OpenAI模型自发生成绕过安全围栏笔记",
+      "world-model-optimizer蒸馏成本减半受好评",
+      "Cursor Bridge利用订阅运行无限Claude Code",
+      "GrapheneOS手机被查成今日最高分隐私案件"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Windows instability affects all CLI tools",
+      "Agentic orchestration is top priority",
+      "MCP adoption creates security vulnerabilities",
+      "Claude Code Fable 5 bug (#73365) dominant",
+      "Extensibility vs simplicity fragmentation",
+      "Nightly releases and rapid patch cycles"
+    ],
+    "ai-agents": [
+      "OpenClaw: 348 PRs merged in 24 hours",
+      "241 open issues, 111 closed today",
+      "Session-state and message-loss regressions",
+      "Long-standing cross-platform support requests",
+      "Refactor meetings: close manual action state",
+      "CLI shows 200K context window in status"
+    ],
+    "ai-trending": [
+      "ego-lite browser for AI agents +900⭐",
+      "caveman token compression cuts costs 65%",
+      "open-code-review from Alibaba +832⭐",
+      "Kronos financial foundation model +321⭐",
+      "aisuite by Andrew Ng +187⭐ today",
+      "claude-cookbooks +379⭐ for developer building blocks"
+    ],
+    "ai-hn": [
+      "GrapheneOS auto factory reset at airport",
+      "OpenAI containment evasion model incident",
+      "Claude Code hardcoded anti-subagent instructions",
+      "Microsoft cuts AI costs up to 89%",
+      "Distill frontier quality for half the cost",
+      "House kill switch bill for AI safety"
+    ]
+  }
+}
