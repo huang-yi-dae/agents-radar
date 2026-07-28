@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 计费争议与 Windows 适配成焦点",
+      "OpenAI Codex 功能请求与 Bug 修复并行",
+      "Gemini CLI 子代理可靠性受质疑",
+      "GitHub Copilot CLI 稳定性回归引担忧",
+      "OpenCode 2.0 重构进行中，付费模型 Bug 影响体验",
+      "Qwen Code 企业集成与长上下文稳定性是核心诉求"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时处理500条Issue和500条PR",
+      "P0级Beta.2迁移阻塞Bug (#109867) 已关闭",
+      "会话初始化冲突和Cron任务误判问题修复",
+      "子代理死锁及文件系统崩溃漏洞已修复",
+      "长期焦点：Linux/Windows桌面应用需求 (#75)",
+      "社区关注跨平台支持与安全增强"
+    ],
+    "ai-trending": [
+      "ollama/ollama 177k星，支持Kimi-K2.6等最新模型",
+      "browser-use/browser-use 107k星，AI Agent浏览器自动化",
+      "CherryHQ/cherry-studio 49k星，集成自治Agent与300+助手",
+      "StarTrail-org/LEANN 97%存储压缩率登顶RAG轻量化",
+      "金融Agent Kronos与OpenBB冲上Trending榜",
+      "claude-mem、mem0等专注Agent记忆层与上下文管理"
+    ],
+    "ai-web": [
+      "Anthropic CEO澄清立场：不主张全面禁止开源权重模型",
+      "Anthropic与Cognizant扩大合作，培训3万认证员工",
+      "OpenAI发布5篇企业应用指南，提及GPT-5与AI Agents",
+      "双方聚焦企业级AI规模化落地核心战场",
+      "Claude Opus 5出现错误率升高，社区质疑稳定性",
+      "Kimi输出与Claude高度相似，引发数据蒸馏猜测"
+    ],
+    "ai-hn": [
+      "Anthropic开放权重立场声明获506分714评论热烈讨论",
+      "Claude Opus 5运行错误率升高，社区质疑稳定性",
+      "Nvidia与OpenAI洽谈2500亿美元数据中心融资",
+      "黄仁勋首次发推支持开源，引发AI军备竞赛讨论",
+      "韩国股市因AI担忧暴跌5%，投资风险信号凸显",
+      "LLM政治偏见测评显示主流模型普遍偏左引发争议"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Billing incident: $704.71 disputed",
+      "ARM64 bug #40198 open for 4 months",
+      "Codex /undo feature at 362 upvotes",
+      "Agent-to-agent protocols emerging as differentiator",
+      "Subagent management remains most brittle component",
+      "Codex and Gemini each merged 10+ PRs in a day"
+    ],
+    "ai-agents": [
+      "P0 gateway memory leak grows to 15.5GB RSS",
+      "P0 beta.2 state migration blocks startup",
+      "P1 Codex session reuse exhaustion discovered",
+      "500 issues and 500 PRs updated in 24 hours",
+      "252 issues closed in one day",
+      "Community pushes for multi-platform and sandboxing"
+    ],
+    "ai-trending": [
+      "Alibaba open-code-review gains 979 stars today",
+      "Kronos financial foundation model emerges",
+      "moeru-ai/airi pushes realtime voice agent",
+      "claude-video enables AI in Minecraft",
+      "ollama hits 177k stars, now supports Kimi-K2.6",
+      "rig: Rust-based LLM application framework at 8k stars"
+    ],
+    "ai-web": [
+      "Anthropic: never advocated banning open-weights models",
+      "Claude partners with Cognizant for enterprise deployment",
+      "Frontier Certified workforce model announced",
+      "OpenAI publishes GPT-5 enterprise use case guides",
+      "OpenAI releases guides on building AI agents",
+      "Anthropic targets both policy defense and commercial scaling"
+    ],
+    "ai-hn": [
+      "Anthropic open-weights stance hits 506 points",
+      "Jensen Huang's first X post defends open access",
+      "Analysis: all major LLMs lean lib-left",
+      "Shared Claude chats indexed by Google",
+      "Sam Altman declares 'we are in the singularity'",
+      "Kimi suspected as Claude clone"
+    ]
+  }
+}
