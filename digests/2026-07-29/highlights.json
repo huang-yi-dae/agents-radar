@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code #38335获470赞讨论成本控制",
+      "OpenCode #6231获193赞社区共鸣",
+      "Qwen Code P0级Issue驱动密集PR修复",
+      "Gemini CLI配额滥用投诉爆发",
+      "Claude Code #74301讨论AI行为安全",
+      "GitHub Copilot CLI社区贡献较低"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.7.2-beta.5专注状态安全",
+      "引入隔离存储机制保护数据韧性",
+      "破坏性变更需执行doctor --fix迁移",
+      "社区热议跨平台支持与内存泄漏",
+      "24小时内处理超500 Issue和PR",
+      "灾难恢复机制增强数据可靠性"
+    ],
+    "ai-trending": [
+      "ECC获636星优化Claude Agent性能",
+      "Claude Video获988星多模态扩展",
+      "微软开源Agent治理工具填补空白",
+      "speech-to-speech本地语音Agent受追捧",
+      "aisuite统一多AI提供商接口",
+      "Airi自托管Grok伴侣获797星"
+    ],
+    "ai-web": [
+      "Claude Mythos发现HAWK加密算法设计缺陷",
+      "Anthropic CEO澄清未主张全面禁止开源权重",
+      "OpenAI更新信息有限可能处于静默期",
+      "Anthropic同时发布硬核安全与前沿治理",
+      "Claude能自主发现密码学漏洞",
+      "Mythos Preview展示超越软件漏洞的能力"
+    ],
+    "ai-hn": [
+      "OpenAI开源Codex Security获370分",
+      "Claude发现密码学漏洞引发安全讨论",
+      "HAWK-256密钥恢复攻击可复现",
+      "未审查开源模型更乐观引对齐讨论",
+      "Apple成5万亿公司因投资者逃离AI",
+      "社区热议AI实际价值幻想帖"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code #38335 session limits: 827 comments",
+      "OpenCode and Qwen Code lead community feature velocity",
+      "Session management and multi-agent orchestration become table stakes",
+      "Windows stability remains top community friction",
+      "MCP ecosystem surface area causes recurring bugs",
+      "Claude Code and Gemini CLI face backlash over opaque billing"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.7.2-beta.5 released with state safety",
+      "500 issues and 500 PRs updated in 24 hours",
+      "280 issues and 271 PRs closed/merged in a day",
+      "Beta focuses on crash recovery and data persistence",
+      "220 open issues and 229 open PRs remain",
+      "Strong fix-and-release cadence across 13 projects"
+    ],
+    "ai-trending": [
+      "moeru-ai/airi gains 797 stars for AI companion",
+      "bradautomates/claude-video +988 stars for video understanding",
+      "affaan-m/ECC reaches 234,903 total stars",
+      "andrewyng/aisuite offers unified AI provider interface",
+      "microsoft/agent-governance-toolkit enforces agent policies",
+      "huggingface/speech-to-speech enables local voice agents"
+    ],
+    "ai-web": [
+      "Claude discovers mathematical weaknesses in cryptographic algorithms",
+      "CEO Dario Amodei rejects protectionist bans on open-weights",
+      "OpenAI hints at Scientific Computing Agentic Ai push",
+      "Claude Mythos Preview attacks HAWK and round-reduced AES",
+      "Attack significantly weakens post-quantum scheme HAWK",
+      "Novel attack on AES extends AI-driven crypto analysis"
+    ],
+    "ai-hn": [
+      "Claude private chats leaked in search results",
+      "Subscriber reports week-long outages with no support",
+      "Anthropic publishes key-recovery attack on HAWK-256",
+      "OpenAI releases Codex Security tool",
+      "Community asks: 'What if useful AI is a fantasy?'",
+      "Debate over responsible disclosure of AI crypto findings"
+    ]
+  }
+}
