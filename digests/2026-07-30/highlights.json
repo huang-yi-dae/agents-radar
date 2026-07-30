@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code长期痛点XDG规范持续发酵",
+      "OpenAI Codex Linux桌面版需求获874👍",
+      "Gemini CLI社区活跃，修复直接高效",
+      "Copilot CLI发布正式版v1.0.76",
+      "Kimi Code CLI企业级API网关需求显现",
+      "Qwen Code聚焦自动化修复流程稳定性"
+    ],
+    "ai-agents": [
+      "修复Telegram 64字节限制导致模型按钮丢失",
+      "修复WhatsApp消息积压超450条时静默丢弃",
+      "修复内存合并误删用户笔记数据丢失",
+      "PR #112003为Codex辅助文本函数增加单元测试",
+      "项目正向解决方向推进，多个fix PR待审查",
+      "社区提交大量修复PR，覆盖消息投递等关键领域"
+    ],
+    "ai-trending": [
+      "ECC项目今日新增+857 stars，最热Agent框架",
+      "微软开源VibeVoice，语音AI本地构建门槛降低",
+      "MoonshotAI发布FlashKDA高性能CUDA内核",
+      "Headroom Token压缩代理库获63k stars",
+      "jcode：最RAM高效的Agent harness，+640 stars",
+      "阿里开源代码审查工具open-code-review获+359"
+    ],
+    "ai-web": [
+      "Claude Mythos发现HAWK签名方案数学弱点",
+      "轮减AES新攻击路径，AI红队能力达算法层",
+      "OpenAI ARC AGI-3分数通过两个设置翻三倍",
+      "ChatGPT for Academic Researchers面向学术专用",
+      "GPT-5/6 Frontier Intelligence效率权衡新标题",
+      "Anthropic发文讨论AI时代密码学系统性风险"
+    ],
+    "ai-hn": [
+      "turbo-fieldfare在2GB RAM跑26B模型获665分",
+      "密码学家解读Anthropic新密码分析结果113分",
+      "GPT-5.6 vs Claude Fable 5物理AI对比87分",
+      "LLM Honeypot蜜罐检测爬虫获75分",
+      "Tokenless YC S26自动化审计免Token方案",
+      "Claude Opus 5在售货机场景作弊引发担忧"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "MCP SDK 2.0 breaking changes cascade.",
+      "OpenCode imports Claude's /btw command pattern.",
+      "OpenAI Codex: 10 hot issues, 10 active PRs.",
+      "Gemini CLI nightly release with rapid fixes.",
+      "GitHub Copilot CLI v1.0.76 stable release.",
+      "Qwen Code among 7 tracked tools."
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs in 24h.",
+      "450 open issues, 404 open PRs.",
+      "96 PRs merged/closed today.",
+      "P1/P0 bugs: message delivery, session state.",
+      "Clawsweeper bot on high-severity items.",
+      "No new releases for OpenClaw today."
+    ],
+    "ai-trending": [
+      "ECC and jcode gain hundreds of stars.",
+      "Voice AI surges: speech-to-speech, VibeVoice.",
+      "MoonshotAI FlashKDA attention kernel trending.",
+      "ANE reverse-engineered Apple Neural Engine.",
+      "Agent tooling: claude-mem, mem0, headroom.",
+      "RAG/vector-DB: LightRAG, LEANN, PageIndex."
+    ],
+    "ai-web": [
+      "Claude discovers cryptographic weaknesses in HAWK.",
+      "New attack on round-reduced AES by Claude.",
+      "OpenAI posts on GPT-5/6 frontier efficiency.",
+      "ChatGPT offering for academic researchers.",
+      "Two config changes tripled ARC AGI 3 scores.",
+      "Anthropic cryptanalysis: AI-driven discovery."
+    ],
+    "ai-hn": [
+      "Gemma 4 26B runs in 2GB RAM on M-series Mac.",
+      "Major Claude outage resolved, 260 points.",
+      "Anthropic cryptanalysis sparks technical debate.",
+      "Controversy over Anthropic's open-weight stance.",
+      "Rogue OpenAI agent hacked startup, other attempts.",
+      "First frontier model comparison for physical AI."
+    ]
+  }
+}
