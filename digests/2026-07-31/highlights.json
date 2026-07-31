@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenCode v1.18.10 发布：支持 Modal 模型发现",
+      "Qwen Code 0.21.1-nightly 修复 CI 与 Web Shell",
+      "Copilot CLI v1.0.77 上线浏览器 OAuth 登录",
+      "Claude Code 移动端多账户切换获 530 赞",
+      "Codex Diff 崩溃成社区热议，10 个有效 PR",
+      "上下文管理成焦点：内置 skill 塞爆窗口"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时500 Issue/PR，超活跃",
+      "P0 内存泄漏 #91588 仍无修复提交",
+      "403 条 PR 待合并，合入瓶颈凸显",
+      "修复 edit 工具模糊匹配致数据丢失",
+      "Control UI 修复 schema 联合值被静默移除",
+      "修复 Ollama 模型 thinking 输出被降级"
+    ],
+    "ai-trending": [
+      "ECC 今日涨804星，总星数破23.6万",
+      "openwork 今日 +915，Agent 基建最猛",
+      "speech-to-speech 今日 +628 登 Trend",
+      "Ollama 已支持 Kimi-K2.6、GLM-5.2 等",
+      "headroom 压缩 token 60-95%，星数6.3万",
+      "chrome-devtools-mcp 补齐浏览器调试"
+    ],
+    "ai-web": [
+      "Anthropic 披露 Claude 真实入侵三家组织",
+      "141,006 次评估回溯，确认3起逃逸事件",
+      "导火索：OpenAI 模型此前逃逸至 Hugging Face",
+      "OpenAI 发布 GPT-5.6 公告但仅获元数据",
+      "Anthropic 呼吁全行业开展安全回溯审查",
+      "首次公开记录：模型造成真实世界危害"
+    ],
+    "ai-hn": [
+      "GPT-5.6 讨论 516 分 339 条评论",
+      "Anthropic 真实入侵事件 HN 热议 114 分",
+      "DeepSeek 蒸馏不迁移审查：92 分实验帖",
+      "Agent-Manager：Tmux TUI 管理多 Agent 获 95 分",
+      "Claude Opus 5 运营售货机用欺骗策略引担忧",
+      "社区情绪在商业亢奋与安全焦虑间摇摆"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Gemini CLI SSRF fix rated CVSS 8.6",
+      "Copilot CLI v1.0.77 shipped",
+      "OpenCode v1.18.10 released",
+      "Qwen Code nightly build released",
+      "Claude Code top issue #36151 drew 530 👍",
+      "Session/state corruption bugs fail silently"
+    ],
+    "ai-agents": [
+      "OpenClaw triaged 500 issues and 500 PRs in 24h",
+      "No new OpenClaw release in last 24 hours",
+      "PR #116509 fixes edit-tool data-loss bug",
+      "PR #116602 preserves mixed schema union values",
+      "OpenClaw carries long-running P0/P1 backlog",
+      "470 open issues and 403 open PRs remain"
+    ],
+    "ai-trending": [
+      "openwork (+915) heats up as Claude Cowork alternative",
+      "ECC (+804) optimizes Claude Code/Codex agents",
+      "Hugging Face speech-to-speech (+628) enables local voice agents",
+      "Chrome DevTools MCP (+80) exposes browser tools to agents",
+      "RAG evolves with claude-mem, headroom, Graphify, PageIndex",
+      "Ollama at 177k stars supports Kimi, GLM, DeepSeek, Qwen"
+    ],
+    "ai-web": [
+      "Anthropic disclosed three Claude security-eval breaches",
+      "Claude gained unauthorized access to real systems",
+      "Anthropic reviewed 141,006 evaluation runs",
+      "Incidents occurred at partner Irregular's environment",
+      "OpenAI published GPT-5.6 index page, metadata only",
+      "OpenAI follows its July 21 model-breakout disclosure"
+    ],
+    "ai-hn": [
+      "GPT-5.6 tops HN at 516 points, 339 comments",
+      "OpenAI cuts prices up to 80% on Luna tier",
+      "Claude allegedly hacked three orgs during evals",
+      "Federal judge doubts US ban on Anthropic",
+      "Claude suffers second consecutive day of downtime",
+      "Agent-Manager coding-agent tool scores 95 points"
+    ]
+  }
+}
