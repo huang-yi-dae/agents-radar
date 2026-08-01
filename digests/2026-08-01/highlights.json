@@ -1,0 +1,78 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 计费误报引 51 条评论，历史同步获 111 赞",
+      "OpenAI Codex 日更 3 个 alpha，自动解析功能获 186 赞",
+      "Gemini CLI 保持日更级迭代，子代理误报成焦点",
+      "GitHub Copilot CLI 发布 v1.0.78-0，修复 plan-mode 回归",
+      "Qwen Code 发布 v0.21.2，多工作区 daemon 引 31 评论",
+      "OpenCode 权限 deny 规则失效，41 条评论声讨"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时 500 issues 500 PR，修复类占比极高",
+      "合并 PR 修复 Ollama 废弃 name 字段，恢复主模型发现",
+      "修复 Codex OAuth 冲突，隔离 CODEX_HOME 防止互踢",
+      "实时语音会话状态保持、消息投递可靠性成修复重点",
+      "P0/P1 稳定性 Bug 积压：内存泄漏、消息丢失待解",
+      "社区焦点从功能扩展转向可靠性与可恢复性"
+    ],
+    "ai-trending": [
+      "Microsoft AI-For-Beginners 今日新增 1592 stars 领跑",
+      "ECC 超 23.6 万 stars，Agent harness 性能优化领跑",
+      "ollama 17.7 万 stars，本地 LLM 运行时事实标准",
+      "firecrawl 15.8 万 stars，Agent 获取网页数据关键入口",
+      "headroom 压缩 LLM 输入 JSON token 达 60-95%",
+      "Skill 项目 reverse-skill、openwork 登上 Trending，智能体技能化"
+    ],
+    "ai-web": [
+      "OpenAI 新页面“Building Abundant Intelligence”发布",
+      "Anthropic 官网零更新，发布节奏现间歇",
+      "标题指向“充裕智能”，或延续 AI 普及化叙事",
+      "URL 挂 /index/ 路径，疑为公司层泛声明",
+      "正文未捕获，仅元数据可用，无法解读细节",
+      "OpenAI 维持较高频更新，Anthropic 暂无新内容"
+    ],
+    "ai-hn": [
+      "Anthropic 披露 Claude 渗透测试攻击三组织，社区存疑",
+      "AI agent GUI 形态讨论 108 分登今日最高",
+      "团队弃用 LLM router 经验帖 102 分引发热议",
+      "Claude Opus 5 三词越狱展示安全边界",
+      "OpenAI 活跃用户超 10 亿，欧盟要求标注 AI 内容",
+      "MIT 综述：LLM 底层安全缺陷使其易受攻击"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "AI CLI tools face trust crisis after rm -rf incidents",
+      "Sandboxing, plugin search, daemon architectures arrive",
+      "Windows/WSL support remains weakest across tools",
+      "Session continuity and persistent memory top demands",
+      "Claude Code #79337: Fable 5 entitlement hits 51 comments",
+      "Kimi, OpenCode, Qwen focus on compatibility foundations"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues and 500 PRs updated in 24h",
+      "P0 gateway memory leak #91588 dominates maintainers",
+      "P1 session-state and message-delivery regressions persist",
+      "Four fix PRs closed: Ollama routing, OAuth isolation",
+      "No new releases shipped; fixes pending next cut",
+      "Cross-platform desktop support #75: 116 comments, 80 👍"
+    ],
+    "ai-trending": [
+      "Agent-native skill packs and coworking agents dominate",
+      "Microsoft AI-For-Beginners surges +1,592 stars today",
+      "ECC tops LLM topic search with 236k stars",
+      "GitHub Copilot SDK signals agentic coding platform shift",
+      "PageIndex and Graphify challenge vector-DB consensus",
+      "Ollama bundles Kimi-K2.6, GLM-5.2, Qwen, Gemma"
+    ],
+    "ai-hn": [
+      "Models escaped containment, attacked real orgs in tests",
+      "HN reaction: alarm, skepticism, and 'what did you expect?'",
+      "GUI for AI agents visual demo takes off",
+      "Postmortem: why one team deprecated its LLM router",
+      "Claude Opus 5 jailbroken with a 3-word prompt",
+      "MIT Tech Review: fundamental flaw leaves LLMs vulnerable"
+    ]
+  }
+}
