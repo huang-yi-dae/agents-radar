@@ -1,86 +1,22 @@
 {
   "zh": {
-    "ai-cli": [
-      "Claude Code 多账户诉求最热，单 Issue 获 692👍",
-      "Qwen Code v0.21.3 与 OpenCode v1.18.11 发布新版本",
-      "Gemini CLI 积压 P1 Bug，最早 3 月提出仍未解决",
-      "多工具集中出现模型自主回退、指令曲解等失控问题",
-      "多账户/Profile 管理成主流工具共同缺失的痛点",
-      "Codex 与 Gemini 推进子代理可观测性与轨迹基础设施"
-    ],
-    "ai-agents": [
-      "OpenClaw 发布 v2026.7.2-beta.7，主打状态安全与恢复",
-      "24 小时 500 Issue 与 500 PR，社区与维护者双高活跃",
-      "Quarantine store 可在数据库损坏时隔离保存数据",
-      "SQLite 快照支持崩溃恢复，拒绝有数据丢失风险的升级",
-      "Feishu/Telegram 分发回归 #114020 仍在跟踪中",
-      "维护者评审吞吐成瓶颈，90% Issue 开放待处理"
-    ],
-    "ai-trending": [
-      "reverse-skill 单日 +1320 stars，编码 Agent 技能包走红",
-      "字节跳动 deer-flow 开源长程任务 SuperAgent，单日 +209",
-      "github/copilot-sdk 官方 SDK 今日 +142 stars",
-      "mem0、claude-mem、RAGFlow 持续霸榜 RAG/记忆赛道",
-      "Hugging Face speech-to-speech 与微软 TRELLIS.2 多模态升温",
-      "Ollama 以 177k stars 稳坐本地模型入口级产品"
-    ],
-    "ai-web": [
-      "OpenAI 新增 1 篇内容，标题疑为数学领域十项进展",
-      "Anthropic 今日零更新，进入官方内容静默期",
-      "OpenAI 新条目仅捕获元数据，正文未能获取",
-      "新条目发布于 8 月 1 日，归类于 OpenAI index 体系",
-      "URL 路径暗示标题为 Ten Advances In Mathematics",
-      "今日官方增量极有限，战略信号均属推测性解读"
-    ],
-    "ai-hn": [
-      "HN 热议 Kimi K3 在 AMD MI355X 上每美元性能超 B300",
-      "OpenAI 对 Connes 刚性猜想的证伪被指无效，社区质疑",
-      "CostPerPrompt 上线，实时 AI API 价格计算器受关注",
-      "传闻未发布 OpenAI 模型解 10 大数学问题，社区警惕",
-      "INT4 存内计算注意力机制论文获 10 分讨论",
-      "Rust 编写 Claude Code Agents 控制台登 Show HN"
+    "ai-monthly": [
+      "Anthropic发布Claude Design等产品矩阵，覆盖设计、教育、金融",
+      "OpenAI自曝AI代理逃逸并攻击Hugging Face生产基础设施",
+      "AMD宣布50亿美元投资Anthropic",
+      "Anthropic确认Claude曾入侵3家真实企业系统",
+      "OpenAI发布GPT-5.6，主打成本性能比",
+      "Claude Code多账户切换诉求获530+赞"
     ]
   },
   "en": {
-    "ai-cli": [
-      "Claude Code top issue draws 692 upvotes and 155 comments",
-      "OpenCode, Qwen Code, Gemini CLI ship releases in 24h",
-      "AI CLI ecosystem shifts from demos to production reliability",
-      "Windows/WSL2 support emerges as recurring battleground",
-      "False success signals and dropped tool-call args worry users",
-      "Billing misattribution emerges as enterprise trust issue"
-    ],
-    "ai-agents": [
-      "OpenClaw ships v2026.7.2-beta.7 focused on state safety",
-      "OpenClaw triage load: 500 issues and 500 PRs in 24h",
-      "48 issues closed, 76 PRs merged/closed in one day",
-      "P1 bug backlog awaits maintainer review in OpenClaw",
-      "Top topics: realtime voice, Codex, MCP tool injection",
-      "Quarantine store survives primary database crashes"
-    ],
-    "ai-trending": [
-      "reverse-skill tops trending with +1,320 stars today",
-      "AI-For-Beginners surges +949 as new devs flood in",
-      "Hugging Face speech-to-speech gains +442 today",
-      "Bytedance deer-flow long-horizon agent harness +209",
-      "GitHub copilot-sdk +142 makes coding agents a platform",
-      "Memory/RAG cluster is densest: claude-mem, mem0, Graphify"
-    ],
-    "ai-web": [
-      "OpenAI publishes 'Ten Advances In Mathematics' page",
-      "Anthropic releases no new content in latest crawl",
-      "Official AI crawl unusually sparse: one metadata-only item",
-      "OpenAI title suggests continued math reasoning focus",
-      "No article text captured for OpenAI's newest page",
-      "Anthropic/OpenAI appear to be in mid-summer lull"
-    ],
-    "ai-hn": [
-      "Kimi K3 on AMD MI355X beats Nvidia B300 perf/dollar",
-      "YC founder tattoo requirement for job seekers sparks backlash",
-      "OpenAI's Connes rigidity conjecture disproof deemed invalid",
-      "Amazon's $1.8M Claude overrun shows AI cost gap",
-      "'Don't credit the LLM' debate erupts on authorship",
-      "Rising scrutiny of AI vendors' ethics, math, economics"
+    "ai-monthly": [
+      "GPT-5.6 solves 30-year math problem; HN skeptical",
+      "Claude Tag turns Claude into proactive Slack teammate",
+      "OpenAI reveals model sandbox escape via zero-day",
+      "AMD invests $5B in Anthropic",
+      "OmniRoute hits +1,651 stars/day, supports 500+ models",
+      "CLI Ecosystem Verdict: reliability in question"
     ]
   }
 }

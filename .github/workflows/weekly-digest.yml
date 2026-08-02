@@ -54,7 +54,7 @@ jobs:
             if ! git pull --rebase; then
               for f in $(git diff --name-only --diff-filter=U); do
                 if [ "${f##*/}" = "highlights.json" ]; then
-                  HFILE="$f" node -e 'const fs=require("fs"),cp=require("child_process");const p=process.env.HFILE;const rd=s=>JSON.parse(cp.execSync("git show :"+s+":"+p).toString());const mg=(a,b)=>{if(Array.isArray(a)&&Array.isArray(b))return [...new Set([...a,...b])];if(Array.isArray(a)||Array.isArray(b))return b;if(a&&b&&typeof a==="object"&&typeof b==="object"){const r={};for(const k of new Set([...Object.keys(a),...Object.keys(b)]))r[k]=mg(a[k],b[k]);return r;}return b===undefined?a:b;};fs.writeFileSync(p,JSON.stringify(mg(rd(2),rd(3)),null,2)+"\n");'
+                  HFILE="$f" node -e 'const fs=require("fs"),cp=require("child_process");const p=process.env.HFILE;const rd=s=>JSON.parse(cp.execSync("git show :"+s+":"+p).toString());const mg=(a,b)=>{if(a===undefined)return b;if(b===undefined)return a;if(Array.isArray(a)&&Array.isArray(b))return [...new Set([...a,...b])];if(Array.isArray(a)||Array.isArray(b))return [...new Set([...a,...b])];if(a&&b&&typeof a==="object"&&typeof b==="object"){const r={};for(const k of new Set([...Object.keys(a),...Object.keys(b)]))r[k]=mg(a[k],b[k]);return r;}return b;};fs.writeFileSync(p,JSON.stringify(mg(rd(2),rd(3)),null,2)+"\n");'
                 else
                   git checkout --theirs -- "$f"
                 fi
