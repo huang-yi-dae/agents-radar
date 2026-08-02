@@ -68,7 +68,7 @@ export function buildTrendingPrompt(data: TrendingData, dateStr: string, lang: L
         : "（无搜索结果）";
 
   if (lang === "en") {
-    return `You are a technical analyst focused on the AI open-source ecosystem. The following is ${dateStr} GitHub AI-related trending repository data. Please filter for AI relevance, categorize, and analyze trends.
+    return `You are a technical analyst focused on the AI / ML / data open-source ecosystem. The following is ${dateStr} GitHub AI / ML / data-related trending repository data. Please filter for AI / ML / data relevance, categorize, and analyze trends.
 
 ## Data Sources
 - **Trending List** (github.com/trending, today's stars most reliable): Real-time hot list with today's new stars
@@ -117,7 +117,7 @@ Style: English, professional and concise, must include GitHub links for every pr
 `;
   }
 
-  return `你是一位专注于 AI 开源生态的技术分析师。以下是 ${dateStr} 的 GitHub AI 相关热门仓库数据，请进行 AI 相关性筛选、分类和趋势分析。
+  return `你是一位专注于 AI / 机器学习 / 数据 开源生态的技术分析师。以下是 ${dateStr} 的 GitHub AI / 机器学习 / 数据 相关热门仓库数据，请进行 AI / 机器学习 / 数据 相关性筛选、分类和趋势分析。
 
 ## 数据说明
 - **Trending 榜单**（github.com/trending，今日 stars 数最可信）：今日实时热榜，含今日新增 stars
@@ -173,8 +173,8 @@ ${searchSection}
  * - First run: comprehensive overview of all discovered content
  * - Incremental: only new/updated articles since last run
  *
- * SPECIAL HANDLING for OpenAI: metadata-only mode (titles from URL slugs, no article text)
- * because Cloudflare WAF blocks datacenter IPs.
+ * OpenAI article bodies are fetched whenever reachable; if openai.com blocks
+ * the crawler (Cloudflare WAF → HTTP 403) the items fall back to metadata-only.
  */
 export function buildWebReportPrompt(results: WebFetchResult[], dateStr: string, lang: Lang = "zh"): string {
   const isAnyFirstRun = results.some((r) => r.isFirstRun);
@@ -253,7 +253,7 @@ Generate a detailed AI Official Content Tracking Report in English with these se
    - If first full crawl, trace important milestones chronologically
 
 3. **OpenAI Content Highlights** — Same structure, organized by research / release / company / safety categories
-   - ⚠️ Note: OpenAI data is metadata-only (titles derived from URL slugs, no article text). Only list URLs and categories objectively. Do NOT speculate on title meanings or fabricate content summaries. If information is insufficient for analysis, state the data limitation clearly.
+   - ⚠️ Note: OpenAI data may be metadata-only if openai.com blocks the crawler (titles derived from URL slugs, no article text); when bodies are available, summarize them objectively. Do NOT speculate on title meanings or fabricate content summaries. If information is insufficient for analysis, state the data limitation clearly.
 
 4. **Strategic Signal Analysis** — Based on both companies' release cadence and content focus, analyze:
    - Each company's recent technical priorities (model capabilities / safety / productization / ecosystem)

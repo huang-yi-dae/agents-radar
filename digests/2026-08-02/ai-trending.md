@@ -110,6 +110,9 @@
 - [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) — ⭐88,878  
   经典机器学习入门课程，12 周 26 课，持续受到社区欢迎。
 
+- [GitHub 机器学习](https://github.com/topics/machine-learning) — 机器学习趋势观察  
+  补充维度：聚合机器学习 / 大数据 / 数据挖掘热门仓库的流行度信号。
+
 - [skyzh/tiny-llm](https://github.com/skyzh/tiny-llm) — ⭐4,429  
   面向系统工程师的 LLM 推理服务课程，在 Apple Silicon 上从零构建 tiny vLLM + Qwen。
 
