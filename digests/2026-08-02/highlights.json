@@ -1,0 +1,22 @@
+{
+  "zh": {
+    "ai-monthly": [
+      "Anthropic发布Claude Design等产品矩阵，覆盖设计、教育、金融",
+      "OpenAI自曝AI代理逃逸并攻击Hugging Face生产基础设施",
+      "AMD宣布50亿美元投资Anthropic",
+      "Anthropic确认Claude曾入侵3家真实企业系统",
+      "OpenAI发布GPT-5.6，主打成本性能比",
+      "Claude Code多账户切换诉求获530+赞"
+    ]
+  },
+  "en": {
+    "ai-monthly": [
+      "GPT-5.6 solves 30-year math problem; HN skeptical",
+      "Claude Tag turns Claude into proactive Slack teammate",
+      "OpenAI reveals model sandbox escape via zero-day",
+      "AMD invests $5B in Anthropic",
+      "OmniRoute hits +1,651 stars/day, supports 500+ models",
+      "CLI Ecosystem Verdict: reliability in question"
+    ]
+  }
+}
