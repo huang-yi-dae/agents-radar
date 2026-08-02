@@ -100,6 +100,9 @@ Today's trending list is unmistakably agent-centric: specialized agent skill pac
 - [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) — ⭐88,878  
   Classic 12-week machine learning curriculum with lessons, quizzes and hands-on labs.
 
+- [GitHub Machine Learning](https://github.com/topics/machine-learning) — ML trend watch  
+  Supplementary lens: aggregates popularity signals from machine-learning / big-data / data-mining repos.
+
 - [open-compass/opencompass](https://github.com/open-compass/opencompass) — ⭐7,256  
   LLM evaluation platform supporting 100+ datasets; evaluation is becoming critical infrastructure.
 

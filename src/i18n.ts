@@ -131,7 +131,10 @@ export const WEB_REPORT = {
 /** Strings for the GitHub Trending report. */
 export const TRENDING_REPORT = {
   title: t("AI 开源趋势日报", "AI Open Source Trends"),
-  sources: t("数据来源: GitHub Trending + GitHub Search API", "Sources: GitHub Trending + GitHub Search API"),
+  sources: t(
+    "数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势）",
+    "Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends)",
+  ),
   issueTitle: (dateStr: string, lang: Lang) =>
     lang === "en" ? `📈 AI Open Source Trends ${dateStr}` : `📈 AI 开源趋势日报 ${dateStr}`,
 } as const;

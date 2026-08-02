@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vitest";
 import {
   parseSitemapUrls,
   isSitemapIndex,
@@ -7,6 +7,8 @@ import {
   urlCategory,
   titleFromUrl,
   emptyState,
+  fetchWebPageItem,
+  fetchSiteContent,
 } from "../web.ts";
 
 // ---------------------------------------------------------------------------
@@ -200,5 +202,116 @@ describe("emptyState", () => {
     expect(a).not.toBe(b);
     a.anthropic.lastChecked = "modified";
     expect(b.anthropic.lastChecked).toBe("");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// fetchWebPageItem — single page fetch + body extraction
+// ---------------------------------------------------------------------------
+
+describe("fetchWebPageItem", () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  it("extracts title (og:title wins) and body text from a fetched page", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(
+        async () =>
+          new Response(
+            "<html><head><title>Fallback</title><meta property='og:title' content='OG Title'></head>" +
+              "<body><main><p>Hello body</p></main></body></html>",
+            { status: 200 },
+          ),
+      ),
+    );
+    const item = await fetchWebPageItem("anthropic", "https://anthropic.com/news/x");
+    expect(item.title).toBe("OG Title");
+    expect(item.content).toBe("Hello body");
+    expect(item.category).toBe("news");
+    expect(item.site).toBe("anthropic");
+  });
+
+  it("falls back to the URL slug for the title when no title tag exists", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => new Response("<main><p>Body only</p></main>", { status: 200 })),
+    );
+    const item = await fetchWebPageItem("openai", "https://openai.com/research/gpt-5");
+    expect(item.title).toBe("Gpt 5");
+    expect(item.content).toBe("Body only");
+  });
+
+  it("throws when the page cannot be fetched (e.g. WAF 403)", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => new Response("blocked", { status: 403 })),
+    );
+    await expect(fetchWebPageItem("openai", "https://openai.com/research/x")).rejects.toThrow();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// fetchSiteContent — graceful fallback when the host blocks body fetching
+// ---------------------------------------------------------------------------
+
+describe("fetchSiteContent (graceful fallback)", () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  const sitemap = `<?xml version="1.0"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url><loc>https://openai.com/research/gpt-5</loc><lastmod>2026-08-01</lastmod></url>
+      <url><loc>https://openai.com/news/foo-bar</loc><lastmod>2026-07-30</lastmod></url>
+    </urlset>`;
+
+  it("falls back to metadata-only items when the host blocks fetching (HTTP 403)", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (url: string) => {
+        if (String(url).includes("sitemap.xml/research/")) {
+          return new Response(sitemap, { status: 200, headers: { "content-type": "application/xml" } });
+        }
+        if (String(url).includes("sitemap.xml")) {
+          return new Response("<urlset></urlset>", {
+            status: 200,
+            headers: { "content-type": "application/xml" },
+          });
+        }
+        return new Response("blocked", { status: 403 });
+      }),
+    );
+    const state = emptyState();
+    const result = await fetchSiteContent("openai", state);
+    expect(result.newItems).toHaveLength(2);
+    // No body text — but the articles are preserved (not dropped)
+    expect(result.newItems.every((i) => i.content === "")).toBe(true);
+    expect(result.newItems[0]!.title).toBe("Gpt 5");
+    expect(result.newItems[1]!.title).toBe("Foo Bar");
+    // All discovered URLs are still recorded as seen
+    expect(Object.keys(state.openai.seenUrls)).toHaveLength(2);
+  });
+
+  it("extracts body content when the host is reachable", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (url: string) => {
+        if (String(url).includes("sitemap.xml/research/")) {
+          return new Response(sitemap, { status: 200, headers: { "content-type": "application/xml" } });
+        }
+        if (String(url).includes("sitemap.xml")) {
+          return new Response("<urlset></urlset>", {
+            status: 200,
+            headers: { "content-type": "application/xml" },
+          });
+        }
+        return new Response(
+          "<html><head><meta property='og:title' content='Real Title'></head><body><main><p>Body here</p></main></body></html>",
+          { status: 200 },
+        );
+      }),
+    );
+    const result = await fetchSiteContent("openai", emptyState());
+    expect(result.newItems).toHaveLength(2);
+    expect(result.newItems[0]!.content).toBe("Body here");
+    expect(result.newItems[0]!.title).toBe("Real Title");
   });
 });

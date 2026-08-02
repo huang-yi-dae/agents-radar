@@ -13,7 +13,8 @@
  * - This module demonstrates "incremental scraping": compare current state with previous state
  *   to detect changes, rather than re-fetching everything.
  * - Sitemaps are XML files that list all URLs on a website — no need to crawl the site.
- * - The `metadataOnly` flag handles sites that block datacenter IPs (e.g. Cloudflare WAF on OpenAI).
+ * - Body extraction is attempted for every site; sites that block datacenter IPs
+ *   (e.g. Cloudflare WAF on OpenAI) gracefully fall back to metadata-only items.
  *
  * KEY CONCEPTS:
  * - XML parsing with regex (no DOM parser needed for simple sitemaps).
@@ -36,7 +37,7 @@ import { sleep } from "./date.ts";
  * - url: The full URL
  * - title: Page title (from og:title meta tag, or <title>, or URL slug)
  * - lastmod: Last modification date from sitemap
- * - content: Extracted text content (first 1500 chars), or empty string for metadataOnly
+ * - content: Extracted text content (first 1500 chars), or empty string if the page couldn't be fetched (e.g. blocked by WAF)
  * - site: Which site this came from ("anthropic" or "openai")
  * - category: URL path segment (e.g. "news", "research", "engineering")
  */
@@ -101,7 +102,6 @@ export interface WebFetchResult {
  * - prefixes?: For single sitemaps — only keep URLs starting with these paths
  * - subSitemapNames?: For sitemap indexes — names of sub-sitemaps to fetch
  * - subSitemapTemplate?: URL template with {name} placeholder
- * - metadataOnly?: If true, don't fetch article pages — derive title from URL slug
  */
 interface SiteConfig {
   name: string;
@@ -109,14 +109,19 @@ interface SiteConfig {
   prefixes?: string[];
   subSitemapNames?: string[];
   subSitemapTemplate?: string;
-  metadataOnly?: boolean;
 }
 
 /**
  * Site configurations. Maps site identifiers to their sitemap structures.
  *
  * Anthropic: single sitemap, filter by path prefixes (/news/, /research/, etc.)
- * OpenAI: sitemap index with named sub-sitemaps; metadataOnly because Cloudflare blocks IPs.
+ * OpenAI: sitemap index with named sub-sitemaps.
+ *
+ * NOTE on body extraction: OpenAI sits behind Cloudflare WAF, which returns
+ * HTTP 403 for requests from datacenter IPs (e.g. CI runners). We still
+ * *attempt* to fetch article bodies — when reachable the body is extracted;
+ * when blocked, fetchSiteContent degrades to metadata-only items instead of
+ * dropping articles entirely.
  */
 const SITE_CONFIGS: Record<"anthropic" | "openai", SiteConfig> = {
   anthropic: {
@@ -139,7 +144,6 @@ const SITE_CONFIGS: Record<"anthropic" | "openai", SiteConfig> = {
       "product",
     ],
     subSitemapTemplate: "https://openai.com/sitemap.xml/{name}/",
-    metadataOnly: true, // Cloudflare WAF blocks datacenter IPs
   },
 };
 
@@ -303,6 +307,44 @@ export function titleFromUrl(url: string): string {
 }
 
 // ---------------------------------------------------------------------------
+// Page fetch + item builders
+// ---------------------------------------------------------------------------
+
+/**
+ * Fetch a single article page and extract its title + body text.
+ *
+ * Throws if the page can't be fetched (HTTP error, timeout, network failure)
+ * so the caller can fall back to a metadata-only item instead of dropping it.
+ */
+export async function fetchWebPageItem(
+  site: "anthropic" | "openai",
+  loc: string,
+  lastmod?: string,
+): Promise<WebPageItem> {
+  const html = await httpGet(loc);
+  return {
+    url: loc,
+    title: extractTitle(html) || titleFromUrl(loc),
+    lastmod: lastmod ?? "",
+    content: extractText(html),
+    site,
+    category: urlCategory(loc),
+  };
+}
+
+/** Build a metadata-only item (no body text) from a sitemap URL. */
+function metadataOnlyItem(site: "anthropic" | "openai", loc: string, lastmod?: string): WebPageItem {
+  return {
+    url: loc,
+    title: titleFromUrl(loc),
+    lastmod: lastmod ?? "",
+    content: "",
+    site,
+    category: urlCategory(loc),
+  };
+}
+
+// ---------------------------------------------------------------------------
 // URL discovery
 // ---------------------------------------------------------------------------
 
@@ -394,7 +436,9 @@ export function saveWebState(state: WebState): void {
  * 3. Compare with seen URLs to find new/updated ones.
  * 4. On first run: fetch content for up to MAX_CONTENT_FETCH_FIRST_RUN articles.
  *    On subsequent runs: fetch all new articles.
- * 5. For metadataOnly sites: skip content fetching, derive title from URL.
+ * 5. Attempt full page fetch for every item; on failure fall back to
+ *    metadata-only. After the first failure in a run, skip remaining fetches
+ *    (the host is blocking us, e.g. Cloudflare WAF).
  * 6. Mark ALL discovered URLs as seen (not just fetched ones).
  *
  * @param site - Site identifier ("anthropic" or "openai")
@@ -421,11 +465,11 @@ export async function fetchSiteContent(
     return b.lastmod.localeCompare(a.lastmod);
   });
 
-  // Find new URLs: not seen before, OR lastmod is newer (for non-metadataOnly sites)
+  // Find new URLs: not seen before, OR lastmod is newer (re-fetch updated content)
   const newUrls = allDiscovered.filter(({ loc, lastmod }) => {
     const prev = siteState.seenUrls[loc];
     if (!prev) return true;
-    if (!cfg.metadataOnly && lastmod && lastmod > prev) return true;
+    if (lastmod && lastmod > prev) return true;
     return false;
   });
 
@@ -437,37 +481,27 @@ export async function fetchSiteContent(
       `${newUrls.length} new URLs, fetching content for ${toFetch.length}`,
   );
 
-  // Build items — either from full page fetches or from sitemap metadata only
+  // Build items — attempt a full page fetch for every item. On failure (e.g.
+  // Cloudflare WAF 403), fall back to a metadata-only item and short-circuit
+  // the rest of this site's fetches so we don't hammer the host with timeouts.
   const items: WebPageItem[] = [];
-  if (cfg.metadataOnly) {
-    for (const { loc, lastmod } of toFetch) {
-      items.push({
-        url: loc,
-        title: titleFromUrl(loc),
-        lastmod: lastmod ?? "",
-        content: "",
-        site,
-        category: urlCategory(loc),
-      });
+  let siteBlocked = false;
+  for (const { loc, lastmod } of toFetch) {
+    if (siteBlocked) {
+      items.push(metadataOnlyItem(site, loc, lastmod));
+      continue;
     }
-  } else {
-    // Fetch page content sequentially with a polite delay
-    for (const { loc, lastmod } of toFetch) {
-      try {
-        const html = await httpGet(loc);
-        items.push({
-          url: loc,
-          title: extractTitle(html),
-          lastmod: lastmod ?? "",
-          content: extractText(html),
-          site,
-          category: urlCategory(loc),
-        });
-      } catch (err) {
-        console.error(`  [web/${site}] Failed to fetch ${loc}: ${err}`);
-      }
-      await sleep(FETCH_DELAY_MS);
+    try {
+      items.push(await fetchWebPageItem(site, loc, lastmod));
+    } catch (err) {
+      siteBlocked = true;
+      console.error(
+        `  [web/${site}] Body fetch failed for ${loc}: ${err}. ` +
+          `Falling back to metadata-only for remaining ${site} items.`,
+      );
+      items.push(metadataOnlyItem(site, loc, lastmod));
     }
+    await sleep(FETCH_DELAY_MS);
   }
 
   // Mark ALL discovered URLs as seen (not just fetched ones)
@@ -489,7 +523,8 @@ export async function fetchSiteContent(
 // This module implements incremental web scraping with 3 key concepts:
 // 1. Sitemap parsing (regex-based XML extraction)
 // 2. State persistence (JSON file tracking seen URLs)
-// 3. Content extraction (HTML → title + text, with metadataOnly fallback)
+// 3. Content extraction (HTML → title + text, with graceful fallback to
+//    metadata-only when a page can't be fetched)
 //
 // QUESTIONS:
 // Q1: Why use regex for XML parsing instead of a proper XML parser?
@@ -498,7 +533,9 @@ export async function fetchSiteContent(
 // Q2: Why mark ALL discovered URLs as seen, not just fetched ones?
 //     (Answer: If we only marked fetched URLs, the next run would re-discover
 //      all the unfetched URLs and treat them as "new" again)
-// Q3: Why does OpenAI use metadataOnly mode?
-//     (Answer: Cloudflare WAF blocks requests from datacenter IPs — we can
-//      read the sitemap but can't fetch article pages)
+// Q3: Why does OpenAI sometimes only have metadata?
+//     (Answer: Cloudflare WAF returns HTTP 403 for datacenter IPs, so the
+//      article-page fetch fails. fetchSiteContent catches the failure and
+//      falls back to metadata-only items instead of dropping the article —
+//      body extraction still runs whenever the host is reachable.)
 // ─────────────────────────────────────────────────────────────────────────────

@@ -6,7 +6,7 @@
  *   1. GitHub Trending page (HTML scraping) — today's hottest repos by new stars
  *   2. GitHub Search API — repos matching AI topic tags, active in last 7 days
  * - HTML scraping uses regex to extract data from the page structure.
- * - The Search API runs 6 parallel queries and deduplicates results.
+ * - The Search API runs the SEARCH_QUERIES in parallel and deduplicates results.
  */
 
 // ---------------------------------------------------------------------------
@@ -46,7 +46,13 @@ export interface TrendingData {
 // Constants
 // ---------------------------------------------------------------------------
 
-/** AI topic queries for the GitHub Search API. */
+/**
+ * AI topic queries for the GitHub Search API.
+ *
+ * Two named data-source groups share this list (same { q, label } shape):
+ *  - "GitHub AI 趋势"      — LLM / agent / RAG / vector-db / training
+ *  - "GitHub 机器学习趋势" — big data / data analysis / data mining
+ */
 const SEARCH_QUERIES = [
   { q: "topic:llm", label: "llm" },
   { q: "topic:ai-agent", label: "ai-agent" },
@@ -54,6 +60,10 @@ const SEARCH_QUERIES = [
   { q: "topic:vector-database", label: "vector-db" },
   { q: "topic:large-language-model", label: "llm-model" },
   { q: "topic:machine-learning", label: "ml" },
+  // ── GitHub 机器学习趋势：大数据 / 数据分析 / 数据挖掘 ──
+  { q: "topic:big-data", label: "big-data" },
+  { q: "topic:data-analysis", label: "data-analysis" },
+  { q: "topic:data-mining", label: "data-mining" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -164,7 +174,7 @@ interface SearchApiResponse {
  * Search GitHub for AI-related repos using topic tags.
  *
  * HOW IT WORKS:
- * 1. For each of the 6 SEARCH_QUERIES, make a parallel API call.
+ * 1. For each of the SEARCH_QUERIES entries, make a parallel API call.
  * 2. Each query searches for repos with a specific topic tag, pushed in the last 7 days.
  * 3. Results are deduplicated by full_name (a repo can match multiple topics).
  * 4. The `seen` Set tracks which repos have already been added.
