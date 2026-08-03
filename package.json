@@ -5,6 +5,7 @@
   "packageManager": "pnpm@9.15.9",
   "scripts": {
     "start": "tsx src/index.ts",
+    "start:local": "tsx --env-file=.env.local src/index.ts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
@@ -30,6 +31,7 @@
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^25.3.5",
     "@vitest/coverage-v8": "^4.0.18",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-prettier": "^10",
     "husky": "^9.1.7",

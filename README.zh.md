@@ -242,6 +242,12 @@ pnpm install
 
 export GITHUB_TOKEN=ghp_xxxxx
 
+# 可选：供应商与模型
+# export LLM_PROVIDER=openai
+# export OPENAI_API_KEY=sk-xxxxxxxx
+# export OPENAI_BASE_URL=https://api.stepfun.com/v1
+# export OPENAI_MODEL=step-3.7-flash
+
 # 方式 A: Anthropic（默认）
 export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 
@@ -249,16 +255,23 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # export LLM_PROVIDER=openai
 # export OPENAI_API_KEY=sk-xxxxxxxx
 
-# 方式 C: GitHub Copilot（使用 GITHUB_TOKEN）
+# 方式 C: OpenAI 兼容端点 + 自定义模型
+# export LLM_PROVIDER=openai
+# export OPENAI_API_KEY=sk-xxxxxxxx
+# export OPENAI_BASE_URL=https://api.stepfun.com/v1
+# export OPENAI_MODEL=step-3.7-flash
+
+# 方式 D: GitHub Copilot（使用 GITHUB_TOKEN）
 # export LLM_PROVIDER=github-copilot
 
-# 方式 D: OpenRouter
+# 方式 E: OpenRouter
 # export LLM_PROVIDER=openrouter
 # export OPENROUTER_API_KEY=sk-or-xxxxxxxx
 
 export DIGEST_REPO=your-username/agents-radar  # 可选，留空则仅写入本地文件
 
 pnpm start
+pnpm start:local
 ```
 
 ## 输出格式
