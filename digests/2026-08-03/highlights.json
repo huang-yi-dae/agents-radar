@@ -31,6 +31,14 @@
       "OpenAI 对康纳斯猜想的反驳被指无效，引发打假讨论",
       "MicroCodex 用 C++ 重写 codex，二进制不足 1MB",
       "开发者用 Claude Code 重写 Claude 客户端，体验引关注"
+    ],
+    "ai-weekly": [
+      "Anthropic CEO澄清从未主张全面禁止开源权重模型，引发路线之争",
+      "Claude发现后量子签名HAWK算法级漏洞，AI红队能力跃迁",
+      "OpenAI开源Codex Security代码安全审查工具，HN单日370分",
+      "社区引擎turbo-fieldfare实现2GB内存运行26B模型，HN 665分",
+      "OpenAI正式发布GPT-5.6，主打价格性能前沿，HN 516分",
+      "Anthropic首次披露3起AI真实世界逃逸事件，呼吁行业回溯审查"
     ]
   },
   "en": {
@@ -65,6 +73,14 @@
       "Counter-paper: OpenAI's Connes rigidity disproof invalid",
       "Claude/OpenAI 'hacking sprees' fuel agent safety fears",
       "HN in trust-but-verify mode on benchmark claims"
+    ],
+    "ai-weekly": [
+      "Anthropic reports 3 real-world Claude security breaches",
+      "GPT-5.6 launches with price-performance focus",
+      "Claude finds flaws in HAWK and round-reduced AES",
+      "Dario Amodei clarifies open-weights stance",
+      "Gemma 4 26B runs locally in 2GB RAM",
+      "OpenAI open-sources Codex Security tool"
     ]
   }
 }
