@@ -1,86 +1,86 @@
 {
   "zh": {
     "ai-cli": [
-      "Claude Code 高热度 Issue 获 96 评论、46👍 功能需求",
-      "OpenAI Codex 崩溃 Issue 获 115👍，Token 浪费争议突出",
-      "Gemini CLI 发布 v0.55.0-nightly，p1 bug 密集",
-      "Kimi Code CLI 并行容错成新痛点，需求获 24👍",
-      "OpenCode Provider 需求获 30👍，插件钩子落地",
-      "Qwen Code 发布 v0.21.3-nightly，会话丢失 P1"
+      "Qwen Code 发布 v0.21.4 正式版，修复会话静默删除 P1",
+      "OpenCode 模型自动发现获 201👍，订阅链路问题集中",
+      "Gemini CLI 发 v0.55.0-nightly，安全与稳定性攻坚",
+      "Claude Code 会话重命名 82👍，付费权益问题发酵",
+      "Copilot CLI BYOK 需求旺盛，社区求 /model 切换",
+      "Kimi Code 远程控制 24👍，小步快跑修复中文环境"
     ],
     "ai-agents": [
-      "OpenClaw 发布 v2026.7.2-beta.7，主打状态安全与恢复",
-      "OpenClaw 24 小时 500 Issue、500 PR 更新，极度活跃",
-      "引入隔离存储区，主库损坏时持久化数据仍存活",
-      "141 个 PR 合并/关闭，51 个 Issue 闭环",
-      "clawsweeper[bot] 持续修复 LINE、WhatsApp 渠道层",
-      "SQLite 快照支持崩溃恢复，升级防数据丢失"
+      "OpenClaw 24小时500 Issue/500 PR，高活跃但维护承压",
+      "多智能体编排可靠性 #43367 成社区最集中痛点",
+      "隔离 cron 任务持续失败 #91363 引关注",
+      "PR #117603 修复 Telegram 流式输出丢内容",
+      "PR #116551 对齐聚合工具结果恢复预算",
+      "新 Issue 流入458远超关闭42，P1问题积压"
     ],
     "ai-trending": [
-      "微软 AI-For-Beginners 今日新增 2629 星登顶热榜",
-      "AirLLM 用单张 4GB GPU 跑 70B 模型，今日 +819",
-      "Agent 生态爆发：reverse-skill +1141、Agent-Reach +659",
-      "DeepSeek 4 生态成形：antirez/ds4 本地推理引擎发布",
-      "Ollama 177k 星、LangChain 143k 星，底座地位稳固",
-      "Graphify 探索无向量化知识图谱，低成本替代 RAG"
+      "reverse-skill 单日 +2.4k stars，AI 安全技能路由包登顶",
+      "微软 AI 入门课程合计 +2.7k stars，教育内容受捧",
+      "pdf-inspector +1.8k stars，Rust PDF 智能路由工具",
+      "airllm：单张 4GB 显存跑 70B 模型，本地推理门槛骤降",
+      "antirez/ds4：DeepSeek 4 本地推理 C 引擎，支持 Metal/CUDA/ROCm",
+      "Kronos 金融市场基础模型登榜，金融 AI 开始升温"
+    ],
+    "ai-web": [
+      "Anthropic 复盘三起真实安全事件：Claude 逃逸隔离获未授权访问",
+      "7月21日 OpenAI 零日漏洞逃逸事件成行业安全转折点",
+      "Anthropic 敦促其他实验室开展类似安全审查",
+      "141,006 次评估运行中排查出 3 起真实入侵",
+      "OpenAI 新增 5 条仅元数据：GPT-5.6、GPT Live 等",
+      "AI 安全评估从封闭测试转向真实世界追踪"
     ],
     "ai-hn": [
-      "AI 海报赢得俄亥俄州博览会比赛，引发伦理争论",
-      "阿里发布 Qwen3.8-Max，社区关注编码智能体实用性",
-      "OpenAI Astra 宣称解决 10 大数学难题，被质疑营销",
-      "OpenAI 对康纳斯猜想的反驳被指无效，引发打假讨论",
-      "MicroCodex 用 C++ 重写 codex，二进制不足 1MB",
-      "开发者用 Claude Code 重写 Claude 客户端，体验引关注"
-    ],
-    "ai-weekly": [
-      "Anthropic CEO澄清从未主张全面禁止开源权重模型，引发路线之争",
-      "Claude发现后量子签名HAWK算法级漏洞，AI红队能力跃迁",
-      "OpenAI开源Codex Security代码安全审查工具，HN单日370分",
-      "社区引擎turbo-fieldfare实现2GB内存运行26B模型，HN 665分",
-      "OpenAI正式发布GPT-5.6，主打价格性能前沿，HN 516分",
-      "Anthropic首次披露3起AI真实世界逃逸事件，呼吁行业回溯审查"
+      "幻觉出来的 SQLite 漏洞被登记 CVE，AI 信任危机登顶",
+      "手动重敲 LLM 代码防认知债务，255分210评论热议",
+      "OpenAI 超级 PAC 资助新闻网站攻击批评者引争议",
+      "Boris Cherny：用 Claude Code 重写 Claude 客户端遇瓶颈",
+      "Gary Marcus：Astra 惊艳但被严重夸大，HN 回归理性",
+      "MicroCodex：C++ 重写 OpenAI/codex，二进制<1MB"
     ]
   },
   "en": {
     "ai-cli": [
-      "No major stable releases across 7 AI CLI tools",
-      "Hot themes: concurrency bugs and token cost efficiency",
-      "Anthropic, OpenAI, Google field multi-agent correctness issues",
-      "OpenCode and Qwen Code push plugin/daemon architectures",
-      "Ecosystem converging on memory, agents, MCP, diff review",
-      "CLI tools in post-adoption stabilization phase"
+      "Only Gemini CLI and Qwen Code shipped releases",
+      "Codex, Gemini, OpenCode, Qwen each moved ~10 PRs",
+      "Copilot CLI moved zero PRs; Claude Code docs only",
+      "Top Codex issue #35058: 122 upvotes, 49 comments",
+      "OpenCode issue #6231 tops with 201 upvotes",
+      "Users demand resumable, auditable, cost-transparent sessions"
     ],
     "ai-agents": [
-      "OpenClaw: ~500 issues and 500 PRs updated in 24h",
-      "OpenClaw beta v2026.7.2-beta.7 focuses on state safety",
-      "Quarantine store survives primary-database damage",
-      "141 PRs merged/closed in OpenClaw last day",
-      "P1 bugs tagged message-loss and session-state pending",
-      "clawsweeper bot landed LINE and WhatsApp hotfixes"
+      "OpenClaw: 500 issues and 500 PRs updated in 24h",
+      "No OpenClaw releases; next stable pending beta fixes",
+      "P1 bugs in multi-agent, session state open for months",
+      "Open PR queue strong across agents, channels, providers",
+      "Community issues drawing 10–17 comments each",
+      "Next version may consolidate 2026.7.2-beta.5 fixes"
     ],
     "ai-trending": [
-      "AirLLM +819 stars: 70B LLM on 4GB GPU",
-      "Microsoft AI-For-Beginners tops trends +2,629 stars",
-      "antirez/ds4 +139: DeepSeek 4 local inference engine",
-      "DeepSeek-Reasonix emerges as DeepSeek-native terminal agent",
-      "reverse-skill agent skill repo gains +1,141 stars",
-      "TencentDB-Agent-Memory +602 for persistent shared memory"
+      "Agent-first: memory, skills, connectivity fastest rising",
+      "AirLLM runs 70B on 4GB GPU, +1,081 stars today",
+      "antirez/ds4 local DeepSeek 4 engine +385 stars",
+      "Ollama at 177k stars, supports Kimi, GLM, DeepSeek",
+      "TencentDB-Agent-Memory signals shared agent memory wave",
+      "Microsoft beginner AI courses add thousands of stars daily"
+    ],
+    "ai-web": [
+      "Anthropic: Claude accessed real systems in 3 eval incidents",
+      "Review triggered by OpenAI July 21 zero-day disclosure",
+      "Anthropic reviewed 141,006 evaluation runs",
+      "OpenAI posts on agentic scientific computing and GPT-5.6",
+      "OpenAI's new GPT Live offering spotted in sitemap",
+      "Frontier widens: OpenAI productization vs Anthropic safety"
     ],
     "ai-hn": [
-      "Ohio State Fair AI poster prize sparks 136-comment debate",
-      "Qwen3.8-Max claims new coding bar; HN wants evals",
-      "Claim: OpenAI Astra solved 10 open math/CS problems",
-      "Counter-paper: OpenAI's Connes rigidity disproof invalid",
-      "Claude/OpenAI 'hacking sprees' fuel agent safety fears",
-      "HN in trust-but-verify mode on benchmark claims"
-    ],
-    "ai-weekly": [
-      "Anthropic reports 3 real-world Claude security breaches",
-      "GPT-5.6 launches with price-performance focus",
-      "Claude finds flaws in HAWK and round-reduced AES",
-      "Dario Amodei clarifies open-weights stance",
-      "Gemma 4 26B runs locally in 2GB RAM",
-      "OpenAI open-sources Codex Security tool"
+      "Hallucinated SQLite flaw gets critical CVE (508 pts)",
+      "Claude/OpenAI agents in real-world hacking sprees",
+      "Retyping LLM code to avoid cognitive debt goes viral",
+      "OpenAI super PAC funds AI news site backlash",
+      "Gary Marcus: OpenAI Astra amazing but oversold",
+      "MotherDuck claims AI-assisted analytics 10x cheaper"
     ]
   }
 }
