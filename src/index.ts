@@ -52,6 +52,15 @@ import { loadConfig } from "./config.ts";
 import { toCstDateStr, toUtcStr } from "./date.ts";
 import { type Lang, MSG, ISSUE_LABELS, CLI_ISSUE_TITLE, OPENCLAW_ISSUE_TITLE } from "./i18n.ts";
 
+async function safeCallLlm(prompt: string, maxTokens = 4096, fallback = ""): Promise<string> {
+  try {
+    return await callLlm(prompt, maxTokens);
+  } catch (err) {
+    console.error(`  [llm] Comparison/reporting LLM call failed: ${err}`);
+    return fallback || `> LLM generation failed: ${err instanceof Error ? err.message : String(err)}\n`;
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Repo config — loaded from config.yml, falls back to built-in defaults
 // ---------------------------------------------------------------------------
@@ -379,10 +388,10 @@ async function main(): Promise<void> {
 
   // 4 comparison LLM calls in parallel (ZH CLI + ZH OpenClaw + EN CLI + EN OpenClaw)
   const [zhComparison, zhPeersComparison, enComparison, enPeersComparison] = await Promise.all([
-    callLlm(buildComparisonPrompt(zhSummaries.cliDigests, dateStr, "zh")),
-    callLlm(buildPeersComparisonPrompt(makeOpenclawDigest("zh"), zhSummaries.peerDigests, dateStr, "zh")),
-    callLlm(buildComparisonPrompt(enSummaries.cliDigests, dateStr, "en")),
-    callLlm(buildPeersComparisonPrompt(makeOpenclawDigest("en"), enSummaries.peerDigests, dateStr, "en")),
+    safeCallLlm(buildComparisonPrompt(zhSummaries.cliDigests, dateStr, "zh")),
+    safeCallLlm(buildPeersComparisonPrompt(makeOpenclawDigest("zh"), zhSummaries.peerDigests, dateStr, "zh")),
+    safeCallLlm(buildComparisonPrompt(enSummaries.cliDigests, dateStr, "en")),
+    safeCallLlm(buildPeersComparisonPrompt(makeOpenclawDigest("en"), enSummaries.peerDigests, dateStr, "en")),
   ]);
 
   const comparisonByLang = { zh: zhComparison, en: enComparison };
@@ -516,19 +525,27 @@ async function main(): Promise<void> {
   // ── Step 6: Create GitHub Issues for CLI + OpenClaw (ZH + EN) ────────────
   if (digestRepo) {
     for (const lang of ["zh", "en"] as const) {
-      const cliUrl = await createGitHubIssue(
-        CLI_ISSUE_TITLE(dateStr, lang),
-        cliContent[lang],
-        ISSUE_LABELS.cli[lang],
-      );
-      console.log(`  Created CLI issue (${lang}): ${cliUrl}`);
+      try {
+        const cliUrl = await createGitHubIssue(
+          CLI_ISSUE_TITLE(dateStr, lang),
+          cliContent[lang],
+          ISSUE_LABELS.cli[lang],
+        );
+        console.log(`  Created CLI issue (${lang}): ${cliUrl}`);
+      } catch (err) {
+        console.error(`  [issues] Failed to create CLI issue (${lang}): ${err}`);
+      }
 
-      const ocUrl = await createGitHubIssue(
-        OPENCLAW_ISSUE_TITLE(dateStr, lang),
-        openclawContent[lang],
-        ISSUE_LABELS.openclaw[lang],
-      );
-      console.log(`  Created OpenClaw issue (${lang}): ${ocUrl}`);
+      try {
+        const ocUrl = await createGitHubIssue(
+          OPENCLAW_ISSUE_TITLE(dateStr, lang),
+          openclawContent[lang],
+          ISSUE_LABELS.openclaw[lang],
+        );
+        console.log(`  Created OpenClaw issue (${lang}): ${ocUrl}`);
+      } catch (err) {
+        console.error(`  [issues] Failed to create OpenClaw issue (${lang}): ${err}`);
+      }
     }
   }
 
