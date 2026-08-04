@@ -23,6 +23,17 @@ import { OpenAICompatibleProvider } from "./openai-compatible.ts";
 /** StepFun API endpoint. */
 const STEPFUN_BASE_URL = "https://api.stepfun.com/v1";
 
+// StepFun reasoning models may surface internal thinking traces inside
+// `message.content` as well as in dedicated `reasoning` / `reasoning_content`
+// fields. We aggressively strip those internal traces so the final digest only
+// keeps the user-facing answer.
+const STEPFUN_THINKING_PATTERNS = [
+  /<think>[\s\S]*?<\/think>/i,
+  /<thinking>[\s\S]*?<\/thinking>/i,
+  /\[thinking\][\s\S]*?\[\/thinking\]/i,
+  /【thinking】[\s\S]*?【\/thinking】/i,
+];
+
 /**
  * StepFun LLM provider.
  *
@@ -61,11 +72,18 @@ export class StepFunProvider extends OpenAICompatibleProvider {
     });
 
     const message = response.choices?.[0]?.message;
-    const text = message?.content ?? "";
+    const rawText = message?.content ?? "";
 
-    if (text) return text;
+    // Always prefer `content`; never use internal reasoning fields as final output.
+    const cleanedText = STEPFUN_THINKING_PATTERNS.reduce(
+      (text, pattern) => text.replace(pattern, "").trim(),
+      rawText,
+    );
+
+    if (cleanedText) return cleanedText;
 
     const responseSummary = {
+      contentPreview: typeof rawText === "string" ? rawText.slice(0, 200) : rawText,
       id: response.id,
       model: response.model,
       object: response.object,
@@ -74,7 +92,7 @@ export class StepFunProvider extends OpenAICompatibleProvider {
       usage: response.usage,
       choices: response.choices,
     };
-    console.error(`[${this.name}] LLM call returned empty content: ${JSON.stringify(responseSummary)}`);
+    console.error(`[${this.name}] LLM call returned no usable content: ${JSON.stringify(responseSummary)}`);
     return `[LLM fallback] ${this.name} returned an empty response.`;
   }
 }
