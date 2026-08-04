@@ -245,8 +245,8 @@ export GITHUB_TOKEN=ghp_xxxxx
 # Optional: provider and model
 # export LLM_PROVIDER=openai
 # export OPENAI_API_KEY=sk-xxxxxxxx
-# export OPENAI_BASE_URL=https://api.stepfun.com/v1
-# export OPENAI_MODEL=step-3.7-flash
+# export OPENAI_BASE_URL=https://api.deepseek.com
+# export OPENAI_MODEL=deepseek-v4-flash
 
 # Option A: Anthropic (default)
 export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
@@ -258,8 +258,8 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # Option C: OpenAI-compatible endpoint with custom model
 # export LLM_PROVIDER=openai
 # export OPENAI_API_KEY=sk-xxxxxxxx
-# export OPENAI_BASE_URL=https://api.stepfun.com/v1
-# export OPENAI_MODEL=step-3.7-flash
+# export OPENAI_BASE_URL=https://api.deepseek.com
+# export OPENAI_MODEL=deepseek-v4-flash
 
 # Option D: GitHub Copilot (uses GITHUB_TOKEN)
 # export LLM_PROVIDER=github-copilot
