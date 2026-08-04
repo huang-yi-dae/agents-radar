@@ -4,7 +4,6 @@ import {
   OpenAIProvider,
   GitHubCopilotProvider,
   OpenRouterProvider,
-  StepFunProvider,
   createProvider,
   VALID_PROVIDER_NAMES,
   type LlmProvider,
@@ -101,18 +100,12 @@ describe("LlmProvider interface", () => {
     expect(p.name).toBe("openrouter");
   });
 
-  it("StepFunProvider has correct name", () => {
-    const p = new StepFunProvider({ apiKey: "test" });
-    expect(p.name).toBe("stepfun");
-  });
-
   it("all providers implement LlmProvider with call()", () => {
     const providers: LlmProvider[] = [
       new AnthropicProvider(),
       new OpenAIProvider({ apiKey: "k" }),
       new GitHubCopilotProvider({ apiKey: "k" }),
       new OpenRouterProvider({ apiKey: "k" }),
-      new StepFunProvider({ apiKey: "k" }),
     ];
     for (const p of providers) {
       expect(typeof p.name).toBe("string");
@@ -127,7 +120,7 @@ describe("LlmProvider interface", () => {
 
 describe("VALID_PROVIDER_NAMES", () => {
   it("contains all supported providers", () => {
-    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter", "stepfun"]);
+    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter"]);
   });
 });
 
@@ -366,22 +359,16 @@ describe("createProvider", () => {
     expect(p).toBeInstanceOf(OpenRouterProvider);
   });
 
-  it("creates stepfun provider", () => {
-    const p = createProvider("stepfun");
-    expect(p).toBeInstanceOf(StepFunProvider);
-  });
-
-  it(
-    "reads LLM_PROVIDER from env",
+  it("reads LLM_PROVIDER from env", () => {
     withEnv({ LLM_PROVIDER: "openai" }, () => {
       const p = createProvider();
       expect(p).toBeInstanceOf(OpenAIProvider);
-    }),
-  );
+    });
+  });
 
   it("throws descriptive error for unknown provider", () => {
     expect(() => createProvider("bogus" as never)).toThrow(
-      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter, stepfun/,
+      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter/,
     );
   });
 
@@ -393,7 +380,6 @@ describe("createProvider", () => {
     const spy = vi.spyOn(console, "log").mockImplementation(() => {});
     createProvider("anthropic");
     const logged = spy.mock.calls.flat().join(" ");
-    // Must log provider name, must NOT log any key-like strings
     expect(logged).toContain("anthropic");
     expect(logged).not.toMatch(/sk-|ghp_|key|secret/i);
     spy.mockRestore();

@@ -87,7 +87,10 @@ export abstract class OpenAICompatibleProvider implements LlmProvider {
     });
     const message = response.choices?.[0]?.message;
     const text =
-      message?.content || (message as { reasoning_content?: string } | undefined)?.reasoning_content || "";
+      message?.content ||
+      (message as { reasoning_content?: string } | undefined)?.reasoning_content ||
+      (message as { reasoning?: string } | undefined)?.reasoning ||
+      "";
     if (text) return text;
 
     const responseSummary = {

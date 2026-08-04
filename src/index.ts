@@ -484,19 +484,28 @@ async function main(): Promise<void> {
       callLlm(buildHighlightsPrompt(zhReports, "zh"), 1024),
       callLlm(buildHighlightsPrompt(enReports, "en"), 1024),
     ]);
-    // Parse JSON from LLM response (strip markdown code fences if present)
-    highlights.zh = JSON.parse(
-      zhRaw
+
+    const parseHighlights = (raw: string): Record<string, string[]> => {
+      const trimmed = raw
         .replace(/```json?\n?/g, "")
         .replace(/```/g, "")
-        .trim(),
-    );
-    highlights.en = JSON.parse(
-      enRaw
-        .replace(/```json?\n?/g, "")
-        .replace(/```/g, "")
-        .trim(),
-    );
+        .trim();
+      const jsonCandidate = trimmed.startsWith("{") ? trimmed : `{${trimmed}}`;
+      const parsed = JSON.parse(jsonCandidate);
+      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+        const normalized: Record<string, string[]> = {};
+        for (const [key, value] of Object.entries(parsed)) {
+          if (Array.isArray(value)) {
+            normalized[key] = value.filter((item): item is string => typeof item === "string");
+          }
+        }
+        return normalized;
+      }
+      return {};
+    };
+
+    highlights.zh = parseHighlights(zhRaw);
+    highlights.en = parseHighlights(enRaw);
   } catch (err) {
     console.error(`  [highlights] Generation failed: ${err}`);
   }
