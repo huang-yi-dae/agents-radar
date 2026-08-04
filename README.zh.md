@@ -59,11 +59,11 @@ export GITHUB_TOKEN=ghp_xxxxx
 # 方式 A: Anthropic（默认）
 export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 
-# 方式 B: StepFun
-export LLM_PROVIDER=stepfun
+# 方式 B: OpenAI 兼容端点
+export LLM_PROVIDER=openai
 export OPENAI_API_KEY=sk-xxxxxxxx
-export OPENAI_BASE_URL=https://api.stepfun.com/v1
-export OPENAI_MODEL=step-3.7-flash
+export OPENAI_BASE_URL=https://api.deepseek.com
+export OPENAI_MODEL=deepseek-v4-flash
 
 # 方式 C: OpenAI 兼容端点
 export LLM_PROVIDER=openai
@@ -259,11 +259,11 @@ openclaw_peers:
 | 供应商 | `LLM_PROVIDER` | 所需环境变量 | 默认模型 |
 |--------|---------------|------------|----------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
-| StepFun | `stepfun` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `step-3.7-flash` |\`r\`n| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
+| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
-可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`STEPFUN_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
+可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
 
 Provider 抽象层位于 `src/providers/`，每个供应商对应独立文件并实现 `LlmProvider` 接口。新增供应商只需创建新文件并在工厂函数中注册。
 

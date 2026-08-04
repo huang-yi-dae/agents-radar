@@ -59,11 +59,11 @@ export GITHUB_TOKEN=ghp_xxxxx
 # Option A: Anthropic (default)
 export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 
-# Option B: StepFun
-export LLM_PROVIDER=stepfun
+# Option B: OpenAI-compatible endpoint
+export LLM_PROVIDER=openai
 export OPENAI_API_KEY=sk-xxxxxxxx
-export OPENAI_BASE_URL=https://api.stepfun.com/v1
-export OPENAI_MODEL=step-3.7-flash
+export OPENAI_BASE_URL=https://api.deepseek.com
+export OPENAI_MODEL=deepseek-v4-flash
 
 # Option C: OpenAI-compatible endpoint
 export LLM_PROVIDER=openai
@@ -259,11 +259,11 @@ Set `LLM_PROVIDER` to choose which model backend powers the digest generation. D
 | Provider | `LLM_PROVIDER` | Required env vars | Default model |
 |----------|---------------|-------------------|---------------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
-| StepFun | `stepfun` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `step-3.7-flash` |\`r\`n| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
+| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
-Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `STEPFUN_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
+Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
 
 The provider abstraction lives in `src/providers/` — each provider is a separate file implementing the `LlmProvider` interface. Adding a new provider only requires creating a new file and registering it in the factory.
 

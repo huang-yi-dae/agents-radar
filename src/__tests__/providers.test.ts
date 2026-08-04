@@ -120,7 +120,7 @@ describe("LlmProvider interface", () => {
 
 describe("VALID_PROVIDER_NAMES", () => {
   it("contains all supported providers", () => {
-    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter", "stepfun"]);
+    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter"]);
   });
 });
 
@@ -193,6 +193,16 @@ describe("OpenAIProvider", () => {
     withEnv({ OPENAI_MODEL: "gpt-4-turbo" }, () => {
       const p = new OpenAIProvider({ apiKey: "k" });
       expect(p.name).toBe("openai");
+      expect(p).toBeInstanceOf(OpenAIProvider);
+    }),
+  );
+
+  it(
+    "uses OPENAI_BASE_URL env var when omitted",
+    withEnv({ OPENAI_BASE_URL: "https://api.deepseek.com" }, () => {
+      const p = new OpenAIProvider({ apiKey: "k" });
+      expect(p.name).toBe("openai");
+      expect(p).toBeInstanceOf(OpenAIProvider);
     }),
   );
 
