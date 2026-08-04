@@ -83,7 +83,8 @@ export abstract class OpenAICompatibleProvider implements LlmProvider {
       max_completion_tokens: maxTokens,
       messages: [{ role: "user", content: prompt }],
     });
-    const text = response.choices?.[0]?.message?.content;
+    const message = response.choices?.[0]?.message;
+    const text = message?.content || (message as { reasoning?: string } | undefined)?.reasoning || "";
     if (text) return text;
 
     const responseSummary = {
