@@ -4,6 +4,7 @@ import {
   OpenAIProvider,
   GitHubCopilotProvider,
   OpenRouterProvider,
+  StepFunProvider,
   createProvider,
   VALID_PROVIDER_NAMES,
   type LlmProvider,
@@ -100,12 +101,18 @@ describe("LlmProvider interface", () => {
     expect(p.name).toBe("openrouter");
   });
 
+  it("StepFunProvider has correct name", () => {
+    const p = new StepFunProvider({ apiKey: "test" });
+    expect(p.name).toBe("stepfun");
+  });
+
   it("all providers implement LlmProvider with call()", () => {
     const providers: LlmProvider[] = [
       new AnthropicProvider(),
       new OpenAIProvider({ apiKey: "k" }),
       new GitHubCopilotProvider({ apiKey: "k" }),
       new OpenRouterProvider({ apiKey: "k" }),
+      new StepFunProvider({ apiKey: "k" }),
     ];
     for (const p of providers) {
       expect(typeof p.name).toBe("string");
@@ -120,7 +127,7 @@ describe("LlmProvider interface", () => {
 
 describe("VALID_PROVIDER_NAMES", () => {
   it("contains all supported providers", () => {
-    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter"]);
+    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter", "stepfun"]);
   });
 });
 
@@ -318,6 +325,70 @@ describe("OpenRouterProvider", () => {
 });
 
 // ---------------------------------------------------------------------------
+// StepFunProvider
+// ---------------------------------------------------------------------------
+
+describe("StepFunProvider", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it("uses STEPFUN_MODEL env var as default", () => {
+    delete process.env["STEPFUN_MODEL"];
+    const p = new StepFunProvider({ apiKey: "k" });
+    expect(p.name).toBe("stepfun");
+  });
+
+  it("uses constructor model parameter over env", () => {
+    const p = new StepFunProvider({ apiKey: "k", model: "custom-stepfun-model" });
+    expect(p.name).toBe("stepfun");
+  });
+
+  it("call returns only content and ignores reasoning fields", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [
+        {
+          message: {
+            content: "final answer",
+            reasoning_content: "internal reasoning",
+            reasoning: "internal reasoning",
+          },
+        },
+      ],
+    });
+
+    const p = new StepFunProvider({ apiKey: "k", model: "step-test" });
+    const result = await p.call("prompt", 256);
+    expect(result).toBe("final answer");
+    expect(mockCreate).toHaveBeenCalledWith({
+      model: "step-test",
+      max_completion_tokens: 256,
+      messages: [{ role: "user", content: "prompt" }],
+    });
+  });
+
+  it("returns fallback instead of leaking reasoning when content is empty", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [
+        {
+          message: {
+            content: null,
+            reasoning_content: "internal reasoning",
+            reasoning: "internal reasoning",
+          },
+        },
+      ],
+    });
+
+    const p = new StepFunProvider({ apiKey: "k" });
+    const result = await p.call("prompt", 100);
+    expect(result).toBe("[LLM fallback] stepfun returned an empty response.");
+  });
+});
+
+// ---------------------------------------------------------------------------
 // createProvider factory
 // ---------------------------------------------------------------------------
 
@@ -359,6 +430,11 @@ describe("createProvider", () => {
     expect(p).toBeInstanceOf(OpenRouterProvider);
   });
 
+  it("creates stepfun provider", () => {
+    const p = createProvider("stepfun");
+    expect(p).toBeInstanceOf(StepFunProvider);
+  });
+
   it("reads LLM_PROVIDER from env", () => {
     withEnv({ LLM_PROVIDER: "openai" }, () => {
       const p = createProvider();
@@ -368,7 +444,7 @@ describe("createProvider", () => {
 
   it("throws descriptive error for unknown provider", () => {
     expect(() => createProvider("bogus" as never)).toThrow(
-      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter/,
+      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter, stepfun/,
     );
   });
 

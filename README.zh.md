@@ -198,6 +198,7 @@ openclaw_peers:
 | `ANTHROPIC_BASE_URL` | 可选 | API 地址覆盖。使用 Kimi Code 时设置为 `https://api.kimi.com/coding/`，使用 Anthropic 时留空 |
 | `OPENAI_API_KEY` | OpenAI 时 | OpenAI API 密钥 |
 | `OPENAI_BASE_URL` | 可选 | OpenAI 端点覆盖 |
+| `STEPFUN_API_KEY` | StepFun 时 | StepFun API 密钥 |
 | `OPENROUTER_API_KEY` | OpenRouter 时 | OpenRouter API 密钥 |
 | `TELEGRAM_BOT_TOKEN` | 可选 | Telegram bot token，从 [@BotFather](https://t.me/BotFather) 获取。设置后每次 digest 完成自动推送通知 |
 | `TELEGRAM_CHAT_ID` | 可选 | 接收通知的 Telegram 频道 / 群组 / 用户 ID |
@@ -228,10 +229,11 @@ openclaw_peers:
 |--------|---------------|------------|----------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
 | OpenAI | `openai` | `OPENAI_API_KEY` | `gpt-4o` |
+| StepFun | `stepfun` | `STEPFUN_API_KEY` | `step-3.7-flash` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
-可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
+可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`STEPFUN_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
 
 Provider 抽象层位于 `src/providers/`，每个供应商对应独立文件并实现 `LlmProvider` 接口。新增供应商只需创建新文件并在工厂函数中注册。
 
@@ -255,16 +257,21 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # export LLM_PROVIDER=openai
 # export OPENAI_API_KEY=sk-xxxxxxxx
 
-# 方式 C: OpenAI 兼容端点 + 自定义模型
+# 方式 C: 阶跃星辰（OpenAI 兼容）
+# export LLM_PROVIDER=stepfun
+# export STEPFUN_API_KEY=sk-xxxxxxxx
+# export STEPFUN_MODEL=step-3.7-flash
+
+# 方式 D: OpenAI 兼容端点 + 自定义模型
 # export LLM_PROVIDER=openai
 # export OPENAI_API_KEY=sk-xxxxxxxx
 # export OPENAI_BASE_URL=https://api.deepseek.com
 # export OPENAI_MODEL=deepseek-v4-flash
 
-# 方式 D: GitHub Copilot（使用 GITHUB_TOKEN）
+# 方式 E: GitHub Copilot（使用 GITHUB_TOKEN）
 # export LLM_PROVIDER=github-copilot
 
-# 方式 E: OpenRouter
+# 方式 F: OpenRouter
 # export LLM_PROVIDER=openrouter
 # export OPENROUTER_API_KEY=sk-or-xxxxxxxx
 
