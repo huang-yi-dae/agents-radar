@@ -473,4 +473,25 @@ describe("StepFunProvider", () => {
     const result = await p.call("prompt", 256);
     expect(result).toBe("## Daily Digest\n- Final answer only.");
   });
+
+  it("strips planning prose before structured report sections", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [
+        {
+          message: {
+            content:
+              "用户现在需要我基于前面给的几个AI CLI工具..." +
+              "\n\n## 横向对比\n\n" +
+              "- 结论A\n" +
+              "- 结论B\n",
+          },
+        },
+      ],
+    });
+
+    const p = new StepFunProvider({ apiKey: "k", model: "step-clean" });
+    const result = await p.call("prompt", 256);
+    expect(result).toBe("## 横向对比\n\n- 结论A\n- 结论B");
+  });
 });

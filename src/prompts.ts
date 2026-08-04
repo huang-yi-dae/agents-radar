@@ -204,6 +204,11 @@ Generate a structured English digest with the following sections:
 6. **Developer Pain Points** - Summarize recurring developer frustrations or high-frequency requests
 
 Style: concise and professional, suited for technical developers. Include GitHub links for each item.
+
+Output requirements:
+- Do not include planning, reasoning, self-instructions, or meta commentary.
+- Do not repeat the prompt back or describe how you will analyze the data.
+- Output only the final structured report.
 `;
   }
 
@@ -232,6 +237,11 @@ ${prsText}
 6. **开发者关注点** - 总结开发者反馈中的痛点或高频需求
 
 语言要求：简洁专业，适合技术开发者阅读。每个条目附上 GitHub 链接。
+
+输出要求：
+- 不要输出思考过程、计划步骤、自我说明或元评论。
+- 不要复述提示词，也不要说明你将如何分析数据。
+- 只输出最终的结构化日报内容。
 `;
 }
 

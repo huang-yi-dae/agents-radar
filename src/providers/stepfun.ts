@@ -35,6 +35,14 @@ const STEPFUN_THINKING_PATTERNS = [
   /【thinking】[\s\S]*?】/i,
 ];
 
+// Some StepFun reasoning responses may embed self-instructions or planning
+// prose inside `message.content` instead of dedicated reasoning fields.
+const STEPFUN_PLANNING_PATTERNS = [
+  /用户现在需要我基于[\s\S]*?(?=\n\n#{1,3} |\n\n- |\n\n\d\. )/,
+  /首先我得[\s\S]*?(?=\n\n#{1,3} |\n\n- |\n\n\d\. )/,
+  /然后[\s\S]*?部分[\s\S]*?(?=\n\n#{1,3} |\n\n- |\n\n\d\. )/,
+];
+
 /**
  * StepFun LLM provider.
  *
@@ -81,7 +89,13 @@ export class StepFunProvider extends OpenAICompatibleProvider {
       rawText,
     );
 
-    if (cleanedText) return cleanedText;
+    const plannedText = STEPFUN_PLANNING_PATTERNS.reduce(
+      (text, pattern) => text.replace(pattern, "").trim(),
+      cleanedText,
+    );
+
+    const normalizedText = plannedText.trim();
+    if (normalizedText) return normalizedText;
 
     const responseSummary = {
       contentPreview: typeof rawText === "string" ? rawText.slice(0, 200) : rawText,
