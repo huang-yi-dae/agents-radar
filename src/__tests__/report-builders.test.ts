@@ -23,6 +23,14 @@ function makeDigest(overrides: Partial<RepoDigest> = {}): RepoDigest {
 // ---------------------------------------------------------------------------
 
 describe("buildCliReportContent", () => {
+  it("strips leaked thinking blocks from summaries", () => {
+    const digests = [makeDigest({ summary: "before<think>internal thought```after</think> before```after" })];
+    const result = buildCliReportContent(digests, "Skills", "comparison", "", "", "", "repo/skills", "zh");
+    expect(result).not.toContain("internal thought");
+    expect(result).toContain("before");
+    expect(result).toContain("after");
+    expect(result).not.toContain("internal thought");
+  });
   it("includes title, meta, and all sections (zh)", () => {
     const digests = [
       makeDigest({ config: { id: "claude-code", repo: "anthropics/claude-code", name: "Claude Code" } }),

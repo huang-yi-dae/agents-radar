@@ -196,6 +196,11 @@ ${prsText}
 
 Generate a structured English digest with the following sections:
 
+IMPORTANT OUTPUT RULES:
+- Do not include internal reasoning, thinking traces, draft notes, or meta-commentary.
+- Do not include planning text such as "first I need to..." or "now I will...".
+- Output only the final report sections requested below.
+
 1. **Today's Highlights** - 2-3 sentences summarizing the most important updates
 2. **Releases** - If new versions exist, summarize changes; omit if none
 3. **Hot Issues** - Pick 10 noteworthy Issues, explain why they matter and community reaction
@@ -223,6 +228,11 @@ ${prsText}
 ---
 
 请生成一份结构清晰的中文日报，包含以下部分：
+
+重要输出约束：
+- 不要输出内部推理过程、思考链、草稿备注或元评论。
+- 不要输出“首先我需要...”“接下来要...”之类的计划性文字。
+- 只输出下面要求的最终报告正文。
 
 1. **今日速览** - 用2-3句话概括今天最重要的动态
 2. **版本发布** - 如有新版本，总结更新内容；无则省略
@@ -304,6 +314,11 @@ ${prsText}
 
 Generate a structured English ${cfg.name} project digest with the following sections:
 
+IMPORTANT OUTPUT RULES:
+- Do not include internal reasoning, thinking traces, draft notes, or meta-commentary.
+- Do not include planning text such as "first I need to..." or "now I will...".
+- Output only the final report sections requested below.
+
 1. **Today's Overview** - 3-5 sentences summarizing project status, including activity assessment
 2. **Releases** - If new versions exist, detail changes, breaking changes, migration notes; omit if none
 3. **Project Progress** - Merged/closed PRs today, what features advanced or were fixed
@@ -336,6 +351,11 @@ ${prsText}
 ---
 
 请生成一份结构清晰的 ${cfg.name} 项目日报，包含以下部分：
+
+重要输出约束：
+- 不要输出内部推理过程、思考链、草稿备注或元评论。
+- 不要输出“首先我需要...”“接下来要...”之类的计划性文字。
+- 只输出下面要求的最终报告正文。
 
 1. **今日速览** - 用3-5句话概括项目今日整体状态，包括活跃度评估
 2. **版本发布** - 如有新版本，详细说明更新内容、破坏性变更、迁移注意事项；无则省略
@@ -388,6 +408,11 @@ ${peerSections}
 
 Generate a cross-project comparison report in English with these sections:
 
+IMPORTANT OUTPUT RULES:
+- Do not include internal reasoning, thinking traces, draft notes, or meta-commentary.
+- Do not include planning text such as "first I need to..." or "now I will...".
+- Output only the final report sections requested below.
+
 1. **Ecosystem Overview** - 3-5 sentences on the overall personal AI assistant / agent open-source landscape
 2. **Activity Comparison** - Table comparing Issues count, PR count, Release status, and health score for each project
 3. **OpenClaw's Position** - Advantages vs peers, technical approach differences, community size comparison
@@ -411,6 +436,11 @@ ${peerSections}
 ---
 
 请基于上述各项目的动态，生成一份横向对比分析报告，包含以下部分：
+
+重要输出约束：
+- 不要输出内部推理过程、思考链、草稿备注或元评论。
+- 不要输出“首先我需要...”“接下来要...”之类的计划性文字。
+- 只输出下面要求的最终报告正文。
 
 1. **生态全景** - 用3-5句话概括个人 AI 助手/自主智能体开源生态整体态势
 2. **各项目活跃度对比** - 以表格形式汇总各项目今日的 Issues 数、PR 数、Release 情况及健康度评估

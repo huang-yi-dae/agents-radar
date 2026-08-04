@@ -16,6 +16,20 @@ import type { RepoConfig, RepoFetch } from "./github.ts";
 import type { RepoDigest } from "./prompts.ts";
 import { type Lang, CLI_REPORT, OPENCLAW_REPORT } from "./i18n.ts";
 
+/**
+ * Strip common reasoning leakage markers from LLM output.
+ *
+ * Some models still wrap internal thoughts in tags even when instructed
+ * not to. This keeps the published report clean by removing those blocks.
+ */
+export function sanitizeReportText(text: string): string {
+  return text
+    .replace(/<\s*think\b[^>]*>[\s\S]*?<\s*\/\s*think\s*>/gi, "")
+    .replace(/<\s*thinking\b[^>]*>[\s\S]*?<\s*\/\s*thinking\s*>/gi, "")
+    .replace(/<\s*reasoning\b[^>]*>[\s\S]*?<\s*\/\s*reasoning\s*>/gi, "")
+    .trim();
+}
+
 // ---------------------------------------------------------------------------
 // CLI Report
 // ---------------------------------------------------------------------------
@@ -70,11 +84,12 @@ export function buildCliReportContent(
     .map((d) => {
       // Only Claude Code gets the skills section
       const skills = d.config.id === "claude-code" ? skillsSection : "";
+      const summary = sanitizeReportText(d.summary);
       return [
         `<details>`,
         `<summary><strong>${d.config.name}</strong> — <a href="https://github.com/${d.config.repo}">${d.config.repo}</a></summary>`,
         ``,
-        skills + d.summary,
+        skills + summary,
         ``,
         `</details>`,
       ].join("\n");
@@ -135,7 +150,7 @@ export function buildOpenclawReportContent(
         `<details>`,
         `<summary><strong>${d.config.name}</strong> — <a href="https://github.com/${d.config.repo}">${d.config.repo}</a></summary>`,
         ``,
-        d.summary,
+        sanitizeReportText(d.summary),
         ``,
         `</details>`,
       ].join("\n"),
@@ -154,10 +169,10 @@ export function buildOpenclawReportContent(
     `${peersRepoLinks}\n\n` +
     `---\n\n` +
     `## ${OPENCLAW_REPORT.deepDive[lang]}\n\n` +
-    openclawSummary +
+    sanitizeReportText(openclawSummary) +
     `\n\n---\n\n` +
     `## ${OPENCLAW_REPORT.comparison[lang]}\n\n` +
-    peersComparison +
+    sanitizeReportText(peersComparison) +
     `\n\n---\n\n` +
     `## ${OPENCLAW_REPORT.peers[lang]}\n\n` +
     peerDetailSections +
