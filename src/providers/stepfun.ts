@@ -98,7 +98,10 @@ export class StepFunProvider extends OpenAICompatibleProvider {
         ],
       });
     } catch (err) {
-      const message = `StepFun request failed: ${err instanceof Error ? err.message : String(err)}`;
+      const rawMessage = err instanceof Error ? err.message : String(err);
+      const message = /402/.test(rawMessage)
+        ? `StepFun request failed with quota/billing error: ${rawMessage}. Check your StepFun plan, billing details, and OPENAI_MODEL access.`
+        : `StepFun request failed: ${rawMessage}`;
       throw new Error(message);
     }
 
