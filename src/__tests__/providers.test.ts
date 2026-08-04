@@ -584,4 +584,16 @@ describe("StepFunProvider", () => {
     const result = await p.call("prompt", 256);
     expect(result).toBe("## 实际结论\n\n- 结论A\n- 结论B");
   });
+
+  it("wraps network timeout with actionable StepFun error", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockRejectedValueOnce(
+      new AggregateError([new Error("connect ETIMEDOUT")], "All promises were rejected"),
+    );
+
+    const p = new StepFunProvider({ apiKey: "k", model: "step-timeout" });
+    await expect(p.call("prompt", 256)).rejects.toThrow(
+      "StepFun request to https://api.stepfun.com/v1 failed with a network timeout",
+    );
+  });
 });

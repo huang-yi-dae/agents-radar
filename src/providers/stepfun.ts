@@ -78,21 +78,35 @@ export class StepFunProvider extends OpenAICompatibleProvider {
    * 2. the model's `content` may already contain the required reasoning format.
    */
   async call(prompt: string, maxTokens: number): Promise<string> {
-    const response = await this.client.chat.completions.create({
-      model: this.model,
-      max_completion_tokens: maxTokens,
-      reasoning_effort: "low",
-      messages: [
-        {
-          role: "system",
-          content:
-            "You are a careful report editor.\n" +
-            "Always output only the final user-facing report content.\n" +
-            "Never include planning, reasoning, self-instructions, chain-of-thought, or internal thinking traces.\n",
-        },
-        { role: "user", content: prompt },
-      ],
-    });
+    let response;
+    try {
+      response = await this.client.chat.completions.create({
+        model: this.model,
+        max_completion_tokens: maxTokens,
+        reasoning_effort: "low",
+        messages: [
+          {
+            role: "system",
+            content:
+              "You are a careful report editor.\n" +
+              "Always output only the final user-facing report content.\n" +
+              "Never include planning, reasoning, self-instructions, chain-of-thought, or internal thinking traces.\n",
+          },
+          { role: "user", content: prompt },
+        ],
+      });
+    } catch (err) {
+      const isNetwork =
+        err instanceof AggregateError ||
+        (typeof err === "object" &&
+          err !== null &&
+          "code" in err &&
+          (err as { code?: string }).code === "ETIMEDOUT");
+      const message = isNetwork
+        ? `StepFun request to ${this.client.baseURL ?? STEPFUN_BASE_URL} failed with a network timeout. Check STEPFUN_API_KEY/STEPFUN_BASE_URL, secret configuration, and runner network access to api.stepfun.com.`
+        : `StepFun request failed: ${err instanceof Error ? err.message : String(err)}`;
+      throw new Error(message);
+    }
 
     const message = response.choices?.[0]?.message;
     const rawText = message?.content ?? "";
