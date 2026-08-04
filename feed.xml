@@ -6,16 +6,16 @@
     <description>AI 开源生态每日简报 · Daily AI ecosystem digest</description>
     <language>zh-CN</language>
     <atom:link href="https://huang-yi-dae.github.io/agents-radar/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 04 Aug 2026 12:35:28 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 13:31:57 +0000</lastBuildDate>
     <item>
       <title>AI CLI 工具社区动态日报 2026-08-04</title>
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-cli</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-cli</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI CLI 工具社区动态日报 2026-08-04 生成时间: 2026-08-04 12:27 UTC | 覆盖工具: 7 个 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills 横向对比 [LLM fallback] stepfun returned an empty response. 各工具详细报告 Claude Code — anthropics/claude-code Claude Code Skills 社区热点 数据来源: anthropics/skills Claude Code Skills 社区热点报告（数据截止2026-08-04） 1. 热门 Skills 排行（按社区关注度排序） PR #1298：skill-creator 评估脚本核心修复 功能：修复run_eval.py始终返回0%召回率的bug，同步解决Windows流读取、触发检测、并行工作器兼容问题 讨论热点：关联10+独立复现的评估失...</description>
+      <description>AI CLI 工具社区动态日报 2026-08-04 生成时间: 2026-08-04 13:31 UTC | 覆盖工具: 7 个 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills 横向对比 LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details 各工具详细报告 Claude Code — anthropics/claude-code Claude Code Skills 社区热点 数据来源: anthropics/skills ⚠️ Skills 摘要生成失败。 ⚠️ 摘要生成失败。 OpenAI Codex — openai/codex ⚠️ 摘要生成失败。 Gemini CLI — google-gemini/gemini-...</description>
       <content:encoded><![CDATA[<h1>AI CLI 工具社区动态日报 2026-08-04</h1>
 <blockquote>
-<p>生成时间: 2026-08-04 12:27 UTC | 覆盖工具: 7 个</p>
+<p>生成时间: 2026-08-04 13:31 UTC | 覆盖工具: 7 个</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/anthropics/claude-code">Claude Code</a></li>
@@ -29,7 +29,9 @@
 </ul>
 <hr>
 <h2>横向对比</h2>
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<blockquote>
+<p>LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details</p>
+</blockquote>
 <hr>
 <h2>各工具详细报告</h2>
 <details>
@@ -39,440 +41,45 @@
 <blockquote>
 <p>数据来源: <a href="https://github.com/anthropics/skills">anthropics/skills</a></p>
 </blockquote>
-<h1>Claude Code Skills 社区热点报告（数据截止2026-08-04）</h1>
-<h2>1. 热门 Skills 排行（按社区关注度排序）</h2>
-<ol>
-<li><p><strong>PR #1298：skill-creator 评估脚本核心修复</strong></p>
-<ul>
-<li>功能：修复<code>run_eval.py</code>始终返回0%召回率的bug，同步解决Windows流读取、触发检测、并行工作器兼容问题</li>
-<li>讨论热点：关联10+独立复现的评估失效问题，是skill描述优化循环失效的根因修复</li>
-<li>状态：OPEN</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/1298">https://github.com/anthropics/skills/pull/1298</a></li>
-</ul>
-</li>
-<li><p><strong>PR #514：document-typography 排版质量控制</strong></p>
-<ul>
-<li>功能：解决AI生成文档的孤儿行、孤段、编号错位等通用排版问题</li>
-<li>讨论热点：覆盖所有Claude生成文档场景，用户普适性需求强</li>
-<li>状态：OPEN</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/514">https://github.com/anthropics/skills/pull/514</a></li>
-</ul>
-</li>
-<li><p><strong>PR #538：pdf skill 大小写引用修复</strong></p>
-<ul>
-<li>功能：修正pdf skill的SKILL.md中8处大小写不匹配的文件引用，避免大小写敏感系统报错</li>
-<li>讨论热点：跨平台兼容性核心问题，影响Linux/macOS用户的正常使用</li>
-<li>状态：OPEN</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/538">https://github.com/anthropics/skills/pull/538</a></li>
-</ul>
-</li>
-<li><p><strong>PR #486：ODT 开源文档格式支持</strong></p>
-<ul>
-<li>功能：支持OpenDocument格式（.odt/.ods）的创建、模板填写、格式转换与HTML解析</li>
-<li>讨论热点：填补开源文档格式Skill空白，与现有微软系文档Skill形成互补</li>
-<li>状态：OPEN</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/486">https://github.com/anthropics/skills/pull/486</a></li>
-</ul>
-</li>
-<li><p><strong>PR #210：frontend-design 技能可执行性优化</strong></p>
-<ul>
-<li>功能：重构前端设计Skill的指令，提升清晰度与可落地性，确保单会话内可执行</li>
-<li>讨论热点：聚焦Skill本身的指令质量优化，降低Claude执行歧义</li>
-<li>状态：OPEN</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/210">https://github.com/anthropics/skills/pull/210</a></li>
-</ul>
-</li>
-<li><p><strong>PR #83：Skill 质量与安全分析元技能</strong></p>
-<ul>
-<li>功能：新增skill-quality-analyzer（5维度质量评估）与skill-security-analyzer（安全风险审计）两个元Skill</li>
-<li>讨论热点：回应Skill生态治理需求，帮助用户评估第三方Skill的可靠性</li>
-<li>状态：OPEN</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/83">https://github.com/anthropics/skills/pull/83</a></li>
-</ul>
-</li>
-<li><p><strong>PR #541：docx skill 文档损坏修复</strong></p>
-<ul>
-<li>功能：修复docx skill添加修订时与现有书签的ID冲突问题，避免OOXML文档损坏</li>
-<li>讨论热点：文档处理稳定性核心问题，影响批量文档修订场景</li>
-<li>状态：OPEN</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/541">https://github.com/anthropics/skills/pull/541</a></li>
-</ul>
-</li>
-<li><p><strong>PR #539：skill-creator YAML 解析防护</strong></p>
-<ul>
-<li>功能：新增前置校验，检测未加引号的description字段含YAML特殊字符时的解析失败问题</li>
-<li>讨论热点：降低Skill创建门槛，避免新手常见的YAML格式错误</li>
-<li>状态：OPEN</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/539">https://github.com/anthropics/skills/pull/539</a></li>
-</ul>
-</li>
-</ol>
-<h2>2. 社区需求趋势（从Issue提炼）</h2>
-<ul>
-<li><strong>团队协作与分发</strong>：组织内Skill共享、统一分发渠道需求强烈（关联Issue #228，16条评论）</li>
-<li><strong>开发工具链完善</strong>：Skill创建、评估、调试工具的稳定性与易用性是核心痛点，多个Issue反馈skill-creator脚本的跨平台兼容问题</li>
-<li><strong>安全与治理</strong>：Skill信任边界、权限管控、输出质量审计需求凸显，仿冒官方Skill的安全风险引发广泛讨论（关联Issue #492，43条评论）</li>
-<li><strong>垂直场景Skill供给</strong>：长上下文记忆管理、文档排版、开源格式支持、测试生成、AI Agent治理等细分场景需求明确</li>
-<li><strong>跨平台兼容</strong>：Windows系统适配、大小写敏感文件系统兼容是高频反馈问题</li>
-</ul>
-<h2>3. 高潜力待合并 Skills</h2>
-<p>以下PR讨论活跃、问题明确，近期落地概率较高：</p>
-<ol>
-<li><p><strong>PR #1479：plan-file-hygiene 规划文件生命周期管理</strong></p>
-<ul>
-<li>解决项目规划文件无生命周期管理、临时文件堆积问题，社区用户已认领需求</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/1479">https://github.com/anthropics/skills/pull/1479</a></li>
-</ul>
-</li>
-<li><p><strong>PR #1367：self-audit 输出质量审计Skill</strong></p>
-<ul>
-<li>实现机械验证+四维度推理质量 gates，覆盖全会话输出质量管控</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/1367">https://github.com/anthropics/skills/pull/1367</a></li>
-</ul>
-</li>
-<li><p><strong>PR #1261：触发评估文件隔离修复</strong></p>
-<ul>
-<li>解决skill-creator并行评估时向用户项目写入临时文件的问题，避免会话冲突</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/1261">https://github.com/anthropics/skills/pull/1261</a></li>
-</ul>
-</li>
-<li><p><strong>PR #1302：color-expert 颜色知识Skill</strong></p>
-<ul>
-<li>覆盖多套颜色命名系统、色彩空间选择等通用颜色知识，跨领域适用性强</li>
-<li>链接：<a href="https://github.com/anthropics/skills/pull/1302">https://github.com/anthropics/skills/pull/1302</a></li>
-</ul>
-</li>
-</ol>
-<h2>4. Skills 生态洞察</h2>
-<p>当前社区最集中的诉求是<strong>完善Skill开发-评估-分发-治理全链路体验，同时补齐垂直场景高质量Skill供给，解决跨平台兼容与安全信任痛点</strong>。</p>
+<p>⚠️ Skills 摘要生成失败。</p>
 <hr>
-<h1>Claude Code 社区动态日报（2026-08-04）</h1>
-<h2>今日速览</h2>
-<p>今日Claude Code发布v2.1.221版本，新增VSCode Focus视图与Linux沙箱凭证掩码能力；社区过去24小时共更新50条Issue、2条PR，其中VSCode扩展额度误判、Windows GPU进程崩溃、Opus 5记忆失效等平台与模型类问题关注度最高。</p>
-<h2>版本发布</h2>
-<h3>v2.1.221</h3>
-<p>更新内容：</p>
-<ol>
-<li>VSCode扩展新增Focus视图：通过<code>Ctrl+Alt+F</code>或「Claude Code: Toggle Focus view」命令切换，可折叠工具活动为每轮可展开摘要，附带运行中工具实时指示器，减少聊天界面干扰。</li>
-<li>Linux平台为沙箱凭证文件新增<code>mode: &quot;mask&quot;</code>支持，提升凭证安全性。
-Release链接：<a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.221">https://github.com/anthropics/claude-code/releases/tag/v2.1.221</a></li>
-</ol>
-<h2>社区热点 Issues（Top 10）</h2>
-<ol>
-<li><a href="https://github.com/anthropics/claude-code/issues/79441">#79441</a> [OPEN] VSCode扩展在用户Max计划剩余20%周Fable额度时仍报「需要usage credits」阻止Fable 5使用，影响付费用户正常功能。该Issue为当前热度最高的开放Issue，已有14条评论、12个👍。</li>
-<li><a href="https://github.com/anthropics/claude-code/issues/81159">#81159</a> [OPEN] Windows 11下Opus 5执行页内浏览器操作时触发GPU进程崩溃（exitCode 101457950），导致Claude Desktop崩溃且MSIX安装包损坏，共11条评论，严重影响Windows桌面端稳定性。</li>
-<li><a href="https://github.com/anthropics/claude-code/issues/68721">#68721</a> [CLOSED] v2.1.178起原生团队管理工具TeamCreate/TeamDelete不再暴露的回归问题，已修复关闭，是过去24小时评论数最多的Issue，共18条讨论、7个👍。</li>
-<li><a href="https://github.com/anthropics/claude-code/issues/73453">#73453</a> [OPEN] v2.1.198起headless模式运行Agent子任务时，子任务启动约50秒后主进程退出，后台任务被强制终止，影响CI/CD场景下Agent SDK的使用，共3条评论、2个👍。</li>
-<li><a href="https://github.com/anthropics/claude-code/issues/83789">#83789</a> [OPEN] Opus 5模型忽略自身持久记忆和过往会话记录就执行操作，导致重复解决过往已解决的问题，单日造成多小时的无效工作，是模型行为的严重回归问题。</li>
-<li><a href="https://github.com/anthropics/claude-code/issues/80576">#80576</a> [OPEN] VSCode扩展中AskUserQuestion组件会遮挡Claude输出的前置文本消息，影响对话可读性，共2条评论、6个👍，是VSCode端体验类的高反馈问题。</li>
-<li><a href="https://github.com/anthropics/claude-code/issues/64479">#64479</a> [OPEN] Linux平台Edit工具在处理包含字面量/转义混合Unicode的多行old_string时会失败，影响代码编辑场景的准确性，共7条评论。</li>
-<li><a href="https://github.com/anthropics/claude-code/issues/82582">#82582</a> [OPEN] Windows Terminal中 Claude Code 的链接会打开两次，原因是TUI和终端同时响应OSC 8超链接点击事件，共2条评论、1个👍，影响Windows终端用户体验。</li>
-<li><a href="https://github.com/anthropics/claude-code/issues/83798">#83798</a> [OPEN] v2.1.221 macOS 26.6下终端模式存在消息队列停滞问题，第一轮会话正常，后续用户消息会被静默丢弃，是刚发布版本的新回归问题。</li>
-<li><a href="https://github.com/anthropics/claude-code/issues/83807">#83807</a> [OPEN] Wayland平台复制功能异常，一半复制操作无法写入剪贴板，原因是两个wl-copy调用竞争，影响Linux Wayland用户的基础使用。</li>
-</ol>
-<h2>重要 PR 进展</h2>
-<p>过去24小时共新增2个PR，均为开放状态：</p>
-<ol>
-<li>[#83374](<a href="https://github.com/anthropics/cl">https://github.com/anthropics/cl</a></li>
-</ol>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>OpenAI Codex</strong> — <a href="https://github.com/openai/codex">openai/codex</a></summary>
 
-<h1>OpenAI Codex 社区动态日报（2026-08-04）</h1>
-<h2>今日速览</h2>
-<p>今日OpenAI Codex社区最受关注的是VS Code扩展的Codex Diff崩溃问题（已标记关闭完成修复），同时Windows、Linux平台的多项兼容性bug持续引发讨论；版本侧发布3个Rust CLI alpha测试版本，PR侧核心聚焦技能系统重构、MCP能力扩展与线程管理优化。</p>
-<hr>
-<h2>版本发布</h2>
-<p>今日发布3个Rust生态Codex CLI alpha测试版本，均为迭代测试版本，未披露详细更新日志：</p>
-<ul>
-<li>rust-v0.147.0-alpha.7</li>
-<li>rust-v0.147.0-alpha.6</li>
-<li>rust-v0.147.0-alpha.1.2</li>
-</ul>
-<hr>
-<h2>社区热点 Issues（Top 10）</h2>
-<ol>
-<li><strong><a href="https://github.com/openai/codex/issues/35058">#35058</a> [CLOSED] VS Code扩展Codex Diff崩溃</strong>
-重要性：影响所有</li>
-</ol>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>Gemini CLI</strong> — <a href="https://github.com/google-gemini/gemini-cli">google-gemini/gemini-cli</a></summary>
 
-<h1>Gemini CLI 社区动态日报（2026-08-04）</h1>
-<h2>今日速览</h2>
-<p>2026-08-04 Gemini CLI社区动态以稳定性修复、安全增强和新模型支持为核心：当日共更新30条热门Issue、20条高互动PR，涵盖Agent可靠性、认证流程、本地模型适配等关键方向，多个P1级问题处于待复测状态，新模型支持和安全修复类PR已提交待合并。</p>
-<h2>版本发布</h2>
-<p>无新版本发布，最新仍为社区维护的 nightly 版本。</p>
-<h2>社区热点 Issues</h2>
-<ol>
-<li><a href="https://github.com/google-gemini/gemini-cli/issues/22323">Issue #22323</a>（P1）：<code>codebase_investigator</code>子代理达到最大轮次限制时错误报告为<code>GOAL</code>成功，掩盖了实际的中断状态，直接影响复杂任务的可观测性和调试效率，为当日评论数最高的Issue，获12条评论。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/issues/21409">Issue #21409</a>（P1）：调用通用子代理时会永久卡死，即使是简单的文件夹创建操作也会触发，用户反馈该问题自v0.33.0后出现，禁用子代理可规避，为当日点赞最高的Issue，获8条评论、8个👍。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/issues/19873">Issue #19873</a>（P2）：提出利用零依赖OS沙盒和模型原生bash亲和力提升代码操作效率，契合Gemini 3模型对POSIX工具的偏好，是Agent能力增强的重要探索方向，获8条评论。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/issues/24353">Issue #24353</a>（P1）：跟踪组件级自动化评测体系建设，是继行为评测之后的质量保障基础设施升级，目前已积累76个行为评测用例，覆盖6款Gemini模型，获7条评论。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/issues/22745">Issue #22745</a>（P2）：评估AST感知的文件读写、搜索和代码映射工具的价值，可通过精准读取方法边界减少轮次和token消耗，是代码操作性能优化的核心探索方向，获7条评论。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/issues/21968">Issue #21968</a>（P2）：反馈Gemini不会主动调用自定义skills和子代理，需要用户显式指令才触发，直接影响Agent的自主性和使用效率，获6条评论。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/issues/26522">Issue #26522</a>（P2）：自动记忆功能会无限重试低信号会话，导致资源浪费，是该功能的核心稳定性问题，获5条评论。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/issues/25166">Issue #25166</a>（P1）：shell命令执行完成后，CLI仍显示“等待输入”卡死，是核心终端交互功能的高频bug，获4条评论、3个👍。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/issues/22232">Issue #22232</a>（P3）：浏览器代理在持久会话模式下遇到锁定的浏览器配置时会直接失败，提出自动会话接管和锁恢复机制，提升浏览器代理的韧性，获4条评论。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/issues/26525">Issue #26525</a>（P2）：自动记忆功能在脱敏前已将内容发送到模型，且存在不必要的日志记录，存在隐私和安全风险，获4条评论。</li>
-</ol>
-<h2>重要 PR 进展</h2>
-<ol>
-<li><a href="https://github.com/google-gemini/gemini-cli/pull/28681">PR #28681</a>（P1，size/l）：新增对SGLang和本地OpenAI兼容端点的支持，扩展了Gemini CLI的后端适配范围，支持用户使用本地部署的模型服务，当日更新待合并。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/pull/28679">PR #28679</a>（P2，area/security）：优化Vertex AI认证时的401错误提示，当用户使用标准Gemini API key配置Vertex AI认证时，会给出明确的错误指引，改善开发者体验，当日更新待合并。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/pull/28680">PR #28680</a>（P2，area/security）：修复A2A远程代理的OpenID Connect认证验证缺陷，避免配置阶段误判为有效、实际请求时失败的问题，当日更新待合并。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/pull/28678">PR #28678</a>（P2，area/security）：修复OAuth回调服务器的超时回调泄漏和资源未释放问题，避免内存泄漏和僵尸进程，当日更新待合并。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/pull/28677">PR #28677</a>（P1，area/core）：给<code>IdeClient.getInstance()</code>的进程遍历逻辑增加3秒超时，避免终端在初始化阶段无限卡在“Initializing...”状态，当日更新待合并。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/pull/28676">PR #28676</a>（P2，area/core）：修复<code>relaunchAppInChildProcess</code>逻辑，将父进程的终止信号（SIGTERM、SIGINT等）转发给子进程，避免子进程变成孤儿进程，当日更新待合并。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/pull/28546">PR #28546</a>（P1，area/security）：修复使用<code>GEMINI_API_KEY</code>认证时残留<code>Authorization</code>头导致401错误的问题，通过 stripping 所有<code>Authorization</code>头解决认证失败，待合并。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/pull/28597">PR #28597</a>（P1，size/l）：修复settings加载的竞态条件，确保环境变量在解析settings占位符之前完成加载，避免本地<code>.env</code>文件配置不生效的问题，当日更新待合并。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/pull/28673">PR #28673</a>（P2，area/core）：新增Gemini 3.6 Flash和Gemini 3.5 Flash-Lite的模型配置、能力声明和别名支持，扩展可用模型范围，当日更新待合并。</li>
-<li><a href="https://github.com/google-gemini/gemini-cli/pull/28566">PR #28566</a>（P1，size/m）：将<code>InvalidStreamError</code>的错误类型和具体信息传递到CLI UI层，当出现空响应等错误时给出针对性的解决建议（如使用<code>/compress</code>压缩上下文），改善故障排查体验，待合并。</li>
-</ol>
-<h2>功能需求趋势</h2>
-<p>从所有Issue中提炼，当前社区最关注的功能方向包括：</p>
-<ol>
-<li><strong>Agent自主性与可靠性</strong>：子代理稳定性、主动调用skills/工具、浏览器代理韧性、代码操作效率提升是最高频的需求。</li>
-<li><strong>安全与隐私增强</strong>：自动记忆的脱敏机制、权限控制、认证流程鲁棒性是社区关注的重点。</li>
-<li><strong>本地部署与多后端支持</strong>：对SGLang、OpenAI兼容端点、更多Gemini模型的支持需求持续增长。</li>
-<li><strong>开发者体验优化</strong>：终端交互</li>
-</ol>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>GitHub Copilot CLI</strong> — <a href="https://github.com/github/copilot-cli">github/copilot-cli</a></summary>
 
-<h1>GitHub Copilot CLI 社区动态日报（2026-08-04）</h1>
-<p>数据来源：github.com/github/copilot-cli</p>
-<h2>今日速览</h2>
-<p>2026年8月4日，GitHub Copilot CLI发布v1.0.78系列版本，带来工具耗时显示、插件自动更新、交互式Shell快捷键优化及实验性新工作树功能。社区层面，会话管理、插件可控性、自定义模型等方向的需求持续高热，同时WSL2输入兼容、企业MCP访问限制、终端渲染等bug成为当日反馈焦点。</p>
-<h2>版本发布</h2>
-<p>当日发布v1.0.78及v1.0.78-3两个版本，核心更新如下：</p>
-<ul>
-<li>新增工具调用耗时时间线：调用超过5秒的工具会实时显示耗时，默认开启，可通过<code>/settings showToolDurations</code>关闭</li>
-<li>插件自动更新：第一方插件会在每次会话启动时自动更新到最新版本</li>
-<li>交互式Shell快捷键优化：现在支持回车触发，且当&quot;$&quot;处于armed状态时会显示内联提示</li>
-<li>登录体验优化：本地桌面场景下Copilot登录默认使用浏览器流程</li>
-<li>实验性新功能：新增<code>/new-worktree</code>命令，支持创建新git工作树并在其中开启独立会话
-（版本链接：<a href="https://github.com/github/copilot-cli/releases">github.com/github/copilot-cli/releases</a>）</li>
-</ul>
-<h2>社区热点 Issues</h2>
-<ol>
-<li><strong>#1697 [OPEN] 会话分叉功能</strong>（👍25 | 评论3）
-需求支持在任务分叉时创建共享上下文的平行会话，解决当前切换会话会丢失上下文的问题，是跨任务效率的核心需求，社区关注度最高。
-链接：github.com/github/copilot-cli/issues/1697</li>
-<li><strong>#2714 [OPEN] 插件启用/禁用开关</strong>（👍11 | 评论2）
-当前仅支持安装/卸载/更新插件，无法快速启用禁用，社区要求对标Claude Code等工具的功能，反馈热烈。
-链接：github.com/github/copilot-cli/issues/2714</li>
-<li><strong>#1947 [CLOSED] 云同步会话跨设备连续使用</strong>（👍6 | 评论4）
-需求将本地存储的会话同步到云端，实现多设备间工作连续性，已被标记为关闭，预计已纳入官方开发计划。
-链接：github.com/github/copilot-cli/issues/1947</li>
-<li><strong>#4139 [CLOSED] 支持自定义LLM模型/端点</strong>（👍6 | 评论1）
-需求允许接入第三方大模型（如Azure OpenAI、本地模型等），已被标记关闭，说明官方已有相关规划。
-链接：github.com/github/copilot-cli/issues/4139</li>
-<li><strong>#2830 [OPEN] 自定义颜色主题支持</strong>（👍6 | 评论2）
-当前仅支持auto/dark/light三种主题，无法自定义颜色盘，适合多任务并行开发的用户需求。
-链接：github.com/github/copilot-cli/issues/2830</li>
-<li><strong>#4328 [OPEN] WSL2下Ctrl+H被误识别为Ctrl+Backspace</strong>（评论5）
-原生Windows终端的<code>WT_SESSION</code>环境变量泄露导致WSL2下删除字符快捷键失效，影响Windows混合开发环境用户的使用体验。
-链接：github.com/github/copilot-cli/issues/4328</li>
-<li><strong>#2692 [CLOSED] Web Search MCP工具报错</strong>（评论6）
-调用<code>github-mcp-server</code>的Web Search工具时出现Streamable HTTP错误，是MCP生态兼容性的典型问题，已修复。
-链接：github.com/github/copilot-cli/issues/2692</li>
-<li><strong>#4349 [OPEN] 企业托管策略校验失败阻塞自定义MCP服务器</strong>（评论1）
-企业托管设置的枚举值校验不兼容合法的<code>&quot;enable&quot;</code>值，导致所有本地/自定义MCP服务器无法使用，影响企业用户。
-链接：github.com/github/copilot-cli/issues/4349</li>
-<li><strong>#3859 [CLOSED] 关闭记忆功能后Subconscious后台代理仍重复启动</strong>（评论2）
-关闭Copilot Memory后内部per-prompt记忆代理仍会每次用户prompt启动，消耗额外资源，已修复。
-链接：github.com/github/copilot-cli/issues/3859</li>
-<li><strong>#4353 [OPEN] 会话压缩可误触且无确认/撤销</strong>（当日新增）
-会话压缩操作无二次确认、无撤销路径，容易误操作丢失上下文，影响会话管理安全性。
-链接：github.com/github/copilot-cli/issues/4353</li>
-</ol>
-<h2>重要 PR 进展</h2>
-<p>当日仅1条PR更新，暂无详细功能说明：</p>
-<ul>
-<li>PR #4355 [OPEN] 由XavierMP14提交，2026-08-04创建并更新，目前处于开放合并状态，具体变更内容尚未公开。
-链接：github.com/github/copilot-cli/pull/4355</li>
-</ul>
-<h2>功能需求趋势</h2>
-<ol>
-<li><strong>会话管理增强</strong>：云同步、会话分叉、会话压缩安全管控是当前最高频的需求方向，票数总和超过40，社区希望提升跨会话、跨设备的上下文连续性。</li>
-<li><strong>插件生态完善</strong>：插件开关、技能调用修复、自动更新等需求持续出现，社区希望提升插件的可控性和易用性。</li>
-<li><strong>自定义能力扩展</strong>：自定义模型端点、自定义主题、工具选择性启用等需求突出，开发者希望提升CLI的适配性以满足个性化场景。</li>
-<li><strong>跨平台兼容性优化</strong>：WSL2输入兼容、终端渲染适配（Ghostty、zellij等）、企业托管策略兼容等需求密集，反映Windows/Linux混合环境和企业场景的用户痛点。</li>
-</ol>
-<h2>开发者关注点</h2>
-<ol>
-<li>交互体验痛点：终端渲染异常（表格重排、超链接截断、屏幕空白）、快捷键兼容性问题（WSL2下快捷键失效）是反馈最多的体验类问题，影响日常使用流畅度。</li>
-<li>企业场景限制：MCP服务器访问权限、托管策略兼容性问题阻塞了自定义工具和CI场景的使用，是企业用户的核心痛点。</li>
-<li>上下文管理风险：会话压缩无确认、上下文compaction时成本统计丢失等问题，容易导致上下文丢失或成本计算错误，影响长期会话的使用可靠性。</li>
-<li>生态兼容性：MCP服务器报错、模型接口不兼容、插件技能调用失败等问题，反映CLI与第三方生态的适配仍需完善。</li>
-</ol>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>Kimi Code CLI</strong> — <a href="https://github.com/MoonshotAI/kimi-cli">MoonshotAI/kimi-cli</a></summary>
 
-<h1>Kimi Code CLI 社区动态日报（2026-08-04）</h1>
-<h2>1. 今日速览</h2>
-<p>2026年8月4日，Kimi Code CLI社区无新版本发布，共5条Issue更新、7条PR进展。跨平台输入法兼容性、ACP协议模型切换能力、跨会话记忆系统是当前社区最受关注的功能方向，多个稳定性与兼容性修复正在推进。</p>
-<h2>2. 版本发布</h2>
-<p>过去24小时无新版本发布。</p>
-<h2>3. 社区热点 Issues</h2>
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>Issue 编号</th>
-<th>类型</th>
-<th>标题</th>
-<th>核心说明</th>
-<th>社区反应</th>
-<th>链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>#1283</td>
-<td>功能需求</td>
-<td>记忆系统：实现跨会话持久化上下文</td>
-<td>核心诉求是支持AI自动管理的项目模式、用户偏好记忆，以及用户手动自定义指令的能力，是长期高票的功能提案，对提升长期开发场景下的工具粘性至关重要。</td>
-<td>累计16条社区讨论，参与度最高</td>
-<td>MoonshotAI/kimi-cli Issue #1283</td>
-</tr>
-<tr>
-<td>2</td>
-<td>#2584</td>
-<td>Bug</td>
-<td>Windows平台IME输入法字符重复</td>
-<td>影响kimi-cli 0.31.1在Windows 11平台的提示词输入体验，泰语等基于输入法的字符会出现重复输入，属于基础输入体验缺陷，对非英语地区用户影响较大。</td>
-<td>创建当日更新，属于高优先级体验bug</td>
-<td>MoonshotAI/kimi-cli Issue #2584</td>
-</tr>
-<tr>
-<td>3</td>
-<td>#2583</td>
-<td>功能需求</td>
-<td>ACP协议支持模型列表广播与中途切换</td>
-<td>当前ACP客户端（如Zed、Happy Coder移动端）无法发现可用模型列表，也无法在会话中途切换模型，该需求将补齐ACP协议核心能力，拓展Kimi CLI在第三方IDE/编辑器中的集成体验。</td>
-<td>创建当日更新，属于协议层关键需求</td>
-<td>MoonshotAI/kimi-cli Issue #2583</td>
-</tr>
-<tr>
-<td>4</td>
-<td>#2573</td>
-<td>Bug</td>
-<td>Web UI切换会话时无限加载</td>
-<td>影响kimi-cli 1.48.0的Web UI（技术预览版）在macOS平台的会话切换体验，切换会话后会出现&quot;Connecting to session...&quot;无限转圈，属于Web UI核心流程的阻塞性bug。</td>
-<td>1条评论，已确认复现</td>
-<td>MoonshotAI/kimi-cli Issue #2573</td>
-</tr>
-<tr>
-<td>5</td>
-<td>#2582</td>
-<td>Bug</td>
-<td>CLI流式生成时卡死、会话失效</td>
-<td>影响kimi-cli 0.31.1在Windows平台使用kimi-k2.7-code模型时的流式输出体验，生成过程中流会无限挂起，导致整个会话不可用，属于高优先级稳定性问题。</td>
-<td>创建当日更新，属于核心功能阻塞bug</td>
-<td>MoonshotAI/kimi-cli Issue #2582</td>
-</tr>
-</tbody></table>
-<h2>4. 重要 PR 进展</h2>
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>PR 编号</th>
-<th>状态</th>
-<th>标题</th>
-<th>内容说明</th>
-<th>链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>#2585</td>
-<td>Open</td>
-<td>feat(cli): 向子进程暴露AI_AGENT环境变量</td>
-<td>实现向Kimi CLI会话启动的子进程设置<code>AI_AGENT=kimi</code>环境变量，同时支持保留外部编排工具传入的非空值，方便下游工具识别当前进程由Kimi CLI启动，适配工具链集成场景。</td>
-<td></td>
-</tr>
-</tbody></table>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>OpenCode</strong> — <a href="https://github.com/anomalyco/opencode">anomalyco/opencode</a></summary>
 
-<h1>OpenCode 社区动态日报 2026-08-04</h1>
-<h2>今日速览</h2>
-<p>今日 OpenCode 连续发布 v1.18.12、v1.18.13 两个修复版本，核心解决 Azure 模型推理请求失败、桌面端 RTL 布局适配、TUI 剪贴板失效等问题。社区最热 Issue 为「TUI 选中文本无法复制到剪贴板」，累计获 109 个赞同、117 条评论；同时多个新功能 PR 合入，包括新增 AWS Kiro 提供商、TUI 动画文本自定义、长会话闲置自动压缩等。</p>
-<hr>
-<h2>版本发布</h2>
-<h3>v1.18.13</h3>
-<ul>
-<li><strong>TUI 修复</strong>：GitHub PR 评审上下文新增 PR 编号与 URL 信息</li>
-<li><strong>Desktop 修复</strong>：解决多标签页、抽屉、调整大小、标题栏交互的多个从右到左（RTL）布局问题，统一适配 RTL 场景的方向图标逻辑</li>
-</ul>
-<h3>v1.18.12</h3>
-<ul>
-<li><strong>Core 修复</strong>：解决 Azure GPT-5.5+ 开启推理模式时完成请求失败的问题</li>
-<li><strong>Desktop 修复</strong>：降低 Draft 包含大体积粘贴图片/附件时的编辑器卡顿，优化项目搜索匹配最近使用项目的逻辑</li>
-</ul>
-<hr>
-<h2>社区热点 Issues（Top 10）</h2>
-<ol>
-<li><strong>[OPEN] Copy To Clipboard is not working</strong> (<a href="https://github.com/anomalyco/opencode/issues/4283">#4283</a>)<br>TUI 选中文本无法复制到系统剪贴板，是今日评论数最高、赞同最多的 Issue，覆盖全平台用户，基础交互 bug 影响面极广。</li>
-<li><strong>[OPEN] Bug: Model generates identical response twice</strong> (<a href="https://github.com/anomalyco/opencode/issues/25270">#25270</a>)<br>模型连续输出完全一致的重复响应，为核心功能异常，已有 24 条讨论，多用户反馈复现。</li>
-<li><strong>[CLOSED] session/update notifications sent after session/prompt response</strong> (<a href="https://github.com/anomalyco/opencode/issues/17505">#17505</a>)<br>OpenCode 作为 ACP 提供商时，会话更新通知在响应结束后发送导致客户端内容缺失，是集成场景的关键 bug，已随 PR #40422 修复。</li>
-<li><strong>[CLOSED] feat: Add option to disable mouse capture in TUI</strong> (<a href="https://github.com/anomalyco/opencode/issues/7926">#7926</a>)<br>请求支持关闭 TUI 鼠标捕获以适配 Zellij、tmux 等终端复用器，获 23 个赞同，已实现功能并关闭。</li>
-<li><strong>[OPEN] [FEATURE]: Add Support for MCP Apps in the desktop app</strong> (<a href="https://github.com/anomalyco/opencode/issues/10884">#10884</a>)<br>请求桌面端支持 MCP Apps 规范，获 44 个赞同，是生态扩展方向的高需求特性。</li>
-<li><strong>[CLOSED] [FEATURE]: Add a config to set the sidebar to open/closed by default</strong> (<a href="https://github.com/anomalyco/opencode/issues/3682">#3682</a>)<br>请求支持配置侧边栏默认开关状态，获 26 个赞同，已合入功能并关闭。</li>
-<li><strong>[OPEN] [Zen] AuthError: &quot;Request blocked by upstream provider&quot;</strong> (<a href="https://github.com/anomalyco/opencode/issues/39827">#39827</a>)<br>Zen 所有模型（付费/免费）均被上游拦截，Direct 提供商 API 正常，为 Zen 服务严重故障，影响大量订阅用户。</li>
-<li><strong>[OPEN] [BUG] TUI prompt input fail on Enter</strong> (<a href="https://github.com/anomalyco/opencode/issues/31217">#31217</a>)<br>TUI 输入框按回车后文本消失但无法提交，为基础交互 bug，中英文输入均受影响。</li>
-<li><strong>[OPEN] CLI/TUI multi-file apply_patch approval only shows first file diff</strong> (<a href="https://github.com/anomalyco/opencode/issues/17076">#17076</a>)<br>多文件代码变更审批仅展示首个文件 diff，严重影响代码审查体验，获 19 个赞同。</li>
-<li><strong>[OPEN] OpenCode Go deepseek-v4-flash 模型版本错配</strong> (<a href="https://github.com/anomalyco/opencode/issues/40409">#40409</a>)<br>请求 <code>deepseek-v4-flash</code> 实际返回 V3.2 版本，知识截止时间不符，为模型服务的严重质量问题，影响付费用户权益。</li>
-</ol>
-<hr>
-<h2>重要 PR 进展（Top 10）</h2>
-<ol>
-<li><strong>[OPEN] some experimental perf improvements</strong> (<a href="https://github.com/anomalyco/opencode/pull/40427">#40427</a>)<br>桌面端渲染性能优化，Home 启动后无超过 50ms 的渲染阻塞任务，显著提升启动速度。</li>
-<li><strong>[OPEN] feat(opencode): add Kiro provider</strong> (<a href="https://github.com/anomalyco/opencode/pull/20491">#20491</a>)<br>新增 AWS Kiro 模型提供商，通过内置插件扩展模型支持范围，对应需求 Issue #9165、#26680。</li>
-<li><strong>[OPEN] fix(plugin): skip mismatched kind in readV1Plugin detect mode</strong> (<a href="https://github.com/anomalyco/opencode/pull/40426">#40426</a>)<br>修复插件检测模式下 kind 不匹配导致加载失败的问题，解决 Issue #31610。</li>
-<li><strong>[OPEN] feat(server): runtime base path support for reverse proxy deployments</strong> (<a href="https://github.com/anomalyco/opencode/pull/28326">#28326</a>)<br>新增 <code>--base-path</code> 参数与 <code>server.basePath</code> 配置，支持 OpenCode Web 端通过反向代理部署，对应 Issue #7624。</li>
-<li><strong>[CLOSED] fix(acp): drain updates before end turn</strong> (<a href="https://github.com/anomalyco/opencode/pull/40422">#40422</a>)<br>修复 ACP 会话更新通知顺序问题，等待会话空闲后再返回响应，已合入并关闭对应 Issue #17505。</li>
-<li><strong>[OPEN] feat(tui): add spinnerVerbs config to customize TUI spinner text</strong> (<a href="https://github.com/anomalyco/opencode/pull/40030">#40030</a>)<br>新增 <code>spinner_verbs</code> 配置项，支持自定义 TUI 加载动画的文本内容，对应 Issue #19401。</li>
-<li><strong>[OPEN] fix(app): correct &quot;sesssion&quot; typo in LayoutRoute tag</strong> (<a href="https://github.com/anomalyco/opencode/pull/40423">#40423</a>)<br>修复 LayoutRoute  discriminated-union 标签拼写错误，解决导航逻辑异常问题，对应 Issue #40421。</li>
-<li><strong>[CLOSED] feat(app): RTL layout interactions</strong> (<a href="https://github.com/anomalyco/opencode/pull/40410">#40410</a>)<br>完成桌面端从右到左布局的全场景适配，包括标题栏、文件树、标签页、滚动条等元素的镜像与交互优化，已合入对应今日 RTL 相关修复。</li>
-<li><strong>[OPEN] [contributor] fix(tui): include model variants in assistant footer</strong> (<a href="https://github.com/anomalyco/opencode/pull/40415">#40415</a>)<br>修复 TUI 助手消息底部未展示非默认模型变体的问题，对应 Issue #40412。</li>
-<li><strong>[OPEN] feat(session): auto-compact stale sessions resumed after idle</strong> (<a href="https://github.com/anomalyco/opencode/pull/40403">#40403</a>)<br>新增闲置长会话恢复后自动压缩逻辑，避免重复发送完整会话前缀导致成本浪费。</li>
-</ol>
-<hr>
-<h2>功能需求趋势</h2>
-<ol>
-<li><strong>基础体验优化</strong>：TUI 剪贴板、RTL 布局、侧边栏配置、终端复用器适配等基础交互问题是社区最高频的需求方向。</li>
-<li><strong>生态扩展</strong>：新增模型提供商（Kiro、Poolside、QVAC 等）、支持 MCP Apps 规范、Zen 服务稳定性优化是生态建设重点。</li>
-<li><strong>代码协作体验</strong>：多文件 diff 展示、Plan 模式权限管控、文件索引刷新、会话历史无限制检索是开发者协作场景的核心需求。</li>
-<li><strong>部署适配</strong>：反向代理支持、bare repo worktree 识别、项目路径变更自动更新是企业级部署场景的常见需求。</li>
-</ol>
-<hr>
-<h2>开发者关注点</h2>
-<ol>
-<li><strong>基础交互稳定性</strong>：TUI 剪贴板失效、回车提交失败、鼠标捕获冲突等问题高频出现，是影响日常使用的首要痛点。</li>
-<li><strong>模型服务可靠性</strong>：Zen 上游拦截、模型版本错配、重复响应、推理请求失败等问题直接冲击核心使用流程，社区反馈强烈。</li>
-<li><strong>高级功能完备性</strong>：多文件 diff 仅展示首文件、Plan 模式权限漏控、会话历史 100 条/30 天限制等问题，降低了代码协作场景的可用性。</li>
-<li><strong>边缘场景兼容性</strong>：终端复用器适配、RTL 布局、反向代理部署等小众但重要的场景 bug，需要持续修复覆盖。</li>
-</ol>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>Qwen Code</strong> — <a href="https://github.com/QwenLM/qwen-code">QwenLM/qwen-code</a></summary>
 
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <hr>
@@ -484,10 +91,10 @@ Release链接：<a href="https://github.com/anthropics/claude-code/releases/tag/
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-cli-en</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-cli-en</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI CLI Tools Community Digest 2026-08-04 Generated: 2026-08-04 12:27 UTC | Tools covered: 7 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills Cross-Tool Comparison [LLM fallback] stepfun returned an empty response. Per-Tool Reports Claude Code — anthropics/claude-code Claude Code Skills Highlights Source: anthropics/skills Claude Code Skills Community Highlights Report Data as of 2026-08-04 1. Top Skills Ranking Rank PR Skill Description S...</description>
+      <description>AI CLI Tools Community Digest 2026-08-04 Generated: 2026-08-04 13:31 UTC | Tools covered: 7 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills Cross-Tool Comparison LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details Per-Tool Reports Claude Code — anthropics/claude-code Claude Code Skills Highlights Source: anthropics/skills ⚠️ Skills summary generation failed. ⚠️ Su...</description>
       <content:encoded><![CDATA[<h1>AI CLI Tools Community Digest 2026-08-04</h1>
 <blockquote>
-<p>Generated: 2026-08-04 12:27 UTC | Tools covered: 7</p>
+<p>Generated: 2026-08-04 13:31 UTC | Tools covered: 7</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/anthropics/claude-code">Claude Code</a></li>
@@ -501,7 +108,9 @@ Release链接：<a href="https://github.com/anthropics/claude-code/releases/tag/
 </ul>
 <hr>
 <h2>Cross-Tool Comparison</h2>
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<blockquote>
+<p>LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details</p>
+</blockquote>
 <hr>
 <h2>Per-Tool Reports</h2>
 <details>
@@ -511,263 +120,45 @@ Release链接：<a href="https://github.com/anthropics/claude-code/releases/tag/
 <blockquote>
 <p>Source: <a href="https://github.com/anthropics/skills">anthropics/skills</a></p>
 </blockquote>
-<h1>Claude Code Skills Community Highlights Report</h1>
-<p><em>Data as of 2026-08-04</em></p>
+<p>⚠️ Skills summary generation failed.</p>
 <hr>
-<h2>1. Top Skills Ranking</h2>
-<table>
-<thead>
-<tr>
-<th>Rank</th>
-<th>PR</th>
-<th>Skill</th>
-<th>Description</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td><a href="https://github.com/anthropics/skills/pull/1298">#1298</a></td>
-<td><strong>skill-creator eval fix</strong></td>
-<td>Fixes <code>run_eval.py</code> reporting 0% recall due to incorrect artifact installation, Windows stream reading, and trigger detection flaws.</td>
-<td>Open</td>
-</tr>
-<tr>
-<td>2</td>
-<td><a href="https://github.com/anthropics/skills/pull/514">#514</a></td>
-<td><strong>document-typography</strong></td>
-<td>Prevents orphan words, widow paragraphs, and numbering misalignment in AI-generated documents.</td>
-<td>Open</td>
-</tr>
-<tr>
-<td>3</td>
-<td><a href="https://github.com/anthropics/skills/pull/538">#538</a></td>
-<td><strong>pdf case-sensitivity fix</strong></td>
-<td>Corrects 8 case-sensitive file references in <code>pdf/SKILL.md</code> that break on Linux/macOS.</td>
-<td>Open</td>
-</tr>
-<tr>
-<td>4</td>
-<td><a href="https://github.com/anthropics/skills/pull/486">#486</a></td>
-<td><strong>odt</strong></td>
-<td>Create, fill, read, and convert OpenDocument Format files (.odt, .ods).</td>
-<td>Open</td>
-</tr>
-<tr>
-<td>5</td>
-<td><a href="https://github.com/anthropics/skills/pull/210">#210</a></td>
-<td><strong>frontend-design overhaul</strong></td>
-<td>Improves clarity, actionability, and coherence of frontend-design skill instructions.</td>
-<td>Open</td>
-</tr>
-<tr>
-<td>6</td>
-<td><a href="https://github.com/anthropics/skills/pull/723">#723</a></td>
-<td><strong>testing-patterns</strong></td>
-<td>Covers unit testing, React component testing, and testing philosophy (Testing Trophy).</td>
-<td>Open</td>
-</tr>
-<tr>
-<td>7</td>
-<td><a href="https://github.com/anthropics/skills/pull/525">#525</a></td>
-<td><strong>pyxel</strong></td>
-<td>Retro/pixel-art game development workflow using the Pyxel engine and pyxel-mcp.</td>
-<td>Open</td>
-</tr>
-</tbody></table>
-<hr>
-<h2>2. Community Demand Trends</h2>
-<p><strong>From Issues, the highest-demand directions are:</strong></p>
-<ul>
-<li><p><strong>Skill-creator reliability</strong> — Multiple issues (#556, #1169, #1061, #1099, #1050, #1323, #1261) report that <code>run_eval.py</code> and <code>run_loop.py</code> fail on Windows, report 0% recall, and pollute live project registries. The community urgently needs a robust, cross-platform evaluation harness.</p>
-</li>
-<li><p><strong>Quality &amp; security meta-tools</strong> — Requests for audit capabilities appear repeatedly: #492 (namespace trust boundary abuse), #1385 (reasoning quality gate pipeline), #1487 (token exhaustion from eager injection), and #1329 (compact-memory symbolic state). Users want skills that analyze and govern skills.</p>
-</li>
-<li><p><strong>Document &amp; enterprise formats</strong> — Strong interest in production-grade document handling: #514 (typography), #486 (ODT), #541 (DOCX tracked changes), and #538 (PDF case fixes).</p>
-</li>
-<li><p><strong>Testing &amp; validation</strong> — #723 (testing-patterns) and #83 (skill-quality-analyzer) signal demand for built-in verification standards.</p>
-</li>
-<li><p><strong>Cross-platform &amp; interoperability</strong> — #29 (AWS Bedrock), #16 (expose as MCPs), and #228 (org-wide sharing) show users want skills to work across runtimes and distribution channels.</p>
-</li>
-</ul>
-<hr>
-<h2>3. High-Potential Pending Skills</h2>
-<p><strong>Active PRs with strong community interest:</strong></p>
-<ul>
-<li><p><strong><a href="https://github.com/anthropics/skills/pull/1367">#1367</a></strong> — <em>self-audit</em> skill (mechanical verification + four-dimension reasoning quality gate). Addresses a gap in automated output validation.</p>
-</li>
-<li><p><strong><a href="https://github.com/anthropics/skills/pull/1302">#1302</a></strong> — <em>color-expert</em> skill covering color spaces, naming systems, and accessibility. Fills a niche in design workflows.</p>
-</li>
-<li><p><strong><a href="https://github.com/anthropics/skills/pull/1479">#1479</a></strong> — <em>plan-file-hygiene</em> skill. Directly responds to #1417 about lifecycle management of planning artifacts.</p>
-</li>
-<li><p><strong><a href="https://github.com/anthropics/skills/pull/83">#83</a></strong> — <em>skill-quality-analyzer</em> and <em>skill-security-analyzer</em>. Proposed two years ago, still open; aligns with current security and quality trends.</p>
-</li>
-</ul>
-<hr>
-<h2>4. Skills Ecosystem Insight</h2>
-<p>The community’s most concentrated demand is for <strong>reliable, cross-platform meta-tooling that audits, validates, and secures skills</strong> — with particular urgency around fixing <code>skill-creator</code>’s broken evaluation loop and preventing trust-boundary abuse in community-contributed skills.</p>
-<hr>
-<h1>Claude Code Community Digest — 2026-08-04</h1>
-<h2>Today&#39;s Highlights</h2>
-<p>Claude Code v2.1.221 shipped today with a new VSCode Focus view to declutter tool activity, plus Linux sandbox credential masking support. Multiple high-severity open issues surfaced today, including a VSCode extension credit-blocking bug for Fable 5 users, a Windows 11 GPU crash tied to Opus 5 in-page actions, and a terminal mode message queue stall affecting macOS 26.6 users.</p>
-<h2>Releases</h2>
-<h3>v2.1.221</h3>
-<ul>
-<li>Added VSCode Focus view: a chat-menu toggle (shortcut <code>Ctrl+Alt+F</code> / command &quot;Claude Code: Toggle Focus view&quot;) that hides tool activity behind expandable per-turn summaries, with a live running-tool indicator for active tasks</li>
-<li>Added <code>mode: &quot;mask&quot;</code> option for sandbox credential files on Linux to improve secret handling security</li>
-<li>No other new releases were published in the last 24 hours.</li>
-</ul>
-<h2>Hot Issues</h2>
-<ol>
-<li>[CLOSED] Regression: Native team-management tools (TeamCreate/TeamDelete) broken in v2.1.178 (#68721)<br>Why it matters: Breaks core enterprise team collaboration workflows for users relying on native team management features.<br>Community reaction: 18 comments, 7 upvotes, confirmed regression from v2.1.177, resolved in a subsequent release.<br>Link: <a href="https://github.com/anthropics/claude-code/issues/68721">https://github.com/anthropics/claude-code/issues/68721</a></li>
-<li>[OPEN] VSCode extension blocks Fable 5 access with false credit error for Max plan users (#79441)<br>Why it matters: Prevents eligible paying users from accessing high-tier model features, with no workaround for affected accounts.<br>Community reaction: 14 comments, 12 upvotes, high frustration from users with remaining weekly Fable allowance.<br>Link: <a href="https://github.com/anthropics/claude-code/issues/79441">https://github.com/anthropics/claude-code/issues/79441</a></li>
-<li>[OPEN] Windows 11 GPU crash corrupts MSIX package during Opus 5 in-page browser actions (#81159)<br>Why it matters: Causes immediate Claude Desktop crashes and broken installs requiring manual cleanup for Windows users running Opus 5.<br>Community reaction: 11 comments, multiple reports of data loss from corrupted packages.<br>Link: <a href="https://github.com/anthropics/claude-code/issues/81159">https://github.com/anthropics/claude-code/issues/81159</a></li>
-<li>[OPEN] GitHub repos missing from Claude Code web repo picker despite desktop app install (#60493)<br>Why it matters: Breaks the core workflow of selecting repositories for work in the browser-based Claude Code</li>
-</ol>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>OpenAI Codex</strong> — <a href="https://github.com/openai/codex">openai/codex</a></summary>
 
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>Gemini CLI</strong> — <a href="https://github.com/google-gemini/gemini-cli">google-gemini/gemini-cli</a></summary>
 
-<h1>Gemini CLI Community Digest</h1>
-<p><strong>Date: 2026-08-04</strong></p>
-<hr>
-<h2>Today&#39;s Highlights</h2>
-<p>August 4, 2026 activity is dominated by critical stability, security, and model support updates for the Gemini CLI. Key changes include fixes for long-standing agent hang issues, new support for Gemini 3.6 Flash/3.5 Flash-Lite and local OpenAI-compatible endpoints, and urgent security patches for authentication and OAuth flows. Multiple high-priority bugs impacting subagent behavior, shell execution, and session memory are also actively being triaged by maintainers.</p>
-<hr>
-<h2>Releases</h2>
-<p>No new stable or nightly releases were published in the last 24 hours.</p>
-<hr>
-<h2>Hot Issues</h2>
-<ol>
-<li><strong><a href="https://github.com/google-gemini/gemini-cli/issues/21409">#21409</a> [P1] Generalist agent hangs</strong>
-The generalist subagent hangs indefinitely on even simple tasks like folder creation, forcing users to manually disable subagents as a workaround. It has 8 upvotes and 8 comments, with multiple users confirming the issue across versions, and is marked for retesting.</li>
-<li><strong><a href="https://github.com/google-gemini/gemini-cli/issues/22323">#22323</a> [P1] Subagent recovery after MAX_TURNS reported as GOAL success</strong>
-Subagents report false <code>success</code> status and <code>GOAL</code> termination reasons when hitting turn limits before completing work, leading to silent failures in multi-step tasks. It has 12 comments, with active discussion around fixing termination reporting logic.</li>
-<li><strong><a href="https://github.com/google-gemini/gemini-cli/issues/25166">#25166</a> [P1] Shell command execution stuck with &quot;Waiting input&quot; after completion</strong>
-Core shell execution functionality is broken, with tasks marked as active and awaiting input long after they finish, blocking subsequent operations. It has 3 upvotes and multiple user reports.</li>
-<li><strong><a href="https://github.com/google-gemini/gemini-cli/issues/21983">#21983</a> [P1] Browser subagent fails in Wayland</strong>
-The browser automation subagent fails for Linux users running the Wayland display server, limiting the feature&#39;s usability for a growing user base. It is marked for retesting.</li>
-<li>**[#24353](<a href="https://github.com/google-gemini">https://github.com/google-gemini</a></li>
-</ol>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>GitHub Copilot CLI</strong> — <a href="https://github.com/github/copilot-cli">github/copilot-cli</a></summary>
 
-<h1>GitHub Copilot CLI Community Digest</h1>
-<p><strong>Date: 2026-08-04</strong></p>
-<h2>Today&#39;s Highlights</h2>
-<p>Copilot CLI v1.0.78 shipped on 2026-08-03, adding live right-aligned tool call duration headers, automatic first-party plugin updates, an experimental <code>/new-worktree</code> command, and a fix for local desktop login defaulting to the browser flow. Multiple high-priority bugs were reported in the last 24 hours, including a regression breaking plugin-provided slash commands, a WSL2 keyboard input mapping issue, and an enterprise managed-settings validation error that blocks custom MCP servers.</p>
-<h2>Releases</h2>
-<h3>v1.0.78 (2026-08-03)</h3>
-<ul>
-<li><strong>Added</strong>: Timeline headers for tool calls lasting 5+ seconds, displayed right-aligned and ticking live during execution; opt out via <code>/settings showToolDurations</code></li>
-<li><strong>Improved</strong>: First-party plugins now automatically update to the latest version at session start</li>
-</ul>
-<h3>v1.0.78-3 (2026-08-03)</h3>
-<ul>
-<li><strong>Added</strong>: Experimental <code>/new-worktree</code> command to create a new git worktree and start a fresh conversation in it</li>
-<li><strong>Improved</strong>: Interactive shell shortcut now launches on Enter and displays an inline hint when the &quot;$&quot; input prefix is armed</li>
-<li><strong>Fixed</strong>: Copilot login now defaults to the browser flow for local desktop installs</li>
-</ul>
-<h2>Hot Issues</h2>
-<p>Top 10 most discussed issues from the last 24 hours, ordered by comment count:</p>
-<ol>
-<li><a href="https://github.com/github/copilot-cli/issues/2692">#2692 [CLOSED] Web Search tool (github-mcp-server) error</a> (6 comments, 2👍): A closed bug where the GitHub MCP server threw Streamable HTTP errors when executing web search tasks. Community reaction confirmed the issue impacted Reddit search and other web search workflows.</li>
-<li>[#4328 [OPEN] Ctrl+H misinterpreted as Ctrl+Backspace under WSL2](https</li>
-</ol>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>Kimi Code CLI</strong> — <a href="https://github.com/MoonshotAI/kimi-cli">MoonshotAI/kimi-cli</a></summary>
 
-<h1>Kimi Code CLI Community Digest | 2026-08-04</h1>
-<h2>Today&#39;s Highlights</h2>
-<p>No new Kimi Code CLI releases were published in the last 24 hours. Active development and community activity focused on ACP protocol improvements, Windows-specific bug fixes, and subprocess environment standardization, with 2 new issues and 1 new PR opened today. Several long-running PRs addressing core CLI reliability and Web UI stability also received updates.</p>
-<h2>Releases</h2>
-<p>No new releases were published in the last 24 hours.</p>
-<h2>Hot Issues</h2>
-<ol>
-<li><a href="https://github.com/MoonshotAI/kimi-cli/issues/1283">#1283: Feature Request: Memory System - Persistent context across sessions</a><br>Why it matters: Proposes a comprehensive persistent memory system (AI-managed automatic notes + user-defined manual instructions) to enable cross-session context retention, drastically improving workflow continuity for long-term projects. Community reaction: High engagement with 16 comments, reflecting strong user demand for persistent project and preference storage.</li>
-<li><a href="https://github.com/MoonshotAI/kimi-cli/issues/2573">#2573: Bug: Web UI &quot;Connecting to session...&quot; infinite spinner when switching sessions</a><br>Why it matters: Breaks core functionality of the technical preview Web UI, making session navigation impossible for users relying on the browser-based interface. Community reaction: Reported by a macOS 26.4 arm64 user on kimi-cli 1.48.0, with 1 comment and no widespread reports yet, but poses a critical usability barrier for Web UI users.</li>
-<li></li>
-</ol>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>OpenCode</strong> — <a href="https://github.com/anomalyco/opencode">anomalyco/opencode</a></summary>
 
-<h1>OpenCode Community Digest | 2026-08-04</h1>
-<h2>Today&#39;s Highlights</h2>
-<p>Two consecutive bugfix releases (v1.18.12 and v1.18.13) shipped within 24 hours, addressing critical Azure model reasoning failures, right-to-left UI layout gaps, TUI pull request context omissions, and desktop composer lag for large attachments. High-activity community discussions remain focused on TUI core usability, hosted Zen API reliability, and edge-case agent behavior, with multiple open issues drawing strong community engagement.</p>
-<h2>Releases</h2>
-<h3>v1.18.13</h3>
-<ul>
-<li>TUI bugfix: Pull request reviews now include the pull request number and URL in context</li>
-<li>Desktop bugfixes: Resolved right-to-left layout issues across tabs, drawers, resizing, and titlebar interactions, plus fixed shared directional icon behavior for RTL interfaces
-Release link: <a href="https://github.com/anomalyco/opencode/releases/tag/v1.18.13">https://github.com/anomalyco/opencode/releases/tag/v1.18.13</a></li>
-</ul>
-<h3>v1.18.12</h3>
-<ul>
-<li>Core bugfix: Fixed Azure GPT-5.5+ completion requests failing when reasoning is enabled (credit: @frederiknsgo)</li>
-<li>Desktop bugfixes: Reduced composer lag for drafts with large pasted images or attachments; fixed project search to match any known recent project instead of only the first five results
-Release link: <a href="https://github.com/anomalyco/opencode/releases/tag/v1.18.12">https://github.com/anomalyco/opencode/releases/tag/v1.18.12</a></li>
-</ul>
-<h2>Hot Issues</h2>
-<ol>
-<li><strong>#4283 [OPEN] Copy To Clipboard is not working</strong> (117 comments, 109 upvotes): Long-running high-impact TUI bug where selected response text fails to copy to clipboard across all operating systems, breaking a core user workflow. <a href="https://github.com/anomalyco/opencode/issues/4283">https://github.com/anomalyco/opencode/issues/4283</a></li>
-<li><strong>#25270 [OPEN] Bug: Model generates identical response twice</strong> (24 comments, 4 upvotes): Core agent loop bug causing duplicate LLM responses, wasting tokens and degrading output reliability. Active community discussion on root cause isolation. <a href="https://github.com/anomalyco/opencode/issues/25270">https://github.com/anomalyco/opencode/issues/25270</a></li>
-<li><strong>#17505 [CLOSED] session/update notifications sent after session/prompt response</strong> (15 comments, 10 upvotes): ACP provider integration bug that caused third-party clients to finalize turns with incomplete content, breaking OpenCode integrations with external tools. Recently resolved via PR #40422. <a href="https://github.com/anomalyco/opencode/issues/17505">https://github.com/anomalyco/opencode/issues/17505</a></li>
-<li><strong>#10884 [OPEN] [FEATURE]: Add Support for MCP Apps in the desktop app</strong> (11 comments, 44 upvotes): High-demand feature request to support the stable Model Context Protocol Apps specification, aligning OpenCode with emerging agent ecosystem standards. 44 upvotes signal strong user demand. <a href="https://github.com/anomalyco/opencode/issues/10884">https://github.com/anomalyco/opencode/issues/10884</a></li>
-<li><strong>#39827 [OPEN] [Zen] AuthError: &quot;Request blocked by upstream provider&quot;</strong> (8 comments, 4 upvotes): Service-breaking bug rendering all Zen models unusable for affected users, with direct provider API keys working as a workaround, pointing to a Zen platform-side outage. <a href="https://github.com/anomalyco/opencode/issues/39827">https://github.com/anomalyco/opencode/issues/39827</a></li>
-<li><strong>#31217 [OPEN] [BUG] TUI prompt input fail on Enter</strong> (7 comments, 3 upvotes): TUI usability bug where pressing Enter after typing a prompt swallows input without submission, breaking core CLI/TUI interaction for both English and Chinese input. <a href="https://github.com/anomalyco/opencode/issues/31217">https://github.com/anomalyco/opencode/issues/31217</a></li>
-<li><strong>#17076 [OPEN] CLI/TUI multi-file apply_patch approval only shows first file diff</strong> (5 comments, 19 upvotes): Code review usability gap where multi-file patch approvals only display one file&#39;s diff, forcing users to miss changes in other modified files. High upvote count reflects strong developer need. <a href="https://github.com/anomalyco/opencode/issues/17076">https://github.com/anomalyco/opencode/issues/17076</a></li>
-<li><strong>#32852 [OPEN] TUI sidebar &quot;Modified Files&quot; section does not show session diffs</strong> (4 comments, 3 upvotes): Regression bug where the sidebar fails to display file changes made during a session, removing visibility into agent code edits. <a href="https://github.com/anomalyco/opencode/issues/32852">https://github.com/anomalyco/opencode/issues/32852</a></li>
-<li><strong>#18213 [OPEN] Sub-agent in plan mode bypasses restrictions after compaction</strong> (4 comments, 1 upvote): Control/security bug where plan mode&#39;s read-only restrictions are violated after sub-agent context compaction, allowing unintended file modifications. <a href="https://github.com/anomalyco/opencode/issues/18213">https://github.com/anomalyco/opencode/issues/18213</a></li>
-<li><strong>#38723 [OPEN] <code>opencode run</code> intermittently hangs during init</strong> (3 comments, 1 upvote): Reliability bug with a 56% observed failure rate where the run command hangs indefinitely with no output or error, breaking CI/automation workflows. <a href="https://github.com/anomalyco/opencode/issues/38723">https://github.com/anomalyco/opencode/issues/38723</a></li>
-</ol>
-<h2>Key PR Progress</h2>
-<ol>
-<li><strong>#40422 [CLOSED] fix(acp): drain updates before end turn</strong>: Resolves #17505 by waiting for the backing session to emit idle status before returning ACP prompt responses, fixing incomplete content delivery to ACP clients. <a href="https://github.com/anomalyco/opencode/pull/40422">https://github.com/anomalyco/opencode/pull/40422</a></li>
-<li><strong>#40410 [CLOSED] feat(app): RTL layout interactions</strong>: Comprehensive right-to-left UI support, mirroring titlebar controls, diff navigation, file trees, tabs, menus, and resize hit zones for RTL language users, paired with the v1.18.13 desktop RTL bugfixes. <a href="https://github.com/anomalyco/opencode/pull/40410">https://github.com/anomalyco/opencode/pull/40410</a></li>
-<li><strong>#40427 [OPEN] some experimental perf improvements</strong>: Experimental renderer performance pass that eliminated renderer-blocking tasks over 50ms on Home startup across consecutive test runs, targeting desktop UI responsiveness. <a href="https://github.com/anomalyco/opencode/pull/40427">https://github.com/anomalyco/opencode/pull/40427</a></li>
-<li><strong>#20491 [OPEN] [contributor] feat(opencode): add Kiro provider</strong>: Adds AWS Kiro as a bundled provider via the opencode-kiro plugin, expanding the supported model ecosystem. <a href="https://github.com/anomalyco/opencode/pull/20491">https://github.com/anomalyco/opencode/pull/20491</a></li>
-<li><strong>#40426 [OPEN] fix(plugin): skip mismatched kind in readV1Plugin detect mode</strong>: Fixes plugin detection logic to skip mismatched plugin kinds, resolving server plugin loader edge cases (closes #31610). <a href="https://github.com/anomalyco/opencode/pull/40426">https://github.com/anomalyco/opencode/pull/40426</a></li>
-<li><strong>#28326 [OPEN] feat(server): runtime base path support for reverse proxy deployments</strong>: Adds <code>--base-path</code> flag and <code>server.basePath</code> config to support running opencode web behind reverse proxies, improving deployment flexibility. <a href="https://github.com/anomalyco/opencode/pull/28326">https://github.com/anomalyco/opencode/pull/28326</a></li>
-<li><strong>#40030 [OPEN] feat(tui): add spinnerVerbs config to customize TUI spinner text</strong>: Adds <code>spinner_verbs</code> config option for <code>.opencode/tui.json</code> to let users customize loading spinner text. <a href="https://github.com/anomalyco/opencode/pull/40030">https://github.com/anomalyco/opencode/pull/40030</a></li>
-<li><strong>#40415 [OPEN] [contributor] fix(tui): include model variants in assistant footer</strong>: Fixes assistant message metadata and exported transcripts to display persisted non-default model variants alongside model names. <a href="https://github.com/anomalyco/opencode/pull/40415">https://github.com/anomalyco/opencode/pull/40415</a></li>
-<li><strong>#40403 [OPEN] feat(session): auto-compact stale sessions resumed after idle</strong>: Adds automatic session compaction for stale long-running sessions resumed after idle, eliminating the cost of re-sending full session prefixes every turn. <a href="https://github.com/anomalyco/opencode/pull/40403">https://github.com/anomalyco/opencode/pull/40403</a></li>
-<li><strong>#40216 [OPEN] [needs:compliance] feat(opencode): let tools opt into strict mode</strong>: Adds a <code>strict?: boolean</code> field to tool definitions, letting individual tools request strict mode instead of relying solely on provider-level settings, improving tool reliability. <a href="https://github.com/anomalyco/opencode/pull/40216">https://github.com/anomalyco/opencode/pull/40216</a></li>
-</ol>
-<h2>Feature Request Trends</h2>
-<p>The most requested feature directions from community issues are:</p>
-<ol>
-<li>TUI customization and usability: Requests for sidebar default state configuration, mouse capture disable for terminal multiplexer compatibility, extended session history access beyond the 100-session/30-day limit, and core interaction fixes (clipboard, Enter key submission)</li>
-<li>Expanded model and provider support: Demand for MCP Apps integration, new provider support (Kiro, QVAC, Poolside), and fixes for incorrect model routing on the Zen platform</li>
-<li>Agent control and observability: Requests for plan mode restriction enforcement, multi-file patch review visibility, session diff tracking in the sidebar, and sub-agent behavior controls</li>
-<li>Deployment flexibility: Support for reverse proxy deployments and local provider integrations for self-hosted use cases</li>
-</ol>
-<h2>Developer Pain Points</h2>
-<p>Recurring frustrations reported across issues include:</p>
-<ol>
-<li>TUI core usability gaps: Interaction bugs (Enter key input swallowing, clipboard copy failure, mouse capture breaking terminal multiplexer copy/paste) and missing customization options are the most frequently reported pain points, with the clipboard bug alone drawing 117 comments.</li>
-<li>Agent behavior edge cases: Duplicate responses, plan mode restriction bypasses after context compaction, and incomplete ACP notifications break trust in agent output and third-party integrations.</li>
-<li>Zen API reliability: Recurring auth errors, incorrect model routing (deepseek-v4-flash returning outdated V3.2), and UTF-8 streaming corruption for non-English text impact users relying on the hosted Zen platform.</li>
-<li>Desktop UI regressions: Right-to-left layout issues, sidebar modified files not updating, and composer lag with large attachments degrade the desktop app experience for power users.</li>
-</ol>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>Qwen Code</strong> — <a href="https://github.com/QwenLM/qwen-code">QwenLM/qwen-code</a></summary>
 
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <hr>
@@ -779,10 +170,10 @@ Release link: <a href="https://github.com/anomalyco/opencode/releases/tag/v1.18.
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-agents</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-agents</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>OpenClaw 生态日报 2026-08-04 Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-04 12:27 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw 项目深度报告 OpenClaw 项目动态日报 2026-08-04 1. 今日速览 项目今日保持高活跃度，24 小时内 Issues 与 PR 更新各达 500 条，其中活跃 Issues 460 条、待合并 PR 428 条，社区参与度持续高位运行。同期发布 2 个补丁版本（v2026.7.1-1 与 v2026.7.1-2），分别修复 Codex 对话稳定性及 npm 插件兼容性问题。当前 Issue 与 PR 待处理积压量较大，核心问题集中在 session-state、message-loss 及 auth-provider 三大领域，项目健康度需关注高优缺陷收...</description>
+      <description>OpenClaw 生态日报 2026-08-04 Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-04 13:31 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw 项目深度报告 ⚠️ 摘要生成失败。 横向生态对比 LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details 同赛道项目详细报告 NanoBot — HKUDS/nanobot ⚠️ 摘要生成失败。 Zeroclaw — zeroclaw-labs/zeroclaw ⚠️ 摘要生成失败。 PicoClaw — sipeed/picoclaw ⚠️ 摘要生成失败。 NanoClaw...</description>
       <content:encoded><![CDATA[<h1>OpenClaw 生态日报 2026-08-04</h1>
 <blockquote>
-<p>Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-04 12:27 UTC</p>
+<p>Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-04 13:31 UTC</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/openclaw/openclaw">OpenClaw</a></li>
@@ -801,504 +192,54 @@ Release link: <a href="https://github.com/anomalyco/opencode/releases/tag/v1.18.
 </ul>
 <hr>
 <h2>OpenClaw 项目深度报告</h2>
-<p><strong>OpenClaw 项目动态日报</strong>
-<em>2026-08-04</em></p>
-<hr>
-<h3>1. 今日速览</h3>
-<p>项目今日保持高活跃度，24 小时内 Issues 与 PR 更新各达 500 条，其中活跃 Issues 460 条、待合并 PR 428 条，社区参与度持续高位运行。同期发布 2 个补丁版本（v2026.7.1-1 与 v2026.7.1-2），分别修复 Codex 对话稳定性及 npm 插件兼容性问题。当前 Issue 与 PR 待处理积压量较大，核心问题集中在 session-state、message-loss 及 auth-provider 三大领域，项目健康度需关注高优缺陷收敛情况。</p>
-<hr>
-<h3>2. 版本发布</h3>
-<p><strong>v2026.7.1-2</strong> (<a href="https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-2">Release</a>)</p>
-<ul>
-<li><strong>修复</strong>：npm 插件接受来自新版 npm 客户端的 singleton-array metadata，确保被追踪的官方插件能够安装并更新到修正版本。</li>
-</ul>
-<p><strong>v2026.7.1-1</strong> (<a href="https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-1">Release</a>)</p>
-<ul>
-<li><strong>修复</strong>：<ul>
-<li><strong>Codex progress replies</strong>：保持 app-server 轮次在投递进度消息后继续运行，确保 GPT/Codex 达到权威终端响应而非中途停止。</li>
-<li><strong>Memory Core startup repair</strong>：恢复派生的 legacy-index 与 ca（摘要未完整显示）。</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3>3. 项目进展</h3>
-<p>过去 24 小时共有 72 个 PR 被合并或关闭，428 个 PR 处于待合并状态。今日推进的关键修复与功能包括：</p>
-<ul>
-<li><strong>共享聊天隐私修复</strong>：PR #119198 (<a href="https://github.com/openclaw/openclaw/pull/119198">link</a>) 修复了共享群组和频道会话自动加载 workspace-root <code>MEMORY.md</code> 导致私有长期上下文泄露的问题。</li>
-<li><strong>Gateway 更新失败恢复</strong>：PR #118378 (<a href="https://github.com/openclaw/openclaw/pull/118378">link</a>) 修复了 <code>openclaw update</code> 失败后 Gateway 停止且恢复启动时被拒绝（&quot;binary is older than the config&quot;）的问题。</li>
-<li><strong>Anthropic 工具调用严格解析</strong>：PR #117968 (<a href="https://github.com/openclaw/openclaw/pull/117968">link</a>) 修复了 Anthropic 流式路径使用宽松解析器修复截断/畸形 JSON 导致工具参数不完整的问题。</li>
-<li><strong>Cron 调度器健壮性</strong>：PR #68112 (<a href="https://github.com/openclaw/openclaw/pull/68112">link</a>) 修复了 <code>runMissedJobs()</code> 在启动时抛出异常导致定时器未激活、调度器静默死亡的问题。</li>
-<li><strong>实时语音会话归属保留</strong>：PR #116792 (<a href="https://github.com/openclaw/openclaw/pull/116792">link</a>) 作为协议修复栈的第一层，解决节点调用代理运行时丢失 Gateway 会话归属的问题。</li>
-</ul>
-<hr>
-<h3>4. 社区热点</h3>
-<p><strong>评论最多的 Issues</strong></p>
-<ul>
-<li><strong>#116201</strong> (<a href="https://github.com/openclaw/openclaw/issues/116201">link</a>) — 54 条评论，0👍<br>实时语音会话在缓慢或突发 provider/client 行为下保留无界 provider 和 consult 状态，P1 级，标记为 🦞 diamond lobster。社区高度关注资源管理与状态清理机制。</li>
-<li><strong>#77598</strong> (<a href="https://github.com/openclaw/openclaw/issues/77598">link</a>) — 22 条评论，1👍<br>24 小时实时监控开发代理行为与轨迹的 observational 追踪议题，反映对代理可观测性的长期需求。</li>
-<li><strong>#84583</strong> (<a href="https://github.com/openclaw/openclaw/issues/84583">link</a>) — 12 条评论，3👍<br>cron 任务 announce 投递触发 <code>EmbeddedAttemptSessionTakeoverError</code>，当用户 actively chatting 时发生，涉及会话锁与并发控制。</li>
-<li><strong>#106779</strong> (<a href="https://github.com/openclaw/openclaw/issues/106779">link</a>) — 12 条评论，3👍<br>2026.7.1 版本下本地 llama.cpp provider 报错 &quot;Unable to generate parser&quot;，curl 和 ChatGPT provider 正常，提示模板解析兼容性问题。</li>
-</ul>
-<p><strong>评论最多的 PRs</strong></p>
-<ul>
-<li><strong>#117712</strong> (<a href="https://github.com/openclaw/openclaw/pull/117712">link</a>) — Dependabot 批量更新 10 个 GitHub Actions，安全与依赖卫生维护。</li>
-<li><strong>#119198</strong> (<a href="https://github.com/openclaw/openclaw/pull/119198">link</a>) — 共享聊天私有内存保护，P1 级，已就绪待维护者审查。</li>
-<li><strong>#92230</strong> (<a href="https://github.com/openclaw/openclaw/pull/92230">link</a>) — 为 <code>/model</code> 命令添加动态模型选择，支持 Slack 等渠道的按钮交互。</li>
-</ul>
-<hr>
-<h3>5. Bug 与稳定性</h3>
-<p><strong>P1 — 严重（影响会话状态、消息投递或崩溃循环）</strong></p>
-<ul>
-<li><strong>#116201</strong> (<a href="https://github.com/openclaw/openclaw/issues/116201">link</a>)：实时语音工作保留无界 provider/consult 状态，无对应 fix PR。</li>
-<li><strong>#84583</strong> (<a href="https://github.com/openclaw/openclaw/issues/84583">link</a>)：cron announce 投递触发 <code>EmbeddedAttemptSessionTakeoverError</code>，无 fix PR。</li>
-<li><strong>#115908</strong> (<a href="https://github.com/openclaw/openclaw/issues/115908">link</a>)：会话转录投影在持续写入下进入 livelock，阻塞主线程，无 fix PR。</li>
-<li><strong>#115001</strong> (<a href="https://github.com/openclaw/openclaw/issues/115001">link</a>)：混合内存搜索通过 FTS LIKE 回退返回虚假相似度 1.0，无 fix PR。</li>
-<li><strong>#118846</strong> (<a href="https://github.com/openclaw/openclaw/issues/118846">link</a>)：Gateway 启动时被插件元数据快照和 fs statting 占满主线程，导致 accept loop 饥饿，无 fix PR。</li>
-<li><strong>#115424</strong> (<a href="https://github.com/openclaw/openclaw/issues/115424">link</a>)：Gateway V8 堆 OOM 后重启恢复热 resume 会话，转化为 7 次核心转储循环，无 fix PR。</li>
-<li><strong>#115037</strong> (<a href="https://github.com/openclaw/openclaw/issues/115037">link</a>)：中断后恢复产生虚假 &quot;No response requested.&quot;，触发模型降级，无 fix PR。</li>
-<li><strong>#118846</strong> (<a href="https://github.com/openclaw/openclaw/issues/118846">link</a>)：Gateway 主线程从启动就被插件元数据快照饱和，无 fix PR。</li>
-</ul>
-<p><strong>P2 — 高（已有部分修复 PR 或进行中）</strong></p>
-<ul>
-<li><strong>#96242</strong> (<a href="https://github.com/openclaw/openclaw/issues/96242">link</a>)：Telegram 多条独立路径导致重复消息。</li>
-<li><strong>#99586</strong> (<a href="https://github.com/openclaw/openclaw/issues/99586">link</a>)：Gateway 操作后运行时工具表面返回空白。</li>
-<li><strong>#107873</strong> (<a href="https://github.com/openclaw/openclaw/issues/107873">link</a>)：嵌入式 prompt-lock 会话 takeover 在工具失败后中止可见 WebChat 回合。</li>
-<li><strong>#115700</strong> (<a href="https://github.com/openclaw/openclaw/issues/115700">link</a>)：<code>chat.send</code> 因过期的 <code>expectedLeafEntryId</code> 被拒。</li>
-<li><strong>#116010</strong> (<a href="https://github.com/openclaw/openclaw/issues/116010">link</a>)：所有持久会话被错误限制在 128k 上下文。</li>
-<li><strong>#92633</strong> (<a href="https://github.com/openclaw/openclaw/issues/92633">link</a>)：<code>memory_search corpus=&quot;all&quot;</code> 超时，而单个 corpus 成功。</li>
-</ul>
-<hr>
-<h3>6. 功能请求与路线图信号</h3>
-<p><strong>高优先级需求（已有或即将有对应实现）</strong></p>
-<ul>
-<li><strong>#7722</strong> (<a href="https://github.com/openclaw/openclaw/issues/7722">link</a>) — 9 条评论，4👍，P1，🦞 diamond lobster<br>请求配置化文件系统沙箱（<code>tools.fileAccess.allowedPaths/denyPaths</code>），已有明确产品决策需求，可能纳入下一版本安全特性。</li>
-<li><strong>#67413</strong> (<a href="https://github.com/openclaw/openclaw/issues/67413">link</a>) — 8 条评论，5👍，P2<br>请求 per-agent dreaming 配置以解决 memory-core dreaming 同时运行导致 OOM 的问题，产品决策中。</li>
-<li><strong>#64046</strong> (<a href="https://github.com/openclaw/openclaw/issues/64046">link</a>) — 9 条评论，P1<br>请求全链路敏感数据脱敏（配置文件、日志、UI），安全性需求迫切。</li>
-<li><strong>#114146</strong> (<a href="https://github.com/openclaw/openclaw/issues/114146">link</a>) — 5 条评论，P2<br>请求为 <code>talk.realtime.providers</code> 添加 <code>baseUrl</code> 配置以支持 OpenAI Realtime 兼容 provider。</li>
-</ul>
-<p><strong>已有 PR 对应功能</strong></p>
-<ul>
-<li><strong>#92230</strong> (<a href="https://github.com/openclaw/openclaw/pull/92230">link</a>)：<code>/model</code> 命令动态模型选择，已就绪待合并且支持多渠道交互。</li>
-<li><strong>#112820</strong> ([link](<a href="https://github.com/openclaw/open">https://github.com/openclaw/open</a></li>
-</ul>
+<p>⚠️ 摘要生成失败。</p>
 <hr>
 <h2>横向生态对比</h2>
-<h1>个人AI助手/自主智能体开源生态横向对比分析报告（2026-08-04）</h1>
-<h2>1. 生态全景</h2>
-<p>当前个人AI助手/自主智能体开源生态处于多线并行迭代期，核心项目围绕稳定性、安全合规、生态兼容三大核心方向推进，不同项目基于技术路线形成差异化定位，社区活跃度分化显著。头部项目迭代速度快但问题积压较多，中小项目多聚焦垂直场景优化，整体生态向生产可用、企业级适配的方向演进。</p>
-<h2>2. 各项目活跃度对比</h2>
-<table>
-<thead>
-<tr>
-<th>项目名称</th>
-<th>活跃Issues数</th>
-<th>PR更新数</th>
-<th>新版本发布</th>
-<th>健康度评估</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>OpenClaw</td>
-<td>460</td>
-<td>1000（500 Issues更新+500 PR更新）</td>
-<td>2个补丁版本（v2026.7.1-1/2）</td>
-<td>中等（核心缺陷积压大，待收敛高优问题）</td>
-</tr>
-<tr>
-<td>Zeroclaw</td>
-<td>50</td>
-<td>50</td>
-<td>无</td>
-<td>良好（架构攻坚期，安全漏洞待修复）</td>
-</tr>
-<tr>
-<td>CoPaw</td>
-<td>18</td>
-<td>48</td>
-<td>无</td>
-<td>良好（迭代节奏稳定，多方向并行优化）</td>
-</tr>
-<tr>
-<td>PicoClaw</td>
-<td>8</td>
-<td>6</td>
-<td>无</td>
-<td>中等（核心稳定性bug</td>
-</tr>
-</tbody></table>
+<blockquote>
+<p>LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details</p>
+</blockquote>
 <hr>
 <h2>同赛道项目详细报告</h2>
 <details>
 <summary><strong>NanoBot</strong> — <a href="https://github.com/HKUDS/nanobot">HKUDS/nanobot</a></summary>
 
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>Zeroclaw</strong> — <a href="https://github.com/zeroclaw-labs/zeroclaw">zeroclaw-labs/zeroclaw</a></summary>
 
-<h1>Zeroclaw 项目动态日报 — 2026-08-04</h1>
-<h2>1. 今日速览</h2>
-<p>过去24小时，Zeroclaw 项目保持高度活跃，共记录 50 条 Issue 更新与 50 条 PR 更新，社区讨论与代码交付同步推进。Issue 侧以 RFC 讨论和安全架构设计为主，PR 侧则集中涌现 7 条关联的 Hindsight 记忆栈补丁（#9063–#9068）及上下文压缩、服务守护等关键增强。当前无已发布版本，项目处于功能攻坚与架构演进阶段，整体健康度良好，但高优先级安全与数据隔离问题需优先收敛。</p>
-<h2>2. 版本发布</h2>
-<p>今日无新版本发布。</p>
-<h2>3. 项目进展</h2>
-<p><strong>今日合并/关闭的重要 PR：</strong></p>
-<ul>
-<li>PR #9569 [P0] 修复了 WhatsApp Cloud 与 Linq 渠道在未配置签名密钥时跳过验证的 fail-open 漏洞，现已关闭合并。</li>
-<li>PR #9350 [P1] 为 <code>zeroclaw cron add/update</code> 补充 CLI 投递标志，修复了定时任务创建时投递模式被硬编码为 <code>none</code> 的问题，现已关闭合并。</li>
-<li>PR #9352 完成跨回合对话关联的 OTel 导出实现，推进了结构化可观测性增强。</li>
-<li>PR #9747 重构提供商元数据，为所有模型-提供商族添加显式端点分类，改进运行时工厂分发。</li>
-<li>PR #9750 引入服务监管器，将守护进程日志限制在 8 MiB 以内，解决日志无界增长问题。</li>
-</ul>
-<p><strong>整体推进评估：</strong>
-今日 6 条 PR 已合并/关闭，44 条待合并 PR 中 Hindsight 记忆栈（7 条）、上下文压缩、权限模型等核心架构补丁均已就绪，预计下一里程碑将集中解决记忆层授权与安全决策管线落地。</p>
-<h2>4. 社区热点</h2>
-<table>
-<thead>
-<tr>
-<th>条目</th>
-<th>类型</th>
-<th>评论数</th>
-<th>链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>#8603 — RFC: ZeroClaw Chat Completions profile</td>
-<td>RFC</td>
-<td>16</td>
-<td><a href="https://github.com/zeroclaw-labs/zeroclaw/issues/8603">https://github.com/zeroclaw-labs/zeroclaw/issues/8603</a></td>
-</tr>
-<tr>
-<td>#8303 — RFC: Goal mode v1 — bounded foreground Matrix work</td>
-<td>RFC</td>
-<td>13</td>
-<td><a href="https://github.com/zeroclaw-labs/zeroclaw/issues/8303">https://github.com/zeroclaw-labs/zeroclaw/issues/8303</a></td>
-</tr>
-<tr>
-<td>#7155 — RFC: Per-execution confirmation tier for high-risk shell commands</td>
-<td>RFC</td>
-<td>12</td>
-<td><a href="https://github.com/zeroclaw-labs/zeroclaw/issues/7155">https://github.com/zeroclaw-labs/zeroclaw/issues/7155</a></td>
-</tr>
-<tr>
-<td>#9488 — RFC: Unified attachment architecture for web chat and channels</td>
-<td>RFC</td>
-<td>11</td>
-<td><a href="https://github.com/zeroclaw-labs/zeroclaw/issues/9488">https://github.com/zeroclaw-labs/zeroclaw/issues/9488</a></td>
-</tr>
-<tr>
-<td>#9487 — RFC: Runtime-owned conversation sessions and transport surface adapters</td>
-<td>RFC</td>
-<td>10</td>
-<td><a href="https://github.com/zeroclaw-labs/zeroclaw/issues/9487">https://github.com/zeroclaw-labs/zeroclaw/issues/9487</a></td>
-</tr>
-</tbody></table>
-<p><strong>诉求分析：</strong>
-社区当前核心诉求集中在<strong>协议兼容性</strong>（#8603 希望 ZeroClaw 原生支持 OpenAI Chat Completions 协议，以接入 Open WebUI、LangChain 等生态）、<strong>安全与权限精细化</strong>（#7155 推动工具级 allow/ask/deny 策略，#7141/#7142 构建可插拔认证与运行时安全决策管线）以及<strong>会话/记忆所有权边界</strong>（#9487/#9488/#9600 明确运行时与渠道的会话归属，#8891 推动持久记忆到达生产 parity）。评论活跃度反映这些议题涉及架构决策，需要多角色协同评审。</p>
-<h2>5. Bug 与稳定性</h2>
-<table>
-<thead>
-<tr>
-<th>严重程度</th>
-<th>Issue</th>
-<th>状态</th>
-<th>是否有 Fix PR</th>
-<th>链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>P0/S0</td>
-<td>#9647 知识图谱缺少 per-agent 归属，任意 agent 可读写他人知识</td>
-<td>accepted</td>
-<td>尚无</td>
-<td><a href="https://github.com/zeroclaw-labs/zeroclaw/issues/9647">https://github.com/zeroclaw-labs/zeroclaw/issues/9647</a></td>
-</tr>
-<tr>
-<td>P0/S0</td>
-<td>#9646 会话/频道读写工具缺少 per-agent 所有权检查</td>
-<td>accepted</td>
-<td>尚无</td>
-<td><a href="https://github.com/zeroclaw-labs/zeroclaw/issues/9646">https://github.com/zeroclaw-labs/zeroclaw/issues/9646</a></td>
-</tr>
-<tr>
-<td>P1/S0</td>
-<td>#9642 审批超时被记录为显式操作员拒绝，篡改审计日志</td>
-<td>in-progress</td>
-<td>尚无</td>
-<td><a href="https://github.com/zeroclaw-labs/zeroclaw/issues/9642">https://github.com/zeroclaw-labs/zeroclaw/issues/9642</a></td>
-</tr>
-<tr>
-<td>P1/S3</td>
-<td>#9697 ZeroCode 无法连接由 Windows 任务计划程序启动的守护进程</td>
-<td>待作者响应</td>
-<td>尚无</td>
-<td><a href="https://github.com/zeroclaw-labs/zeroclaw/issues/9697">https://github.com/zeroclaw-labs/zeroclaw/issues/9697</a></td>
-</tr>
-</tbody></table>
-<p><strong>说明：</strong> 今日报告了两组 P0 级数据安全漏洞（知识图谱与会话/频道权限逃逸），均已在同一天被标记为 accepted，但尚未出现对应修复 PR，建议维护者立即分配负责人并启动紧急修复。</p>
-<h2>6. 功能请求与路线图信号</h2>
-<ul>
-<li><strong>OpenAI 协议兼容</strong> (#8603)：若被采纳，ZeroClaw 将新增 Chat Completions profile 网关，直接对齐主流客户端生态，预计进入 v0.9.x–v1.0 路线图。</li>
-<li><strong>Goal mode v1</strong> (#8303)： bounded foreground Matrix 工作流，已被讨论 13 轮，accepted 状态显示可能纳入近期迭代。</li>
-<li><strong>Hindsight 记忆栈</strong> (#9063–#9068 及 #8891 tracker)：7 条关联 PR 全部就绪，是下一版本记忆子系统的核心交付物，预计随 tracker #8891 闭环。</li>
-<li><strong>上下文压缩按模型窗口比例</strong> (#9535)：新增 <code>context_compact_ratio</code> 配置，已进入待合并状态，功能已可期。</li>
-<li><strong>产品遥测</strong> (#9621)： staged opt-in 遥测提案，解决维护者决策数据不足的痛点，可能影响发布策略。</li>
-</ul>
-<h2>7. 用户反馈摘要</h2>
-<ul>
-<li><strong>安全与隔离是当前最大痛点</strong>：社区对 #9647 和 #9646 的高严重性 bug 反应迅速，反映了多 agent 场景下数据隔离的紧迫性。</li>
-<li><strong>协议兼容需求强烈</strong>：#8603 的 16 条评论中，用户普遍反映现有 WebSocket/ACP 接入门槛高，期待 OpenAI 兼容层降低集成成本。</li>
-<li><strong>工具权限模型尚不成熟</strong>：#7155 的修订历史显示作者已从 shell-only 扩展到 all-tools 统一权限层，说明用户反馈推动了范围收敛。</li>
-<li><strong>Windows 部署体验待改善</strong>：#9697 指出 Windows 任务计划启动守护进程后的连接问题，属于桌面用户实际障碍。</li>
-<li><strong>日志失控问题受关注</strong>：#9750 的 PR 直接回应了守护进程日志无界增长的生产环境投诉。</li>
-</ul>
-<h2>8. 待处理积压</h2>
-<ul>
-<li><strong>RFC #7155</strong>（12 评论，2026-06-03 创建）：工具权限确认层 RFC，已更新至 Rev 2，但标记为 <code>needs-maintainer-review</code>，长期未收口。</li>
-<li><strong>RFC #7141</strong>（10 评论，2026-06-03 创建）：可插拔 inbound 认证与规范主体，当前 Rev 7，仍处于 <code>needs-maintainer-review</code>，影响 IAM 里程碑。</li>
-<li><strong>Tracker #8692</strong>（8 评论，2026-07-04 创建）：维护者决策队列，用于 RFC 与设计议题的 accept/reject 分流，当前队列可能堆积。</li>
-<li><strong>RFC #8398</strong>（3 评论，2026-06-27 创建）：插件权限、配置与密钥模型的开放问题，标记 <code>needs-author-action</code>，需作者补充内容。</li>
-<li><strong>PR #9063–#9068</strong>（Hindsight 栈，共 7 条）：均标记 <code>needs-author-action</code>，虽已就绪但等待作者响应 review 意见，可能阻塞记忆层发布。</li>
-</ul>
-<hr>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>PicoClaw</strong> — <a href="https://github.com/sipeed/picoclaw">sipeed/picoclaw</a></summary>
 
-<h1>PicoClaw 项目日报（2026-08-04）</h1>
-<h2>1. 今日速览</h2>
-<p>过去24小时，PicoClaw 项目保持中等活跃度，共 8 条 Issue 更新与 6 条 PR 更新。当前 3 条活跃 Issue 均指向核心稳定性缺陷（MCP 连接容错、Web UI 性能、路由上下文管理），3 条待合并 PR 聚焦日志可观测性、上下文修复及 Telegram 体验优化。无新版本发布，项目处于 bug 修复与体验优化阶段，整体健康度中等。</p>
-<h2>2. 版本发布</h2>
-<p>无新版本发布。</p>
-<h2>3. 项目进展</h2>
-<p><strong>今日待合并 PR（3 条）：</strong></p>
-<ul>
-<li><strong>PR #3317</strong>（待合并）：在 LLM 响应调试日志中增加 prompt cache tokens 记录，帮助开发者排查 DeepSeek 等 provider 的缓存行为。<br><a href="https://github.com/sipeed/picoclaw/pull/3317">sipeed/picoclaw PR #3317</a></li>
-<li><strong>PR #3316</strong>（待合并）：修复 dispatch rules 路由至非默认 agent 时的上下文管理缺陷，恢复历史记忆与自动压缩功能。<br><a href="https://github.com/sipeed/picoclaw/pull/3316">sipeed/picoclaw PR #3316</a></li>
-<li><strong>PR #3315</strong>（待合并）：支持 Telegram 私聊中的 topics 处理，修复 <code>IsTopicMessage</code> 识别逻辑。<br><a href="https://github.com/sipeed/picoclaw/pull/3315">sipeed/picoclaw PR #3315</a></li>
-</ul>
-<p><strong>今日已关闭 PR（3 条）：</strong></p>
-<ul>
-<li><strong>PR #3267</strong>（已关闭）：修复 antigravity token refresh 的 scope 传递错误，消除 <code>PERMISSION_DENIED</code> 错误。</li>
-<li><strong>PR #3273</strong>（已关闭）：添加日语（ja）本地化翻译文件，完善 Web UI 国际化支持。</li>
-<li><strong>PR #3202</strong>（已关闭）：修复路由 ID 规范化中的前后下划线 stripping 逻辑，确保符合命名规范。</li>
-</ul>
-<h2>4. 社区热点</h2>
-<ul>
-<li><strong>Issue #3269</strong>（3 条评论，👍1）：MCP server 连接失败导致 agent loop 挂起，聊天界面停止响应。该问题触及 agent 核心运行机制，用户对生产环境稳定性表达担忧。<br><a href="https://github.com/sipeed/picoclaw/issues/3269">sipeed/picoclaw Issue #3269</a></li>
-<li><strong>Issue #3281</strong>（3 条评论，👍1）：Web UI 在聊天历史较长时输入卡顿，直接影响高频使用体验。<br><a href="https://github.com/sipeed/picoclaw/issues/3281">sipeed/picoclaw Issue #3281</a></li>
-<li><strong>PR #3316</strong>（待合并）：与 Issue #3301 直接对应，解决多 agent 路由场景下的上下文丢失与压缩失效，是今日功能性最强的修复。</li>
-</ul>
-<h2>5. Bug 与稳定性</h2>
-<table>
-<thead>
-<tr>
-<th>严重程度</th>
-<th>问题</th>
-<th>状态</th>
-<th>关联 Fix PR</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>高</strong></td>
-<td>#3269: MCP 连接失败导致 agent loop hang，阻塞聊天回复</td>
-<td>OPEN, stale</td>
-<td>无</td>
-</tr>
-<tr>
-<td><strong>中</strong></td>
-<td>#3301: /clear 与 session 自动压缩在非默认 agent 路由中失效</td>
-<td>OPEN</td>
-<td>#3316（待合并）</td>
-</tr>
-<tr>
-<td><strong>中</strong></td>
-<td>#3281: Web UI 长历史输入卡顿</td>
-<td>OPEN, stale</td>
-<td>无</td>
-</tr>
-<tr>
-<td><strong>已修复</strong></td>
-<td>#3265: Gateway 启动报错 unknown channel type</td>
-<td>CLOSED</td>
-<td>—</td>
-</tr>
-<tr>
-<td><strong>已修复</strong></td>
-<td>#3264: SplitMessage 超大围栏代码信息字符串导致无限循环</td>
-<td>CLOSED</td>
-<td>—</td>
-</tr>
-<tr>
-<td><strong>已修复</strong></td>
-<td>#3268: exec tool action 参数不应为必填</td>
-<td>CLOSED</td>
-<td>—</td>
-</tr>
-<tr>
-<td><strong>已修复</strong></td>
-<td>#3267: antigravity token refresh scope bug</td>
-<td>CLOSED</td>
-<td>—</td>
-</tr>
-</tbody></table>
-<h2>6. 功能请求与路线图信号</h2>
-<ul>
-<li><strong>Issue #3276</strong>（已关闭）：请求 Launcher 支持外部管理的 gateway（systemd），并优雅处理未知 channel 类型。该需求反映无头部署场景的痛点，已关闭可能意味着需求已被满足或纳入规划。<br><a href="https://github.com/sipeed/picoclaw/issues/3276">sipeed/picoclaw Issue #3276</a></li>
-<li><strong>Issue #3272</strong>（已关闭）：日语本地化请求，对应 PR #3273 已提交，预计将随下一版本合入。<br><a href="https://github.com/sipeed/picoclaw/issues/3272">sipeed/picoclaw Issue #3272</a></li>
-<li><strong>PR #3315</strong>（待合并）：Telegram 私聊 topics 支持，完善即时通讯渠道功能覆盖。</li>
-<li><strong>PR #3317</strong>（待合并）：LLM 缓存 token 日志，提升可观测性与调试效率。</li>
-</ul>
-<h2>7. 用户反馈摘要</h2>
-<ul>
-<li><strong>部署与运维</strong>：用户采用 systemd 管理 picoclaw gateway 与 launcher，希望组件支持外部生命周期管理，而非硬依赖自身启动逻辑（#3276）。</li>
-<li><strong>国际化</strong>：日本社区活跃贡献，已提供完整日语翻译（#3272/#3273），体现社区全球化意愿。</li>
-<li><strong>性能体验</strong>：Web UI 在长会话下的输入卡顿（#3281）被反复提及，前端渲染或消息处理存在瓶颈。</li>
-<li><strong>可靠性</strong>：MCP 服务作为外部依赖，当前缺乏连接失败时的优雅降级，agent 直接挂死（#3269），用户需要更强的容错与重试机制。</li>
-<li><strong>高级配置</strong>：多 agent 路由（dispatch rules）用户反馈上下文管理混乱，说明高级用例的稳定性仍需打磨（#3301）。</li>
-</ul>
-<h2>8. 待处理积压</h2>
-<ul>
-<li><strong>Issue #3269</strong>（创建于 2026-07-20，标记 stale）：MCP 连接故障导致 agent 挂起的严重 bug，已超过两周未修复，建议优先处理。</li>
-<li><strong>Issue #3281</strong>（创建于 2026-07-21，标记 stale）：Web UI 性能问题，影响日常使用体验，需前端性能优化。</li>
-<li><strong>Issue #3301</strong>（创建于 2026-07-29）：路由上下文管理 bug，虽有 PR #3316 待合并，但需尽快 review 合入以恢复用户正常使用。</li>
-</ul>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>NanoClaw</strong> — <a href="https://github.com/qwibitai/nanoclaw">qwibitai/nanoclaw</a></summary>
 
-<h1>NanoClaw 项目动态日报（2026-08-04）</h1>
-<h2>1. 今日速览</h2>
-<p>过去24小时NanoClaw无新开Issue，PR活跃度较高，共9条PR更新，其中4条待合并、5条已关闭，无新版本发布。当前项目迭代重点集中在多端交互Bug修复、Agent调度能力优化及渠道扩展，整体项目健康度良好，核心功能稳定性持续提升。</p>
-<h2>2. 版本发布</h2>
-<p>无新版本发布。</p>
-<h2>3. 项目进展（已合并/关闭PR）</h2>
-<p>今日共5条PR完成合并/关闭，推进了渠道接入、运行环境安全、Agent能力、会话管理4个方向的优化：</p>
-<ul>
-<li>PR #3154（已关闭）：修复Agent定时任务的时间渲染逻辑，新增任务级<code>current_time</code>字段，包含星期、时区配置，解决定时任务时间显示不准确的问题，提升调度可靠性。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3154">https://github.com/nanocoai/nanoclaw/pull/3154</a></li>
-<li>PR #3182（已关闭）：更新Agent运行镜像至<code>hardened-2026-08-02</code>版本，镜像体积增加10MB，上游内容与上一版本一致，强化了运行环境的安全基线。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3182">https://github.com/nanocoai/nanoclaw/pull/3182</a></li>
-<li>PR #3180（已关闭）：修复更新流程中hardened镜像迁移的提示逻辑，让运维人员能清晰感知镜像迁移过程，降低操作困惑。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3180">https://github.com/nanocoai/nanoclaw/pull/3180</a></li>
-<li>PR #3137（已关闭）：统一Agent响应策略的一致性，新增群组Agent自主查看、调整响应策略的能力，同时增加JavaScript正则规则有效性校验，避免非法配置导致运行异常。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3137">https://github.com/nanocoai/nanoclaw/pull/3137</a></li>
-<li>PR #3181（已关闭）：修复iMessage渠道的线路分配逻辑，用户发送首条消息时即可自动匹配对应线路，简化iMessage接入流程。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3181">https://github.com/nanocoai/nanoclaw/pull/3181</a></li>
-</ul>
-<h2>4. 社区热点</h2>
-<p>过去24小时无新开Issue，PR层面的关注热点集中在2个条目：</p>
-<ul>
-<li>PR #3050（待合并）：新增Dial渠道支持，扩展频道选择器、向导/技能体系的覆盖范围，新增<code>runChannelSkill</code>模型，是当前功能迭代的核心诉求，该PR自7月14日创建以来持续更新，累计获得较多关注。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3050">https://github.com/nanocoai/nanoclaw/pull/3050</a></li>
-<li>PR #3185（待合并）：修复Discord渠道审批交互的严重Bug，解决点击任意审批按钮均被误判为拒绝的问题，是近期Discord用户反馈的高频痛点，今日新开即获得社区关注。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3185">https://github.com/nanocoai/nanoclaw/pull/3185</a></li>
-</ul>
-<h2>5. Bug 与稳定性</h2>
-<p>今日涉及Bug修复的PR共5条，按严重程度排序：</p>
-<ol>
-<li>【高严重】PR #3185：Discord审批交互逻辑错误，所有审批卡片点击后均返回拒绝结果，完全阻塞Discord渠道的审批流程，已有对应修复PR待合并。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3185">https://github.com/nanocoai/nanoclaw/pull/3185</a></li>
-<li>【中严重】PR #3184：Claude会话恢复逻辑缺陷，当会话转录文件丢失时，会返回<code>No conversation found with session ID</code>错误，导致长会话无法继续，已有修复PR待合并。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3184">https://github.com/nanocoai/nanoclaw/pull/3184</a></li>
-<li>【中严重】PR #3183：群组会话保留策略缺陷，超过30天未活跃的渠道重新发消息时，会因会话被清理报错，已有修复PR待合并。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3183">https://github.com/nanocoai/nanoclaw/pull/3183</a></li>
-<li>【低严重】PR #3181：iMessage线路分配逻辑缺陷，旧版本需手动配置线路才能正常使用，已通过修复PR关闭。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3181">https://github.com/nanocoai/nanoclaw/pull/3181</a></li>
-</ol>
-<h2>6. 功能请求与路线图信号</h2>
-<p>当前唯一在途的功能类PR为#3050，新增Dial渠道接入及<code>runChannelSkill</code>模型支持，扩展了NanoClaw的多端接入能力，目前PR状态为待合并，预计将纳入下一版本正式发布。链接：<a href="https://github.com/nanocoai/nanoclaw/pull/3050">https://github.com/nanocoai/nanoclaw/pull/3050</a></p>
-<h2>7. 用户反馈摘要</h2>
-<p>过去24小时无新开Issue，近期用户反馈集中在已修复/待修复的Bug场景：</p>
-<ul>
-<li>Discord渠道用户反馈审批功能完全不可用，点击Approve按钮也会被系统判定为拒绝，严重影响审批类场景的使用；</li>
-<li>Claude长会话用户反馈，若会话转录文件丢失，会话会直接中断且无法恢复，影响长周期任务的使用连续性；</li>
-<li>低频使用群组渠道的用户反馈，超过30天未活跃后重新发消息会报错，需要重新创建会话，体验较差；</li>
-<li>iMessage接入用户反馈旧版本线路配置门槛高，该问题已通过近期修复解决。</li>
-</ul>
-<h2>8. 待处理积压</h2>
-<p>过去24小时无新增长期未响应的Issue，当前待合并PR共4条，均为近期创建/更新的活跃PR，提醒维护者优先审核高优先级Bug修复PR：</p>
-<ul>
-<li>PR #3185（Discord审批修复）优先级最高，影响大量Discord用户的核心使用流程，建议尽快审核合并；</li>
-<li>PR #3050（Dial渠道支持）为功能迭代重点</li>
-</ul>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>NullClaw</strong> — <a href="https://github.com/nullclaw/nullclaw">nullclaw/nullclaw</a></summary>
 
-<h1>NullClaw 项目日报（2026-08-04）</h1>
-<h2>1. 今日速览</h2>
-<p>NullClaw 项目今日处于低活跃维护状态，过去 24 小时内无新版本发布，亦无代码合并或 PR 更新。项目仅有一条活跃 Issue #915 持续获得社区关注，反映出用户在本地部署场景下使用 scheduler 功能时遇到授权障碍。整体来看，项目代码库处于稳定期，但功能迭代节奏较慢，社区互动有限。</p>
-<h2>2. 版本发布</h2>
-<p>过去 24 小时无新版本发布。</p>
-<h2>3. 项目进展</h2>
-<p>今日无 Pull Request 被合并或关闭，代码库未产生新的功能变更或缺陷修复。项目在代码推进层面处于停滞状态，开发重心可能已转向问题排查或中长期规划。</p>
-<h2>4. 社区热点</h2>
-<p><strong>Issue #915</strong> <a href="https://github.com/nullclaw/nullclaw/issues/915">Problem with scheduler unauthorized</a> 是今日唯一活跃的社区讨论话题（4 条评论，1 个 👍）。该 Issue 由用户 scabros 于 2026-05-15 发起，最新更新于昨日。用户描述了在 Ubuntu 环境下搭配同一网络中的 ollama 外部主机（模型 qwen3.6:27b，显卡 RTX 3090）部署 NullClaw 时，scheduler 功能在 Telegram 聊天等场景中完全失效，尽管 LLM 调用与工具调用基本正常。该问题指向跨服务权限配置或网络授权机制存在缺陷，具有较高的社区关注度。</p>
-<h2>5. Bug 与稳定性</h2>
-<table>
-<thead>
-<tr>
-<th>严重程度</th>
-<th>问题描述</th>
-<th>状态</th>
-<th>Fix PR</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>高</td>
-<td><strong>#915</strong>：scheduler 功能完全失效，影响 Telegram 集成及潜在的其他调度场景，用户已提供完整运行环境配置（Ubuntu + ollama 外部主机 + qwen3.6:27b + RTX 3090）。</td>
-<td>OPEN</td>
-<td>无</td>
-</tr>
-</tbody></table>
-<h2>6. 功能请求与路线图信号</h2>
-<p>今日未收到新的功能请求，社区讨论焦点集中于现有 scheduler 功能的稳定性修复。</p>
-<h2>7. 用户反馈摘要</h2>
-<p>用户 scabros 反馈了典型的本地混合部署场景痛点：在自托管 ollama 服务与 NullClaw 集成时，基础 LLM 调用与工具调用可正常工作，但 scheduler 功能完全失效。这表明项目在复杂集成场景下的错误隔离能力不足，或 scheduler 模块对网络环境、外部服务配置变化较为敏感。用户满意度因核心功能可用但高级调度功能缺失而受到明显影响。</p>
-<h2>8. 待处理积压</h2>
-<p><strong>Issue #915</strong> 自 2026-05-15 创建以来已接近三个月，累计 4 条评论，仍未获得维护者官方回应或修复方案。建议项目维护者优先排查该授权问题，避免长期未解决的技术债务持续影响用户体验与项目可信度。</p>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>IronClaw</strong> — <a href="https://github.com/nearai/ironclaw">nearai/ironclaw</a></summary>
 
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>LobsterAI</strong> — <a href="https://github.com/netease-youdao/LobsterAI">netease-youdao/LobsterAI</a></summary>
 
-<h1>LobsterAI 项目动态日报（2026-08-04）</h1>
-<h2>今日速览</h2>
-<p>过去24小时项目活跃度较高，共追踪到12条PR更新、1条活跃Issue，其中10条PR已完成合并/关闭，2条PR处于待合并状态，无新版本发布。今日核心工作围绕2026.8.3版本的发布准备展开，完成了积分活动、登录体验、错误处理等多方面优化，同时社区反馈存在1条高危安全类待处理Bug。</p>
-<h2>版本发布</h2>
-<p>今日无新版本发布。</p>
-<h2>项目进展</h2>
-<p>今日共有10条PR合并/关闭，核心推进内容如下：</p>
-<ol>
-<li>核心版本合入PR #2430：将<code>release/2026.8.3</code>分支合并至<code>main</code>分支，为下个版本发布奠定基础。<a href="https://github.com/netease-youdao/LobsterAI/pull/2430">netease-youdao/LobsterAI PR #2430</a></li>
-<li>功能优化类PR：<ul>
-<li>#2429：优化登录页面体验 <a href="https://github.com/netease-youdao/LobsterAI/pull/2429">netease-youdao/LobsterAI PR #2429</a></li>
-<li>#2427：打包启动积分活动宣传素材，支持本地渲染活动弹窗，保留服务端控制的发放、时效与奖励逻辑 <a href="https://github.com/netease-youdao/LobsterAI/pull/2427">netease-youdao/LobsterAI PR #2427</a></li>
-<li>#2425：新增Artifact自动预览开关，允许用户禁用文件自动预览打开，保留手动预览能力 <a href="https://github.com/netease-youdao/LobsterAI/pull/2425">netease-youdao/LobsterAI PR #2425</a></li>
-<li>#2428：完善启动积分活动分析字段，补全登录重定向URL、各类错误上报逻辑及Electron认证IPC契约 <a href="https://github.com/netease-youdao/LobsterAI/pull/2428">netease-youdao/LobsterAI PR #2428</a></li>
-<li>#2426：将模型容量过载错误与速率限制错误单独分类，避免错误提示误导用户立即重试 <a href="https://github.com/netease-youdao/LobsterAI/pull/2426">netease-youdao/LobsterAI PR #2426</a></li>
-<li>#2424：恢复在线的积分奖励活动，包括订阅积分重置、500积分申领流程及对应IPC、UI、资源修复 <a href="https://github.com/netease-youdao/LobsterAI/pull/2424">netease-youdao/LobsterAI PR #2424</a></li>
-</ul>
-</li>
-</ol>
-<h2>社区热点</h2>
-<p>今日唯一活跃的社区讨论为Issue #1202，该Issue反馈agent存在敏感信息泄漏风险，当前已有1条用户评论，是今日关注度最高的议题。用户核心诉求为要求agent屏蔽密钥、配置路径等敏感信息的泄露，避免攻击者通过环境变量、配置文件位置获取模型key。<a href="https://github.com/netease-youdao/LobsterAI/issues/1202">netease-youdao/LobsterAI Issue #1202</a></p>
-<h2>Bug 与稳定性</h2>
-<p>今日共报告1条新Bug，按严重程度排序如下：</p>
-<ol>
-<li>【高危】Issue #1202：agent泄漏model key相关敏感信息，存在安全风险。用户复现路径：向agent询问key配置信息时，agent会返回配置文件定义位置、环境变量相关信息，进一步询问即可获取模型key。目前无对应修复PR，状态为OPEN。<a href="https://github.com/netease-youdao/LobsterAI/issues/1202">netease-youdao/LobsterAI Issue #1202</a></li>
-</ol>
-<h2>功能请求与路线图信号</h2>
-<p>今日无新增用户功能请求。已合入的积分奖励活动、Artifact自动预览开关、登录页优化、模型错误分类优化等功能，将随2026.8.3版本发布上线，属于下一版本的核心迭代内容。</p>
-<h2>用户反馈摘要</h2>
-<p>今日仅有的用户反馈来自Issue #1202，用户实际使用中发现agent未对敏感信息做防护，存在密钥泄漏隐患，期望官方尽快修复该安全问题，暂无其他功能或体验相关反馈。</p>
-<h2>待处理积压</h2>
-<p>以下为长期未响应的条目，提醒维护者关注：</p>
-<ol>
-<li>安全类待处理Issue：#1202，创建于2026-04-01，为stale状态，涉及敏感信息泄漏风险，需优先处理。<a href="https://github.com/netease-youdao/LobsterAI/issues/1202">netease-youdao/LobsterAI Issue #1202</a></li>
-<li>功能类待处理PR：#1205，创建于2026-04-01，为stale状态，修复会话重命名失败时无错误提示的问题，当前待合并。<a href="https://github.com/netease-youdao/LobsterAI/pull/1205">netease-youdao/LobsterAI PR #1205</a></li>
-<li>依赖升级类待处理PR：#1277（electron依赖升级）、#1282（@headlessui/react升级）、#1283（react升级）、#1284（react-syntax-highlighter升级），均创建于2026-04-02，为stale状态，长期未合并。</li>
-</ol>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
@@ -1310,64 +251,13 @@ Release link: <a href="https://github.com/anomalyco/opencode/releases/tag/v1.18.
 <details>
 <summary><strong>Moltis</strong> — <a href="https://github.com/moltis-org/moltis">moltis-org/moltis</a></summary>
 
-<h2>Moltis 项目日报（2026-08-04）</h2>
-<h3>1. 今日速览</h3>
-<p>过去24小时内，Moltis项目整体活跃度处于较低水平，仅记录到1个待合并的Pull Request，无新增Issue、无新版本发布、无Bug报告。项目当前处于功能扩展阶段，核心开发焦点集中在MCP服务器管理能力的增强上。整体健康度保持稳定，但社区互动和贡献者参与度有待提升。</p>
-<h3>2. 版本发布</h3>
-<p>无新版本发布。</p>
-<h3>3. 项目进展</h3>
-<p>过去24小时唯一活跃的代码变更为 <strong>PR #1183</strong>（<a href="https://github.com/moltis-org/moltis/pull/1183">feat(mcp): add managed repository bundles</a>），由贡献者 <strong>penso</strong> 提交，最后更新于 2026-08-03。该PR实现了对托管Git仓库 bundles 的支持，为MCP服务器提供发现、预览、安装、更新、回滚及移除的全生命周期管理功能；同时涵盖HTTPS凭证支持、固定托管SSH传输、vault生命周期集成以及导入仓库 backed MCP 配置等特性。若合并，将显著扩展Moltis在MCP生态中的自动化部署与配置管理能力，属于中大型功能增强。</p>
-<h3>4. 社区热点</h3>
-<p>今日社区唯一活动点为 <strong>PR #1183</strong>。该PR未收到评论或表情反应，反映出项目当前社区参与度有限。从内容看，该功能聚焦MCP服务器的规模化托管与安全凭证管理，契合DevOps和AI Agent部署场景对配置一致性和可回滚性的核心诉求。建议维护者尽快启动review以推动社区讨论。</p>
-<h3>5. Bug 与稳定性</h3>
-<p>今日无新报告Bug、崩溃或回归问题。项目稳定性状态良好，无紧急修复需求。</p>
-<h3>6. 功能请求与路线图信号</h3>
-<p>今日无新开功能请求Issue。但 <strong>PR #1183</strong> 明确揭示了项目向MCP服务器托管基础设施演进的路线图方向：从单纯的客户端工具向支持配置即代码、集中式管理和安全注入的平台化能力扩展。该功能若纳入下一版本，将成为Moltis的核心差异化特性。</p>
-<h3>7. 用户反馈摘要</h3>
-<p>过去24小时未收到新的用户反馈（无Issue评论或新开Issue）。当前无法提炼用户痛点、使用场景及满意度信息。</p>
-<h3>8. 待处理积压</h3>
-<p>今日无长期未响应的重要Issue积压数据。但需提醒关注 <strong>PR #1183</strong> 的合并时效——该PR已创建超48小时（创建于2026-08-02）且处于待合并状态，建议维护者优先评估以保持贡献者积极性并推进关键功能落地。</p>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
 <summary><strong>CoPaw</strong> — <a href="https://github.com/agentscope-ai/CoPaw">agentscope-ai/CoPaw</a></summary>
 
-<h1>CoPaw 项目日报（2026-08-04）</h1>
-<h2>1. 今日速览</h2>
-<p>过去24小时项目共收到18条Issue更新（9条新开/活跃、9条已关闭）、48条PR更新（31条待合并、17条已合并/关闭），无新版本发布，整体社区活跃度较高，贡献者覆盖功能优化、bug修复、安全加固、测试改进等多个方向，项目迭代节奏稳定，健康度良好。</p>
-<h2>2. 版本发布</h2>
-<p>无新版本发布。</p>
-<h2>3. 项目进展</h2>
-<p>今日共9个PR合并/关闭，推进了核心功能修复、体验优化与安全加固：</p>
-<ol>
-<li>PR #6682：修复控制台Agent迭代限制保存时未同步legacy <code>max_iters</code>字段的问题，避免UI配置与实际运行逻辑不一致，已合并。</li>
-<li>PR #6309 + #6618：修复会话列表时间戳强制转换为UTC的问题，实现跨时区时间戳正确解析与显示，已合并。</li>
-<li>PR #6677：修复长工具命令在聊天窗口溢出的问题，优化工具卡片布局，避免会话窗口异常拉宽，已合并。</li>
-<li>PR #6672：加固CI Review Bot权限，分离无权限的AI分析与privileged PR操作权限，降低提示注入风险，已合并。</li>
-<li>PR #6522：修复token使用量持久化失败时丢失脏标记的问题，避免瞬态I/O错误导致统计数据丢失，已合并。</li>
-<li>PR #6633：修复慢网络环境下Skills/Skill Pool页面因接口返回过大超时无法加载的问题，已合并。</li>
-<li>PR #6655：修复Console通道安全审批提示未渲染导致被拦截命令静默超时的问题，已合并。</li>
-<li>PR #6642 + #6583：优化文件拖拽体验，支持直接读取原路径文件，解决多文件拖拽显示不全的问题，已合并。</li>
-<li>PR #5906：修复防重复功能异常触发的问题，避免正常对话被误判为重复循环，已合并。</li>
-<li>PR #6656：完成QwenPaw v2.1.0-beta.1的安装验证工作，保障Beta版本发布质量，已关闭。</li>
-</ol>
-<h2>4. 社区热点</h2>
-<p>今日讨论最活跃的议题如下：</p>
-<ol>
-<li>Issue #6649（13条评论）：[enhancement] Support GPT-5.6 prompt caching parameters in Responses API provider，诉求是为多轮对话启用提示缓存，降低API调用延迟与成本，已有对应PR #6668跟进实现，是当前社区关注度最高的功能需求。</li>
-<li>Issue #6655（12条评论）：[bug] Console通道安全审批提示不渲染导致静默超时，诉求是补齐Console通道的安全交互能力，避免用户无感知的审批等待，已修复合并。</li>
-<li>Issue #6588（6条评论）：[bug] <code>spawn_subagent</code> 误判空<code>batch</code>占位符为批处理模式，诉求是修复子代理单任务调用的逻辑错误，避免非预期的批处理行为，待跟进修复。</li>
-</ol>
-<h2>5. Bug 与稳定性</h2>
-<h3>高严重级</h3>
-<ol>
-<li>Issue #6667：DeepSeek模型多轮对话时<code>reasoning_content</code>丢失，导致思考模式完全失效，属于核心模型功能故障，影响DeepSeek系列模型用户使用，已有修复PR #6675待合并。</li>
-<li>Issue #6655：Console通道安全审批静默超时，存在安全交互盲区，已修复合并。</li>
-<li>Issue #6683：App Center安装官方插件<code>qwenpaw-creator</code>失败，因插件顶层模块命名冲突导致加载失败，影响插件生态使用，待修复。</li>
-<li>Issue #6588：<code>spawn_subagent</code> 空<code>batch</code>占位符误判为批处理模式，导致单任务子代理调用行为异常，待修复。</li>
-</ol>
-<h3>中严重级</h3>
-<p>1</p>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <details>
@@ -1379,32 +269,7 @@ Release link: <a href="https://github.com/anomalyco/opencode/releases/tag/v1.18.
 <details>
 <summary><strong>EasyClaw</strong> — <a href="https://github.com/gaoyangz77/easyclaw">gaoyangz77/easyclaw</a></summary>
 
-<h1>EasyClaw 项目动态日报（2026-08-04）</h1>
-<h2>今日速览</h2>
-<p>EasyClaw项目过去24小时社区互动无新增动态，无新开或活跃Issue、PR，整体社区活跃度较低。项目正式发布v1.8.86版本，核心优化达人营销相关功能与桌面端体验，维护节奏稳定。当前无公开的Bug、功能需求积压，项目健康度平稳。</p>
-<h2>版本发布</h2>
-<p>本次发布新版本：v1.8.86，Release链接：<a href="https://github.com/gaoyangz77/easyclaw/releases/tag/v1.8.86">https://github.com/gaoyangz77/easyclaw/releases/tag/v1.8.86</a></p>
-<h3>更新内容</h3>
-<ol>
-<li>功能优化：优化达人模型选择、预估销售洞察与对比工作流，提升达人营销场景下的决策效率；</li>
-<li>体验优化：优化桌面端云端订阅流程，修复冷启动恢复逻辑问题，提升桌面端使用稳定性。</li>
-</ol>
-<h3>变更说明</h3>
-<p>本次发布无公开记录的破坏性变更，无需额外迁移操作。</p>
-<h3>安装注意事项</h3>
-<p>macOS用户安装时若出现“‘RivonClaw’已损坏”的提示，需前往系统设置-隐私与安全性中允许打开该应用，具体指引可参考Release页安装说明。</p>
-<h2>项目进展</h2>
-<p>过去24小时无新增合并或关闭的PR，项目代码库无新提交合入，版本迭代仅通过Release发布优化内容，整体推进节奏平稳，无重大功能或修复落地。</p>
-<h2>社区热点</h2>
-<p>过去24小时无新增或活跃的社区讨论，无高互动量的Issue/PR，社区暂无明显热点。欢迎用户前往项目Issue页提交使用反馈与需求：<a href="https://github.com/gaoyangz77/easyclaw/issues">https://github.com/gaoyangz77/easyclaw/issues</a></p>
-<h2>Bug 与稳定性</h2>
-<p>过去24小时无新报告的Bug、崩溃或回归问题，当前无待修复的公开问题，项目稳定性暂无异常信号。</p>
-<h2>功能请求与路线图信号</h2>
-<p>过去24小时无用户提交的新功能需求。结合本次v1.8.86的优化方向（达人营销工具链、桌面端体验），可推测下一版本可能继续围绕商业化功能、桌面端体验优化方向迭代，暂无公开的路线图更新。</p>
-<h2>用户反馈摘要</h2>
-<p>过去24小时无新的用户反馈提交，暂无最新用户痛点、使用场景及满意度相关信息，可参考历史Issue中的用户反馈：<a href="https://github.com/gaoyangz77/easyclaw/issues?q=is%3Aissue">https://github.com/gaoyangz77/easyclaw/issues?q=is%3Aissue</a></p>
-<h2>待处理积压</h2>
-<p>目前公开Issue池无长期未响应的重要问题，所有历史Issue均已响应关闭，项目维护响应度良好。</p>
+<p>⚠️ 摘要生成失败。</p>
 </details>
 
 <hr>
@@ -1416,10 +281,10 @@ Release link: <a href="https://github.com/anomalyco/opencode/releases/tag/v1.18.
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-agents-en</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-agents-en</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>OpenClaw Ecosystem Digest 2026-08-04 Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 12:27 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw Deep Dive [LLM fallback] stepfun returned an empty response. Cross-Ecosystem Comparison Cross-Project Comparison Report: Open-Source AI Agent Ecosystem (2026-08-04) 1. Ecosystem Overview The 2026 open-source personal AI assistant and agent ecosystem is split in...</description>
+      <description>OpenClaw Ecosystem Digest 2026-08-04 Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 13:31 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw Deep Dive ⚠️ Summary generation failed. Cross-Ecosystem Comparison LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details Peer Project Reports NanoBot — HKUDS/nanobot ⚠️ Summary generation ...</description>
       <content:encoded><![CDATA[<h1>OpenClaw Ecosystem Digest 2026-08-04</h1>
 <blockquote>
-<p>Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 12:27 UTC</p>
+<p>Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 13:31 UTC</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/openclaw/openclaw">OpenClaw</a></li>
@@ -1438,234 +303,54 @@ Release link: <a href="https://github.com/anomalyco/opencode/releases/tag/v1.18.
 </ul>
 <hr>
 <h2>OpenClaw Deep Dive</h2>
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ Summary generation failed.</p>
 <hr>
 <h2>Cross-Ecosystem Comparison</h2>
-<h1>Cross-Project Comparison Report: Open-Source AI Agent Ecosystem (2026-08-04)</h1>
-<h2>1. Ecosystem Overview</h2>
-<p>The 2026 open-source personal AI assistant and agent ecosystem is split into two clear tiers: actively maintained, feature-rich frameworks with regular community contributions, and smaller niche or stalled projects with minimal recent activity. Leading projects are prioritizing core agent reliability, multi-channel integration, and MCP ecosystem compatibility, while a subset of end-user-facing tools are focused on polished user experiences and commercial feature support. Critical unfixed bugs (security, scheduler reliability) are present in multiple projects, highlighting gaps in production readiness for some use cases, while foundational frameworks show consistent iteration on core agent infrastructure.</p>
-<h2>2. Activity Comparison</h2>
-<table>
-<thead>
-<tr>
-<th>Project</th>
-<th>Updated Issues (Active/Total)</th>
-<th>Updated PRs (Merged/Open)</th>
-<th>Release Status</th>
-<th>Health Assessment</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>PicoClaw</td>
-<td>3 open / 8 total</td>
-<td>3 merged / 3 open</td>
-<td>None (24h window)</td>
-<td>Active: Core fixes, localization, and community bug reports ongoing</td>
-</tr>
-<tr>
-<td>NanoClaw</td>
-<td>0 updated / 0 active</td>
-<td>5 merged / 4 open</td>
-<td>None (24h window)</td>
-<td>Stable: Core maintenance and channel feature work in progress</td>
-</tr>
-<tr>
-<td>LobsterAI</td>
-<td>1 open / 1 active</td>
-<td>10 merged / 2 open</td>
-<td>None (upcoming 2026.8.3 release)</td>
-<td>Moderate: Active feature development, critical unfixed security bug</td>
-</tr>
-<tr>
-<td>NullClaw</td>
-<td>1 open / 1 active</td>
-<td>0 merged / 0 open</td>
-<td>None</td>
-<td>Low: Stalled, no active development, single unresolved critical bug</td>
-</tr>
-<tr>
-<td>Moltis</td>
-<td>0 / 0</td>
-<td>0 merged / 1 open</td>
-<td>None</td>
-<td>Low: Minimal activity, single pending MCP feature PR</td>
-</tr>
-<tr>
-<td>EasyClaw</td>
-<td>0 / 0</td>
-<td>0 / 0</td>
-<td>v1.8.86 published 2026-08-04</td>
-<td>Stable: Core team-only maintenance, no community activity</td>
-</tr>
-<tr>
-<td>TinyClaw</td>
-<td>0 / 0</td>
-<td>0 / 0</td>
-<td>None</td>
-<td>Inactive: No tracked activity</td>
-</tr>
-<tr>
-<td>ZeptoClaw</td>
-<td>0 / 0</td>
-<td>0 / 0</td>
-<td>None</td>
-<td>Inactive: No tracked activity</td>
-</tr>
-<tr>
-<td>OpenClaw, NanoBot, Zeroclaw, IronClaw, CoPaw</td>
-<td>No available data</td>
-<td>No available data</td>
-<td>No available data</td>
-<td>No available data</td>
-</tr>
-</tbody></table>
-<h2>3. OpenClaw&#39;s Position</h2>
-<p>Public activity data for OpenClaw was not available in the 2026-08-04 tracking window, so direct quantitative benchmarking against peers is limited. As a designated core reference framework, OpenClaw likely provides foundational agent infrastructure leveraged by</p>
+<blockquote>
+<p>LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details</p>
+</blockquote>
 <hr>
 <h2>Peer Project Reports</h2>
 <details>
 <summary><strong>NanoBot</strong> — <a href="https://github.com/HKUDS/nanobot">HKUDS/nanobot</a></summary>
 
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>Zeroclaw</strong> — <a href="https://github.com/zeroclaw-labs/zeroclaw">zeroclaw-labs/zeroclaw</a></summary>
 
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>PicoClaw</strong> — <a href="https://github.com/sipeed/picoclaw">sipeed/picoclaw</a></summary>
 
-<h1>PicoClaw Project Digest (2026-08-04)</h1>
-<h2>Today&#39;s Overview</h2>
-<p>As of 2026-08-04, PicoClaw shows moderate development activity with 8 total issues and 6 total pull requests updated in the last 24 hours, with no new releases published in the period. Of the updated items, 3 issues and 3 PRs remain open for active development, while 5 issues and 3 PRs were closed or merged in the preceding day. Core current work focuses on agent routing context management, channel integration fixes, UI localization, and performance improvements. The project maintains an active open-source community with ongoing bug reports and feature contributions from external users.</p>
-<h2>Releases</h2>
-<p>No new PicoClaw releases were published on 2026-08-04.</p>
-<h2>Project Progress</h2>
-<p>Three pull requests were closed or merged in the last 24 hours, delivering fixes and feature improvements:</p>
-<ul>
-<li>PR #3267 (closed): Fixed a scope bug in Antigravity provider token refresh logic, resolving <code>PERMISSION_DENIED</code> errors during token refresh after successful primary authentication. Link: <a href="https://github.com/sipeed/picoclaw/pull/3267">https://github.com/sipeed/picoclaw/pull/3267</a></li>
-<li>PR #3273 (closed): Added full Japanese (<code>ja</code>) localization support for the PicoClaw WebUI, including 968 lines of translated UI strings and proper dayjs locale integration. Link: <a href="https://github.com/sipeed/picoclaw/pull/3273">https://github.com/sipeed/picoclaw/pull/3273</a></li>
-<li>PR #3202 (closed): Fixed a routing ID normalization bug in <code>pkg/routing/agent_id.go</code>, ensuring normalized agent and account IDs adhere to the required <code>^[a-z0-9][a-z0-9_-]{0,63}$</code> regex by stripping leading/trailing underscores. Link: <a href="https://github.com/sipeed/picoclaw/pull/3202">https://github.com/sipeed/picoclaw/pull/3202</a></li>
-</ul>
-<h2>Community Hot Topics</h2>
-<p>The most engaged community items in the last 24 hours are:</p>
-<ul>
-<li>Issue #3269 (3 comments, 1 👍): Reports that failed MCP server connections cause the PicoClaw agent loop to hang, stopping chat interface responses. Link: <a href="https://github.com/sipeed/picoclaw/issues/3269">https://github.com/sipeed/picoclaw/issues/3269</a></li>
-<li>Issue #3281 (3 comments, 1 👍): Reports laggy Web UI chat input when session history is moderately long. Link: <a href="https://github.com/sipeed/picoclaw/issues/3281">https://github.com/sipeed/picoclaw/issues/3281</a></li>
-<li>Issue #3301 + open PR #3316: A bug report and corresponding fix for context management failures (missing history, non-functional auto-compression) for chats routed to non-default agents via dispatch rules. Issue link: <a href="https://github.com/sipeed/picoclaw/issues/3301">https://github.com/sipeed/picoclaw/issues/3301</a>, PR link: <a href="https://github.com/sipeed/picoclaw/pull/3316">https://github.com/sipeed/picoclaw/pull/3316</a>
-Underlying needs across these topics center on core chat interface stability,</li>
-</ul>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>NanoClaw</strong> — <a href="https://github.com/qwibitai/nanoclaw">qwibitai/nanoclaw</a></summary>
 
-<h1>NanoClaw Project Digest (2026-08-04)</h1>
-<h2>1. Today&#39;s Overview</h2>
-<p>As of 2026-08-04, NanoClaw has 0 issues updated in the last 24 hours, with 9 pull requests updated (4 open, 5 merged/closed) and no new releases. Project activity is concentrated on merging core stability fixes and reviewing in-progress feature work, with no new community-reported issues submitted in the past day. The project health is stable, with active maintenance of core channel and agent functionality.</p>
-<h2>2. Releases</h2>
-<p>No new releases were published in the last 24 hours.</p>
-<h2>3. Project Progress</h2>
-<p>5 pull requests were merged or closed by the core team in the last 24 hours, advancing core stability and operational tooling:</p>
-<ul>
-<li>PR #3182 (closed, core-team): Repinned the agent container image to the hardened-2026-08-02 build, retaining an identical upstream AI echo digest and only updating the base image layer. <a href="https://github.com/qwibitai/nanoclaw/pull/3182">Link</a></li>
-<li>PR #3180 (closed, core-team): Added an operational skill to surface hardened image migration steps for end users. <a href="https://github.com/qwibitai/nanoclaw/pull/3180">Link</a></li>
-<li>PR #3154 (closed, core-team): Fixed agent-runner scheduled task time rendering, pulling task time from the scheduled <code>process_after</code> value and adding a per-run <code>current_time</code> field for task context. <a href="https://github.com/qwibitai/nanoclaw/pull/3154">Link</a></li>
-<li>PR #3137 (closed, core-team): Fixed engagement consistency for group-scoped agents, adding support for agents to inspect their wirings, request approved engagement-policy updates, and rejecting invalid JavaScript engagement regexes. <a href="https://github.com/qwibitai/nanoclaw/pull/3137">Link</a></li>
-<li>PR #3181 (closed, core-team): Fixed iMessage opt-in flow to trigger via the first message sent to a user&#39;s assigned iMessage line. <a href="https://github.com/qwibitai/nanoclaw/pull/3181">Link</a></li>
-</ul>
-<h2>4. Community Hot Topics</h2>
-<p>The most active in-progress work focuses on channel integration and critical user-facing bug fixes:</p>
-<ul>
-<li>PR #3050 (open, last updated 2026-08-04): A feature PR to add Dial support to the channel picker, setup wizard, and skills system via a new <code>runChannelSkill</code> model. It has been in review since 2026-07-14, indicating high demand for expanded third-party channel integration support. <a href="https://github.com/qwibitai/nanoclaw/pull/3050">Link</a></li>
-<li>PR #3185 (open, created 2026-08-04): A high-priority bug fix for Discord webhook approval interactions, which were incorrectly resolving all approval actions to &quot;re</li>
-</ul>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>NullClaw</strong> — <a href="https://github.com/nullclaw/nullclaw">nullclaw/nullclaw</a></summary>
 
-<h1>NullClaw Project Digest (2026-08-04)</h1>
-<h2>1. Today&#39;s Overview</h2>
-<p>As of 2026-08-04, NullClaw records minimal short-term activity: only 1 open issue was updated in the past 24 hours, with no new pull requests or product releases during the same period. The project has 1 total active open issue as of the latest data, with no closed or merged contributions in the last day. Overall project momentum is low in the immediate window, with no active development progress to report for the date. The single active issue relates to scheduler functionality failures, the most pressing outstanding user-reported problem for the project.</p>
-<h2>2. Releases</h2>
-<p>No new releases were published for NullClaw in the 24 hours leading up to 2026-08-04, and no prior release information is available in the provided dataset.</p>
-<h2>3. Project Progress</h2>
-<p>No pull requests were merged or closed in the past 24 hours, and no new feature development, bug fixes, or code contributions advanced during this period.</p>
-<h2>4. Community Hot Topics</h2>
-<p>The only active community discussion in the past 24 hours is open issue #915 ([bug] Problem with scheduler unauthorized, <a href="https://github.com/nullclaw/nullclaw/issues/915">https://github.com/nullclaw/nullclaw/issues/915</a>), which has 4 total comments and 1 user upvote as of the update date. The issue was created on 2026-05-15 and last updated 2026-08-03, focusing on scheduler functionality failures for users running NullClaw on Ubuntu with an external Ollama host, where LLM inference and general tool calling work as expected but scheduled tasks fail to operate in Telegram chats and other supported contexts. This is the highest-engagement open item for the project, indicating scheduler reliability is the most pressing unmet user need currently under discussion.</p>
-<h2>5. Bugs &amp; Stability</h2>
-<p>The only bug reported in the past 24 hours is the scheduler unauthorized error detailed in issue #915, which impacts core scheduled task functionality for users running the project with external Ollama LLM hosts. The issue is reproducible for users matching the reported environment (Ubuntu, external Ollama with Qwen3.6:27b on RTX 3090), and no associated fix pull request has been opened as of the data date. Severity is assessed as high, as scheduled task execution is a core advertised feature of the project that is non-functional for affected users.</p>
-<h2>6. Feature Requests &amp; Roadmap Signals</h2>
-<p>No new feature requests were reported or updated in the past 24 hours, and no explicit roadmap signals are visible in the provided dataset. The only active user-reported need relates to fixing existing scheduler functionality rather than adding new features, so no upcoming feature additions can be predicted from recent activity.</p>
-<h2>7. User Feedback Summary</h2>
-<p>The only user feedback in the past 24 hours comes from the reporter of issue #915, who notes that core LLM inference and general tool calling work as expected in their environment, but scheduled task functionality is fully non-functional across multiple use cases including Telegram chat integration. The user has provided detailed environment context to support troubleshooting, indicating a willingness to collaborate on resolving the issue. No other user satisfaction or pain point feedback is available in the provided dataset.</p>
-<h2>8. Backlog Watch</h2>
-<p>Issue #915 has been open since 2026-05-15 with no confirmed resolution as of 2026-08-04, representing an unresolved backlog item that has seen community discussion but no official maintainer response or fix PR to date. As the only active open issue for the project, it is the highest-priority item requiring maintainer attention to address scheduler reliability for external Ollama users. No other long-unanswered issues or PRs are present in the project backlog per the provided data.</p>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>IronClaw</strong> — <a href="https://github.com/nearai/ironclaw">nearai/ironclaw</a></summary>
 
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>LobsterAI</strong> — <a href="https://github.com/netease-youdao/LobsterAI">netease-youdao/LobsterAI</a></summary>
 
-<h1>LobsterAI Project Digest (2026-08-04)</h1>
-<h2>1. Today&#39;s Overview</h2>
-<p>As of 2026-08-04, the LobsterAI repository shows moderate development activity, with 1 active open issue and 12 pull requests (PRs) updated in the past 24 hours (2 open, 10 merged/closed). No new public releases were published today. The majority of merged PRs are tied to the upcoming 2026.8.3 release, focused on login experience improvements, credit campaign functionality, error handling refinements, and UI optimizations. A critical unaddressed security bug related to model key leakage remains open as the only active issue.</p>
-<h2>2. Releases</h2>
-<p>No new releases were published for LobsterAI as of 2026-08-04.</p>
-<h2>3. Project Progress</h2>
-<p>10 PRs were merged or closed today, nearly all targeting the upcoming 2026.8.3 release:</p>
-<ul>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/2430">PR #2430</a>: Merged the 2026.8.3 release branch into main, introducing native credit-reward activities, streamlined first-run login, artifact auto-preview controls, improved model error handling, and Windows installer reliability fixes</li>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/2429">PR #2429</a>: Closed, optimized the login page UI</li>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/2428">PR #2428</a>: Closed, fixed startup credit campaign analytics fields to report full login redirect URLs, error messages for claim failures, and extended auth IPC contract coverage</li>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/2427">PR #2427</a>: Closed, bundled final startup credit campaign artwork and aligned UI assets with server-controlled campaign logic</li>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/2426">PR #2426</a>: Closed, split model capacity overload errors into a separate classification from rate limits to reduce user confusion</li>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/2425">PR #2425</a>: Closed, added a user-facing toggle to disable automatic artifact preview opening</li>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/2424">PR #2424</a>: Closed, restored the active credits campaign and 500-credit claim flow for eligible non-subscribers after an accidental revert
-Additionally, 4 stale dependency bump PRs (#1282, #1283, #1284, #1277) were updated/closed as part of routine maintenance.</li>
-</ul>
-<h2>4. Community Hot Topics</h2>
-<ul>
-<li>Top active issue: <a href="https://github.com/netease-youdao/LobsterAI/issues/1202">Issue #1202</a> (open, security bug): Reports that the LobsterAI agent leaks model key configuration details (file paths, environment variable references) when queried, posing a sensitive information leakage risk. It has received 1 comment since its creation in April 2026, and is the highest-priority unresolved community item. The underlying community need is robust security hardening for credential handling in AI agent interactions.</li>
-<li>Top open PRs: <a href="https://github.com/netease-youdao/LobsterAI/pull/1205">PR #1205</a> (stale, fix for session rename error toast) and <a href="https://github.com/netease-youdao/LobsterAI/pull/1277">PR #1277</a> (open dependabot electron dependency bump). PR #1205 addresses user frustration with silent failures when renaming chat sessions, a long-unresolved usability gap.</li>
-</ul>
-<h2>5. Bugs &amp; Stability</h2>
-<ul>
-<li>Critical severity (unfixed): <a href="https://github.com/netease-youdao/LobsterAI/issues/1202">Issue #1202</a>: Agent leaks model key configuration information when queried, creating a sensitive data exposure risk. No associated fix PR has been opened or merged to date.</li>
-<li>Fixed in today&#39;s merged PRs:<ul>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/2426">PR #2426</a>: Resolved misclassification of model capacity overload errors as rate limits, which previously misled users into unnecessary retries.</li>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/2424">PR #2424</a>: Fixed a regression that accidentally disabled the active credits campaign for eligible users.</li>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/2428">PR #2428</a>: Fixed incomplete analytics reporting for startup credit campaign claims, improving error traceability.</li>
-</ul>
-</li>
-</ul>
-<h2>6. Feature Requests &amp; Roadmap Signals</h2>
-<ul>
-<li>The user-requested artifact auto-preview toggle (<a href="https://github.com/netease-youdao/LobsterAI/pull/2425">PR #2425</a>) has been merged and will be included in the upcoming 2026.8.3 release, giving users control over automatic file preview behavior.</li>
-<li>The separate model overload error classification (<a href="https://github.com/netease-youdao/LobsterAI/pull/2426">PR #2426</a>) addresses user feedback about confusing error messaging, and will also ship in 2026.8.3.</li>
-<li>The bundled startup credit campaign features (<a href="https://github.com/netease-youdao/LobsterAI/pull/2427">PRs #2427</a>, <a href="https://github.com/netease-youdao/LobsterAI/pull/2428">PR #2428</a>) and restored credit claim flow (<a href="https://github.com/netease-youdao/LobsterAI/pull/2424">PR #2424</a>) indicate the team is prioritizing in-app reward and engagement features for the next release.</li>
-</ul>
-<h2>7. User Feedback Summary</h2>
-<ul>
-<li>High-priority user concerns center on security: the unaddressed model key leakage bug (#1202) is a top pain point for users handling sensitive API credentials.</li>
-<li>Usability pain points that have been recently resolved include silent session rename failures, confusing model error messages, and lack of control over automatic artifact previews.</li>
-<li>Positive sentiment is indicated by the team&#39;s quick turnaround on merging usability and feature improvements for the 2026.8.3 release, showing responsiveness to user requests for non-security issues.</li>
-</ul>
-<h2>8. Backlog Watch</h2>
-<ul>
-<li><a href="https://github.com/netease-youdao/LobsterAI/issues/1202">Issue #1202</a>: Critical security bug open since April 2026, with no fix PR or maintainer response in recent activity, requiring urgent attention.</li>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/1205">PR #1205</a>: Stale PR for a session rename error toast fix, open since April 2026, pending review and merge to resolve a long-standing usability gap.</li>
-<li><a href="https://github.com/netease-youdao/LobsterAI/pull/1277">PR #1277</a>: Open dependabot PR to bump electron and electron-builder dependencies, pending maintainer review to address potential security and compatibility risks from outdated dependencies.</li>
-</ul>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
@@ -1677,29 +362,13 @@ Additionally, 4 stale dependency bump PRs (#1282, #1283, #1284, #1277) were upda
 <details>
 <summary><strong>Moltis</strong> — <a href="https://github.com/moltis-org/moltis">moltis-org/moltis</a></summary>
 
-<h1>Moltis Project Digest (2026-08-04)</h1>
-<h2>Today&#39;s Overview</h2>
-<p>As of 2026-08-04, the Moltis open-source project (github.com/moltis-org/moltis) has low recent activity, with no new issues opened or closed in the 24-hour tracking window, and no new releases published in the period. One open pull request focused on MCP server management capabilities was updated in the last 24 hours, representing the only tracked project activity for the date. No critical stability issues or high-priority pending contributions are reported in the current tracking window.</p>
-<h2>Releases</h2>
-<p>No new Moltis releases were published in the 24-hour window ending 2026-08-04.</p>
-<h2>Project Progress</h2>
-<p>No pull requests were merged or closed in the tracked period. The only active PR updated in the last 24 hours is <a href="https://github.com/moltis-org/moltis/pull/1183">PR #1183</a>, submitted by contributor <em>penso</em> and last updated 2026-08-03. The PR adds managed Git repository bundles for end-to-end MCP server lifecycle management, including discovery, previewing, installation, updating, rolling back, and removal of MCP servers. It also includes support for HTTPS credentials, pinned managed SSH transport, vault lifecycle integration, and imported repository-backed MCP configurations, with a stated goal of simplifying web onboarding for MCP server use cases.</p>
-<h2>Community Hot Topics</h2>
-<p>The sole community contribution with recent activity is <a href="https://github.com/moltis-org/moltis/pull/1183">PR #1183</a>, the only item updated in the 24-hour window. This PR addresses a core gap in Moltis&#39;s MCP ecosystem tooling by centralizing repository-backed MCP server operations, indicating clear demand from contributors and users for streamlined, integrated MCP server management that eliminates manual configuration steps.</p>
-<h2>Bugs &amp; Stability</h2>
-<p>No bug reports, crash reports, or stability regressions were filed in the 24-hour window ending 2026-08-04. No open bug fix PRs are pending review or merge as of the report date.</p>
-<h2>Feature Requests &amp; Roadmap Signals</h2>
-<p>The only in-progress feature work tracked in the period is <a href="https://github.com/moltis-org/moltis/pull/1183">PR #1183</a>, which confirms that managed MCP repository support is a near-term roadmap priority for the Moltis maintainer team. No new user-submitted feature requests were opened in the tracked 24-hour window.</p>
-<h2>User Feedback Summary</h2>
-<p>No new user feedback, reported pain points, or use case submissions were posted via GitHub issues in the 24-hour window ending 2026-08-04. No actionable user sentiment can be derived from the limited recent activity data.</p>
-<h2>Backlog Watch</h2>
-<p>No open, unanswered issues are present in the Moltis repository as of 2026-08-04. The only pending contribution awaiting maintainer review is <a href="https://github.com/moltis-org/moltis/pull/1183">PR #1183</a>, which has not yet received maintainer comments, reactions, or merge status updates as of the report date.</p>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
 <summary><strong>CoPaw</strong> — <a href="https://github.com/agentscope-ai/CoPaw">agentscope-ai/CoPaw</a></summary>
 
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <details>
@@ -1711,30 +380,7 @@ Additionally, 4 stale dependency bump PRs (#1282, #1283, #1284, #1277) were upda
 <details>
 <summary><strong>EasyClaw</strong> — <a href="https://github.com/gaoyangz77/easyclaw">gaoyangz77/easyclaw</a></summary>
 
-<h1>EasyClaw Project Digest (2026-08-04)</h1>
-<p>Repository: <a href="https://github.com/gaoyangz77/easyclaw">https://github.com/gaoyangz77/easyclaw</a></p>
-<hr>
-<h2>1. Today&#39;s Overview</h2>
-<p>As of 2026-08-04, the EasyClaw project has low community interaction activity in the last 24 hours, with no open, updated, or closed issues or pull requests logged. The project shipped 1 new stable release (v1.8.86) during the period, indicating active maintenance from the core team despite limited community contribution activity. Overall project health is stable, with recent updates focused on core functionality and Desktop user experience improvements.</p>
-<h2>2. Releases</h2>
-<p>A new stable release, v1.8.86 (TK Copilot), was published on 2026-08-04. Key updates include:</p>
-<ul>
-<li>Improvements to affiliate model selection, predicted-sales insights, and comparison workflows</li>
-<li>Optimizations for Desktop cloud subscriptions and cold-start recovery functionality
-No breaking changes or required migration steps are noted for this release. Full release notes are available at: <a href="https://github.com/gaoyangz77/easyclaw/releases/tag/v1.8.86">https://github.com/gaoyangz77/easyclaw/releases/tag/v1.8.86</a></li>
-</ul>
-<h2>3. Project Progress</h2>
-<p>No pull requests were opened, merged, or closed in the last 24 hours, so no community-contributed features or fixes were integrated during the reporting period. All recent progress is driven by core maintainer releases, with no tracked collaborative development activity today.</p>
-<h2>4. Community Hot Topics</h2>
-<p>No issues or pull requests were updated in the last 24 hours, and the repository has no active open issues as of the reporting date. As a result, there are no high-engagement community discussions to highlight, and no underlying user needs are surfaced in recent tracker activity.</p>
-<h2>5. Bugs &amp; Stability</h2>
-<p>No new bug reports, crash logs, or regression issues were submitted via the GitHub issue tracker in the last 24 hours. The v1.8.86 release includes targeted optimizations for cold-start recovery functionality, but no new post-release bug reports have been filed as of the reporting time.</p>
-<h2>6. Feature Requests &amp; Roadmap Signals</h2>
-<p>No new feature requests were submitted by the community in the last 24 hours, and no open feature request issues are present in the repository. As a result, there are no confirmed community-driven roadmap signals for upcoming releases at this time.</p>
-<h2>7. User Feedback Summary</h2>
-<p>No new user feedback, pain points, use case reports, or satisfaction/dissatisfaction comments were submitted via GitHub channels in the last 24 hours. No user sentiment data is available for the reporting period.</p>
-<h2>8. Backlog Watch</h2>
-<p>There are no open, long-unanswered issues or pending pull requests requiring maintainer attention as of 2026-08-04, per the repository&#39;s public tracker data. One minor documentation gap exists: the macOS installation warning note in the v1.8.86 release notes is truncated mid-sentence, and may require clarification from maintainers for users encountering the &quot;RivonClaw is damaged&quot; error.</p>
+<p>⚠️ Summary generation failed.</p>
 </details>
 
 <hr>
@@ -1857,13 +503,13 @@ No breaking changes or required migration steps are noted for this release. Full
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-trending</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-trending</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI 开源趋势日报 2026-08-04 数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-04 12:27 UTC [LLM fallback] stepfun returned an empty response. 本日报由 agents-radar 自动生成。</description>
+      <description>AI 开源趋势日报 2026-08-04 数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-04 13:31 UTC ⚠️ 趋势报告生成失败。 本日报由 agents-radar 自动生成。</description>
       <content:encoded><![CDATA[<h1>AI 开源趋势日报 2026-08-04</h1>
 <blockquote>
-<p>数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-04 12:27 UTC</p>
+<p>数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-04 13:31 UTC</p>
 </blockquote>
 <hr>
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ 趋势报告生成失败。</p>
 <hr>
 <p><em>本日报由 <a href="https://github.com/huang-yi-dae/agents-radar">agents-radar</a> 自动生成。</em></p>
 ]]></content:encoded>
@@ -1873,13 +519,13 @@ No breaking changes or required migration steps are noted for this release. Full
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-trending-en</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-trending-en</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI Open Source Trends 2026-08-04 Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-04 12:27 UTC [LLM fallback] stepfun returned an empty response. This digest is auto-generated by agents-radar.</description>
+      <description>AI Open Source Trends 2026-08-04 Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-04 13:31 UTC ⚠️ Trending report generation failed. This digest is auto-generated by agents-radar.</description>
       <content:encoded><![CDATA[<h1>AI Open Source Trends 2026-08-04</h1>
 <blockquote>
-<p>Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-04 12:27 UTC</p>
+<p>Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-04 13:31 UTC</p>
 </blockquote>
 <hr>
-<p>[LLM fallback] stepfun returned an empty response.</p>
+<p>⚠️ Trending report generation failed.</p>
 <hr>
 <p><em>This digest is auto-generated by <a href="https://github.com/huang-yi-dae/agents-radar">agents-radar</a>.</em></p>
 ]]></content:encoded>
