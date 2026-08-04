@@ -62,7 +62,7 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # Option B: StepFun
 export LLM_PROVIDER=stepfun
 export OPENAI_API_KEY=sk-xxxxxxxx
-export OPENAI_BASE_URL=https://api.stepfun.com/v1
+export OPENAI_BASE_URL=https://api.stepfun.com/step_plan/v1
 export OPENAI_MODEL=step-3.7-flash
 
 # Option C: OpenAI-compatible endpoint

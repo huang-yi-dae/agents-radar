@@ -3,7 +3,7 @@
  *
  * Env vars:
  *   OPENAI_API_KEY     - API key
- *   OPENAI_BASE_URL    - endpoint override (default: https://api.stepfun.com/v1)
+ *   OPENAI_BASE_URL    - endpoint override (default: https://api.stepfun.com/step_plan/v1)
  *   OPENAI_MODEL       - model name (default: step-3.7-flash)
  *
  * OFFICIAL RESPONSE SHAPE (confirmed from StepFun docs):
@@ -22,7 +22,7 @@
 import { OpenAICompatibleProvider } from "./openai-compatible.ts";
 
 /** StepFun API endpoint. */
-const STEPFUN_BASE_URL = "https://api.stepfun.com/v1";
+const STEPFUN_BASE_URL = "https://api.stepfun.com/step_plan/v1";
 
 // StepFun reasoning models may surface internal thinking traces inside
 // `message.content` as well as in dedicated `reasoning` / `reasoning_content`
