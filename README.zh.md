@@ -193,11 +193,11 @@ openclaw_peers:
 
 | Secret | 必填 | 说明 |
 |--------|------|------|
-| `LLM_PROVIDER` | 可选 | `anthropic`（默认）、`openai`、`github-copilot`、`openrouter` 或 `stepfun` |
+| `LLM_PROVIDER` | 可选 | `anthropic`（默认）、`openai`、`github-copilot`、`openrouter` |
 | `ANTHROPIC_API_KEY` | Anthropic 时 | API 密钥，兼容 Anthropic 和 Kimi Code |
 | `ANTHROPIC_BASE_URL` | 可选 | API 地址覆盖。使用 Kimi Code 时设置为 `https://api.kimi.com/coding/`，使用 Anthropic 时留空 |
-| `STEPFUN_API_KEY` | StepFun 时 | StepFun API 密钥 |`r`n| `OPENAI_API_KEY` | OpenAI 时 | OpenAI API 密钥 |
-| `STEPFUN_BASE_URL` | 可选 | StepFun 端点覆盖 |`r`n| `OPENAI_BASE_URL` | 可选 | OpenAI 端点覆盖 |
+| `OPENAI_API_KEY` | OpenAI 兼容时 | API 密钥 |
+| `OPENAI_BASE_URL` | 可选 | OpenAI 兼容端点覆盖 |
 | `OPENROUTER_API_KEY` | OpenRouter 时 | OpenRouter API 密钥 |
 | `TELEGRAM_BOT_TOKEN` | 可选 | Telegram bot token，从 [@BotFather](https://t.me/BotFather) 获取。设置后每次 digest 完成自动推送通知 |
 | `TELEGRAM_CHAT_ID` | 可选 | 接收通知的 Telegram 频道 / 群组 / 用户 ID |
@@ -227,32 +227,28 @@ openclaw_peers:
 | 供应商 | `LLM_PROVIDER` | 所需环境变量 | 默认模型 |
 |--------|---------------|------------|----------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
-| StepFun | `stepfun` | `STEPFUN_API_KEY` | `step-3.7-flash` |`r`n| OpenAI | `openai` | `OPENAI_API_KEY` | `gpt-4o` |
+| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
-可通过 `ANTHROPIC_MODEL`、`STEPFUN_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
+可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
 
 Provider 抽象层位于 `src/providers/`，每个供应商对应独立文件并实现 `LlmProvider` 接口。新增供应商只需创建新文件并在工厂函数中注册。
 
-## 本地运行
 
 ```bash
 pnpm install
 
 export GITHUB_TOKEN=ghp_xxxxx
 
-# export LLM_PROVIDER=stepfun`r`n# export STEPFUN_API_KEY=sk-xxxxxxxx`r`n# export STEPFUN_MODEL=step-3.7-flash`r`n`r`n# 方式 B: OpenAI`r`n# export LLM_PROVIDER=openai`r`n# export OPENAI_API_KEY=sk-xxxxxxxx`r`n# export OPENAI_BASE_URL=https://api.deepseek.com`r`n# export OPENAI_MODEL=deepseek-v4-flash
-
 # 方式 A: Anthropic（默认）
 export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 
-# 方式 B: OpenAI
-# export LLM_PROVIDER=openai
-# export OPENAI_API_KEY=sk-xxxxxxxx
-
-# 方式 B: OpenAI 兼容端点 + 自定义模型
-# export LLM_PROVIDER=stepfun`r`n# export STEPFUN_API_KEY=sk-xxxxxxxx`r`n# export STEPFUN_MODEL=step-3.7-flash`r`n`r`n# 方式 B: OpenAI`r`n# export LLM_PROVIDER=openai`r`n# export OPENAI_API_KEY=sk-xxxxxxxx`r`n# export OPENAI_BASE_URL=https://api.deepseek.com`r`n# export OPENAI_MODEL=deepseek-v4-flash
+# 方式 B: OpenAI 兼容端点
+export LLM_PROVIDER=openai
+export OPENAI_API_KEY=sk-xxxxxxxx
+export OPENAI_BASE_URL=https://api.deepseek.com
+export OPENAI_MODEL=deepseek-v4-flash
 
 # 方式 C: GitHub Copilot（使用 GITHUB_TOKEN）
 # export LLM_PROVIDER=github-copilot
@@ -261,11 +257,12 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # export LLM_PROVIDER=openrouter
 # export OPENROUTER_API_KEY=sk-or-xxxxxxxx
 
-export DIGEST_REPO=your-username/agents-radar  # 可选，留空则仅写入本地文件
+export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write files
 
 pnpm start
 pnpm start:local
 ```
+
 
 ## 输出格式
 
@@ -383,4 +380,3 @@ OpenAI 内容精选            (research / release / company / safety / ...)
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=huang-yi-dae/agents-radar&type=Date)](https://star-history.com/#huang-yi-dae/agents-radar&Date)
-

@@ -36,10 +36,10 @@ jobs:
       - name: Run daily digest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LLM_PROVIDER: stepfun
-          STEPFUN_API_KEY: ${{ secrets.STEPFUN_API_KEY || secrets.OPENAI_API_KEY }}
-          STEPFUN_BASE_URL: https://api.stepfun.com/v1
-          STEPFUN_MODEL: step-3.7-flash
+          LLM_PROVIDER: openai
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: https://api.deepseek.com
+          OPENAI_MODEL: deepseek-v4-flash
           DIGEST_REPO: ${{ github.repository }}
         run: pnpm start
 

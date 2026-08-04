@@ -4,7 +4,6 @@ import {
   OpenAIProvider,
   GitHubCopilotProvider,
   OpenRouterProvider,
-  StepFunProvider,
   createProvider,
   VALID_PROVIDER_NAMES,
   type LlmProvider,
@@ -107,7 +106,6 @@ describe("LlmProvider interface", () => {
       new OpenAIProvider({ apiKey: "k" }),
       new GitHubCopilotProvider({ apiKey: "k" }),
       new OpenRouterProvider({ apiKey: "k" }),
-      new StepFunProvider({ apiKey: "k" }),
     ];
     for (const p of providers) {
       expect(typeof p.name).toBe("string");
@@ -122,7 +120,7 @@ describe("LlmProvider interface", () => {
 
 describe("VALID_PROVIDER_NAMES", () => {
   it("contains all supported providers", () => {
-    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter", "stepfun"]);
+    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter"]);
   });
 });
 
@@ -357,11 +355,6 @@ describe("createProvider", () => {
     expect(p).toBeInstanceOf(OpenRouterProvider);
   });
 
-  it("creates stepfun provider", () => {
-    const p = createProvider("stepfun");
-    expect(p).toBeInstanceOf(StepFunProvider);
-  });
-
   it("reads LLM_PROVIDER from env", () => {
     withEnv({ LLM_PROVIDER: "openai" }, () => {
       const p = createProvider();
@@ -371,7 +364,7 @@ describe("createProvider", () => {
 
   it("throws descriptive error for unknown provider", () => {
     expect(() => createProvider("bogus" as never)).toThrow(
-      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter, stepfun/,
+      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter/,
     );
   });
 
@@ -386,214 +379,5 @@ describe("createProvider", () => {
     expect(logged).toContain("anthropic");
     expect(logged).not.toMatch(/sk-|ghp_|key|secret/i);
     spy.mockRestore();
-  });
-});
-
-// ---------------------------------------------------------------------------
-// StepFunProvider
-// ---------------------------------------------------------------------------
-
-describe("StepFunProvider", () => {
-  beforeEach(async () => {
-    vi.clearAllMocks();
-    const mockCreate = await getOpenAIMockCreate();
-    mockCreate.mockReset();
-    mockCreate.mockImplementation((_input: unknown) =>
-      Promise.resolve({
-        choices: [{ message: { content: "ok" } }],
-      }),
-    );
-  });
-
-  it("uses STEPFUN_MODEL env var as default", async () => {
-    await withEnv({ STEPFUN_MODEL: "step-custom" }, async () => {
-      const modelProvider = new StepFunProvider({ apiKey: "k" });
-      expect((modelProvider as unknown as { model: string }).model).toBe("step-custom");
-      expect(
-        (modelProvider as unknown as { client: { chat: { completions: { create: unknown } } } }).client.chat
-          .completions.create,
-      ).toBeInstanceOf(Function);
-    });
-  });
-
-  it("uses STEPFUN_BASE_URL env var as default", async () => {
-    await withEnv({ STEPFUN_BASE_URL: "https://custom.stepfun/v1" }, async () => {
-      const urlProvider = new StepFunProvider({ apiKey: "k" });
-      expect((urlProvider as unknown as { client: { baseURL?: string } }).client.baseURL).toBe(
-        "https://custom.stepfun/v1",
-      );
-      expect(
-        (urlProvider as unknown as { client: { chat: { completions: { create: unknown } } } }).client.chat
-          .completions.create,
-      ).toBeInstanceOf(Function);
-    });
-  });
-
-  it("uses STEPFUN_MODEL env var for API calls", async () => {
-    const mockCreate = await getOpenAIMockCreate();
-    mockCreate.mockResolvedValueOnce({
-      choices: [{ message: { content: "ok" } }],
-    });
-
-    await withEnv({ STEPFUN_MODEL: "step-custom" }, async () => {
-      const p = new StepFunProvider({ apiKey: "k" });
-      await p.call("prompt", 256);
-      expect(await getOpenAIMockCreate()).toHaveBeenCalledWith(
-        expect.objectContaining({
-          model: "step-custom",
-        }),
-      );
-    });
-  });
-
-  it("uses constructor model parameter over env", () => {
-    const p = new StepFunProvider({ apiKey: "k", model: "custom-stepfun-model" });
-    expect(p.name).toBe("stepfun");
-  });
-
-  it("uses STEPFUN_BASE_URL env var for API calls", async () => {
-    const mockCreate = await getOpenAIMockCreate();
-    mockCreate.mockResolvedValueOnce({
-      choices: [{ message: { content: "ok" } }],
-    });
-
-    await withEnv({ STEPFUN_BASE_URL: "https://custom.stepfun/v1" }, async () => {
-      const p = new StepFunProvider({ apiKey: "k" });
-      await p.call("prompt", 256);
-      expect(mockCreate).toHaveBeenCalledWith(
-        expect.objectContaining({
-          baseURL: "https://custom.stepfun/v1",
-        }),
-      );
-    });
-  });
-
-  it("call returns only content and ignores reasoning fields", async () => {
-    const mockCreate = await getOpenAIMockCreate();
-    mockCreate.mockResolvedValueOnce({
-      choices: [
-        {
-          message: {
-            content: "final answer",
-            reasoning_content: "internal reasoning",
-            reasoning: "internal reasoning",
-          },
-        },
-      ],
-    });
-
-    const p = new StepFunProvider({ apiKey: "k", model: "step-test" });
-    const result = await p.call("prompt", 256);
-    expect(result).toBe("final answer");
-    expect(mockCreate).toHaveBeenCalledWith({
-      model: "step-test",
-      max_completion_tokens: 256,
-      reasoning_effort: "low",
-      messages: [
-        {
-          role: "system",
-          content:
-            "You are a careful report editor.\n" +
-            "Always output only the final user-facing report content.\n" +
-            "Never include planning, reasoning, self-instructions, chain-of-thought, or internal thinking traces.\n",
-        },
-        { role: "user", content: "prompt" },
-      ],
-    });
-  });
-
-  it("returns fallback instead of leaking reasoning when content is empty", async () => {
-    const mockCreate = await getOpenAIMockCreate();
-    mockCreate.mockResolvedValueOnce({
-      choices: [
-        {
-          message: {
-            content: null,
-            reasoning_content: "internal reasoning",
-            reasoning: "internal reasoning",
-          },
-        },
-      ],
-    });
-
-    const p = new StepFunProvider({ apiKey: "k" });
-    const result = await p.call("prompt", 100);
-    expect(result).toBe("[LLM fallback] stepfun returned an empty response.");
-  });
-
-  it("strips embedded thinking blocks from content", async () => {
-    const mockCreate = await getOpenAIMockCreate();
-    mockCreate.mockResolvedValueOnce({
-      choices: [
-        {
-          message: {
-            content:
-              "<think>user wants a daily report.</think>" +
-              "<thinking>I should organize by repo.</thinking>" +
-              "[thinking]I will not expose this.[/thinking]" +
-              "【thinking】Keep this private.】" +
-              "## Daily Digest\n- Final answer only.",
-          },
-        },
-      ],
-    });
-
-    const p = new StepFunProvider({ apiKey: "k", model: "step-clean" });
-    const result = await p.call("prompt", 256);
-    expect(result).toBe("## Daily Digest\n- Final answer only.");
-  });
-
-  it("strips planning prose before structured report sections", async () => {
-    const mockCreate = await getOpenAIMockCreate();
-    mockCreate.mockResolvedValueOnce({
-      choices: [
-        {
-          message: {
-            content:
-              "用户现在需要我基于前面给的几个AI CLI工具..." +
-              "\n\n## 横向对比\n\n" +
-              "- 结论A\n" +
-              "- 结论B\n",
-          },
-        },
-      ],
-    });
-
-    const p = new StepFunProvider({ apiKey: "k", model: "step-clean" });
-    const result = await p.call("prompt", 256);
-    expect(result).toBe("## 横向对比\n\n- 结论A\n- 结论B");
-  });
-
-  it("strips complex planning prose from leaked reasoning output", async () => {
-    const mockCreate = await getOpenAIMockCreate();
-    mockCreate.mockResolvedValueOnce({
-      choices: [
-        {
-          message: {
-            content:
-              "## 横向对比\n\n用户现在需要我基于前面给的几个AI CLI工具..." +
-              "\n\n首先第一个部分，生态全景..." +
-              "\n\n然后第三个部分，各工具活跃度对比..." +
-              "\n\n## 实际结论\n\n- 结论A\n- 结论B\n",
-          },
-        },
-      ],
-    });
-
-    const p = new StepFunProvider({ apiKey: "k", model: "step-clean" });
-    const result = await p.call("prompt", 256);
-    expect(result).toBe("## 实际结论\n\n- 结论A\n- 结论B");
-  });
-
-  it("wraps network timeout with actionable StepFun error", async () => {
-    const mockCreate = await getOpenAIMockCreate();
-    mockCreate.mockRejectedValueOnce(
-      new AggregateError([new Error("connect ETIMEDOUT")], "All promises were rejected"),
-    );
-
-    const p = new StepFunProvider({ apiKey: "k", model: "step-timeout" });
-    await expect(p.call("prompt", 256)).rejects.toThrow(
-      "StepFun request to https://api.stepfun.com/v1 failed with a network timeout",
-    );
   });
 });

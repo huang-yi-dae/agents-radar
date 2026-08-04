@@ -193,11 +193,11 @@ Go to **Settings → Secrets and variables → Actions** and add:
 
 | Secret | Required | Description |
 |--------|----------|-------------|
-| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, `openrouter`, or `stepfun` |
+| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, or `openrouter` |
 | `ANTHROPIC_API_KEY` | if Anthropic | API key — works with both Anthropic and Kimi Code |
 | `ANTHROPIC_BASE_URL` | optional | API endpoint override. Set to `https://api.kimi.com/coding/` for Kimi Code; leave unset for Anthropic |
-| `STEPFUN_API_KEY` | if StepFun | StepFun API key |`r`n| `OPENAI_API_KEY` | if OpenAI | OpenAI API key |
-| `STEPFUN_BASE_URL` | optional | StepFun endpoint override |`r`n| `OPENAI_BASE_URL` | optional | OpenAI endpoint override |
+| `OPENAI_API_KEY` | if OpenAI-compatible | API key |
+| `OPENAI_BASE_URL` | optional | OpenAI-compatible endpoint override |
 | `OPENROUTER_API_KEY` | if OpenRouter | OpenRouter API key |
 | `TELEGRAM_BOT_TOKEN` | optional | Telegram bot token from [@BotFather](https://t.me/BotFather). If set, a message is sent after each digest run |
 | `TELEGRAM_CHAT_ID` | optional | Telegram chat/channel/group ID to send notifications to |
@@ -227,32 +227,28 @@ Set `LLM_PROVIDER` to choose which model backend powers the digest generation. D
 | Provider | `LLM_PROVIDER` | Required env vars | Default model |
 |----------|---------------|-------------------|---------------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
-| StepFun | `stepfun` | `STEPFUN_API_KEY` | `step-3.7-flash` |`r`n| OpenAI | `openai` | `OPENAI_API_KEY` | `gpt-4o` |
+| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
-Override the model name with `ANTHROPIC_MODEL`, `STEPFUN_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
+Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
 
 The provider abstraction lives in `src/providers/` — each provider is a separate file implementing the `LlmProvider` interface. Adding a new provider only requires creating a new file and registering it in the factory.
 
-## Running locally
 
 ```bash
 pnpm install
 
 export GITHUB_TOKEN=ghp_xxxxx
 
-# export LLM_PROVIDER=stepfun`r`n# export STEPFUN_API_KEY=sk-xxxxxxxx`r`n# export STEPFUN_MODEL=step-3.7-flash`r`n`r`n# Option B: OpenAI`r`n# export LLM_PROVIDER=openai`r`n# export OPENAI_API_KEY=sk-xxxxxxxx`r`n# export OPENAI_BASE_URL=https://api.deepseek.com`r`n# export OPENAI_MODEL=deepseek-v4-flash
-
 # Option A: Anthropic (default)
 export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 
-# Option B: OpenAI
-# export LLM_PROVIDER=openai
-# export OPENAI_API_KEY=sk-xxxxxxxx
-
-# Option B: OpenAI-compatible endpoint with custom model
-# export LLM_PROVIDER=stepfun`r`n# export STEPFUN_API_KEY=sk-xxxxxxxx`r`n# export STEPFUN_MODEL=step-3.7-flash`r`n`r`n# Option B: OpenAI`r`n# export LLM_PROVIDER=openai`r`n# export OPENAI_API_KEY=sk-xxxxxxxx`r`n# export OPENAI_BASE_URL=https://api.deepseek.com`r`n# export OPENAI_MODEL=deepseek-v4-flash
+# Option B: OpenAI-compatible endpoint
+export LLM_PROVIDER=openai
+export OPENAI_API_KEY=sk-xxxxxxxx
+export OPENAI_BASE_URL=https://api.deepseek.com
+export OPENAI_MODEL=deepseek-v4-flash
 
 # Option C: GitHub Copilot (uses GITHUB_TOKEN)
 # export LLM_PROVIDER=github-copilot
@@ -266,6 +262,7 @@ export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write fi
 pnpm start
 pnpm start:local
 ```
+
 
 ## Output format
 
@@ -406,4 +403,3 @@ To change the schedule, edit the cron expressions in the corresponding workflow 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=huang-yi-dae/agents-radar&type=Date)](https://star-history.com/#huang-yi-dae/agents-radar&Date)
-
