@@ -32,6 +32,7 @@ const STEPFUN_THINKING_PATTERNS = [
   /<thinking>[\s\S]*?<\/thinking>/i,
   /\[thinking\][\s\S]*?\[\/thinking\]/i,
   /【thinking】[\s\S]*?【\/thinking】/i,
+  /【thinking】[\s\S]*?】/i,
 ];
 
 /**

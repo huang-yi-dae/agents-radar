@@ -451,4 +451,26 @@ describe("StepFunProvider", () => {
     const result = await p.call("prompt", 100);
     expect(result).toBe("[LLM fallback] stepfun returned an empty response.");
   });
+
+  it("strips embedded thinking blocks from content", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [
+        {
+          message: {
+            content:
+              "<think>user wants a daily report.</think>" +
+              "<thinking>I should organize by repo.</thinking>" +
+              "[thinking]I will not expose this.[/thinking]" +
+              "【thinking】Keep this private.】" +
+              "## Daily Digest\n- Final answer only.",
+          },
+        },
+      ],
+    });
+
+    const p = new StepFunProvider({ apiKey: "k", model: "step-clean" });
+    const result = await p.call("prompt", 256);
+    expect(result).toBe("## Daily Digest\n- Final answer only.");
+  });
 });
