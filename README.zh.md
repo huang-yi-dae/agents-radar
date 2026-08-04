@@ -50,9 +50,41 @@
 
 **OpenClaw 接入** — 执行以下命令：
 
+
 ```bash
-openclaw mcp add --transport http agents-radar https://agents-radar-mcp.duanyytop.workers.dev
+pnpm install
+
+export GITHUB_TOKEN=ghp_xxxxx
+
+# 方式 A: Anthropic（默认）
+export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
+
+# 方式 B: StepFun
+export LLM_PROVIDER=stepfun
+export OPENAI_API_KEY=sk-xxxxxxxx
+export OPENAI_BASE_URL=https://api.stepfun.com/v1
+export OPENAI_MODEL=step-3.7-flash
+
+# 方式 C: OpenAI 兼容端点
+export LLM_PROVIDER=openai
+export OPENAI_API_KEY=sk-xxxxxxxx
+export OPENAI_BASE_URL=https://api.deepseek.com
+export OPENAI_MODEL=deepseek-v4-flash
+
+# 方式 D: GitHub Copilot（使用 GITHUB_TOKEN）
+# export LLM_PROVIDER=github-copilot
+
+# 方式 E: OpenRouter
+# export LLM_PROVIDER=openrouter
+# export OPENROUTER_API_KEY=sk-or-xxxxxxxx
+
+export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write files
+
+pnpm start
+pnpm start:local
 ```
+
+
 
 或手动编辑 `~/.openclaw/openclaw.json`：
 
@@ -196,7 +228,7 @@ openclaw_peers:
 | `LLM_PROVIDER` | 可选 | `anthropic`（默认）、`openai`、`github-copilot`、`openrouter` |
 | `ANTHROPIC_API_KEY` | Anthropic 时 | API 密钥，兼容 Anthropic 和 Kimi Code |
 | `ANTHROPIC_BASE_URL` | 可选 | API 地址覆盖。使用 Kimi Code 时设置为 `https://api.kimi.com/coding/`，使用 Anthropic 时留空 |
-| `OPENAI_API_KEY` | OpenAI 兼容时 | API 密钥 |
+| `OPENAI_API_KEY` | API 密钥 |
 | `OPENAI_BASE_URL` | 可选 | OpenAI 兼容端点覆盖 |
 | `OPENROUTER_API_KEY` | OpenRouter 时 | OpenRouter API 密钥 |
 | `TELEGRAM_BOT_TOKEN` | 可选 | Telegram bot token，从 [@BotFather](https://t.me/BotFather) 获取。设置后每次 digest 完成自动推送通知 |
@@ -227,11 +259,11 @@ openclaw_peers:
 | 供应商 | `LLM_PROVIDER` | 所需环境变量 | 默认模型 |
 |--------|---------------|------------|----------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
-| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
+| StepFun | `stepfun` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `step-3.7-flash` |\`r\`n| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
-可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
+可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`STEPFUN_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
 
 Provider 抽象层位于 `src/providers/`，每个供应商对应独立文件并实现 `LlmProvider` 接口。新增供应商只需创建新文件并在工厂函数中注册。
 

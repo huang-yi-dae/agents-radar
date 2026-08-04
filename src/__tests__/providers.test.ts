@@ -120,7 +120,7 @@ describe("LlmProvider interface", () => {
 
 describe("VALID_PROVIDER_NAMES", () => {
   it("contains all supported providers", () => {
-    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter"]);
+    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter", "stepfun"]);
   });
 });
 

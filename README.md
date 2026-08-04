@@ -50,9 +50,41 @@ Restart Claude Desktop after saving. You can then ask Claude things like:
 
 **OpenClaw setup** — run the following command:
 
+
 ```bash
-openclaw mcp add --transport http agents-radar https://agents-radar-mcp.duanyytop.workers.dev
+pnpm install
+
+export GITHUB_TOKEN=ghp_xxxxx
+
+# Option A: Anthropic (default)
+export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
+
+# Option B: StepFun
+export LLM_PROVIDER=stepfun
+export OPENAI_API_KEY=sk-xxxxxxxx
+export OPENAI_BASE_URL=https://api.stepfun.com/v1
+export OPENAI_MODEL=step-3.7-flash
+
+# Option C: OpenAI-compatible endpoint
+export LLM_PROVIDER=openai
+export OPENAI_API_KEY=sk-xxxxxxxx
+export OPENAI_BASE_URL=https://api.deepseek.com
+export OPENAI_MODEL=deepseek-v4-flash
+
+# Option D: GitHub Copilot (uses GITHUB_TOKEN)
+# export LLM_PROVIDER=github-copilot
+
+# Option E: OpenRouter
+# export LLM_PROVIDER=openrouter
+# export OPENROUTER_API_KEY=sk-or-xxxxxxxx
+
+export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write files
+
+pnpm start
+pnpm start:local
 ```
+
+
 
 Or add it manually to `~/.openclaw/openclaw.json`:
 
@@ -196,7 +228,7 @@ Go to **Settings → Secrets and variables → Actions** and add:
 | `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, or `openrouter` |
 | `ANTHROPIC_API_KEY` | if Anthropic | API key — works with both Anthropic and Kimi Code |
 | `ANTHROPIC_BASE_URL` | optional | API endpoint override. Set to `https://api.kimi.com/coding/` for Kimi Code; leave unset for Anthropic |
-| `OPENAI_API_KEY` | if OpenAI-compatible | API key |
+| `OPENAI_API_KEY` | API key |
 | `OPENAI_BASE_URL` | optional | OpenAI-compatible endpoint override |
 | `OPENROUTER_API_KEY` | if OpenRouter | OpenRouter API key |
 | `TELEGRAM_BOT_TOKEN` | optional | Telegram bot token from [@BotFather](https://t.me/BotFather). If set, a message is sent after each digest run |
@@ -227,11 +259,11 @@ Set `LLM_PROVIDER` to choose which model backend powers the digest generation. D
 | Provider | `LLM_PROVIDER` | Required env vars | Default model |
 |----------|---------------|-------------------|---------------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
-| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
+| StepFun | `stepfun` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `step-3.7-flash` |\`r\`n| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
-Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
+Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `STEPFUN_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
 
 The provider abstraction lives in `src/providers/` — each provider is a separate file implementing the `LlmProvider` interface. Adding a new provider only requires creating a new file and registering it in the factory.
 
