@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-08-04T06:36:05.219Z",
+    "lastChecked": "2026-08-04T08:23:14.201Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-25T23:57:06.000Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -438,7 +438,7 @@
     }
   },
   "openai": {
-    "lastChecked": "2026-08-04T06:36:08.414Z",
+    "lastChecked": "2026-08-04T08:23:18.389Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-07-25T07:19:31.944Z",
       "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-07-29T03:13:44.572Z",
@@ -1156,7 +1156,7 @@
       "https://openai.com/index/next-phase-of-microsoft-partnership/": "2026-06-03T23:20:14.812Z",
       "https://openai.com/index/where-the-goblins-came-from/": "2026-06-03T20:07:37.813Z",
       "https://openai.com/index/mrc-supercomputer-networking/": "2026-06-03T20:07:26.515Z",
-      "https://openai.com/index/model-disproves-discrete-geometry-conjecture/": "2026-08-04T04:41:03.350Z",
+      "https://openai.com/index/model-disproves-discrete-geometry-conjecture/": "2026-08-04T08:22:08.154Z",
       "https://openai.com/index/dell-codex-enterprise-partnership/": "2026-05-29T00:27:22.767Z",
       "https://openai.com/index/next-phase-of-enterprise-ai/": "2026-07-25T07:23:03.007Z",
       "https://openai.com/index/work-with-codex-from-anywhere/": "2026-05-27T01:26:35.768Z",
@@ -1185,7 +1185,7 @@
       "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/": "2026-08-03T16:24:01.681Z",
       "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/": "2026-08-04T02:06:43.656Z",
       "https://openai.com/index/building-abundant-intelligence/": "2026-07-31T15:01:22.960Z",
-      "https://openai.com/index/ten-advances-in-mathematics/": "2026-08-04T06:32:37.578Z",
+      "https://openai.com/index/ten-advances-in-mathematics/": "2026-08-04T07:51:53.637Z",
       "https://openai.com/index/apple-is-getting-this-wrong/": "2026-08-04T05:33:18.870Z",
       "https://openai.com/index/continuous-voice-interaction-with-gpt-live/": "2026-08-03T20:21:10.293Z"
     }
