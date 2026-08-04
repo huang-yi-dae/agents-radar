@@ -1,6 +1,6 @@
 # OpenClaw Ecosystem Digest 2026-08-04
 
-> Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 14:02 UTC
+> Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 14:12 UTC
 
 - [OpenClaw](https://github.com/openclaw/openclaw)
 - [NanoBot](https://github.com/HKUDS/nanobot)
@@ -20,20 +20,13 @@
 
 ## OpenClaw Deep Dive
 
-# OpenClaw Project Digest
-## Date: 2026-08-04
-
----
-
-### 1. Today's Overview
-OpenClaw sees very high community activity on
+[LLM fallback] stepfun returned an empty response.
 
 ---
 
 ## Cross-Ecosystem Comparison
 
-> LLM generation failed: StepFun request failed: Connection error.
-
+[LLM fallback] stepfun returned an empty response.
 
 ---
 
@@ -42,100 +35,84 @@ OpenClaw sees very high community activity on
 <details>
 <summary><strong>NanoBot</strong> — <a href="https://github.com/HKUDS/nanobot">HKUDS/nanobot</a></summary>
 
-[LLM fallback] stepfun returned an empty response.
+# NanoBot Project Digest (2026-08-04)
+---
+
+## Today's Overview
+NanoBot saw high development activity on 2026-08-04, with 27 pull requests and 3 issues updated in the prior 24 hours. Of the updated PRs, 20 have been merged or closed, while 7 remain open for review, alongside 2 active open issues and 1 recently closed issue. Development focus areas include WebUI usability improvements, channel integration stability, provider compatibility, and core session/security fixes, with no new public releases published today.
+
+## Releases
+No new releases were published on 2026-08-04.
+
+## Project Progress
+Key merged/closed PRs advancing project functionality on 2026-08-04 include:
+- Core provider support: Merged PR #5236 adds support for Claude Opus 5 effort controls, fixing temperature configuration rejections for the new model.
+- Channel integration fixes: Closed PR #5223 fixes WeCom media download failures when filename sanitization strips all characters; closed PR #5222 fixes Telegram fenced code block corruption for languages with special characters (e.g., C++); closed PR #1776 adds the missing `group_mode` configuration field to the Telegram channel schema.
+- WebUI improvements: Merged PR #5210 adds trusted upstream-proxy bootstrap authentication for zero-trust deployments; closed PR #5239 adds an integrated Vite dev mode for one-command frontend development; closed PR #5244 renders markdown in prompt rail previews; closed PR #5245 aligns timestamp tooltip styles for accessibility; closed PR #5240 unifies floating control styling across the WebUI; closed PR #5243 moves automation metadata to message footers aligned with timestamps; closed PR #5241 refines inline token highlight styling; closed PR #5242 adds validation for malformed slash commands with typo suggestions.
+- Core features: Merged PR #5211 adds cross-session search and mention functionality for bounded conversation access; closed PR #1288 adds Claude Code and Codex CLI delegation skills; closed PR #3200 fixes silent consolidator failures when context window boundaries are not found; closed PR #3211 adds generic agent plugin infrastructure for external custom agent implementations.
+
+## Community Hot Topics
+Most active community items updated today include:
+- [Issue #4784](https://github.com/HKUDS/nanobot/issues/4784) (open, 2 comments): A high-priority security bug reporting that provider API keys are leaked between providers via global `os.environ` mutation. Underlying need: Secure multi-provider deployment support for enterprise use cases.
+- [PR #5210](https://github.com/HKUDS/nanobot/pull/5210) (merged, priority: p1): Adds trusted proxy bootstrap authentication for the WebUI, requested for use with Cloudflare Tunnel + Cloudflare Access. Underlying need: Enterprise-grade zero-trust access control for self-hosted deployments.
+- [PR #5238](https://github.com/HKUDS/nanobot/pull/5238) (open, priority: p1): A core refactor to remove request-scoped access grants and simplify session tool authorization. Underlying need: Reduced complexity and improved stability for session management.
+- [PR #5184](https://github.com/HKUDS/nanobot/pull/5184) (open): Adds Quick Chat
 
 </details>
 
 <details>
 <summary><strong>Zeroclaw</strong> — <a href="https://github.com/zeroclaw-labs/zeroclaw">zeroclaw-labs/zeroclaw</a></summary>
 
-# Zeroclaw Project Digest (2026-08-04)
-
-## 1. Today's Overview
-2026-08-04 saw high activity across the Zeroclaw repository, with 50 issues and 50 pull requests updated in the prior 24 hours (48 open issues, 46 open PRs, 4 merged/closed PRs). No new releases were published, as the project remains in an active design and implementation phase focused on architecture hardening, security enhancements, and core feature rollouts for upcoming milestones. The majority of active work centers on the multi-slice Hindsight persistent memory stack, cross-turn observability, and transport/session ownership standardization.
-
-## 2. Releases
-No new releases were published on 2026-08-04.
-
-## 3. Project Progress
-4 pull requests were merged or closed in the last 24 hours. Active open PR work advancing core functionality includes:
-- The 7-slice Hindsight persistent memory stack (PRs [#9063](https://github.com/zeroclaw-labs/zeroclaw/pull/9063), [#9064](https://github.com/zeroclaw-labs/zeroclaw/pull/9064), [#9065](https://github.com/zeroclaw-labs/zeroclaw/pull/9065), [#9066](https://github.com/zeroclaw-labs/zeroclaw/pull/9066), [#9067](https://github.com/zeroclaw-labs/zer
+[LLM fallback] stepfun returned an empty response.
 
 </details>
 
 <details>
 <summary><strong>PicoClaw</strong> — <a href="https://github.com/sipeed/picoclaw">sipeed/picoclaw</a></summary>
 
-**PicoClaw Project Digest – 2026-08-04**
+**1. Today's Overview**
+On 2026-08-04, the PicoClaw repository recorded moderate activity with 8 issues and 6 pull requests updated in the last 24 hours. Of these, 3 open issues and 3 open PRs remain unresolved, while 5 issues and 3 PRs were closed, indicating ongoing maintenance and bug-fixing. No new releases were published, and most updated items are marked as stale, suggesting some community-reported items are awaiting maintainer attention.
 
----
+**2. Releases**
+No new releases were published on 2026-08-04.
 
-### 1. Today's Overview
-On 2026-08-04, the PicoClaw repository saw moderate activity with 8 issues and 6 pull requests updated in the previous 24 hours. The project currently has 3 open issues and 3 open PRs, while 5 issues and 3 PRs were closed or merged. No new releases were published. The community continues to focus on stability improvements, UI performance, and feature enhancements.
+**3. Project Progress**
+Three PRs were merged or closed today:
+- PR #3267 fixed a scope bug in the antigravity token refresh flow that caused `PERMISSION_DENIED` errors after successful primary authentication.
+- PR #3273 added full Japanese (ja) localization to the PicoClaw WebUI, addressing issue #3272.
+- PR #3202 corrected `NormalizeAgentID`/`NormalizeAccountID` logic to properly strip leading/trailing underscores and invalid characters, aligning with documented ID patterns.
 
----
+**4. Community Hot Topics**
+- Issue #3269 (3 comments, 1 👍) — MCP server connection failures causing the agent loop to hang and the chat interface to stop replying.
+- Issue #3281 (3 comments, 1 👍) — Web UI chat input becomes laggy when session history grows.
+- Issue #3301 (1 comment) — `/clear` and session auto-compression fail in chats routed to non-default agents via dispatch rules.
+- PR #3316 (open) — Fix for routed-agent context management, directly addressing #3301.
+- PR #3315 (open) — Adds support for Telegram topics in private bot chats.
 
-### 2. Releases
-No new releases were published on 2026-08-04.  
-*Section omitted per instructions.*
+**5. Bugs & Stability**
+- **High severity**: Issue #3269 — Agent loop hangs indefinitely if the MCP server connection fails, rendering the chat interface unresponsive.
+- **High severity**: Issue #3264 (closed) — `SplitMessage` enters an infinite loop on oversized fenced-code info strings, though a fix was recently merged.
+- **Medium severity**: Issue #3281 — Web UI input lag with moderately long chat history, affecting usability.
+- **Medium severity**: Issue #3301 — `/clear` and auto-compression broken for routed-agent sessions; a corresponding fix PR (#3316) is open.
+- **Medium severity**: Issue #3265 (closed) — Gateway startup failure when an unknown channel type (e.g., `deltachat`) is present in configuration, even if unused.
+- **Low severity**: Issue #3268 (closed) — `exec` tool requires an `action` parameter instead of defaulting to `"run"`, causing predictable failures when omitted.
 
----
+**6. Feature Requests & Roadmap Signals**
+- Issue #3276 (closed) requested externally-managed gateway detection (systemd) and graceful handling of unknown channel types, partially fulfilled by #3265 closure.
+- Issue #3272 requested Japanese localization, implemented in PR #3273.
+- PR #3315 (open) proposes Telegram topic support in private bot chats.
+- PR #3317 (open) adds prompt cache token logging to LLM response debug output, useful for providers like DeepSeek.
 
-### 3. Project Progress
-Three PRs were closed or merged recently, contributing fixes and features:
-- **PR #3267** – Fixed a scope bug in the antigravity token refresh flow, preventing `PERMISSION_DENIED` errors during LLM calls. ([link](https://github.com/sipeed/picoclaw/pull/3267))
-- **PR #3273** – Added complete Japanese (`ja`) localization to the PicoClaw WebUI, including i18next resources and dayjs locale registration. ([link](https://github.com/sipeed/picoclaw/pull/3273))
-- **PR #3202** – Corrected ID normalization logic to strip leading/trailing underscores, ensuring compliance with the documented `^[a-z0-9][a-z0-9_-]{0,63}$` pattern. ([link](https://github.com/sipeed/picoclaw/pull/3202))
+**7. User Feedback Summary**
+Users report critical reliability problems: the agent interface can freeze entirely on backend connectivity issues (#3269), and the Web UI degrades with typical conversation lengths (#3281). Advanced deployment scenarios (systemd-managed gateway) and non-English localization (Japanese) are also valued. Additionally, users leveraging dispatch rules for multi-agent routing encounter broken session management (#3301), indicating a need for more robust context handling.
 
----
-
-### 4. Community Hot Topics
-The most active discussions based on comment count and reactions are:
-- **Issue #3269** – *MCP server connection failure hangs the agent loop* (3 comments, 1 👍). Highlights a critical reliability gap in the agent execution pipeline. ([link](https://github.com/sipeed/picoclaw/issues/3269))
-- **Issue #3281** – *Web UI chat input lag with moderately long history* (3 comments, 1 👍). Points to performance bottlenecks in the frontend rendering or state management. ([link](https://github.com/sipeed/picoclaw/issues/3281))
-- **PR #3316** – *Fix routed-agent context management* (open, created 2026-08-03). Addresses broken memory and auto-compression for dispatch-routed agents, a direct response to user-reported context loss. ([link](https://github.com/sipeed/picoclaw/pull/3316))
-
-Underlying needs: robust error handling for external services, scalable UI performance, and predictable agent behavior in multi-agent deployments.
-
----
-
-### 5. Bugs & Stability
-Reported bugs, ranked by apparent severity:
-1. **Issue #3269** – MCP server connection failure causes the entire agent loop to hang, making the chat interface unresponsive. *(Critical)* ([link](https://github.com/sipeed/picoclaw/issues/3269))
-2. **Issue #3301** – `/clear` and session auto-compression fail for chats routed to non-default agents via dispatch rules. *(High)* ([link](https://github.com/sipeed/picoclaw/issues/3301))
-3. **Issue #3281** – Web UI input becomes laggy when chat history grows beyond a few messages. *(Medium)* ([link](https://github.com/sipeed/picoclaw/issues/3281))
-4. **Issue #3264** – `SplitMessage` enters an infinite loop on oversized fenced-code info strings, risking crashes. *(Medium)* ([link](https://github.com/sipeed/picoclaw/issues/3264))
-5. **Issue #3265** – Gateway fails to start if an unknown channel type (e.g., `deltachat`) appears in configuration, even when not used. *(Medium)* ([link](https://github.com/sipeed/picoclaw/issues/3265))
-6. **Issue #3268** – `exec` tool requires an `action` parameter that should default to `"run"`, causing unpredictable AI agent failures. *(Low–Medium)* ([link](https://github.com/sipeed/picoclaw/issues/3268))
-
-Related fix PRs: #3316 (addresses #3301), #3267 (token refresh), #3202 (routing ID normalization). No open PRs currently target #3269, #3281, #3264, #3265, or #3268.
-
----
-
-### 6. Feature Requests & Roadmap Signals
-- **Issue #3276** – Launcher should detect externally-managed gateways (systemd) and tolerate unknown channel types instead of hard-failing. ([link](https://github.com/sipeed/picoclaw/issues/3276))
-- **Issue #3272** – Request for Japanese localization (now implemented via PR #3273, likely in the next release). ([link](https://github.com/sipeed/picoclaw/issues/3272))
-- **PR #3315** – Support for Telegram topics in private bot chats, extending forum-mode handling to non-supergroup contexts. ([link](https://github.com/sipeed/picoclaw/pull/3315))
-
-Prediction: Japanese localization (#3273) and private topic support (#3315) are strong candidates for inclusion in the next version. Gateway launcher improvements (#3276) may follow in a subsequent release.
-
----
-
-### 7. User Feedback Summary
-- **Pain points**: Reliability of external integrations (MCP server), UI responsiveness during longer sessions, agent memory consistency when using dispatch rules, and configuration rigidity in the gateway/launcher.
-- **Use cases**: Headless server deployments with systemd, multi-channel bots (Discord, Telegram), and AI agents that execute code or use tools.
-- **Satisfaction**: Community is actively engaged, filing detailed bug reports and contributing fixes. The presence of multiple stale-but-closed issues suggests maintainers are addressing backlog, though some critical bugs remain open.
-
----
-
-### 8. Backlog Watch
-Open issues and PRs that are stale or awaiting maintainer attention:
-- **Issue #3269** – Stale, open critical bug (MCP hang) since 2026-07-20. Requires urgent fix. ([link](https://github.com/sipeed/picoclaw/issues/3269))
-- **Issue #3281** – Stale, open UI performance issue since 2026-07-21. ([link](https://github.com/sipeed/picoclaw/issues/3281))
-- **Issue #3301** – Open bug regarding routed-agent context; recently updated but not yet fixed. ([link](https://github.com/sipeed/picoclaw/issues/3301))
-- **PR #3317** – Open enhancement to log prompt cache tokens in LLM response debug output. ([link](https://github.com/sipeed/picoclaw/pull/3317))
-- **PR #3316** – Open fix for routed-agent context management; review/merge needed. ([link](https://github.com/sipeed/picoclaw/pull/3316))
-- **PR #3315** – Open feature for private chat topic support; review/merge needed. ([link](https://github.com/sipeed/picoclaw/pull/3315))
+**8. Backlog Watch**
+Several stale items from mid-July remain open or under review:
+- Issue #3269 (open, created 2026-07-20) — MCP hang bug with 3 comments; needs a maintainer response or fix PR.
+- Issue #3281 (open, created 2026-07-21) — Web UI lag; no fix PR yet.
+- Issue #3301 (open, created 2026-07-29) — Routing context bug; PR #3316 is open but unmerged.
+- PR #3317 (open, created 2026-08-04) — Provider logging enhancement; awaiting review.
+- PR #3315 (open, created 2026-08-03) — Telegram topic support; awaiting review.
 
 </details>
 
@@ -143,98 +120,67 @@ Open issues and PRs that are stale or awaiting maintainer attention:
 <summary><strong>NanoClaw</strong> — <a href="https://github.com/qwibitai/nanoclaw">qwibitai/nanoclaw</a></summary>
 
 # NanoClaw Project Digest (2026-08-04)
-## 1. Today's Overview
-NanoClaw recorded moderate development activity on 2026-08-04, with 10 pull requests updated in the prior 24 hours (5 open, 5 merged/closed) and no new open or closed issues, and no new releases published. Work is split across new channel integration features, core stability fixes, and operational infrastructure updates. No critical unaddressed community-reported issues are active as of the reporting date.
-
-## 2. Releases
-No new releases were published for NanoClaw on 2026-08-04.
-
-## 3. Project Progress
-5 pull requests were merged or closed on 2026-08-04, advancing core functionality and operational stability:
-1. PR #3154 (https://github.com/nanocoai/nanoclaw/pull/3154): Fixed scheduled task time rendering to use the effective scheduled occurrence timestamp, with legacy creation time fallback, and added task-only `current_time` generation for agent runs.
-2. PR #3182 (https://github.com/nanocoai/nanoclaw/pull/3182): Repinned the agent container image to the hardened-2026-08-02 build, with identical upstream AI echo digest to prior versions for consistent behavior.
-3. PR #3180 (https://github.com/nanocoai/nanoclaw/pull/3180): Surfaced the hardened agent image migration process to end users.
-4. PR #3137 (https://github.com/nanocoai/nanoclaw/pull/3137): Fixed engagement context consistency to retain accumulated messages without triggering unnecessary follow-up turns, added group-scoped agent wiring inspection capabilities, and added validation for engagement policy JavaScript regexes.
-5. PR #3181 (https://github.com/nanocoai/nanoclaw/pull/3181): Fixed iMessage onboarding to opt users in automatically via their first message to the assigned line.
-
-## 4. Community Hot Topics
-The most active ongoing work items as of the reporting date are:
-1. Dial channel integration feature work: PR #3041 (https://github.com/nanocoai/nanoclaw/pull/3041) and PR #3050 (https://github.com/nanocoai/nanoclaw/pull/3050), both opened 2026-07-14 and updated 2026-08-04, add support for SMS and AI voice calls via the Dial integration, plus corresponding setup for the channel picker, wizard, and skills system.
-2. Discord approval workflow bug fix: PR #3185 (https://github.com/nanocoai/nanoclaw/pull/3185), created and updated 2026-08-04, addresses a high-impact regression that breaks all approval requests in Discord.
-Underlying needs: Users are requesting expanded communication channel support beyond existing integrations, and demand more transparent, user-controlled agent configuration options.
-
-## 5. Bugs & Stability
-Three active bug fixes are in progress, ranked by severity:
-1. Critical: PR #3185 (https://github.com/nanocoai/nanoclaw/pull/3185) addresses a regression in the Discord Chat SDK bridge where all approval requests are incorrectly rejected, even when users click Approve, caused by a newline delimiter bug in webhook `custom_id` parsing.
-2. Medium: PR #3184 (https://github.com/nanocoai/nanoclaw/pull/3184) fixes a crash that occurs when resuming a conversation with a missing transcript file, which previously returned a fatal `No conversation found with session ID` error.
-3. Medium: PR #3183 (https://github.com/nanocoai/nanoclaw/pull/3183) fixes a bug where users messaging channels inactive for 30+ days receive session not found errors instead of a reply, caused by retention cleanup reaping cold active sessions.
-All three fixes have open pull requests pending review.
-
-## 6. Feature Requests & Roadmap Signals
-The active Dial channel integration PRs (#3041, #3050) are the highest-priority feature in progress, and are likely to be included in the next project release given their active maintenance and alignment with user demand for expanded communication channels. The recently merged engagement wiring controls (PR #3137) signal a roadmap focus on giving end users and group admins more granular control over agent behavior and configuration.
-
-## 7. User Feedback Summary
-No explicit user feedback threads are included in the provided data, but the active bug fixes indicate reported user pain points around broken Discord approval workflows, conversation resume failures for missing transcripts, and errors when messaging inactive channels. The active Dial channel integration feature work signals clear user demand for expanded communication channel support including SMS and AI voice calls. No explicit satisfaction or dissatisfaction metrics are available for the reporting period.
-
-## 8. Backlog Watch
-No open issues are pending maintainer response as of 2026-08-04. The two Dial channel integration pull requests (#3041 https://github.com/nanocoai/nanoclaw/pull/3041, #3050 https://github.com/nanocoai/nanoclaw/pull/3050) have been open for 21 days as of the reporting date, and may benefit from prioritized maintainer review to advance the feature toward merge.
+## Today's Overview
+As of
 
 </details>
 
 <details>
 <summary><strong>NullClaw</strong> — <a href="https://github.com/nullclaw/nullclaw">nullclaw/nullclaw</a></summary>
 
-# NullClaw Project Digest | 2026-08-04
----
+# NullClaw Project Digest (2026-08-04)
+
 ## 1. Today's Overview
-On 2026-08-04, NullClaw recorded minimal development activity: no issues were created, updated, or closed in the preceding 24 hours, and no new releases were published. The sole activity in the window was an update to 1 open pull request, with no merged or closed PRs. Overall project activity is low, focused solely on in-progress feature work for new provider support, with no active community discussions or reported problems in the day.
+As of 2026-08-04, NullClaw saw low activity in the preceding 24-hour window, with no new issues or releases published, and only one open pull request receiving an update. The project currently has 0 active open or closed issues, indicating no immediate unresolved bug reports or feature discussions in the backlog. A single open feature PR remains under development, focused on expanding the project's supported AI provider integrations. Overall project health is stable, with consistent low-level activity centered on core functionality enhancements.
 
 ## 2. Releases
-No new releases were published on 2026-08-04. No version changes, breaking changes, or migration notes are available for this date.
+No new releases were published for NullClaw in the reporting period ending 2026-08-04.
 
 ## 3. Project Progress
-The only PR updated in the last 24 hours is [PR #981](https://github.com/nullclaw/nullclaw/pull/981), authored by valonmulolli and originally opened on 2026-07-29. This open PR adds an optional `grok-cli` provider that delegates to the local xAI Grok CLI, following the existing spawn-per-request pattern used for `codex-cli`, `gemini-cli`, and `claude-cli` providers. The PR has not yet been merged or closed as of the report date.
+No pull requests were merged or closed in the last 24 hours. The only active PR updated in the period is #981, a feature contribution that adds an optional grok-cli provider for xAI Grok, following the existing spawn-per-request pattern used for other CLI-based providers including codex-cli, gemini-cli, and claude-cli. The PR was created on 2026-07-29, last updated on 2026-08-04, and remains open for review.
+[GitHub link: https://github.com/nullclaw/nullclaw/pull/981]
 
 ## 4. Community Hot Topics
-There are no active open or closed issues as of 2026-08-04. The only active community-facing work is the aforementioned [PR #981](https://github.com/nullclaw/nullclaw/pull/981), which is the sole point of discussion for recent project activity. This PR addresses demand for native support of xAI's Grok CLI tool, aligning with the project's existing pattern of integrating popular local AI CLIs as optional providers.
+The most active community contribution in the reporting period is pull request #981, which proposes adding support for the xAI Grok CLI as an optional provider. This contribution addresses a demand for expanded compatibility with popular AI CLI tools, aligning with the project's existing pattern for CLI-based provider integrations. As of the reporting date, the PR has not received any comments, reactions, or formal review feedback.
+[GitHub link: https://github.com/nullclaw/nullclaw/pull/981]
 
 ## 5. Bugs & Stability
-No bugs, crashes, regressions, or stability issues were reported, updated, or resolved in the 24 hours leading up to 2026-08-04. There are no open bug-related issues to track for the date.
+No bugs, crashes, performance regressions, or stability issues were reported for NullClaw in the last 24 hours. There are 0 active open issues, indicating no unresolved stability concerns in the current project backlog. No bug fix pull requests are in progress as of the reporting date.
 
 ## 6. Feature Requests & Roadmap Signals
-The in-progress [PR #981](https://github.com/nullclaw/nullclaw/pull/981) is the only active feature work on the project as of the report date. If the PR passes review, it will add optional support for the xAI Grok CLI to NullClaw's provider roster, consistent with the project's pattern of supporting widely used local AI CLI tools. No other feature requests or roadmap-aligned work is currently in active development.
+The only active in-progress feature is the grok-cli provider integration detailed in PR #981, which would expand the project's supported AI provider ecosystem if merged. No formal feature request issues were opened or updated in the last 24 hours, so no additional roadmap signals are available from recent community input. If the PR passes review, the grok-cli provider is likely to be included in the next minor release of NullClaw.
+[GitHub link: https://github.com/nullclaw/nullclaw/pull/981]
 
 ## 7. User Feedback Summary
-No user-submitted feedback, pain points, use case discussions, or satisfaction/dissatisfaction reports were posted or updated in the 24 hours prior to 2026-08-04. There are no active user feedback threads to analyze for the date.
+No user feedback was submitted via public issues or PR comments in the last 24 hours. The only pending community contribution (PR #981) has not yet received any user or reviewer feedback as of 2026-08-04. No user pain points, use case reports, or satisfaction/dissatisfaction feedback are available in the current reporting window.
 
 ## 8. Backlog Watch
-There are no stale, long-unanswered issues or PRs requiring maintainer attention as of 2026-08-04. The only open PR (#981) was updated on the report date, so it is not considered backlogged. The project has 0 active open issues, with no pending items awaiting maintainer response.
+There are no unanswered open issues in the NullClaw backlog as of the reporting date. The open PR #981, first submitted on 2026-07-29 and last updated 2026-08-04, has not received any maintainer review feedback to date, and may benefit from timely review to advance the feature to completion.
+[GitHub link: https://github.com/nullclaw/nullclaw/pull/981]
 
 </details>
 
 <details>
 <summary><strong>IronClaw</strong> — <a href="https://github.com/nearai/ironclaw">nearai/ironclaw</a></summary>
 
-[LLM fallback] stepfun returned an empty response.
+# IronClaw Project Digest (2026-08-04)
+## 1. Today's Overview
+On 2026-08-04, the IronClaw repository saw high development activity: 50 issues were updated (42 open, 8 closed) and 50 pull requests were updated (31 open, 19 merged/closed), with no new version releases published. Core development work is focused on advancing the Reborn architecture restructure (WS2 and WS6 waves), stabilizing CI/CD pipelines, addressing bug bash-reported stability issues, and hardening security controls for multi-tenant and extension functionality. The project maintains active momentum with multiple large-scale refactor PRs in flight alongside targeted bug fixes and dependency updates.
+
+## 2. Releases
+No new IronClaw releases were published on 2026-08-04.
+
+## 3. Project Progress
+19 pull requests were merged or closed today, delivering key improvements:
+- Architecture refactoring: PR #7143 closed 4 of 5 open WS2 rows via the `ironclaw_extension_host` re-layer, retiring unused identity migration code ([nearai/ironclaw PR #7143](https://github.com/nearai/ironclaw/pull/7143)).
+- CI/CD stabilization: PR #7134 fixed Windows fixture portability to unblock E2E coverage ([near
 
 </details>
 
 <details>
 <summary><strong>LobsterAI</strong> — <a href="https://github.com/netease-youdao/LobsterAI">netease-youdao/LobsterAI</a></summary>
 
-# LobsterAI Project Digest (2026-08-04)
-
-## 1. Today's Overview
-On 2026-08-04, the LobsterAI repository recorded moderate development activity, with 12 pull requests updated (10 merged/closed, 2 open) and 1 active open issue updated. No new software releases were published on the date. Development work was focused on finalizing the upcoming 2026.8.3 release, with contributions covering credit campaign features, login experience optimization, error handling improvements, and dependency updates. The project has one unaddressed high-severity security bug related to sensitive information leakage that requires maintainer attention.
-
-## 2. Releases
-No new releases were published on 2026-08-04.
-
-## 3. Project Progress
-10 pull requests were merged or closed on 2026-08-04, advancing the upcoming 2026.8.3 release and dependency maintenance:
-- PR #2430: Merged the `release/2026.8.3` branch into `main`, finalizing the release that includes native credit-reward activities, streamlined first-run login, Artifact auto-preview controls, improved model error handling, and Windows installer reliability fixes. [Link](https://github.com/netease-youdao/LobsterAI/pull/2430)
-- PR #2429: Optimized the login page UI/UX. [Link](https://github.com/netease-youdao/LobsterAI/pull/2429)
-- PR #2428: Completed startup credit campaign analytics fields, added full login redirect
+[LLM fallback] stepfun returned an empty response.
 
 </details>
 
@@ -249,39 +195,69 @@ No activity in the last 24 hours.
 <summary><strong>Moltis</strong> — <a href="https://github.com/moltis-org/moltis">moltis-org/moltis</a></summary>
 
 # Moltis Project Digest (2026-08-04)
-
+---
 ## 1. Today's Overview
-As of 2026-08-04, the Moltis project has no active open issues, with 2 open pull requests updated in the last 24 hours and no new releases published. Project activity is focused on ongoing feature development and routine dependency maintenance, with no urgent bug fixes or community-reported issues in the immediate window. The codebase appears stable, with active work advancing core MCP-related functionality.
+Moltis (github.com/moltis-org/moltis) recorded 0 issue updates and 2 open pull request (PR) updates in the 24 hours leading up to 2026-08-04, with no new releases published. Project activity is low for the day, with no completed work, bug fixes, or new issue reports. The two active open PRs consist of one routine dependency maintenance task and one in-progress feature implementation for MCP server management, representing all tracked development activity for the period.
 
 ## 2. Releases
-No new releases were published for Moltis on 2026-08-04.
+No new releases were published for Moltis as of 2026-08-04.
 
 ## 3. Project Progress
-No pull requests were merged or closed in the last 24 hours. Two open PRs are currently in progress:
-- PR #1184 (https://github.com/moltis-org/moltis/pull/1184): A routine dependency maintenance PR that bumps the `undici` package from version 7.28.0 to 7.29.0 in the `/website` directory, as part of standard `npm_and_yarn` dependency group updates.
-- PR #1183 (https://github.com/moltis-org/moltis/pull/1183): A feature PR last updated 2026-08-03 that adds managed Git repository bundles for MCP servers, enabling end-to-end lifecycle management (discovery, preview, installation, updates, rollbacks, removal) with support for HTTPS credentials, pinned SSH transport, vault integration, and repository-backed MCP configurations, alongside simplified web onboarding flows.
+No PRs were merged or closed in the last 24 hours. The two active open PRs are:
+- PR #1184: Routine dependency maintenance bump for the `undici` package in the `/website` directory, updating it from version 7.28.0 to 7.29.0 as part of the `npm_and_yarn` dependency group, with no functional changes to project code. [Link: https://github.com/moltis-org/moltis/pull/1184]
+- PR #1183: In-progress feature implementation for MCP managed repository bundles, which adds functionality for discovering, previewing, installing, updating, rolling back, and removing MCP servers, alongside support for HTTPS credentials, managed SSH transport, vault lifecycle integration, and imported repository-backed MCP configurations. Last updated 2026-08-03, with no merged or closed status as of the report date. [Link: https://github.com/moltis-org/moltis/pull/1183]
 
 ## 4. Community Hot Topics
-The most active recent community-facing work is PR #1183, which addresses a core user need for streamlined, secure MCP server management without manual configuration overhead. No issues have received community comments or reactions in the last 24 hours, and the dependency bump PR has not yet attracted community engagement.
+The most active community-facing work in the tracked window is PR #1183, the MCP managed repository bundles feature, which addresses core user needs for streamlined MCP server administration in personal AI assistant workflows. No issues have received recent community engagement, with 0 issue updates recorded in the last 24 hours. The feature PR is the primary focus of ongoing development, with no comment or reaction activity recorded in the latest update window.
 
 ## 5. Bugs & Stability
-No bugs, crashes, or regressions were reported or updated in the last 24 hours. There are no open bug-fix PRs in progress, indicating no active stability concerns as of the report date.
+No bugs, crashes, regressions, or stability issues were reported in the last 24 hours, and no bug fix PRs are in progress. Project stability is unaffected by recent activity, with no open defect reports.
 
 ## 6. Feature Requests & Roadmap Signals
-The in-progress PR #1183 signals that the Moltis roadmap is prioritizing robust MCP server lifecycle management as a core feature, with a focus on secure credential handling and simplified user onboarding for MCP tooling. No formal user-submitted feature requests were reported in the last 24 hours.
+The only active feature work is the MCP managed repository bundle implementation in PR #1183, which signals that expanded MCP ecosystem integration is a near-term roadmap priority for Moltis. No formal user-submitted feature requests are open as of 2026-08-04, but the in-progress PR aligns with common user demand for simplified, centralized MCP server management for personal AI assistants. Once merged, this feature will be a core addition to Moltis's MCP support capabilities.
 
 ## 7. User Feedback Summary
-No new user feedback, pain points, or use case reports were submitted in the last 24 hours. The scope of the active MCP feature PR suggests the development team is proactively addressing demand for easier MCP server deployment and management, a common pain point for users working with model context protocols.
+No new user-submitted feedback, pain points, or satisfaction reports were recorded in the last 24 hours. The ongoing MCP bundle feature is likely driven by prior user demand for streamlined MCP server administration, but no direct user input was submitted in the tracked window.
 
 ## 8. Backlog Watch
-There are no open issues or long-unattended pull requests requiring maintainer attention as of 2026-08-04. All active work is focused on the two in-progress open PRs listed above.
+There are no open issues requiring maintainer attention as of 2026-08-04. The only open PRs are a low-priority routine dependency bump (#1184) and the in-progress MCP feature PR (#1183), which was last updated 2026-08-03 with no pending review feedback or unresolved discussion threads as of the report date.
 
 </details>
 
 <details>
 <summary><strong>CoPaw</strong> — <a href="https://github.com/agentscope-ai/CoPaw">agentscope-ai/CoPaw</a></summary>
 
-[LLM fallback] stepfun returned an empty response.
+# CoPaw (QwenPaw) Project Digest
+Date: 2026-08-04
+
+## 1. Today's Overview
+On 2026-08-04, CoPaw (QwenPaw) recorded high development activity with 19 issues and 44 pull requests updated in the prior 24 hours, and no new official releases published. Of the updated items, 9 issues and 21 pull requests remain open, indicating active ongoing work across core backend, console UI, channel integrations, and model provider support. The project is in a beta stabilization phase, with a heavy focus on bug fixes, cross-platform compatibility, and support for new model capabilities.
+
+## 2. Releases
+No new official releases were published on 2026-08-04. The most recent pre-release is v2.1.0-beta.1, whose installation verification was completed earlier in the day.
+
+## 3. Project Progress
+21 pull requests were closed or merged on 2026-08-04, delivering the following key improvements:
+- PR #6678: Fixed Playwright Chromium installation for the integration test suite, resolving nightly CI failures across all platforms. [Link](https://github.com/agentscope-ai/QwenPaw/pull/6678)
+- PR #6686: Fixed Chrome integration test contract mismatches and added missing p-tier test markers to close PR gate coverage gaps. [Link](https://github.com/agentscope-ai/QwenPaw/pull/6686)
+- PR #6679: Aligned import-local integration test cases with source guard restrictions and widened a flaky poll window. [Link](https://github.com/agentscope-ai/QwenPaw/pull/6679)
+- PR #6685 / #6618: Fixed timezone handling for session message timestamps, resolving incorrect naive UTC timestamp conversion to ensure timestamps display in user local time. [Link](https://github.com/agentscope-ai/QwenPaw/pull/6685) [Link](https://github.com/agentscope-ai/QwenPaw/pull/6618)
+- PR #6682: Fixed sync of the legacy `max_iters` field with the UI-bound `loop.iteration.max_iterations` in console agent running config saves. [Link](https://github.com/agentscope-ai/QwenPaw/pull/6682)
+- PR #6677: Fixed overflow of long tool commands in the chat UI, adding layout regression tests. [Link](https://github.com/agentscope-ai/QwenPaw/pull/6677)
+- PR #6672: Hardened AI review bot permissions to separate untrusted PR analysis from privileged PR mutations, improving CI security. [Link](https://github.com/agentscope-ai/QwenPaw/pull/6672)
+- PR #6522: Fixed token usage persistence to retain unflushed data on transient write failures. [Link](https://github.com/agentscope-ai/QwenPaw/pull/6522)
+
+## 4. Community Hot Topics
+The most active discussions by comment count are:
+1. Issue #6649 (13 comments, open enhancement): Request to add support for GPT-5.6 prompt caching parameters (`prompt_cache_key`, `prompt_cache_options`, `prompt_cache_breakpoint`) to the Responses API provider. An in-progress linked PR #6668 is implementing the feature. Core underlying need: Lower latency and cost for long multi-turn agent workflows by reusing cached prompt prefixes. [Link](https://github.com/agentscope-ai/QwenPaw/issues/6649)
+2. Issue #6655 (12 comments, closed): Report that the console channel does not render security approval prompts for high-risk commands, leading to silent 300-second timeouts with no user visibility. This highlighted a gap in cross-channel UX consistency for safety features. [Link](https://github.com/agentscope-ai/QwenPaw/issues/6655)
+3. Issue #6643 (6 comments, open enhancement): Request to organize task output artifacts out of the flat `media` directory into per-task subdirectories to reduce clutter, aligned with parallel requests for improved drag-and-drop file handling. [Link](https://github.com/agentscope-ai/QwenPaw/issues/6643)
+
+## 5. Bugs & Stability
+Bugs are ranked by severity:
+1. Critical: Issue #6683 (open, 1 comment): App Center installation of the `qwenpaw-creator` plugin fails with a module naming conflict error (`No module named 'utils.env'`). No fix PR has been announced. [Link](https://github.com/agentscope-ai/QwenPaw/issues/6683)
+2. High: Issue #6687 (open, 1 comment): OpenRouter multimodal probe incorrectly overwrites documented model capabilities with `false`, leading to wrong feature availability for image/video support. No fix PR has been announced. [Link](https://github.com/agentscope-ai/QwenPaw/issues/6687)
+3. High: Issue #6674 (open, 1 comment): Free-tier `deepseek-v4-flash` model rate limiting (429 errors) causes frequent task interruptions with no built-in retry or backoff handling. No fix PR has been announced. [Link](https://github.com/agentscope-
 
 </details>
 
@@ -295,35 +271,59 @@ No activity in the last 24 hours.
 <details>
 <summary><strong>EasyClaw</strong> — <a href="https://github.com/gaoyangz77/easyclaw">gaoyangz77/easyclaw</a></summary>
 
-# EasyClaw Project Digest (2026-08-04)
-Repository: https://github.com/gaoyangz77/easyclaw
+# EasyClaw Project Digest
+**Date:** 2026-08-04  
+**Repository:** [github.com/gaoyangz77/easyclaw](https://github.com/gaoyangz77/easyclaw)
 
-## Today's Overview
-As of 2026-08-04, the EasyClaw repository recorded no activity in its issue or pull request trackers over the prior 24 hours, with zero open/active or closed issues and zero updated PRs. The project did launch a new minor version release (v1.8.86, branded as TK Copilot) on the reporting date, focused on core workflow improvements for affiliate marketing and desktop cloud use cases. Overall project activity is low for the day, with maintenance efforts concentrated on the new release rollout rather than community issue triage or collaborative feature development. No community engagement or code contribution activity was logged in the 24-hour window.
+---
 
-## Releases
-A new minor version, v1.8.86 (TK Copilot), was published on 2026-08-04. The release includes the following improvements:
-- Optimized affiliate model selection, predicted sales insights, and product comparison workflows
-- Upgraded Desktop cloud subscription functionality and fixed cold-start recovery issues
-No breaking changes or mandatory migration steps are called out in the official release notes. Full release details are available at https://github.com/gaoyangz77/easyclaw/releases/tag/v1.8.86.
+## 1. Today's Overview
+EasyClaw released version **v1.8.86** today, focusing on improvements to affiliate model selection, predicted-sales insights, comparison workflows, and desktop cloud subscription reliability. There was **no community activity** in the last 24 hours: zero issues opened, closed, or updated, and zero pull requests opened, merged, or closed. The project shows a healthy release cadence despite a quiet contribution window.
 
-## Project Progress
-No pull requests were created, updated, merged, or closed in the 24-hour reporting window. As a result, no new features, bug fixes, or codebase improvements were advanced via community or maintainer PR activity on this date.
+---
 
-## Community Hot Topics
-There are no open or recently updated issues in the repository as of the reporting date, so no active community discussion threads or high-engagement topics are available for analysis. All issue tracking counts are at zero per the latest GitHub data.
+## 2. Releases
+**New Release:** [v1.8.86 — TK Copilot v1.8.86](https://github.com/gaoyangz77/easyclaw/releases/tag/v1.8.86)
 
-## Bugs & Stability
-No bugs, crashes, performance regressions, or stability issues were reported via the repository's issue tracker in the 24-hour reporting period. No outstanding user-reported stability concerns are currently tracked in the project.
+### What's New
+- Improved affiliate model selection, predicted-sales insights, and comparison workflows
+- Improved Desktop cloud subscriptions and cold-start recovery
 
-## Feature Requests & Roadmap Signals
-No user-submitted feature requests are currently logged in the repository's issue tracker, so no explicit community-driven roadmap signals are available as of 2026-08-04.
+### 更新内容
+- 优化达人模型选择、预估销售洞察和对比工作流
+- 优化桌面端云端订阅与冷启动恢复
 
-## User Feedback Summary
-No formal user feedback is recorded in the repository's public issue tracker for the reporting date, so no aggregated user pain points, use case reports, or satisfaction/dissatisfaction signals are available via public GitHub data.
+**Breaking Changes / Migration Notes:** None announced in the release notes.
 
-## Backlog Watch
-There are no long-unanswered issues or pending pull requests requiring maintainer attention in the repository as of the reporting date, with all tracked item counts at zero.
+---
+
+## 3. Project Progress
+No pull requests were opened, merged, or closed in the last 24 hours. No feature development or bug fixes via PRs were recorded today.
+
+---
+
+## 4. Community Hot Topics
+No issues or pull requests were updated today. No community discussions or trending topics to report.
+
+---
+
+## 5. Bugs & Stability
+No bugs, crashes, or regressions were reported in the last 24 hours. No fix pull requests are pending or were merged today.
+
+---
+
+## 6. Feature Requests & Roadmap Signals
+No new feature requests were opened today. No explicit roadmap signals from community discussions.
+
+---
+
+## 7. User Feedback Summary
+No user feedback captured via issues or PRs in the current reporting period.
+
+---
+
+## 8. Backlog Watch
+No long-unanswered issues or pull requests require maintainer attention at this time.
 
 </details>
 
