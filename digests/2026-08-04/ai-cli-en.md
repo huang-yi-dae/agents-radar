@@ -1,6 +1,6 @@
 # AI CLI Tools Community Digest 2026-08-04
 
-> Generated: 2026-08-04 13:33 UTC | Tools covered: 7
+> Generated: 2026-08-04 13:37 UTC | Tools covered: 7
 
 - [Claude Code](https://github.com/anthropics/claude-code)
 - [OpenAI Codex](https://github.com/openai/codex)
@@ -15,7 +15,7 @@
 
 ## Cross-Tool Comparison
 
-> LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details
+> LLM generation failed: StepFun request failed with quota/billing error: 402 You exceeded your current quota, please check your plan and billing details. Check your StepFun plan, billing details, and OPENAI_MODEL access.
 
 
 ---
