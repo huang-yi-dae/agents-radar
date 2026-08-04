@@ -81,6 +81,7 @@ export class StepFunProvider extends OpenAICompatibleProvider {
     const response = await this.client.chat.completions.create({
       model: this.model,
       max_completion_tokens: maxTokens,
+      reasoning_effort: "low",
       messages: [
         {
           role: "system",

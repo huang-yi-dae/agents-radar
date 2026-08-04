@@ -488,6 +488,7 @@ describe("StepFunProvider", () => {
     expect(mockCreate).toHaveBeenCalledWith({
       model: "step-test",
       max_completion_tokens: 256,
+      reasoning_effort: "low",
       messages: [
         {
           role: "system",
