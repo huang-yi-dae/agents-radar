@@ -13,7 +13,7 @@
  *
  * KEY CONCEPTS:
  * - `abstract readonly name: string` — subclasses MUST define `name`.
- * - `protected readonly client: OpenAI` — the SDK client, shared by all subclasses.
+ * - `protected readonly client: OpenAI` — the SDK client, shared across all subclasses.
  * - The `OpenAI` SDK is used because many providers expose OpenAI-compatible endpoints.
  */
 
@@ -68,8 +68,6 @@ export abstract class OpenAICompatibleProvider implements LlmProvider {
    * HOW IT WORKS:
    * 1. Call the chat completions API with a single user message.
    * 2. Extract the text from the first choice's message content.
-   *    For reasoning-enabled providers, prefer `content`, then `reasoning_content`,
-   *    and avoid returning the provider's internal `reasoning` trace as final output.
    * 3. Throw if the response is empty (shouldn't happen with valid models).
    *
    * NOTE: `max_completion_tokens` is the OpenAI API parameter name.
@@ -85,25 +83,9 @@ export abstract class OpenAICompatibleProvider implements LlmProvider {
       max_completion_tokens: maxTokens,
       messages: [{ role: "user", content: prompt }],
     });
-    const message = response.choices?.[0]?.message;
-    const text =
-      message?.content ||
-      (message as { reasoning_content?: string } | undefined)?.reasoning_content ||
-      (message as { reasoning?: string } | undefined)?.reasoning ||
-      "";
-    if (text) return text;
-
-    const responseSummary = {
-      id: response.id,
-      model: response.model,
-      object: response.object,
-      serviceTier: (response as { service_tier?: string }).service_tier,
-      systemFingerprint: (response as { system_fingerprint?: string }).system_fingerprint,
-      usage: response.usage,
-      choices: response.choices,
-    };
-    console.error(`[${this.name}] LLM call returned empty content: ${JSON.stringify(responseSummary)}`);
-    return `[LLM fallback] ${this.name} returned an empty response.`;
+    const text = response.choices[0]?.message?.content;
+    if (!text) throw new Error(`Unexpected empty response from ${this.name}`);
+    return text;
   }
 }
 
@@ -113,7 +95,7 @@ export abstract class OpenAICompatibleProvider implements LlmProvider {
 // 1. Abstract class with abstract property — subclasses MUST define `name`
 // 2. Template Method pattern — the `call()` algorithm is defined here,
 //    subclasses only provide config via constructor
-// 3. Protected members — `client` and `model` are accessible to subclasses
+// 3. Protected members — `client` and `model` are accessible from subclasses
 //
 // QUESTIONS:
 // Q1: Why doesn't AnthropicProvider extend this class?
@@ -121,6 +103,6 @@ export abstract class OpenAICompatibleProvider implements LlmProvider {
 //      it uses `max_tokens` instead of `max_completion_tokens`, and the response
 //      structure is `message.content[0].text` vs `choices[0].message.content`)
 // Q2: What's the difference between `protected` and `private`?
-//     (Answer: `private` = only accessible in the declaring class;
-//      `protected` = accessible in the declaring class AND its subclasses)
+//     (Answer: `private` = only accessible in the declaring file;
+//      `protected` = accessible in this class AND its subclasses)
 // ─────────────────────────────────────────────────────────────────────────────

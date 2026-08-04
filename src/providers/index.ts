@@ -20,14 +20,12 @@ export { AnthropicProvider } from "./anthropic.ts";
 export { OpenAIProvider } from "./openai.ts";
 export { GitHubCopilotProvider } from "./github-copilot.ts";
 export { OpenRouterProvider } from "./openrouter.ts";
-export { StepFunProvider } from "./stepfun.ts";
 
 import type { LlmProvider, ProviderFactory } from "./types.ts";
 import { AnthropicProvider } from "./anthropic.ts";
 import { OpenAIProvider } from "./openai.ts";
 import { GitHubCopilotProvider } from "./github-copilot.ts";
 import { OpenRouterProvider } from "./openrouter.ts";
-import { StepFunProvider } from "./stepfun.ts";
 
 // ---------------------------------------------------------------------------
 // Single source of truth — add new providers here only.
@@ -53,7 +51,6 @@ const PROVIDERS = {
   openai: () => new OpenAIProvider(),
   "github-copilot": () => new GitHubCopilotProvider(),
   openrouter: () => new OpenRouterProvider(),
-  stepfun: () => new StepFunProvider(),
 } satisfies Record<string, ProviderFactory>;
 
 /**

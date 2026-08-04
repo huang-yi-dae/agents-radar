@@ -339,10 +339,6 @@ async function main(): Promise<void> {
   requireEnv("GITHUB_TOKEN");
 
   const providerName = process.env["LLM_PROVIDER"] ?? "anthropic";
-  if (providerName === "stepfun") {
-    requireEnv("STEPFUN_API_KEY");
-  }
-
   const now = new Date();
   const since = new Date(now.getTime() - 24 * 60 * 60 * 1000); // 24 hours ago
   const dateStr = toCstDateStr(now); // "2026-03-11"
