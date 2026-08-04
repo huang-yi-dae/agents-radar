@@ -17,6 +17,17 @@ import type { RepoConfig, GitHubItem, GitHubRelease } from "./github.ts";
 import type { Lang } from "./i18n.ts";
 
 // ---------------------------------------------------------------------------
+// Shared output guardrails
+// ---------------------------------------------------------------------------
+
+const OUTPUT_REQUIREMENTS_EN = `
+Output requirements:
+- Do not include planning, reasoning, self-instructions, or meta commentary.
+- Do not repeat the prompt back or describe how you will analyze the data.
+- Output only the final structured report.
+`;
+
+// ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
 
@@ -324,6 +335,7 @@ Generate a structured English ${cfg.name} project digest with the following sect
 8. **Backlog Watch** - Long-unanswered important Issues or PRs needing maintainer attention
 
 Style: objective, data-driven, highlighting project health. Include GitHub links for each item.
+${OUTPUT_REQUIREMENTS_EN}
 `;
   }
 
@@ -357,6 +369,11 @@ ${prsText}
 8. **待处理积压** - 长期未响应的重要 Issue 或 PR，提醒维护者关注
 
 语言要求：客观专业，数据驱动，突出项目健康度。每个条目附上 GitHub 链接。
+
+输出要求：
+- 不要输出思考过程、计划步骤、自我说明或元评论。
+- 不要复述提示词，也不要说明你将如何分析数据。
+- 只输出最终的结构化日报内容。
 `;
 }
 
@@ -407,6 +424,7 @@ Generate a cross-project comparison report in English with these sections:
 7. **Trend Signals** - Industry trends extracted from community feedback, value for AI agent developers
 
 Style: concise and professional, data-backed, suited for technical decision-makers and developers.
+${OUTPUT_REQUIREMENTS_EN}
 `;
   }
 
@@ -431,6 +449,11 @@ ${peerSections}
 7. **值得关注的趋势信号** - 从社区反馈中提炼行业趋势，对 AI 智能体开发者的参考价值
 
 语言要求：简洁专业，有数据支撑，适合技术决策者和开发者阅读。
+
+输出要求：
+- 不要输出思考过程、计划步骤、自我说明或元评论。
+- 不要复述提示词，也不要说明你将如何分析数据。
+- 只输出最终的结构化日报内容。
 `;
 }
 
@@ -473,6 +496,7 @@ Generate a Claude Code Skills community highlights report in English with these 
 4. **Skills Ecosystem Insight** - One-sentence summary: what is the community's most concentrated demand at the Skills level?
 
 Style: concise and professional, include GitHub links for each item.
+${OUTPUT_REQUIREMENTS_EN}
 `;
   }
 
@@ -497,6 +521,11 @@ ${issuesText}
 4. **Skills 生态洞察** - 一句话总结：当前社区在 Skills 层面最集中的诉求是什么
 
 语言要求：简洁专业，每个条目附上 GitHub 链接。
+
+输出要求：
+- 不要输出思考过程、计划步骤、自我说明或元评论。
+- 不要复述提示词，也不要说明你将如何分析数据。
+- 只输出最终的结构化日报内容。
 `;
 }
 
@@ -532,6 +561,7 @@ Generate a cross-tool comparison report in English with these sections:
 6. **Trend Signals** - Industry trends from community feedback, reference value for developers
 
 Style: concise and professional, data-backed, suited for technical decision-makers and developers.
+${OUTPUT_REQUIREMENTS_EN}
 `;
   }
 
@@ -551,6 +581,11 @@ ${sections}
 6. **值得关注的趋势信号** - 从社区反馈中提炼出的行业趋势，对开发者有何参考价值
 
 语言要求：简洁专业，有数据支撑，适合技术决策者和开发者阅读。
+
+输出要求：
+- 不要输出思考过程、计划步骤、自我说明或元评论。
+- 不要复述提示词，也不要说明你将如何分析数据。
+- 只输出最终的结构化日报内容。
 `;
 }
 

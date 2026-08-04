@@ -17,8 +17,26 @@ import type { TrendingData } from "./trending.ts";
 import type { HnData } from "./hn.ts";
 import type { Lang } from "./i18n.ts";
 
+// ---------------------------------------------------------------------------
+// Shared output guardrails
+// ---------------------------------------------------------------------------
+
+const OUTPUT_REQUIREMENTS_ZH = `
+输出要求：
+- 不要输出思考过程、计划步骤、自我说明或元评论。
+- 不要复述提示词，也不要说明你将如何分析数据。
+- 只输出最终的结构化日报内容。
+`;
+
+const OUTPUT_REQUIREMENTS_EN = `
+Output requirements:
+- Do not include planning, reasoning, self-instructions, or meta commentary.
+- Do not repeat the prompt back or describe how you will analyze the data.
+- Output only the final structured report.
+`;
+
 /**
- * Build the prompt for the GitHub AI Trending report.
+ * Build the prompt for the GitHub AI trending report.
  *
  * HOW IT WORKS:
  * - Takes TrendingData (from trending.ts) with two sections: trending repos + search repos.
@@ -114,6 +132,11 @@ Generate a structured AI Open Source Trends Report in English:
 4. **Community Hot Spots** — Bullet list of 3-5 specific projects or directions worth developer focus, with brief reasoning
 
 Style: English, professional and concise, must include GitHub links for every project.
+
+Output requirements:
+- Do not include planning, reasoning, self-instructions, or meta commentary.
+- Do not repeat the prompt back or describe how you will analyze the data.
+- Output only the final structured report.
 `;
   }
 
@@ -163,6 +186,11 @@ ${searchSection}
 4. **社区关注热点** — 以 bullet 形式列出 3~5 个值得开发者重点关注的具体项目或方向，给出简短理由
 
 语言要求：中文，专业简洁，每个项目必须附 GitHub 链接。
+
+输出要求：
+- 不要输出思考过程、计划步骤、自我说明或元评论。
+- 不要复述提示词，也不要说明你将如何分析数据。
+- 只输出最终的结构化日报内容。
 `;
 }
 
@@ -334,6 +362,7 @@ Generate an AI Tools Ecosystem Weekly Report with these sections:
 7. **Next Week's Signals** - Based on this week's data, predict trends and upcoming events worth watching
 
 Style: English, concise and professional, helping technical developers quickly grasp the week's developments.
+${OUTPUT_REQUIREMENTS_EN}
 `;
   }
 
@@ -353,7 +382,7 @@ ${digestEntries}
 6. **官方动态** - Anthropic 和 OpenAI 本周发布的重要内容（若有）
 7. **下周信号** - 基于本周数据，预判值得关注的趋势或即将到来的事件
 
-语言要求：中文，简洁专业，适合技术开发者快速掌握一周动态。
+语言要求：中文，简洁专业，适合技术开发者快速掌握一周动态。${OUTPUT_REQUIREMENTS_ZH}
 `;
 }
 
@@ -388,6 +417,7 @@ Generate an AI Tools Ecosystem Monthly Report with these sections:
 7. **Next Month's Outlook** - Based on this month's trends, predict key directions and potential events to watch
 
 Style: English, in-depth analysis, data-driven, suited for monthly retrospectives and strategic decision-making.
+${OUTPUT_REQUIREMENTS_EN}
 `;
   }
 
@@ -407,7 +437,7 @@ ${digestEntries}
 6. **官方动态回顾** - Anthropic 和 OpenAI 本月发布内容的战略意义分析
 7. **下月展望** - 基于本月趋势，预判值得重点关注的方向和潜在事件
 
-语言要求：中文，深度分析，数据驱动，适合月度复盘和战略决策参考。
+语言要求：中文，深度分析，数据驱动，适合月度复盘和战略决策参考。${OUTPUT_REQUIREMENTS_ZH}
 `;
 }
 
@@ -538,6 +568,7 @@ Generate a structured Hacker News AI Community Digest in English:
 4. **Worth Deep Reading** — List 2-3 pieces most worth developers/researchers reading in depth, with brief reasoning
 
 Style: English, concise and professional, preserve all original links.
+${OUTPUT_REQUIREMENTS_EN}
 `;
   }
 
@@ -571,7 +602,7 @@ ${storiesText}
 
 4. **值得深读** — 列出 2~3 条今日最值得开发者/研究者深入阅读的内容，简述理由
 
-语言要求：中文，简洁专业，保留所有原文链接。
+语言要求：中文，简洁专业，保留所有原文链接。${OUTPUT_REQUIREMENTS_ZH}
 `;
 }
 
