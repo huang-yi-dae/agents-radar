@@ -338,13 +338,17 @@ async function generateSummaries(
 async function main(): Promise<void> {
   requireEnv("GITHUB_TOKEN");
 
+  const providerName = process.env["LLM_PROVIDER"] ?? "anthropic";
+  if (providerName === "stepfun") {
+    requireEnv("STEPFUN_API_KEY");
+  }
+
   const now = new Date();
   const since = new Date(now.getTime() - 24 * 60 * 60 * 1000); // 24 hours ago
   const dateStr = toCstDateStr(now); // "2026-03-11"
   const utcStr = toUtcStr(now); // "2026-03-11 00:00"
   const digestRepo = process.env["DIGEST_REPO"] ?? "";
 
-  const providerName = process.env["LLM_PROVIDER"] ?? "anthropic";
   console.log(`[${now.toISOString()}] Starting digest | provider: ${providerName}`);
 
   // ── Phase 1: Fetch all data in parallel ──────────────────────────────────
