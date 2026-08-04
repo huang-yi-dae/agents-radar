@@ -83,9 +83,20 @@ export abstract class OpenAICompatibleProvider implements LlmProvider {
       max_completion_tokens: maxTokens,
       messages: [{ role: "user", content: prompt }],
     });
-    const text = response.choices[0]?.message?.content;
-    if (!text) throw new Error(`Unexpected empty response from ${this.name}`);
-    return text;
+    const text = response.choices?.[0]?.message?.content;
+    if (text) return text;
+
+    const responseSummary = {
+      id: response.id,
+      model: response.model,
+      object: response.object,
+      serviceTier: (response as { service_tier?: string }).service_tier,
+      systemFingerprint: (response as { system_fingerprint?: string }).system_fingerprint,
+      usage: response.usage,
+      choices: response.choices,
+    };
+    console.error(`[${this.name}] LLM call returned empty content: ${JSON.stringify(responseSummary)}`);
+    return `[LLM fallback] ${this.name} returned an empty response.`;
   }
 }
 

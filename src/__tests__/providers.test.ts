@@ -225,7 +225,8 @@ describe("OpenAIProvider", () => {
     });
 
     const p = new OpenAIProvider({ apiKey: "k" });
-    await expect(p.call("prompt", 100)).rejects.toThrow("Unexpected empty response from openai");
+    const result = await p.call("prompt", 100);
+    expect(result).toBe("[LLM fallback] openai returned an empty response.");
   });
 
   it("throws when choices is empty", async () => {
@@ -233,7 +234,8 @@ describe("OpenAIProvider", () => {
     mockCreate.mockResolvedValueOnce({ choices: [] });
 
     const p = new OpenAIProvider({ apiKey: "k" });
-    await expect(p.call("prompt", 100)).rejects.toThrow("Unexpected empty response from openai");
+    const result = await p.call("prompt", 100);
+    expect(result).toBe("[LLM fallback] openai returned an empty response.");
   });
 });
 
@@ -270,7 +272,8 @@ describe("GitHubCopilotProvider", () => {
     mockCreate.mockResolvedValueOnce({ choices: [] });
 
     const p = new GitHubCopilotProvider({ apiKey: "k" });
-    await expect(p.call("prompt", 100)).rejects.toThrow("Unexpected empty response from github-copilot");
+    const result = await p.call("prompt", 100);
+    expect(result).toBe("[LLM fallback] github-copilot returned an empty response.");
   });
 });
 
@@ -309,7 +312,8 @@ describe("OpenRouterProvider", () => {
     });
 
     const p = new OpenRouterProvider({ apiKey: "k" });
-    await expect(p.call("prompt", 100)).rejects.toThrow("Unexpected empty response from openrouter");
+    const result = await p.call("prompt", 100);
+    expect(result).toBe("[LLM fallback] openrouter returned an empty response.");
   });
 });
 
