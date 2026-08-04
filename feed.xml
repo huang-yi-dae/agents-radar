@@ -6,16 +6,16 @@
     <description>AI 开源生态每日简报 · Daily AI ecosystem digest</description>
     <language>zh-CN</language>
     <atom:link href="https://huang-yi-dae.github.io/agents-radar/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 04 Aug 2026 13:34:28 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 13:38:03 +0000</lastBuildDate>
     <item>
       <title>AI CLI 工具社区动态日报 2026-08-04</title>
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-cli</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-cli</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI CLI 工具社区动态日报 2026-08-04 生成时间: 2026-08-04 13:33 UTC | 覆盖工具: 7 个 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills 横向对比 LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details 各工具详细报告 Claude Code — anthropics/claude-code Claude Code Skills 社区热点 数据来源: anthropics/skills ⚠️ Skills 摘要生成失败。 ⚠️ 摘要生成失败。 OpenAI Codex — openai/codex ⚠️ 摘要生成失败。 Gemini CLI — google-gemini/gemini-...</description>
+      <description>AI CLI 工具社区动态日报 2026-08-04 生成时间: 2026-08-04 13:37 UTC | 覆盖工具: 7 个 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills 横向对比 LLM generation failed: StepFun request failed with quota/billing error: 402 You exceeded your current quota, please check your plan and billing details. Check your StepFun plan, billing details, and OPENAI_MODEL access. 各工具详细报告 Claude Code — anthropics/claude-code Claude Code Skills 社区热点 数据来源: anthropics/skills ⚠️ Skills...</description>
       <content:encoded><![CDATA[<h1>AI CLI 工具社区动态日报 2026-08-04</h1>
 <blockquote>
-<p>生成时间: 2026-08-04 13:33 UTC | 覆盖工具: 7 个</p>
+<p>生成时间: 2026-08-04 13:37 UTC | 覆盖工具: 7 个</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/anthropics/claude-code">Claude Code</a></li>
@@ -30,7 +30,7 @@
 <hr>
 <h2>横向对比</h2>
 <blockquote>
-<p>LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details</p>
+<p>LLM generation failed: StepFun request failed with quota/billing error: 402 You exceeded your current quota, please check your plan and billing details. Check your StepFun plan, billing details, and OPENAI_MODEL access.</p>
 </blockquote>
 <hr>
 <h2>各工具详细报告</h2>
@@ -91,10 +91,10 @@
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-cli-en</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-cli-en</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI CLI Tools Community Digest 2026-08-04 Generated: 2026-08-04 13:33 UTC | Tools covered: 7 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills Cross-Tool Comparison LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details Per-Tool Reports Claude Code — anthropics/claude-code Claude Code Skills Highlights Source: anthropics/skills ⚠️ Skills summary generation failed. ⚠️ Su...</description>
+      <description>AI CLI Tools Community Digest 2026-08-04 Generated: 2026-08-04 13:37 UTC | Tools covered: 7 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills Cross-Tool Comparison LLM generation failed: StepFun request failed with quota/billing error: 402 You exceeded your current quota, please check your plan and billing details. Check your StepFun plan, billing details, and OPENAI_MODEL access. Per-Tool Reports Claude Code — anthropics/claude-code Claud...</description>
       <content:encoded><![CDATA[<h1>AI CLI Tools Community Digest 2026-08-04</h1>
 <blockquote>
-<p>Generated: 2026-08-04 13:33 UTC | Tools covered: 7</p>
+<p>Generated: 2026-08-04 13:37 UTC | Tools covered: 7</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/anthropics/claude-code">Claude Code</a></li>
@@ -109,7 +109,7 @@
 <hr>
 <h2>Cross-Tool Comparison</h2>
 <blockquote>
-<p>LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details</p>
+<p>LLM generation failed: StepFun request failed with quota/billing error: 402 You exceeded your current quota, please check your plan and billing details. Check your StepFun plan, billing details, and OPENAI_MODEL access.</p>
 </blockquote>
 <hr>
 <h2>Per-Tool Reports</h2>
@@ -170,10 +170,10 @@
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-agents</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-agents</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>OpenClaw 生态日报 2026-08-04 Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-04 13:33 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw 项目深度报告 ⚠️ 摘要生成失败。 横向生态对比 LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details 同赛道项目详细报告 NanoBot — HKUDS/nanobot ⚠️ 摘要生成失败。 Zeroclaw — zeroclaw-labs/zeroclaw ⚠️ 摘要生成失败。 PicoClaw — sipeed/picoclaw ⚠️ 摘要生成失败。 NanoClaw...</description>
+      <description>OpenClaw 生态日报 2026-08-04 Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-04 13:37 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw 项目深度报告 ⚠️ 摘要生成失败。 横向生态对比 LLM generation failed: StepFun request failed with quota/billing error: 402 You exceeded your current quota, please check your plan and billing details. Check your StepFun plan, billing details, and OPENAI_MODEL access. 同赛道项目详细报告 NanoBot — HKUDS/nanobot ⚠️ 摘要生成失败...</description>
       <content:encoded><![CDATA[<h1>OpenClaw 生态日报 2026-08-04</h1>
 <blockquote>
-<p>Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-04 13:33 UTC</p>
+<p>Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-04 13:37 UTC</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/openclaw/openclaw">OpenClaw</a></li>
@@ -196,7 +196,7 @@
 <hr>
 <h2>横向生态对比</h2>
 <blockquote>
-<p>LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details</p>
+<p>LLM generation failed: StepFun request failed with quota/billing error: 402 You exceeded your current quota, please check your plan and billing details. Check your StepFun plan, billing details, and OPENAI_MODEL access.</p>
 </blockquote>
 <hr>
 <h2>同赛道项目详细报告</h2>
@@ -281,10 +281,10 @@
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-agents-en</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-agents-en</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>OpenClaw Ecosystem Digest 2026-08-04 Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 13:33 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw Deep Dive ⚠️ Summary generation failed. Cross-Ecosystem Comparison LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details Peer Project Reports NanoBot — HKUDS/nanobot ⚠️ Summary generation ...</description>
+      <description>OpenClaw Ecosystem Digest 2026-08-04 Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 13:37 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw Deep Dive ⚠️ Summary generation failed. Cross-Ecosystem Comparison LLM generation failed: StepFun request failed with quota/billing error: 402 You exceeded your current quota, please check your plan and billing details. Check your StepFun plan, billing details,...</description>
       <content:encoded><![CDATA[<h1>OpenClaw Ecosystem Digest 2026-08-04</h1>
 <blockquote>
-<p>Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 13:33 UTC</p>
+<p>Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 13:37 UTC</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/openclaw/openclaw">OpenClaw</a></li>
@@ -307,7 +307,7 @@
 <hr>
 <h2>Cross-Ecosystem Comparison</h2>
 <blockquote>
-<p>LLM generation failed: StepFun request failed: 402 You exceeded your current quota, please check your plan and billing details</p>
+<p>LLM generation failed: StepFun request failed with quota/billing error: 402 You exceeded your current quota, please check your plan and billing details. Check your StepFun plan, billing details, and OPENAI_MODEL access.</p>
 </blockquote>
 <hr>
 <h2>Peer Project Reports</h2>
@@ -503,10 +503,10 @@
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-trending</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-trending</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI 开源趋势日报 2026-08-04 数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-04 13:33 UTC ⚠️ 趋势报告生成失败。 本日报由 agents-radar 自动生成。</description>
+      <description>AI 开源趋势日报 2026-08-04 数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-04 13:37 UTC ⚠️ 趋势报告生成失败。 本日报由 agents-radar 自动生成。</description>
       <content:encoded><![CDATA[<h1>AI 开源趋势日报 2026-08-04</h1>
 <blockquote>
-<p>数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-04 13:33 UTC</p>
+<p>数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-04 13:37 UTC</p>
 </blockquote>
 <hr>
 <p>⚠️ 趋势报告生成失败。</p>
@@ -519,10 +519,10 @@
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-trending-en</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-04/ai-trending-en</guid>
       <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI Open Source Trends 2026-08-04 Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-04 13:33 UTC ⚠️ Trending report generation failed. This digest is auto-generated by agents-radar.</description>
+      <description>AI Open Source Trends 2026-08-04 Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-04 13:37 UTC ⚠️ Trending report generation failed. This digest is auto-generated by agents-radar.</description>
       <content:encoded><![CDATA[<h1>AI Open Source Trends 2026-08-04</h1>
 <blockquote>
-<p>Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-04 13:33 UTC</p>
+<p>Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-04 13:37 UTC</p>
 </blockquote>
 <hr>
 <p>⚠️ Trending report generation failed.</p>
