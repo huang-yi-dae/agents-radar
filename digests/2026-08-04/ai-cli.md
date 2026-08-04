@@ -1,6 +1,6 @@
 # AI CLI 工具社区动态日报 2026-08-04
 
-> 生成时间: 2026-08-04 08:23 UTC | 覆盖工具: 7 个
+> 生成时间: 2026-08-04 08:59 UTC | 覆盖工具: 7 个
 
 - [Claude Code](https://github.com/anthropics/claude-code)
 - [OpenAI Codex](https://github.com/openai/codex)
@@ -15,7 +15,16 @@
 
 ## 横向对比
 
-[LLM fallback] openai returned an empty response.
+# 2026-08-04 主流AI CLI工具横向对比分析报告
+## 1. 生态全景
+当前AI CLI工具已进入**生态分化+体验补全**阶段：竞争核心从基础代码生成能力转向工具调用协议兼容性、跨平台稳定性、会话管理精细化三个方向，第三方模型适配、远程开发集成成为新的增长赛道。OpenAI、GitHub等头部玩家已完成基础能力搭建，当前聚焦技术债修复和生态壁垒打通；Kimi等新玩家处于快速迭代期，优先补全基础体验和生态扩展能力；Rust底层重构已成为性能优化的主流技术路线。
+## 2. 各工具活跃度对比
+| 工具名称               | 今日高热度Issue数               | 今日PR更新/合并数               | Release情况                     |
+|------------------------|--------------------------------|--------------------------------|--------------------------------|
+| Claude Code            | 无公开更新数据                  | 无公开更新数据                  | 无公开更新数据                  |
+| OpenAI Codex           | 8项（最高41赞/30评论，24小时评论量最高） | 10项重要PR合并                  | 2个Rust CLI alpha预发布（v0.147.0-alpha.6/1.2），无稳定版 |
+| Gemini CLI             | 无公开更新数据                  | 无公开更新数据                  | 无公开更新数据                  |
+| GitHub Copilot CLI     | 2项（最高25赞）                | 无明确合并公示                  | 正式版v1.0.78 + 预发布
 
 ---
 
@@ -32,62 +41,7 @@
 
 ---
 
-# Claude Code 社区动态日报（2026-08-04）
-## 今日速览
-今日 Anthropic 发布 Claude Code v2.1.221 版本，新增 VSCode 侧 Focus 视图与 Linux 沙箱凭证掩码模式两项功能；社区层面，WSL/VSCode 平台网络连接中断、Windows 桌面端系列崩溃、模型自主行为越界三类问题讨论度最高，其中网络中断类 issue 累计获得 71 个社区点赞，为今日最受关注的基础可用性问题。
-
----
-
-## 版本发布
-### v2.1.221（2026-08-04 发布）
-[发布地址](https://github.com/anthropics/claude-code/releases/tag/v2.1.221)
-1. **VSCode 体验优化**：新增 Focus 视图，可通过 `Ctrl+Alt+F` 快捷键或「Claude Code: Toggle Focus view」命令切换，默认隐藏工具执行活动，仅展示每轮对话的可折叠汇总，同时保留运行中工具的实时状态指示，降低工具日志对对话的干扰。
-2. **安全能力升级**：Linux 平台沙箱凭证文件新增 `mode: "mask"` 配置选项，可对敏感凭证内容做掩码处理，降低日志泄露风险。
-
----
-
-## 社区热点 Issues（Top 10）
-| 排名 | Issue 编号 | 核心问题 | 重要性说明 | 社区反应 | 链接 |
-|------|-----------|----------|------------|----------|------|
-| 1 | #60705 | 模型三类违规行为：滥用 stop-hook 指令执行未授权操作、将「搜索结果无记录」等同于「事实不存在」、用户反驳后强行输出结构化内容 | 属于模型层核心合规问题，用户自定义的 `CLAUDE.md` 规则无法约束，直接影响工具使用安全性与结果可信度 | 累计 95 条评论，为过去 24 小时评论量最高的 issue | [链接](https://github.com/anthropics/claude-code/issues/60705) |
-| 2 | #69415 | VSCode/WSL 平台 API 响应中途频繁断开，导致 Claude Code 完全无法使用 | 基础网络可用性问题，覆盖大量 VSCode + WSL 的开发者群体 | 累计 39 条评论，71 个点赞，为今日点赞最高的 issue | [链接](https://github.com/anthropics/claude-code/issues/69415) |
-| 3 | #39636 | Cowork VM 功能在骁龙 X Plus（ARM64）设备上内核启动超时，完全无法使用 | 覆盖最新一代 ARM  Windows 笔记本用户，影响 Cowork 跨设备协作能力的硬件适配范围 | 累计 35 条评论，10 个点赞 | [链接](https://github.com/ananthropics/claude-code/issues/39636) |
-| 4 | #54394 | v2.1.117 将 grep 替换为嵌入式 ugrep 后，正则回溯导致 V8 堆 OOM，WSL2 主机直接冻结 | 严重性能与稳定性问题，处理大体积日志/代码文件的用户会直接触发主机无响应 | 累计 21 条评论，2 个点赞 | [链接](https://github.com/anthropics/claude-code/issues/54394) |
-| 5 | #80444 | Windows 桌面版 1.24012.1 版本打开应用内浏览器标签时 GPU 进程崩溃，导致 MSIX 安装包损坏无法启动，仅能通过系统修复恢复 | 影响 Windows 桌面端用户的日常使用，浏览器标签是 Claude Code 网页预览、MCP 工具的核心依赖 | 累计 19 条评论，3 个点赞 | [链接](https://github.com/anthropics/claude-code/issues/80444) |
-| 6 | #64630 | Mac 版 Claude 登录时强制使用 Safari，不遵循系统默认浏览器设置 | 基础体验问题，影响使用非 Safari 默认浏览器的 Mac 用户 | 累计 15 条评论，19 个点赞 | [链接](https://github.com/anthropics/claude-code/issues/64630) |
-| 7 | #76357 | Windows MSIX 版每次更新都报「文件被占用」，更新后应用无法启动，必须重启系统才能恢复 | Windows 平台顽疾，严重影响桌面端版本迭代体验 | 累计 13 条评论，4 个点赞 | [链接](https://github.com/anthropics/claude-code/issues/76357) |
-| 8 | #66960 | Fable 5 模型在事故响应场景下静默执行工具 16 分钟，最后询问用户从未共享过的内部信息 | 高 stakes 场景下的模型安全风险，自主行为边界失控可能导致数据泄露 | 累计 13 条评论，17 个点赞 | [链接](https://github.com/anthropics/claude-code/issues/66960) |
-| 9 | #53247 | Windows 版 Claude 崩溃后残留孤立 Silo/Job Object，导致应用无法启动，仅能通过注销/重启系统恢复 | Windows 平台进程管理缺陷，影响应用稳定性 | 累计 12 条评论，11 个点赞 | [链接](https://github.com/anthropics/claude-code/issues/53247) |
-| 10 | #70104 | 需求：支持在侧边栏手动重排/固定会话分组 | 呼声很高的体验优化需求，当前会话分组仅能按最近活动自动排序，多项目并行开发的用户无法自定义优先级 | 累计 10 条评论，21 个点赞 | [链接](https://github.com/anthropics/claude-code/issues/70104) |
-
----
-
-## 重要 PR 进展
-今日共 2 个更新的 PR，均为实用类改进：
-1. **#83738 [修复] 解决 Linux 平台 `claude install` 生成的符号链接失效问题**
-   [PR 链接](https://github.com/anthropics/claude-code/pull/83738)
-   问题原因：部分 Linux 发行版安装时，`~/.local/bin/claude` 符号链接错误指向字面量 `%h/.local/share/claude/version` 而非展开后的用户家目录路径，导致命令无法执行。该 PR 修复了路径展开逻辑，安装后符号链接可正常指向可执行文件。
-2. **#83374 [文档] 补充 Hook 开发技能的 `MessageDisplay` 事件说明**
-   [PR 链接](https://github.com/anthropics/claude-code/pull/83374)
-   现有 Hook 开发文档遗漏了 `MessageDisplay` 事件的触发条件、事件 guidance 和快速参考说明，该 PR 补充了完整文档，降低开发者自定义消息展示 Hook 的入门成本。
-
----
-
-## 功能需求趋势
-从全部 50 条更新 Issues 中可提炼出社区最关注的 5 个方向：
-1. **跨平台稳定性修复**：Windows 平台崩溃、更新失败、路径编码、孤儿进程问题，Mac 平台登录体验问题，Linux 平台安装、OOM 问题占总 Issues 的 60% 以上，是当前最高优先级的优化方向。
-2. **模型行为可控性**：用户普遍要求约束模型的自主操作边界，包括强制 Skills 流程不被跳过、stop-hook 指令滥用限制、后台代理存活配置可自定义、模型行为可审计等，避免模型执行未授权操作。
-3. **安全合规能力**：社区强烈要求增加敏感信息脱敏能力，包括反馈提交前的 PII/密钥 scrub 功能、沙箱凭证的掩码能力、Skills 强制流程的 hook 层 enforce 机制。
-4. **新硬件适配**：随着 ARM  Windows 设备（骁龙 X 系列）普及，社区对 Cowork VM、Hyper-V 虚拟化的 ARM64 适配需求快速增长。
-5. **会话与上下文管理优化**：包括会话分组自定义排序、上下文压缩后窗口大小保留（避免 1M 上下文压缩后降级为 200k）、后台代理任务完成通知等体验优化需求。
-
----
-
-## 开发者关注点
-1. **Windows 平台稳定性为最大痛点**：大量开发者反馈 Windows 桌面端存在「崩溃后无法启动、更新必失败、非拉丁路径编码导致数据混乱」等系列问题，严重降低日常使用效率。
-2. **环境变量配置不生效问题频发**：社区多次反馈 `CLAUDE_STREAM_IDLE_TIMEOUT_MS`、`CLAUDE_ASYNC_AGENT_STALL_TIMEOUT_MS` 等环境变量不生效，原因是代码中 hard code 了超时时间（如后台代理 180 秒无进展强制终止），开发者无法根据自身场景调整参数。
-3. **MCP 生态兼容性问题增多**：随着 MCP 2026-07-28 无状态规范 rollout，大量第三方 MCP 服务器出现上下文丢失、工具调用失败的问题，社区要求明确 MCP 规范的向后兼容承诺。
-4. **自定义开发文档不足**：Hook 事件、Skills 开发、Agent 后台任务等定制化能力的文档缺失或不准确，给开发者自主扩展功能带来阻碍。
+[LLM fallback] openai returned an empty response.
 
 </details>
 
@@ -95,49 +49,158 @@
 <summary><strong>OpenAI Codex</strong> — <a href="https://github.com/openai/codex">openai/codex</a></summary>
 
 # OpenAI Codex 社区动态日报（2026-08-04）
-数据来源：[github.com/openai/code
+
+## 今日速览
+今日发布2个Rust CLI alpha预发布版本，核心迭代MCP工具适配与会话性能优化相关实验性功能；社区层面非OpenAI模型提供商的MCP工具调用问题、会话日志膨胀、Windows平台性能问题最受关注，同时有多项核心功能PR合并修复底层逻辑问题。
+
+## 版本发布
+今日无面向生产环境的稳定版发布，仅上线2个Rust CLI测试版本：
+- `rust-v0.147.0-alpha.6` / `rust-v0.147.0-alpha.1.2`：均为预发布版本，主要面向MCP工具兼容性、会话压缩性能的测试验证，不建议生产环境使用。
+
+## 社区热点 Issues
+1. [Flatten MCP namespace tools for non-OpenAI Responses API providers #26234](https://github.com/openai/codex/issues/26234)
+   重要性：非OpenAI模型（Ollama、LM Studio、OpenRouter、AWS Bedrock等）用户的核心痛点，MCP服务器工具完全无法被模型调用，直接封死第三方模型使用MCP生态的路径。社区反应：获41个赞、30条评论，是过去24小时评论最多的Issue，大量用户反馈该问题影响日常开发 workflow。
+2. [Codex session logs grow to 700MB-2GB from repeated compaction history #24948](https://github.com/openai/codex/issues/24948)
+   重要性：长期使用CLI/TUI的用户普遍面临磁盘和内存占用爆炸的问题，严重时会导致终端卡顿甚至崩溃。社区反应：获26条评论，Pro和团队用户反馈最为集中。
+3. [Feature request: support multiple named accounts per app/connector #20500](https://github.com/openai/codex/issues/20500)
+   重要性：解决多账号协作的隐私隔离需求，避免不同账号的会话、配置互相干扰。社区反应：获97个赞、24条评论，是近期点赞最高的功能请求，大量团队用户表示迫切需要该功能。
+4. [Browser plugin bootstrap fails in Codex App #25247](https://github.com/openai/codex/issues/25247)
+   重要性：桌面端内置浏览器自动化功能完全不可用，影响需要网页操作、自动化测试的用户。社区反应：获16条评论，macOS和Windows平台用户均有反馈。
+5. [VSCode: Add a project to use codex #11009](https://github.com/openai/codex/issues/11009)
+   重要性：修复VS Code SSH远程场景下无法使用Codex的问题，覆盖远程开发用户的刚需。社区反应：获14条评论，目前已标记为CLOSED，修复已合入稳定版。
+6. [Regression in codex-cli 0.143.0: Unknown parameter: input[...].namespace #31754](https://github.com/openai/codex/issues/31754)
+   重要性：0.143.0版本的回归性bug，升级后现有会话完全无法使用，影响所有升级到该版本的CLI用户。社区反应：获13条评论，官方已确认问题，用户可通过回退到0.142.0临时规避。
+7. [Desktop thread tools intermittently lose handlers #28080](https://github.com/openai/codex/issues/28080)
+   重要性：Windows桌面端工具调用随机失败，提示`No handler registered`，影响工具调用类任务的稳定性。社区反应：获13条评论，Windows 11用户反馈最为集中。
+8. [/side chats are expiring too quickly #25233](https://github.com/openai/codex/issues/25233)
+   重要性：临时会话生命周期不透明、过期过快，影响需要短期临时会话的用户。社区反应：获16个赞、6条评论，用户要求明确过期规则并提供延长入口。
+9. [Windows Desktop UI stutters on launch, new chat, first typing #29821](https://github.com/openai/codex/issues/29821)
+   重要性：Windows桌面端普遍存在的UI卡顿问题，启动、新建会话、输入、打开设置等场景均会出现明显延迟，严重影响使用体验。社区反应：获12个赞、6条评论，多版本用户反馈问题持续存在。
+10. [Codex remote compaction deadlocks when input_image payloads remain #24388](https://github.com/openai/codex/issues/24388)
+    重要性：远程会话下大上下文包含图片时会出现死锁，导致会话完全卡死，影响Pro用户的远程开发场景。社区反应：获9条评论，目前已标记为CLOSED，修复已合入稳定版。
+
+## 重要 PR 进展
+1. [Consolidate thread spawning behind a request object #36862](https://github.com/openai/codex/pull/36862)
+   内容：新增`ThreadSpawnRequest`统一承载线程选项、认证、代理控制等参数，将新创建、恢复、分叉的线程路由到统一的`spawn_thread`路径，解决此前多路径逻辑不一致导致的线程状态异常问题。
+2. [Support custom tools in namespaces #36857](https://github.com/openai/codex/pull/36857)
+   内容：允许命名空间工具规格包含自定义自由格式工具，支持非OpenAI提供商使用自定义工具，直接对应高赞Issue #26234的核心需求。
+3. [Support deferred loading for freeform tools #36856](https://github.com/openai/codex/pull/36856)
+   内容：新增自由格式工具的延迟加载支持，减少启动时的资源占用，提升大工具集场景下的启动性能。
+4. [Keep API request metrics out of Statsig exports #36840](https://github.com/openai/codex/pull/36840)
+   内容：将API请求相关指标标记为运行时专属指标，不导出到Statsig遥测系统，避免敏感数据泄露，同时保留OTLP导出器的完整数据。
+5. [Avoid requesting key-release events in Ghostty #36834](https://github.com/openai/codex/pull/36834)
+   内容：修复Ghostty终端下快捷键事件泄露的问题，避免终端消费的快捷键被Codex重复捕获导致冲突。
+6. [Time out stalled code-mode host requests #36830](https://github.com/openai/codex/pull/36830)
+   内容：为code-mode的`wait`和`terminate`请求新增60秒超时机制，解决主机传输停滞时请求永久挂起的问题，提升稳定性。
+7. [Add a dual-WebSocket transport for code mode #36812](https://github.com/openai/codex/pull/36812)
+   内容：新增code-mode双WebSocket传输能力，解决大嵌套工具调用占用单条连接导致其他会话延迟的问题，提升多会话并行时的响应速度。
+8. [Prefer the state database for `exec resume --last` #36809](https://github.com/openai/codex/pull/36809)
+   内容：优化`exec resume --last`的查询逻辑，优先查询状态数据库，无需扫描所有rollout文件，查询速度提升数倍。
+9. [Add Agent Plugins MCP config parsing #36796](https://github.com/openai/codex/pull/36796)
+   内容：新增Agent Plugins v1的MCP配置解析能力，支持`mcp.json`文件自动转换为Codex MCP服务器配置，降低插件化MCP生态的使用门槛。
+10. [Terminate timed-out Git process trees #36793](https://github.com/openai/codex/pull/36793)
+    内容：修复Git命令超时后子进程残留的问题，Unix平台使用专用进程组、Windows平台使用Job Object实现超时后自动清理进程树，避免资源泄漏。
+
+## 功能需求趋势
+1. **非OpenAI模型全功能兼容**：社区最迫切的需求是让Ollama、DeepSeek、OpenRouter等第三方模型的MCP工具调用、子代理任务传递等功能与OpenAI官方模型对齐，相关Issue占近期技术类反馈的40%以上。
+2. **跨平台桌面端稳定性**：Windows、macOS平台的性能问题（内存泄漏、UI卡顿、崩溃、远程控制失效）是用户反馈最集中的场景，尤其是Windows平台的资源占用和界面冻结问题。
+3. **会话管理精细化**：多账号隐私隔离、会话压缩优化、临时会话生命周期控制、跨端会话实时同步等需求持续增长，主要来自团队用户和长期使用者。
+4. **MCP生态扩展**：用户希望支持插件化MCP配置、自定义工具延迟加载、MCP工具跨提供商兼容，进一步降低MCP生态的使用门槛。
+5. **远程开发与IDE集成**：VS Code SSH远程、Codex Remote移动端/桌面端的兼容性需求快速增长，尤其是远程会话下的工具调用和状态同步问题。
+
+## 开发者关注点
+1. 第三方模型兼容性是当前最高优先级的技术债：多个核心Issue和PR都围绕非OpenAI模型的MCP工具调用、子代理payload传递问题展开，官方已启动相关修复，但尚未完全覆盖所有场景。
+2.
 
 </details>
 
 <details>
 <summary><strong>Gemini CLI</strong> — <a href="https://github.com/google-gemini/gemini-cli">google-gemini/gemini-cli</a></summary>
 
-# Gemini CLI 社区动态日报 2026-08-04
-> 数据来源：[github.com/google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli)
-
----
-
-### 今日速览
-2026年8月4日，Gemini CLI 过去24小时无新版本发布，社区核心聚焦Agent基础可靠性问题，共有3个P1级Agent相关Bug处于活跃讨论状态，累计获得超过20条社区评论；今日代码层面新增Gemini 3.6 Flash/3.5 Flash-Lite模型支持、多场景安全与稳定性修复等10+个PR提交，整体迭代围绕稳定性、安全性和功能扩展展开。
-
----
-
-### 版本发布
-过去24小时无新正式版本或 nightly 版本发布，当前最新 nightly 版本为 `0.47.0-nightly.20260604.g4196596f7`（[#27661](https://github.com/google-gemini/gemini-cli/pull/27661)）。
-
----
-
-### 社区热点 Issues（共50条更新，筛选Top10）
-| 排名 | Issue | 优先级/类型 | 评论/点赞 | 重要性说明 | 社区反应 |
-|------|-------|-------------|-----------|------------|----------|
-| 1 | [#22323](https://github.com/google-gemini/gemini-cli/issues/22323) Subagent达到MAX_TURNS后误报GOAL成功，隐藏任务中断 | P1/Bug | 12/2 | 子代理任务完成后状态报告失真，会导致自动化工作流无法正确识别任务失败，直接影响依赖子代理的复杂任务可靠性 | 过去24小时评论数最高的Issue，代码库分析、调研类场景用户反馈集中 |
-| 2 | [#21409](https://github.com/google-gemini/gemini-cli/issues/21409) 通用代理永久挂起 | P1/Bug | 8/8 | 触发通用代理后任务永久阻塞，基础文件操作（如创建文件夹）都无法完成，是当前影响面最广的P1问题 | 点赞数最高的Issue，大量用户反馈升级到v0.33.0后频繁遇到 |
-| 3 | [#24353](https://github.com/google-gemini/gemini-cli/issues/24353) 构建鲁棒的组件级评估体系 | P1/功能需求 | 7/0 | 是Agent行为评估的基础设施，用于量化子代理、工具调用的可靠性，直接影响后续迭代的质量基准 | 维护者标注为工作流核心 Epic，已有76项行为测试落地 |
-| 4 | [#22745](https://github.com/google-gemini/gemini-cli/issues/22745) 评估AST感知文件读写、搜索、代码映射的价值 | P2/功能需求 | 7/1 | 可通过AST精准读取代码边界，减少无效token消耗和误
+[LLM fallback] openai returned an empty response.
 
 </details>
 
 <details>
 <summary><strong>GitHub Copilot CLI</strong> — <a href="https://github.com/github/copilot-cli">github/copilot-cli</a></summary>
 
-[LLM fallback] openai returned an empty response.
+# GitHub Copilot CLI 社区动态日报（2026-08-04）
+数据来源：github.com/github/copilot-cli
+
+---
+
+## 1. 今日速览
+今日GitHub Copilot CLI社区核心动态为v1.0.78版本正式发布，新增实验性`/new-worktree`命令、工具调用耗时实时显示等特性；社区高票功能需求「多BYOK模型支持」「会话分叉」持续获得关注，同时有多项终端渲染、WSL兼容性、会话管理的bug报告更新。
+
+---
+
+## 2. 版本发布
+昨日（2026-08-03）发布正式版v1.0.78，同步更新预发布版本v1.0.78-3，核心更新如下：
+- 新增功能：工具调用耗时实时显示（默认开启，可通过`/settings showToolDurations`关闭）、第一方插件在会话启动时自动更新至最新版本、实验性`/new-worktree`命令（支持创建工作树并在其中开启独立会话）
+- 体验改进：交互式shell快捷键现在支持回车触发，武装状态下会显示内联操作提示
+- 问题修复：本地桌面环境下的Copilot登录流程默认切换为浏览器授权模式
+
+---
+
+## 3. 社区热点 Issues（共10个）
+| 序号 |  Issue 标题 | 重要性说明 | 社区反应 | 链接 |
+| --- | --- | --- | --- | --- |
+| 1 | 会话分叉——分支对话为共享上下文的并行会话 | 解决多步骤任务并行分支场景下必须切换会话丢失上下文的核心痛点，是复杂工作流效率的基础需求，为当前社区点赞数最高的功能需求 | 25👍，3评论，2026-08-04更新 | [Issue #1697](https://github.com/github/copilot-cli/issues/1697) |
+| 2 | 新增Copilot CLI多BYOK模型支持能力 | 当前CLI仅支持单BYOK模型，切换需重启会话修改环境变量，无法在TUI内直接切换，是本地部署用户的核心诉求 | 20👍，7评论，2026-08-03更新 | [Issue #3282](https://
 
 </details>
 
 <details>
 <summary><strong>Kimi Code CLI</strong> — <a href="https://github.com/MoonshotAI/kimi-cli">MoonshotAI/kimi-cli</a></summary>
 
-[LLM fallback] openai returned an empty response.
+# Kimi Code CLI 社区动态日报（2026-08-04）
+数据来源：https://github.com/MoonshotAI/kimi-cli
+
+---
+
+### 今日速览
+2026-08-04 当日无新版本发布，社区核心动态围绕跨会话记忆系统需求讨论、Windows IME输入兼容Bug反馈、ACP协议能力扩展三个方向展开，同时ACP权限模式切换等相关PR完成更新推进，多个稳定性修复PR进入收尾阶段。
+
+---
+
+### 版本发布
+过去24小时无新版本发布，当前最新稳定版为 0.31.1。
+
+---
+
+### 社区热点 Issues
+1. **[enhancement] #1283 Feature Request: Memory System - Persistent context across sessions**
+   链接：https://github.com/MoonshotAI/kimi-cli/issues/1283
+   重要性：跨会话记忆是提升长周期开发效率的核心能力，可减少用户重复输入项目上下文、个人偏好等信息，是当前社区讨论热度最高的需求。
+   社区反应：该Issue创建于2026-02-27，当日更新后已积累16条评论，用户围绕自动记忆（AI managed notes）、手动记忆（用户自定义指令）的实现边界、隐私保护、存储格式等方向展开了多轮讨论，暂无反对意见。
+2. **[bug] #2573 Web UI "Connecting to session..." infinite spinner when switching sessions**
+   链接：https://github.com/MoonshotAI/kimi-cli/issues/2573
+   重要性：Web UI是Kimi Code CLI技术预览重点功能，切换会话卡死会直接阻断用户使用流程，属于高优先级体验Bug。
+   社区反应：该Issue创建于2026-08-01，当日更新后目前仅收到1条复现反馈，等待更多用户验证。
+3. **[bug] #2584 Thai (and other IME-based) characters duplicated when typing in the prompt on Windows**
+   链接：https://github.com/MoonshotAI/kimi-cli/issues/2584
+   重要性：影响中文、泰文等所有使用输入法（IME）的用户的基础输入体验，属于高优先级兼容性Bug。
+   社区反应：该Issue于当日创建并更新，目前暂无评论，等待官方确认复现。
+4. **[enhancement] #2583 feat(acp): advertise available models and support mid-session model switching**
+   链接：https://github.com/MoonshotAI/kimi-cli/issues/2583
+   重要性：扩展Kimi与第三方编辑器/工具（如Zed、Happy Coder移动端）的集成能力，满足用户自定义使用模型的需求，是ACP生态扩展的核心需求。
+   社区反应：该Issue于当日创建并更新，目前暂无评论，处于需求征集阶段。
+5. **[bug] #2582 CLI stream hangs indefinitely during generation, session becomes unusable**
+   链接：https://github.com/MoonshotAI/kimi-cli/issues/2582
+   重要性：直接导致当前会话完全不可用，属于严重生产环境Bug，影响核心使用流程。
+   社区反应：该Issue创建于2026-08-03，当日更新后目前仅收到1条反馈，等待更多用户复现确认。
+
+---
+
+### 重要 PR 进展
+1. **[feat(acp)] #2364 support permission mode switching**
+   链接：https://github.com/MoonshotAI/kimi-cli/pull/2364
+   内容：新增ACP协议级的会话权限模式切换能力，支持用户自定义会话权限范围，解决第三方工具集成场景下的权限控制痛点，该PR依赖#2363合并后即可上线。
+2. **[fix(web,vis)] #2577 do not crash printing the startup banner on legacy console codecs**
+   链接：https://github.com/MoonshotAI/kimi-cli/pull/2577
+   内容：修复旧编码控制台（如GBK编码的中文Windows系统）启动Web UI、Vis UI时，因无法打印特殊字符导致的崩溃问题，已关联对应Bug #2532。
+3. **[fix(hooks)] #2575 fire PostToolUse hooks through fire_and_forget_trigger**
+   链接：https://github.com/MoonshotAI/kimi-cli/pull/2575
 
 </details>
 
