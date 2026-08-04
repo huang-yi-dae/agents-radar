@@ -233,6 +233,8 @@ openclaw_peers:
 
 可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
 
+**快速切换**：要在 GitHub Actions 或本地使用阶跃星辰，请设置 `LLM_PROVIDER=openai`、`OPENAI_BASE_URL=https://api.stepfun.com/v1`、`OPENAI_MODEL=step-3.7-flash`；在 DeepSeek 与阶跃星辰之间切换时，保持这三个 secret 名称不变即可。
+
 Provider 抽象层位于 `src/providers/`，每个供应商对应独立文件并实现 `LlmProvider` 接口。新增供应商只需创建新文件并在工厂函数中注册。
 
 ## 本地运行
@@ -256,6 +258,12 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # export OPENAI_API_KEY=sk-xxxxxxxx
 
 # 方式 C: OpenAI 兼容端点 + 自定义模型
+# export LLM_PROVIDER=openai
+# export OPENAI_API_KEY=sk-xxxxxxxx
+# export OPENAI_BASE_URL=https://api.stepfun.com/v1
+# export OPENAI_MODEL=step-3.7-flash
+
+# 方式 C-alt: 阶跃星辰
 # export LLM_PROVIDER=openai
 # export OPENAI_API_KEY=sk-xxxxxxxx
 # export OPENAI_BASE_URL=https://api.stepfun.com/v1

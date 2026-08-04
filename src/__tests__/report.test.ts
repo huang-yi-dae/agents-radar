@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import fs from "node:fs";
+import path from "node:path";
 
 // ---------------------------------------------------------------------------
 // Mock provider — intercepts createProvider() so the module-level `provider`
@@ -82,16 +83,19 @@ describe("saveFile", () => {
   it("returns the expected file path", () => {
     const result = saveFile("content", "2026-03-09", "ai-cli.md");
     expect(result).toBe("digests/2026-03-09/ai-cli.md");
+    expect(path.posix.normalize(result)).toBe(result);
   });
 
   it("creates parent directories recursively", () => {
     saveFile("content", "2026-03-09", "ai-cli.md");
     expect(fs.mkdirSync).toHaveBeenCalledWith("digests/2026-03-09", { recursive: true });
+    expect(path.posix.normalize("digests/2026-03-09")).toBe("digests/2026-03-09");
   });
 
   it("writes content as utf-8", () => {
     saveFile("hello world", "2026-03-09", "test.md");
     expect(fs.writeFileSync).toHaveBeenCalledWith("digests/2026-03-09/test.md", "hello world", "utf-8");
+    expect(path.posix.normalize("digests/2026-03-09/test.md")).toBe("digests/2026-03-09/test.md");
   });
 });
 

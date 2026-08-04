@@ -27,6 +27,7 @@ import "dotenv/config";
 import {
   type GitHubItem,
   type RepoFetch,
+  type GitHubRelease,
   fetchRecentItems,
   fetchRecentReleases,
   fetchSkillsData,
@@ -122,9 +123,18 @@ async function fetchAllData(
     Promise.all(
       allConfigs.map(async (cfg) => {
         const [issuesRaw, prs, releases] = await Promise.all([
-          fetchRecentItems(cfg, "issues", since),
-          fetchRecentItems(cfg, "pulls", since),
-          fetchRecentReleases(cfg.repo, since),
+          fetchRecentItems(cfg, "issues", since).catch((err) => {
+            console.error(`  [${cfg.id}] issues fetch failed: ${err}`);
+            return [] as GitHubItem[];
+          }),
+          fetchRecentItems(cfg, "pulls", since).catch((err) => {
+            console.error(`  [${cfg.id}] prs fetch failed: ${err}`);
+            return [] as GitHubItem[];
+          }),
+          fetchRecentReleases(cfg.repo, since).catch((err) => {
+            console.error(`  [${cfg.id}] releases fetch failed: ${err}`);
+            return [] as GitHubRelease[];
+          }),
         ]);
         // Filter out PRs from the issues list (GitHub's /issues returns both)
         const issues = issuesRaw.filter((i) => !i.pull_request);

@@ -233,6 +233,8 @@ Set `LLM_PROVIDER` to choose which model backend powers the digest generation. D
 
 Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
 
+**Quick switch**: to use StepFun in GitHub Actions or locally, set `LLM_PROVIDER=openai`, `OPENAI_BASE_URL=https://api.stepfun.com/v1`, and `OPENAI_MODEL=step-3.7-flash`; keep the same three secret names when switching between DeepSeek and StepFun.
+
 The provider abstraction lives in `src/providers/` — each provider is a separate file implementing the `LlmProvider` interface. Adding a new provider only requires creating a new file and registering it in the factory.
 
 ## Running locally
@@ -256,6 +258,12 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # export OPENAI_API_KEY=sk-xxxxxxxx
 
 # Option C: OpenAI-compatible endpoint with custom model
+# export LLM_PROVIDER=openai
+# export OPENAI_API_KEY=sk-xxxxxxxx
+# export OPENAI_BASE_URL=https://api.stepfun.com/v1
+# export OPENAI_MODEL=step-3.7-flash
+
+# Option C-alt: StepFun
 # export LLM_PROVIDER=openai
 # export OPENAI_API_KEY=sk-xxxxxxxx
 # export OPENAI_BASE_URL=https://api.stepfun.com/v1
