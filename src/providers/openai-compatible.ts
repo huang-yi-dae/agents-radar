@@ -84,7 +84,7 @@ export abstract class OpenAICompatibleProvider implements LlmProvider {
       messages: [{ role: "user", content: prompt }],
     });
     const message = response.choices?.[0]?.message;
-    const text = message?.content || "";
+    const text = message?.content || (message as { reasoning?: string } | undefined)?.reasoning || "";
     if (text) return text;
 
     const responseSummary = {
