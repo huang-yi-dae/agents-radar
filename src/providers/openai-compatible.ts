@@ -68,6 +68,8 @@ export abstract class OpenAICompatibleProvider implements LlmProvider {
    * HOW IT WORKS:
    * 1. Call the chat completions API with a single user message.
    * 2. Extract the text from the first choice's message content.
+   *    For reasoning-enabled providers, prefer `content`, then `reasoning_content`,
+   *    and avoid returning the provider's internal `reasoning` trace as final output.
    * 3. Throw if the response is empty (shouldn't happen with valid models).
    *
    * NOTE: `max_completion_tokens` is the OpenAI API parameter name.
@@ -84,7 +86,8 @@ export abstract class OpenAICompatibleProvider implements LlmProvider {
       messages: [{ role: "user", content: prompt }],
     });
     const message = response.choices?.[0]?.message;
-    const text = message?.content || (message as { reasoning?: string } | undefined)?.reasoning || "";
+    const text =
+      message?.content || (message as { reasoning_content?: string } | undefined)?.reasoning_content || "";
     if (text) return text;
 
     const responseSummary = {

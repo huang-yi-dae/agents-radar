@@ -4,6 +4,7 @@ import {
   OpenAIProvider,
   GitHubCopilotProvider,
   OpenRouterProvider,
+  StepFunProvider,
   createProvider,
   VALID_PROVIDER_NAMES,
   type LlmProvider,
@@ -100,12 +101,18 @@ describe("LlmProvider interface", () => {
     expect(p.name).toBe("openrouter");
   });
 
+  it("StepFunProvider has correct name", () => {
+    const p = new StepFunProvider({ apiKey: "test" });
+    expect(p.name).toBe("stepfun");
+  });
+
   it("all providers implement LlmProvider with call()", () => {
     const providers: LlmProvider[] = [
       new AnthropicProvider(),
       new OpenAIProvider({ apiKey: "k" }),
       new GitHubCopilotProvider({ apiKey: "k" }),
       new OpenRouterProvider({ apiKey: "k" }),
+      new StepFunProvider({ apiKey: "k" }),
     ];
     for (const p of providers) {
       expect(typeof p.name).toBe("string");
@@ -119,8 +126,8 @@ describe("LlmProvider interface", () => {
 // ---------------------------------------------------------------------------
 
 describe("VALID_PROVIDER_NAMES", () => {
-  it("contains all four supported providers", () => {
-    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter"]);
+  it("contains all supported providers", () => {
+    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter", "stepfun"]);
   });
 });
 
@@ -359,6 +366,11 @@ describe("createProvider", () => {
     expect(p).toBeInstanceOf(OpenRouterProvider);
   });
 
+  it("creates stepfun provider", () => {
+    const p = createProvider("stepfun");
+    expect(p).toBeInstanceOf(StepFunProvider);
+  });
+
   it(
     "reads LLM_PROVIDER from env",
     withEnv({ LLM_PROVIDER: "openai" }, () => {
@@ -369,7 +381,7 @@ describe("createProvider", () => {
 
   it("throws descriptive error for unknown provider", () => {
     expect(() => createProvider("bogus" as never)).toThrow(
-      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter/,
+      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter, stepfun/,
     );
   });
 

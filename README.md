@@ -228,10 +228,11 @@ Set `LLM_PROVIDER` to choose which model backend powers the digest generation. D
 |----------|---------------|-------------------|---------------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
 | OpenAI | `openai` | `OPENAI_API_KEY` | `gpt-4o` |
+| StepFun | `stepfun` | `STEPFUN_API_KEY` | `step-3.7-flash` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
-Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
+Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `STEPFUN_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
 
 The provider abstraction lives in `src/providers/` — each provider is a separate file implementing the `LlmProvider` interface. Adding a new provider only requires creating a new file and registering it in the factory.
 
@@ -254,6 +255,11 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # Option B: OpenAI
 # export LLM_PROVIDER=openai
 # export OPENAI_API_KEY=sk-xxxxxxxx
+
+# Option C: StepFun (OpenAI-compatible)
+# export LLM_PROVIDER=stepfun
+# export STEPFUN_API_KEY=sk-xxxxxxxx
+# export STEPFUN_MODEL=step-3.7-flash
 
 # Option C: OpenAI-compatible endpoint with custom model
 # export LLM_PROVIDER=openai

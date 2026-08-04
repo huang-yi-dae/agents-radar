@@ -228,10 +228,11 @@ openclaw_peers:
 |--------|---------------|------------|----------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
 | OpenAI | `openai` | `OPENAI_API_KEY` | `gpt-4o` |
+| StepFun | `stepfun` | `STEPFUN_API_KEY` | `step-3.7-flash` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
-可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
+可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`STEPFUN_MODEL`、`GITHUB_COPILOT_MODEL` 或 `OPENROUTER_MODEL` 分别覆盖默认模型名称。
 
 Provider 抽象层位于 `src/providers/`，每个供应商对应独立文件并实现 `LlmProvider` 接口。新增供应商只需创建新文件并在工厂函数中注册。
 
@@ -254,6 +255,11 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # 方式 B: OpenAI
 # export LLM_PROVIDER=openai
 # export OPENAI_API_KEY=sk-xxxxxxxx
+
+# 方式 C: 阶跃星辰（OpenAI 兼容）
+# export LLM_PROVIDER=stepfun
+# export STEPFUN_API_KEY=sk-xxxxxxxx
+# export STEPFUN_MODEL=step-3.7-flash
 
 # 方式 C: OpenAI 兼容端点 + 自定义模型
 # export LLM_PROVIDER=openai
