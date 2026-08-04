@@ -33,12 +33,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-        - name: Run daily digest
+      - name: Run daily digest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_PROVIDER: stepfun
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_BASE_URL: https://api.deepseek.com
-          OPENAI_MODEL: deepseek-chat
+          OPENAI_BASE_URL: https://api.stepfun.com/v1
+          OPENAI_MODEL: step-3.7-flash
           DIGEST_REPO: ${{ github.repository }}
         run: pnpm start
 
