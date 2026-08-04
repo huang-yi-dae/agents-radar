@@ -27,10 +27,14 @@ import { OpenAICompatibleProvider } from "./openai-compatible.ts";
 export class OpenAIProvider extends OpenAICompatibleProvider {
   readonly name = "openai";
 
+  private static normalizeBaseURL(baseURL: string): string {
+    return baseURL.replace(/\/chat\/completions\/?$/i, "").replace(/\/$/, "");
+  }
+
   constructor(opts?: { apiKey?: string; baseURL?: string; model?: string }) {
     super({
       apiKey: opts?.apiKey ?? process.env["OPENAI_API_KEY"],
-      baseURL: opts?.baseURL ?? process.env["OPENAI_BASE_URL"],
+      baseURL: OpenAIProvider.normalizeBaseURL(opts?.baseURL ?? process.env["OPENAI_BASE_URL"] ?? ""),
       model: opts?.model ?? process.env["OPENAI_MODEL"] ?? "gpt-4o",
     });
   }
