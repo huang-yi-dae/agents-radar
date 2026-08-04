@@ -199,7 +199,7 @@ export async function callLlm(prompt: string, maxTokens = LLM_TOKENS_DEFAULT): P
  * Write content to a file in the digests directory.
  *
  * HOW IT WORKS:
- * 1. `path.join("digests", ...segments)` builds the file path (e.g. "digests/2026-03-11/ai-cli.md").
+ * 1. `path.posix.join("digests", ...segments)` builds the file path with forward slashes.
  * 2. `fs.mkdirSync(..., { recursive: true })` creates the directory and all parent directories.
  * 3. `fs.writeFileSync(...)` writes the content to the file.
  *
@@ -208,7 +208,7 @@ export async function callLlm(prompt: string, maxTokens = LLM_TOKENS_DEFAULT): P
  * @returns The file path that was written
  */
 export function saveFile(content: string, ...segments: string[]): string {
-  const filepath = path.join("digests", ...segments);
+  const filepath = path.posix.join("digests", ...segments);
   fs.mkdirSync(path.dirname(filepath), { recursive: true });
   fs.writeFileSync(filepath, content, "utf-8");
   return filepath;

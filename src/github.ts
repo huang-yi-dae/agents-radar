@@ -17,6 +17,8 @@
  * - GitHub API rate limit: 5000 requests/hour for authenticated users.
  */
 
+import { sleep } from "./date.ts";
+
 // ---------------------------------------------------------------------------
 // Types — these describe the shape of GitHub API responses
 // ---------------------------------------------------------------------------
@@ -170,9 +172,26 @@ function headers(): Record<string, string> {
 async function githubGet<T>(url: string, params: Record<string, string> = {}): Promise<T> {
   const u = new URL(url);
   for (const [k, v] of Object.entries(params)) u.searchParams.set(k, v);
-  const resp = await fetch(u.toString(), { headers: headers() });
-  if (!resp.ok) throw new Error(`GitHub API error ${resp.status} (${url}): ${await resp.text()}`);
-  return resp.json() as Promise<T>;
+  const maxRetries = 3;
+  let attempt = 0;
+  while (true) {
+    const resp = await fetch(u.toString(), { headers: headers() });
+    if (resp.ok) return resp.json() as Promise<T>;
+
+    const status = resp.status;
+    const body = await resp.text();
+    const retryable = status === 503 || status === 502 || status === 500;
+    if (retryable && attempt < maxRetries - 1) {
+      attempt++;
+      const wait = 1000 * 2 ** attempt;
+      console.error(
+        `  [github] ${status} from ${url} — retry ${attempt}/${maxRetries - 1} in ${wait / 1000}s...`,
+      );
+      await sleep(wait);
+      continue;
+    }
+    throw new Error(`GitHub API error ${status} (${url}): ${body}`);
+  }
 }
 
 /**
