@@ -4,6 +4,7 @@
  * Env vars:
  *   STEPFUN_API_KEY     - API key
  *   STEPFUN_MODEL       - model name (default: step-3.7-flash)
+ *   STEPFUN_BASE_URL    - endpoint override (default: https://api.stepfun.com/v1)
  *
  * OFFICIAL RESPONSE SHAPE (confirmed from StepFun docs):
  * - `message.content` is the final assistant text we should use for reports.
@@ -38,9 +39,10 @@ const STEPFUN_THINKING_PATTERNS = [
 // Some StepFun reasoning responses may embed self-instructions or planning
 // prose inside `message.content` instead of dedicated reasoning fields.
 const STEPFUN_PLANNING_PATTERNS = [
-  /用户现在需要我基于[\s\S]*?(?=\n\n#{1,3} |\n\n- |\n\n\d\. )/,
-  /首先我得[\s\S]*?(?=\n\n#{1,3} |\n\n- |\n\n\d\. )/,
-  /然后[\s\S]*?部分[\s\S]*?(?=\n\n#{1,3} |\n\n- |\n\n\d\. )/,
+  /[\s\S]*?用户现在需要我基于[\s\S]*?(?=\n\n#{1,3}\s|\n\n[-*] |\n\n\d+\. |(?=\n*$))/,
+  /[\s\S]*?首先第一个部分[，,][\s\S]*?(?=\n\n#{1,3}\s|\n\n[-*] |\n\n\d+\. |(?=\n*$))/,
+  /[\s\S]*?然后第[一二三四五六七八九十]+个部分[，,][\s\S]*?(?=\n\n#{1,3}\s|\n\n[-*] |\n\n\d+\. |(?=\n*$))/,
+  /[\s\S]*?总结一下[：:][\s\S]*?(?=\n\n#{1,3}\s|\n\n[-*] |\n\n\d+\. |(?=\n*$))/,
 ];
 
 /**
@@ -50,16 +52,18 @@ const STEPFUN_PLANNING_PATTERNS = [
  * - Extends OpenAICompatibleProvider with StepFun's endpoint.
  * - Uses STEPFUN_API_KEY for authentication.
  * - Default model is "step-3.7-flash", overridable with STEPFUN_MODEL env var.
+ * - Requests `reasoning_format=deepseek-style` so reasoning stays in
+ *   `message.reasoning_content`, while `message.content` remains the final answer.
  * - Overrides `call()` so final digest text comes only from `message.content`,
  *   avoiding leakage of internal reasoning fields.
  */
 export class StepFunProvider extends OpenAICompatibleProvider {
   readonly name = "stepfun";
 
-  constructor(opts?: { apiKey?: string; model?: string }) {
+  constructor(opts?: { apiKey?: string; baseURL?: string; model?: string }) {
     super({
       apiKey: opts?.apiKey ?? process.env["STEPFUN_API_KEY"],
-      baseURL: STEPFUN_BASE_URL,
+      baseURL: opts?.baseURL ?? process.env["STEPFUN_BASE_URL"] ?? STEPFUN_BASE_URL,
       model: opts?.model ?? process.env["STEPFUN_MODEL"] ?? "step-3.7-flash",
     });
   }
@@ -77,7 +81,16 @@ export class StepFunProvider extends OpenAICompatibleProvider {
     const response = await this.client.chat.completions.create({
       model: this.model,
       max_completion_tokens: maxTokens,
-      messages: [{ role: "user", content: prompt }],
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are a careful report editor.\n" +
+            "Always output only the final user-facing report content.\n" +
+            "Never include planning, reasoning, self-instructions, chain-of-thought, or internal thinking traces.\n",
+        },
+        { role: "user", content: prompt },
+      ],
     });
 
     const message = response.choices?.[0]?.message;

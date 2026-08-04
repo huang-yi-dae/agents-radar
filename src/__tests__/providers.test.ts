@@ -371,7 +371,7 @@ describe("createProvider", () => {
 
   it("throws descriptive error for unknown provider", () => {
     expect(() => createProvider("bogus" as never)).toThrow(
-      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter/,
+      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter, stepfun/,
     );
   });
 
@@ -394,19 +394,78 @@ describe("createProvider", () => {
 // ---------------------------------------------------------------------------
 
 describe("StepFunProvider", () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     vi.clearAllMocks();
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockReset();
+    mockCreate.mockImplementation((_input: unknown) =>
+      Promise.resolve({
+        choices: [{ message: { content: "ok" } }],
+      }),
+    );
   });
 
-  it("uses STEPFUN_MODEL env var as default", () => {
-    delete process.env["STEPFUN_MODEL"];
-    const p = new StepFunProvider({ apiKey: "k" });
-    expect(p.name).toBe("stepfun");
+  it("uses STEPFUN_MODEL env var as default", async () => {
+    await withEnv({ STEPFUN_MODEL: "step-custom" }, async () => {
+      const modelProvider = new StepFunProvider({ apiKey: "k" });
+      expect((modelProvider as unknown as { model: string }).model).toBe("step-custom");
+      expect(
+        (modelProvider as unknown as { client: { chat: { completions: { create: unknown } } } }).client.chat
+          .completions.create,
+      ).toBeInstanceOf(Function);
+    });
+  });
+
+  it("uses STEPFUN_BASE_URL env var as default", async () => {
+    await withEnv({ STEPFUN_BASE_URL: "https://custom.stepfun/v1" }, async () => {
+      const urlProvider = new StepFunProvider({ apiKey: "k" });
+      expect((urlProvider as unknown as { client: { baseURL?: string } }).client.baseURL).toBe(
+        "https://custom.stepfun/v1",
+      );
+      expect(
+        (urlProvider as unknown as { client: { chat: { completions: { create: unknown } } } }).client.chat
+          .completions.create,
+      ).toBeInstanceOf(Function);
+    });
+  });
+
+  it("uses STEPFUN_MODEL env var for API calls", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [{ message: { content: "ok" } }],
+    });
+
+    await withEnv({ STEPFUN_MODEL: "step-custom" }, async () => {
+      const p = new StepFunProvider({ apiKey: "k" });
+      await p.call("prompt", 256);
+      expect(await getOpenAIMockCreate()).toHaveBeenCalledWith(
+        expect.objectContaining({
+          model: "step-custom",
+        }),
+      );
+    });
   });
 
   it("uses constructor model parameter over env", () => {
     const p = new StepFunProvider({ apiKey: "k", model: "custom-stepfun-model" });
     expect(p.name).toBe("stepfun");
+  });
+
+  it("uses STEPFUN_BASE_URL env var for API calls", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [{ message: { content: "ok" } }],
+    });
+
+    await withEnv({ STEPFUN_BASE_URL: "https://custom.stepfun/v1" }, async () => {
+      const p = new StepFunProvider({ apiKey: "k" });
+      await p.call("prompt", 256);
+      expect(mockCreate).toHaveBeenCalledWith(
+        expect.objectContaining({
+          baseURL: "https://custom.stepfun/v1",
+        }),
+      );
+    });
   });
 
   it("call returns only content and ignores reasoning fields", async () => {
@@ -429,7 +488,16 @@ describe("StepFunProvider", () => {
     expect(mockCreate).toHaveBeenCalledWith({
       model: "step-test",
       max_completion_tokens: 256,
-      messages: [{ role: "user", content: "prompt" }],
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are a careful report editor.\n" +
+            "Always output only the final user-facing report content.\n" +
+            "Never include planning, reasoning, self-instructions, chain-of-thought, or internal thinking traces.\n",
+        },
+        { role: "user", content: "prompt" },
+      ],
     });
   });
 
@@ -493,5 +561,26 @@ describe("StepFunProvider", () => {
     const p = new StepFunProvider({ apiKey: "k", model: "step-clean" });
     const result = await p.call("prompt", 256);
     expect(result).toBe("## 横向对比\n\n- 结论A\n- 结论B");
+  });
+
+  it("strips complex planning prose from leaked reasoning output", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [
+        {
+          message: {
+            content:
+              "## 横向对比\n\n用户现在需要我基于前面给的几个AI CLI工具..." +
+              "\n\n首先第一个部分，生态全景..." +
+              "\n\n然后第三个部分，各工具活跃度对比..." +
+              "\n\n## 实际结论\n\n- 结论A\n- 结论B\n",
+          },
+        },
+      ],
+    });
+
+    const p = new StepFunProvider({ apiKey: "k", model: "step-clean" });
+    const result = await p.call("prompt", 256);
+    expect(result).toBe("## 实际结论\n\n- 结论A\n- 结论B");
   });
 });
