@@ -1,53 +1,76 @@
 # AI 开源趋势日报 2026-08-04
 
-> 数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-04 13:52 UTC
+> 数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-04 14:02 UTC
 
 ---
 
-# AI 开源趋势日报
-**日期：2026-08-04**
-
----
+# AI 开源趋势日报（2026-08-04）
 
 ## 今日速览
-
-今日 AI 开源领域呈现 **Agent 生态爆发** 与 **推理优化** 并进的格局。Agent 记忆层、AI 编程助手和轻量化推理成为最热赛道，TencentDB-Agent-Memory、AirLLM 等新锐项目单日吸粉过千。RAG 技术向知识图谱与混合检索演进，垂直领域 AI 应用（科学、金融、视频生成）持续涌现，社区正从模型层转向应用层与基础设施层的深度创新。
+今日AI开源领域热度集中在AI Agent落地与轻量推理方向：多款垂直场景Agent工具、团队级Agent记忆组件崭露头角，反映Agent工程化从通用框架向细分场景落地的趋势；同时低资源大模型推理工具热度暴涨，边缘部署需求持续升温。RAG与知识库方向热度稳定，向量数据库、Agent记忆层项目持续获得社区关注。
 
 ---
 
 ## 各维度热门项目
 
 ### 🔧 AI 基础工具
-
-- [lyogavin/airllm](https://github.com/lyogavin/airllm) ⭐0 (+1716 today) — AirLLM 实现 70B 大模型在单块 4GB GPU 上推理，突破硬件限制，今日因极简部署方案引发关注。
-- [firecrawl/pdf-inspector](https://github.com/firecrawl/pdf-inspector) ⭐0 (+2524 today) — Rust 编写的高性能 PDF 检测与文本提取库，智能识别扫描件与文本 PDF，为 AI 文档处理提供基础设施。
-- [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) ⭐0 (+784 today) — 微软出品的生成式 AI 入门教程，21 节课覆盖从零构建生成式 AI 应用，今日热度不减。
-- [0xPlaygrounds/rig](https://github.com/0xPlaygrounds/rig) ⭐8,164 — Rust 编写的模块化 LLM 应用开发框架，为系统工程师提供高性能推理服务构建能力。
-- [googleworkspace/cli](https://github.com/googleworkspace/cli) ⭐30,191 — Google Workspace 命令行工具，集成 AI agent 技能，实现 Drive、Gmail、Calendar 等服务的 AI 自动化。
+1. [lyogavin/airllm](https://github.com/lyogavin/airllm) ⭐ 1716（今日新增）
+   AirLLM实现70B大模型单4GB GPU推理，轻量级推理方案热度暴涨，为资源受限场景的大模型部署提供低成本选择。
+2. [esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) ⭐ 924（今日新增），总star 30,560
+   DeepSeek原生终端AI编码Agent，基于前缀缓存稳定性优化，支持长时间后台运行，适配DeepSeek生态的编码工具新选择。
+3. [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) ⭐ 784（今日新增）
+  微软开源生成式AI入门教程，包含21节从理论到实践的课程，降低GenAI开发入门门槛。
+4. [EveryInc/compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) ⭐ 33（今日新增）
+  支持Claude Code、Codex、Cursor等多款AI编码客户端的官方工程插件，可提升AI编码效率与工程规范。
 
 ### 🤖 AI 智能体/工作流
-
-- [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) ⭐0 (+1138 today) — 腾讯云开源的团队级 Agent 记忆中心，将对话、文档、代码转化为可复用的记忆资产，今日因企业级 Agent 治理需求升温。
-- [esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) ⭐30,552 (+924 today) — 基于 DeepSeek 的终端 AI 编程 Agent，围绕 prefix-cache 稳定性优化，支持长时间运行，今日登榜。
-- [obra/superpowers](https://github.com/obra/superpowers) ⭐0 (+617 today) — 轻量级 Agent 技能框架与软件开发方法论，强调可组合的智能体能力。
-- [livekit/agents](https://github.com/livekit/agents) ⭐0 (+432 today) — 实时语音、视频 AI Agent 开发框架，今日因实时多模态 Agent 趋势受关注。
-- [HKUDS/nanobot](https://github.com/HKUDS/nanobot) ⭐46,609 — 香港大学开源的超轻量个人 AI Agent 框架，支持 WebUI、工具调用、记忆与多智能体工作流。
-- [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) ⭐0 (+2310 today) — 面向安全研究的 AI 技能路由包，支持 AI 自动路由与工具链自举，今日因安全 AI 工具需求爆发。
-- [browser-use/video-use](https://github.com/browser-use/video-use) ⭐0 (+306 today) — 通过编码 Agent 编辑视频的 AI 工具，降低视频自动化处理门槛。
+1. [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) ⭐ 1138（今日新增）
+  腾讯云开源的团队级Agent记忆中枢，可将对话、文档、代码转化为可复用的记忆资产，统一管控多Agent、多框架的记忆能力，适配企业级多Agent协作场景。
+2. [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) ⭐ 2310（今日新增）
+  AI驱动的安全技能路由包，支持逆向工程、授权渗透测试等安全场景，适配主流AI编码客户端，自带工具链自举与知识库自进化能力。
+3. [livekit/agents](https://github.com/livekit/agents) ⭐ 432（今日新增）
+  实时语音AI Agent开发框架，支持构建带音视频能力的实时交互Agent，适合客服、会议等实时智能体场景。
+4. [obra/superpowers](https://github.com/obra/superpowers) ⭐ 617（今日新增）
+  Agentic技能框架与软件开发方法论，提供可落地的智能体开发范式，降低Agent开发门槛。
 
 ### 📦 AI 应用
-
-- [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) ⭐101,541 — 基于大模型的一键高清短视频生成工作流，输入主题即可自动生成带旁白的视频，内容创作领域标杆项目。
-- [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) ⭐42,957 — AI 将文档或主题转化为原生 PowerPoint 演示文稿，支持动画、图表与音频旁白。
-- [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) ⭐32,612 — 面向科学研究的 Agent 技能库，158 个现成技能覆盖生物、化学、医学，今日因科研 AI 化加速。
-- [666ghj/BettaFish](https://github.com/666ghj/BettaFish) ⭐41,940 — 多 Agent 舆情分析助手，打破信息茧房，辅助决策，从零实现不依赖框架。
+1. [firecrawl/pdf-inspector](https://github.com/firecrawl/pdf-inspector) ⭐ 2524（今日新增）
+  Rust实现的高性能PDF检测分类库，可智能识别扫描件/文本型PDF，为AI文档处理、RAG预处理等场景提供智能路由能力，今日 Trending 热度最高。
+2. [browser-use/video-use](https://github.com/browser-use/video-use) ⭐ 306（今日新增）
+  AI驱动的视频编辑工具，支持通过编码Agent实现视频自动化编辑，降低短视频制作门槛。
+3. [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) ⭐ 32,613
+  科研专属AI Agent技能库，覆盖生物、化学、医药等158个科研场景技能，已被17万+科研人员使用，适配多款AI客户端。
 
 ### 🧠 大模型/训练
+1. [ollama/ollama](https://github.com/ollama/ollama) 总star 177,755
+  本地大模型运行工具，支持Kimi-K2.6、DeepSeek、Qwen等主流模型一键部署，是当前最流行的本地LLM运行方案。
+2. [huggingface/transformers](https://github.com/huggingface/transformers) 总star 163,332
+  Hugging Face开源的多模态模型定义框架，覆盖文本、视觉、音频等模型的训练与推理，是当前最主流的模型开发基础框架。
+3. [0xPlaygrounds/rig](https://github.com/0xPlaygrounds/rig) 总star 8,164
+  Rust实现的模块化LLM应用开发框架，适合构建高性能、可扩展的大模型应用，填补了Rust生态的大模型开发工具空白。
 
-- [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow) ⭐196,778 — Google 主导的机器学习框架，工业级部署与生态最成熟。
-- [ollama/ollama](https://github.com/ollama/ollama) ⭐177,754 — 本地 LLM 运行工具，支持 Kimi-K2.6、DeepSeek、Qwen 等模型，简化模型部署。
-- [huggingface/transformers](https://github.com/huggingface/transformers) ⭐163,330 — Hugging Face 模型定义框架，覆盖文本、视觉、音频与多模态模型。
-- [pytorch/p
+### 🔍 RAG/知识库
+1. [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) 总star 130,425
+  开源AI Agent、技能与RAG应用合集，包含100+免费开源项目，是RAG应用开发的重要参考仓库。
+2. [infiniflow/ragflow](https://github.com/infiniflow/ragflow) 总star 86,798
+  强推理增强的RAG引擎，融合RAG与Agent能力，为LLM提供高质量上下文层，是企业级RAG落地的热门选择。
+3. [mem0ai/mem0](https://github.com/mem0ai/mem0) 总star 62,499
+  AI Agent通用记忆层，为Agent提供跨会话的持久化记忆能力，解决Agent“失忆”痛点，适配多款主流Agent框架。
+4. [topoteretes/cognee](https://github.com/topoteretes/cognee) 总star 29,761
+  开源AI记忆平台，基于知识图谱引擎为Agent提供长期持久记忆，支持自托管，保障数据隐私。
+
+---
+
+## 趋势信号分析
+今日AI开源的核心信号集中在三个方向：一是AI Agent工程化进入落地快车道，从通用框架向垂直场景细化，出现团队级Agent记忆、安全技能路由、科研专属技能等细分工具，覆盖企业开发、安全、科研等多场景；二是轻量部署与边缘推理需求爆发，AirLLM等支持低资源运行大模型的项目热度暴涨，反映开发者对降低大模型部署成本的强烈需求；三是RAG向“知识增强+记忆持久化”方向升级，向量数据库、Agent记忆层项目持续火热，知识管理从单次检索向长期记忆演进，与近期大模型上下文窗口扩展、Agent长程任务需求提升的趋势高度关联。
+
+---
+
+## 社区关注热点
+- **TencentDB-Agent-Memory**：企业级Agent记忆组件首次登榜，反映Agent从单机运行向团队协同、多框架共享记忆的方向演进，适合需要多Agent协作的团队关注。
+- **firecrawl/pdf-inspector**：PDF智能路由工具热度暴涨，AI文档处理场景的细分需求正在被挖掘，可作为RAG文档预处理Pipeline的关键组件。
+- **DeepSeek-Reasonix**：DeepSeek生态的终端编码Agent热度上升，国产大模型配套开发工具正在快速完善，适配DeepSeek模型的开发者可重点关注。
+- **ragflow**：企业级RAG引擎持续高热，融合Agent能力的RAG方案正在成为LLM应用落地的标准架构，适合需要搭建生产级RAG系统的团队参考。
 
 ---
 *本日报由 [agents-radar](https://github.com/huang-yi-dae/agents-radar) 自动生成。*

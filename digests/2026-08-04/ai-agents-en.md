@@ -1,6 +1,6 @@
 # OpenClaw Ecosystem Digest 2026-08-04
 
-> Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 13:52 UTC
+> Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-04 14:02 UTC
 
 - [OpenClaw](https://github.com/openclaw/openclaw)
 - [NanoBot](https://github.com/HKUDS/nanobot)
@@ -20,13 +20,20 @@
 
 ## OpenClaw Deep Dive
 
-[LLM fallback] stepfun returned an empty response.
+# OpenClaw Project Digest
+## Date: 2026-08-04
+
+---
+
+### 1. Today's Overview
+OpenClaw sees very high community activity on
 
 ---
 
 ## Cross-Ecosystem Comparison
 
-[LLM fallback] stepfun returned an empty response.
+> LLM generation failed: StepFun request failed: Connection error.
+
 
 ---
 
@@ -35,262 +42,180 @@
 <details>
 <summary><strong>NanoBot</strong> — <a href="https://github.com/HKUDS/nanobot">HKUDS/nanobot</a></summary>
 
-**NanoBot Project Digest – 2026-08-04**
-
----
-
-### 1. Today's Overview
-NanoBot shows high development activity with 27 pull requests updated in the last 24 hours (9 open, 18 merged/closed) and 3 issues updated (2 open, 1 closed). No new releases were published. The focus areas include security hardening, provider configuration fixes, channel-specific bug fixes, and WebUI enhancements. The project appears healthy with rapid iteration on both user-facing features and backend stability.
-
----
-
-### 2. Releases
-No new releases today.
-
----
-
-### 3. Project Progress
-**Merged/Closed PRs (selected highlights):**
-- **Telegram:** Fixed fenced code block rendering for languages with special characters ([PR #5222](https://github.com/HKUDS/nanobot/pull/5222)); added missing `group_mode` config field ([PR #1776](https://github.com/HKUDS/nanobot/pull/1776)).
-- **Anthropic:** Added support for Opus 5 effort controls ([PR #5236](https://github.com/HKUDS/nanobot/pull/5236)).
-- **WebUI:** Rendered Markdown in prompt rail previews ([PR #5244](https://github.com/HKUDS/nanobot/pull/5244)); aligned timestamp tooltips ([PR #5245](https://github.com/HKUDS/nanobot/pull/5245)); unified floating controls ([PR #5240](https://github.com/HKUDS/nanobot/pull/5240)); aligned automation metadata with timestamps ([PR #5243](https://github.com/HKUDS/nanobot/pull/5243)); rejected malformed slash commands ([PR #5242](https://github.com/HKUDS/nanobot/pull/5242)); added integrated Vite dev mode ([PR #5239](https://github.com/HKUDS/nanobot/pull/5239)); refined inline token highlights ([PR #5241](https://github.com/HKUDS/nanobot/pull/5241)).
-- **Session:** Added cross-session search and mentions ([PR #5211](https://github.com/HKUDS/nanobot/pull/5211)).
-- **Other:** Prevented silent consolidator failure when boundary not found ([PR #3200](https://github.com/HKUDS/nanobot/pull/3200)); added agent plugin infrastructure ([PR #3211](https://github.com/HKUDS/nanobot/pull/3211)).
-
----
-
-### 4. Community Hot Topics
-- **Security – API key leakage** ([Issue #4784](https://github.com/HKUDS/nanobot/issues/4784), 2 comments): Critical concern about global `os.environ` mutation exposing provider keys. Active discussion on isolation.
-- **Trusted proxy bootstrap auth** ([PR #5210](https://github.com/HKUDS/nanobot/pull/5210), P1): Community interest in secure deployments behind reverse proxies.
-- **Session refactor** ([PR #5238](https://github.com/HKUDS/nanobot/pull/5238), P1): Removal of request-scoped access grants to simplify authorization.
-- **Quick Chat & Temporary Chat** ([PR #5184](https://github.com/HKUDS/nanobot/pull/5184)): Feature request for persistent and ephemeral chat modes.
-- **MCP error handling** ([Issue #5237](https://github.com/HKUDS/nanobot/issues/5237), 1 comment): Agent fails to recognize tool-level business errors.
-
----
-
-### 5. Bugs & Stability
-- **Critical:** Provider API keys leaked via global `os.environ` mutation ([Issue #4784](https://github.com/HKUDS/nanobot/issues/4784)) – open, no merged fix yet.
-- **High:** MCP tool “data not found” envelope ignored by agent ([Issue #5237](https://github.com/HKUDS/nanobot/issues/5237)) – open, no fix PR yet.
-- **Medium:** Anthropic Opus 5 temperature handling bug ([Issue #5235](https://github.com/HKUDS/nanobot/issues/5235)) – closed, fix merged ([PR #5236](https://github.com/HKUDS/nanobot/pull/5236)).
-- **Medium:** Telegram silently stalled polling ([PR #5156](https://github.com/HKUDS/nanobot/pull/5156)) – open.
-- **Low:** WeCom filename sanitization can target directory instead of file ([PR #5223](https://github.com/HKUDS/nanobot/pull/5223)) – open.
-- **Low:** Telegram fenced code corruption with special language tags ([PR #5222](https://github.com/HKUDS/nanobot/pull/5222)) – closed.
-
----
-
-### 6. Feature Requests & Roadmap Signals
-- **Trusted proxy auth** for WebUI bootstrap ([PR #5210](https://github.com/HKUDS/nanobot/pull/5210)) – likely in next release.
-- **Mattermost thread-level group policy** ([PR #5233](https://github.com/HKUDS/nanobot/pull/5233)) – enhances channel configurability.
-- **Quick Chat and Temporary Chat** ([PR #5184](https://github.com/HKUDS/nanobot/pull/5184)) – WebUI UX improvement.
-- **Cross-session search and mentions** ([PR #5211](https://github.com/HKUDS/nanobot/pull/5211)) – already merged, now part of baseline.
-- **Delegation skills (Claude Code, Codex)** ([PR #1288](https://github.com/HKUDS/nanobot/pull/1288)) – merged earlier, signals ecosystem extensibility.
-
----
-
-### 7. User Feedback Summary
-Users report concrete pain points:
-- **Security & multi-provider isolation:** Keys meant for one provider overwrite another due to global environment mutation.
-- **Model compatibility:** New model releases (Opus 5) break existing parameter handling.
-- **Tool reliability:** MCP business errors are silently swallowed, leaving agents stuck.
-- **Channel-specific UX:** Telegram group replies, code formatting, and polling stability need polish; WeCom media handling needs robustness.
-- **Workflow convenience:** Requests for faster chat modes (Quick/Temporary) and better proxy support indicate demand for production-ready deployment options.
-
----
-
-### 8. Backlog Watch
-- **Issue #4784** (security) open since 2026-07-06 – highest priority, needs maintainer attention.
-- **PR #5156** (telegram polling) open since 2026-07-29 – medium priority, no recent review activity.
-- **PR #5184** (Quick Chat) open since 2026-07-30 – feature request awaiting merge.
-- **PR #5233** (Mattermost threads) open since 2026-08-03 – awaiting review.
-- **PR #5238** (session refactor) opened today (P1) – likely to be prioritized quickly.
+[LLM fallback] stepfun returned an empty response.
 
 </details>
 
 <details>
 <summary><strong>Zeroclaw</strong> — <a href="https://github.com/zeroclaw-labs/zeroclaw">zeroclaw-labs/zeroclaw</a></summary>
 
-[LLM fallback] stepfun returned an empty response.
+# Zeroclaw Project Digest (2026-08-04)
+
+## 1. Today's Overview
+2026-08-04 saw high activity across the Zeroclaw repository, with 50 issues and 50 pull requests updated in the prior 24 hours (48 open issues, 46 open PRs, 4 merged/closed PRs). No new releases were published, as the project remains in an active design and implementation phase focused on architecture hardening, security enhancements, and core feature rollouts for upcoming milestones. The majority of active work centers on the multi-slice Hindsight persistent memory stack, cross-turn observability, and transport/session ownership standardization.
+
+## 2. Releases
+No new releases were published on 2026-08-04.
+
+## 3. Project Progress
+4 pull requests were merged or closed in the last 24 hours. Active open PR work advancing core functionality includes:
+- The 7-slice Hindsight persistent memory stack (PRs [#9063](https://github.com/zeroclaw-labs/zeroclaw/pull/9063), [#9064](https://github.com/zeroclaw-labs/zeroclaw/pull/9064), [#9065](https://github.com/zeroclaw-labs/zeroclaw/pull/9065), [#9066](https://github.com/zeroclaw-labs/zeroclaw/pull/9066), [#9067](https://github.com/zeroclaw-labs/zer
 
 </details>
 
 <details>
 <summary><strong>PicoClaw</strong> — <a href="https://github.com/sipeed/picoclaw">sipeed/picoclaw</a></summary>
 
-[LLM fallback] stepfun returned an empty response.
+**PicoClaw Project Digest – 2026-08-04**
+
+---
+
+### 1. Today's Overview
+On 2026-08-04, the PicoClaw repository saw moderate activity with 8 issues and 6 pull requests updated in the previous 24 hours. The project currently has 3 open issues and 3 open PRs, while 5 issues and 3 PRs were closed or merged. No new releases were published. The community continues to focus on stability improvements, UI performance, and feature enhancements.
+
+---
+
+### 2. Releases
+No new releases were published on 2026-08-04.  
+*Section omitted per instructions.*
+
+---
+
+### 3. Project Progress
+Three PRs were closed or merged recently, contributing fixes and features:
+- **PR #3267** – Fixed a scope bug in the antigravity token refresh flow, preventing `PERMISSION_DENIED` errors during LLM calls. ([link](https://github.com/sipeed/picoclaw/pull/3267))
+- **PR #3273** – Added complete Japanese (`ja`) localization to the PicoClaw WebUI, including i18next resources and dayjs locale registration. ([link](https://github.com/sipeed/picoclaw/pull/3273))
+- **PR #3202** – Corrected ID normalization logic to strip leading/trailing underscores, ensuring compliance with the documented `^[a-z0-9][a-z0-9_-]{0,63}$` pattern. ([link](https://github.com/sipeed/picoclaw/pull/3202))
+
+---
+
+### 4. Community Hot Topics
+The most active discussions based on comment count and reactions are:
+- **Issue #3269** – *MCP server connection failure hangs the agent loop* (3 comments, 1 👍). Highlights a critical reliability gap in the agent execution pipeline. ([link](https://github.com/sipeed/picoclaw/issues/3269))
+- **Issue #3281** – *Web UI chat input lag with moderately long history* (3 comments, 1 👍). Points to performance bottlenecks in the frontend rendering or state management. ([link](https://github.com/sipeed/picoclaw/issues/3281))
+- **PR #3316** – *Fix routed-agent context management* (open, created 2026-08-03). Addresses broken memory and auto-compression for dispatch-routed agents, a direct response to user-reported context loss. ([link](https://github.com/sipeed/picoclaw/pull/3316))
+
+Underlying needs: robust error handling for external services, scalable UI performance, and predictable agent behavior in multi-agent deployments.
+
+---
+
+### 5. Bugs & Stability
+Reported bugs, ranked by apparent severity:
+1. **Issue #3269** – MCP server connection failure causes the entire agent loop to hang, making the chat interface unresponsive. *(Critical)* ([link](https://github.com/sipeed/picoclaw/issues/3269))
+2. **Issue #3301** – `/clear` and session auto-compression fail for chats routed to non-default agents via dispatch rules. *(High)* ([link](https://github.com/sipeed/picoclaw/issues/3301))
+3. **Issue #3281** – Web UI input becomes laggy when chat history grows beyond a few messages. *(Medium)* ([link](https://github.com/sipeed/picoclaw/issues/3281))
+4. **Issue #3264** – `SplitMessage` enters an infinite loop on oversized fenced-code info strings, risking crashes. *(Medium)* ([link](https://github.com/sipeed/picoclaw/issues/3264))
+5. **Issue #3265** – Gateway fails to start if an unknown channel type (e.g., `deltachat`) appears in configuration, even when not used. *(Medium)* ([link](https://github.com/sipeed/picoclaw/issues/3265))
+6. **Issue #3268** – `exec` tool requires an `action` parameter that should default to `"run"`, causing unpredictable AI agent failures. *(Low–Medium)* ([link](https://github.com/sipeed/picoclaw/issues/3268))
+
+Related fix PRs: #3316 (addresses #3301), #3267 (token refresh), #3202 (routing ID normalization). No open PRs currently target #3269, #3281, #3264, #3265, or #3268.
+
+---
+
+### 6. Feature Requests & Roadmap Signals
+- **Issue #3276** – Launcher should detect externally-managed gateways (systemd) and tolerate unknown channel types instead of hard-failing. ([link](https://github.com/sipeed/picoclaw/issues/3276))
+- **Issue #3272** – Request for Japanese localization (now implemented via PR #3273, likely in the next release). ([link](https://github.com/sipeed/picoclaw/issues/3272))
+- **PR #3315** – Support for Telegram topics in private bot chats, extending forum-mode handling to non-supergroup contexts. ([link](https://github.com/sipeed/picoclaw/pull/3315))
+
+Prediction: Japanese localization (#3273) and private topic support (#3315) are strong candidates for inclusion in the next version. Gateway launcher improvements (#3276) may follow in a subsequent release.
+
+---
+
+### 7. User Feedback Summary
+- **Pain points**: Reliability of external integrations (MCP server), UI responsiveness during longer sessions, agent memory consistency when using dispatch rules, and configuration rigidity in the gateway/launcher.
+- **Use cases**: Headless server deployments with systemd, multi-channel bots (Discord, Telegram), and AI agents that execute code or use tools.
+- **Satisfaction**: Community is actively engaged, filing detailed bug reports and contributing fixes. The presence of multiple stale-but-closed issues suggests maintainers are addressing backlog, though some critical bugs remain open.
+
+---
+
+### 8. Backlog Watch
+Open issues and PRs that are stale or awaiting maintainer attention:
+- **Issue #3269** – Stale, open critical bug (MCP hang) since 2026-07-20. Requires urgent fix. ([link](https://github.com/sipeed/picoclaw/issues/3269))
+- **Issue #3281** – Stale, open UI performance issue since 2026-07-21. ([link](https://github.com/sipeed/picoclaw/issues/3281))
+- **Issue #3301** – Open bug regarding routed-agent context; recently updated but not yet fixed. ([link](https://github.com/sipeed/picoclaw/issues/3301))
+- **PR #3317** – Open enhancement to log prompt cache tokens in LLM response debug output. ([link](https://github.com/sipeed/picoclaw/pull/3317))
+- **PR #3316** – Open fix for routed-agent context management; review/merge needed. ([link](https://github.com/sipeed/picoclaw/pull/3316))
+- **PR #3315** – Open feature for private chat topic support; review/merge needed. ([link](https://github.com/sipeed/picoclaw/pull/3315))
 
 </details>
 
 <details>
 <summary><strong>NanoClaw</strong> — <a href="https://github.com/qwibitai/nanoclaw">qwibitai/nanoclaw</a></summary>
 
-**NanoClaw Project Digest — 2026-08-04**
+# NanoClaw Project Digest (2026-08-04)
+## 1. Today's Overview
+NanoClaw recorded moderate development activity on 2026-08-04, with 10 pull requests updated in the prior 24 hours (5 open, 5 merged/closed) and no new open or closed issues, and no new releases published. Work is split across new channel integration features, core stability fixes, and operational infrastructure updates. No critical unaddressed community-reported issues are active as of the reporting date.
 
----
+## 2. Releases
+No new releases were published for NanoClaw on 2026-08-04.
 
-### 1. Today's Overview
+## 3. Project Progress
+5 pull requests were merged or closed on 2026-08-04, advancing core functionality and operational stability:
+1. PR #3154 (https://github.com/nanocoai/nanoclaw/pull/3154): Fixed scheduled task time rendering to use the effective scheduled occurrence timestamp, with legacy creation time fallback, and added task-only `current_time` generation for agent runs.
+2. PR #3182 (https://github.com/nanocoai/nanoclaw/pull/3182): Repinned the agent container image to the hardened-2026-08-02 build, with identical upstream AI echo digest to prior versions for consistent behavior.
+3. PR #3180 (https://github.com/nanocoai/nanoclaw/pull/3180): Surfaced the hardened agent image migration process to end users.
+4. PR #3137 (https://github.com/nanocoai/nanoclaw/pull/3137): Fixed engagement context consistency to retain accumulated messages without triggering unnecessary follow-up turns, added group-scoped agent wiring inspection capabilities, and added validation for engagement policy JavaScript regexes.
+5. PR #3181 (https://github.com/nanocoai/nanoclaw/pull/3181): Fixed iMessage onboarding to opt users in automatically via their first message to the assigned line.
 
-NanoClaw shows moderate development activity with no new releases or issues opened in the last 24 hours. Ten pull requests were updated, split evenly between five merged/closed and five open. The project focuses on channel integrations, stability fixes, and agent runtime improvements.
+## 4. Community Hot Topics
+The most active ongoing work items as of the reporting date are:
+1. Dial channel integration feature work: PR #3041 (https://github.com/nanocoai/nanoclaw/pull/3041) and PR #3050 (https://github.com/nanocoai/nanoclaw/pull/3050), both opened 2026-07-14 and updated 2026-08-04, add support for SMS and AI voice calls via the Dial integration, plus corresponding setup for the channel picker, wizard, and skills system.
+2. Discord approval workflow bug fix: PR #3185 (https://github.com/nanocoai/nanoclaw/pull/3185), created and updated 2026-08-04, addresses a high-impact regression that breaks all approval requests in Discord.
+Underlying needs: Users are requesting expanded communication channel support beyond existing integrations, and demand more transparent, user-controlled agent configuration options.
 
----
+## 5. Bugs & Stability
+Three active bug fixes are in progress, ranked by severity:
+1. Critical: PR #3185 (https://github.com/nanocoai/nanoclaw/pull/3185) addresses a regression in the Discord Chat SDK bridge where all approval requests are incorrectly rejected, even when users click Approve, caused by a newline delimiter bug in webhook `custom_id` parsing.
+2. Medium: PR #3184 (https://github.com/nanocoai/nanoclaw/pull/3184) fixes a crash that occurs when resuming a conversation with a missing transcript file, which previously returned a fatal `No conversation found with session ID` error.
+3. Medium: PR #3183 (https://github.com/nanocoai/nanoclaw/pull/3183) fixes a bug where users messaging channels inactive for 30+ days receive session not found errors instead of a reply, caused by retention cleanup reaping cold active sessions.
+All three fixes have open pull requests pending review.
 
-### 2. Releases
+## 6. Feature Requests & Roadmap Signals
+The active Dial channel integration PRs (#3041, #3050) are the highest-priority feature in progress, and are likely to be included in the next project release given their active maintenance and alignment with user demand for expanded communication channels. The recently merged engagement wiring controls (PR #3137) signal a roadmap focus on giving end users and group admins more granular control over agent behavior and configuration.
 
-No new releases were published today.
+## 7. User Feedback Summary
+No explicit user feedback threads are included in the provided data, but the active bug fixes indicate reported user pain points around broken Discord approval workflows, conversation resume failures for missing transcripts, and errors when messaging inactive channels. The active Dial channel integration feature work signals clear user demand for expanded communication channel support including SMS and AI voice calls. No explicit satisfaction or dissatisfaction metrics are available for the reporting period.
 
----
-
-### 3. Project Progress
-
-**Merged / Closed PRs:**
-- **#3154** — `fix(agent-runner): give scheduled tasks current run time` (core-team). Renders task time from effective scheduled occurrence, adds task-only `current_time` at agent runtime. [PR #3154](https://github.com/qwibitai/nanoclaw/pull/3154)
-- **#3182** — `versions: repin the agent image to hardened-2026-08-02` (core-team). Updates agent image digest and base. [PR #3182](https://github.com/qwibitai/nanoclaw/pull/3182)
-- **#3180** — `fix(update): surface hardened image migration` (core-team). Operational skill to expose migration path. [PR #3180](https://github.com/qwibitai/nanoclaw/pull/3180)
-- **#3137** — `Fix engagement consistency and expose self-serve wiring controls` (core-team). Preserves message context, allows agents to inspect/adjust engagement policies, validates JS regexes. [PR #3137](https://github.com/qwibitai/nanoclaw/pull/3137)
-- **#3181** — `fix(imessage): opt in via first message to the assigned line` (core-team). [PR #3181](https://github.com/qwibitai/nanoclaw/pull/3181)
-
-**Open PRs:**
-- **#3050** — `feat(setup): add Dial to the channel picker + wizard/skills`. Adds Dial channel integration. [PR #3050](https://github.com/qwibitai/nanoclaw/pull/3050)
-- **#3041** — `feat(channels): add Dial channel adapter (SMS + AI voice calls)`. [PR #3041](https://github.com/qwibitai/nanoclaw/pull/3041)
-- **#3185** — `fix(discord): strip \n delimiter in webhook interaction custom_id so approvals resolve correctly`. [PR #3185](https://github.com/qwibitai/nanoclaw/pull/3185)
-- **#3184** — `fix(claude): rotate on missing transcript instead of resuming into a dead session`. [PR #3184](https://github.com/qwibitai/nanoclaw/pull/3184)
-- **#3183** — `fix(group-init): pin cleanupPeriodDays so retention cleanup can't reap cold sessions`. [PR #3183](https://github.com/qwibitai/nanoclaw/pull/3183)
-
----
-
-### 4. Community Hot Topics
-
-All PRs have zero comments and zero reactions. The most significant topics are the Dial channel feature pair (#3041, #3050) and the Discord approval fix (#3185), reflecting active integration expansion and platform stability work.
-
----
-
-### 5. Bugs & Stability
-
-**High severity:**
-- **#3185** — Discord webhook approvals always reject due to newline in `custom_id` decoding. Fix PR open. [PR #3185](https://github.com/qwibitai/nanoclaw/pull/3185)
-- **#3184** — Missing transcript causes `No conversation found` errors on next message. Fix PR open. [PR #3184](https://github.com/qwibitai/nanoclaw/pull/3184)
-- **#3183** — Cold group sessions (30+ days) throw `No conversation found` instead of replying. Fix PR open. [PR #3183](https://github.com/qwibitai/nanoclaw/pull/3183)
-
-**Fixed / Closed:**
-- **#3154** — Agent-runner scheduled task time rendering corrected. [PR #3154](https://github.com/qwibitai/nanoclaw/pull/3154)
-
----
-
-### 6. Feature Requests & Roadmap Signals
-
-- **Dial channel adapter** (#3041, #3050) — SMS and AI voice calls support. Likely targeted for the next release given active development.
-
----
-
-### 7. User Feedback Summary
-
-No new issues today. Reported bugs (#3185, #3184, #3183) indicate user-facing failures in Discord approvals, Claude session continuity, and group-init message handling, suggesting reliability gaps in multi-channel and session management.
-
----
-
-### 8. Backlog Watch
-
-No open issues. Five open PRs remain unmerged: #3050, #3041, #3185, #3184, #3183. Core-team PRs (#3154, #3182, #3180, #3137, #3181) were recently merged. Maintainer review is needed for the open community and internal PRs.
+## 8. Backlog Watch
+No open issues are pending maintainer response as of 2026-08-04. The two Dial channel integration pull requests (#3041 https://github.com/nanocoai/nanoclaw/pull/3041, #3050 https://github.com/nanocoai/nanoclaw/pull/3050) have been open for 21 days as of the reporting date, and may benefit from prioritized maintainer review to advance the feature toward merge.
 
 </details>
 
 <details>
 <summary><strong>NullClaw</strong> — <a href="https://github.com/nullclaw/nullclaw">nullclaw/nullclaw</a></summary>
 
-# NullClaw Project Digest (2026-08-04)
-## Today's Overview
-As of 2026-08-04, NullClaw has minimal recent development activity, with no new pull requests, merged code changes, or releases in the last 24 hours. The project’s only open issue, #915, saw its last update on 2026-08-03, with no new activity recorded in the past day. No new issues were opened, and no existing issues were closed during the reporting window. Overall project activity for the period is low, with no active in-progress development work visible in public repositories.
+# NullClaw Project Digest | 2026-08-04
+---
+## 1. Today's Overview
+On 2026-08-04, NullClaw recorded minimal development activity: no issues were created, updated, or closed in the preceding 24 hours, and no new releases were published. The sole activity in the window was an update to 1 open pull request, with no merged or closed PRs. Overall project activity is low, focused solely on in-progress feature work for new provider support, with no active community discussions or reported problems in the day.
 
-## Releases
-No new releases were published for NullClaw in the reporting period.
+## 2. Releases
+No new releases were published on 2026-08-04. No version changes, breaking changes, or migration notes are available for this date.
 
-## Project Progress
-No pull requests were updated, merged, or closed in the last 24 hours. No new features, bug fixes, or code improvements were advanced in the reporting window.
+## 3. Project Progress
+The only PR updated in the last 24 hours is [PR #981](https://github.com/nullclaw/nullclaw/pull/981), authored by valonmulolli and originally opened on 2026-07-29. This open PR adds an optional `grok-cli` provider that delegates to the local xAI Grok CLI, following the existing spawn-per-request pattern used for `codex-cli`, `gemini-cli`, and `claude-cli` providers. The PR has not yet been merged or closed as of the report date.
 
-## Community Hot Topics
-The most active community topic is Issue #915 ([bug] Problem with scheduler unauthorized), which has 4 comments and 1 community upvote: https://github.com/nullclaw/nullclaw/issues/915. The issue, first opened on 2026-05-15, describes a user running NullClaw on Ubuntu with a local network-hosted Ollama instance running qwen3.6:27b on an RTX 3090, where general LLM inference and tool calling function correctly, but the built-in scheduler fails to work across Telegram chat and other use cases. The high comment count and upvote indicate the scheduler bug impacts a subset of users relying on NullClaw’s time-based task automation features.
+## 4. Community Hot Topics
+There are no active open or closed issues as of 2026-08-04. The only active community-facing work is the aforementioned [PR #981](https://github.com/nullclaw/nullclaw/pull/981), which is the sole point of discussion for recent project activity. This PR addresses demand for native support of xAI's Grok CLI tool, aligning with the project's existing pattern of integrating popular local AI CLIs as optional providers.
 
-## Bugs & Stability
-One active bug was updated in the reporting period, with no associated fix pull requests currently open:
-1. [Medium-High Severity] Issue #915: Scheduler functionality fails entirely for users running NullClaw with external Ollama hosts, blocking access to time-based task automation features. No fix PRs have been submitted for this issue to date.
+## 5. Bugs & Stability
+No bugs, crashes, regressions, or stability issues were reported, updated, or resolved in the 24 hours leading up to 2026-08-04. There are no open bug-related issues to track for the date.
 
-## Feature Requests & Roadmap Signals
-No new feature requests were opened or updated in the reporting period. No public roadmap signals or planned feature announcements are visible in recent repository activity.
+## 6. Feature Requests & Roadmap Signals
+The in-progress [PR #981](https://github.com/nullclaw/nullclaw/pull/981) is the only active feature work on the project as of the report date. If the PR passes review, it will add optional support for the xAI Grok CLI to NullClaw's provider roster, consistent with the project's pattern of supporting widely used local AI CLI tools. No other feature requests or roadmap-aligned work is currently in active development.
 
-## User Feedback Summary
-The only recorded user feedback in the reporting period comes from the reporter of Issue #915, who expresses frustration that NullClaw’s core scheduler feature is completely non-functional in their deployment environment (Ubuntu host, local network Ollama instance, RTX 3090 GPU, qwen3.6:27b model) despite general LLM inference and tool calling working correctly. The user’s use case relies on time-based task automation via the scheduler, and the bug prevents them from using this core functionality. No other user feedback, positive or negative, was recorded in the last 24 hours.
+## 7. User Feedback Summary
+No user-submitted feedback, pain points, use case discussions, or satisfaction/dissatisfaction reports were posted or updated in the 24 hours prior to 2026-08-04. There are no active user feedback threads to analyze for the date.
 
-## Backlog Watch
-Issue #915, first opened on 2026-05-15, has remained unresolved for nearly 3 months with no fix submitted, and is the only item in the project’s active backlog requiring maintainer attention. The issue has received 4 community comments but no official maintainer response or resolution timeline as of the reporting date.
+## 8. Backlog Watch
+There are no stale, long-unanswered issues or PRs requiring maintainer attention as of 2026-08-04. The only open PR (#981) was updated on the report date, so it is not considered backlogged. The project has 0 active open issues, with no pending items awaiting maintainer response.
 
 </details>
 
 <details>
 <summary><strong>IronClaw</strong> — <a href="https://github.com/nearai/ironclaw">nearai/ironclaw</a></summary>
 
-## Today's Overview
-IronClaw saw intense development activity on 2026-08-04, with 50 issues and 50 pull requests updated in the last 24 hours. The project is in the middle of a large-scale Reborn architecture refactor (WS2–WS6), alongside a wave of stability fixes and CI hygiene improvements. Open issues currently stand at 42, with 8 closed today. No new releases were cut.
-
-## Releases
-None.
-
-## Project Progress
-### Merged/Closed PRs (today)
-- **PR #7143** — Executed the first half of the WS2 re-layer for `host_ingress`, deleting retired-identity migration and closing four WS2 rows.  
-- **PR #7134** — Fixed Windows fixture portability and stabilized E2E coverage.  
-- **PR #7126** — Stopped the “Reconnecting” badge from flashing on every streamed SSE chunk.  
-- **PR #7132** — Made builtin `grep` filesystem diagnostics model-visible and actionable.  
-- **PR #7122** — Required explicit approved release cuts via a new manual workflow.  
-- **PR #7092** — Closed the initial `ironclaw_extension_host` product-to-loops sizing task.  
-- **PR #7100** — Closed: CI Reborn test planner failed closed on `crates/AGENTS.md`.  
-- **PR #7116** — Closed: Live-QA runner incorrectly gated Slack cases.  
-- **PR #7072** — Closed: Telegram raw Markdown rendering bug.  
-- **PR #7069** — Closed: Google services required repeated authentication.  
-- **PR #7071** — Closed: “Reconnecting” status appeared during streaming.  
-- **PR #7089** — Closed: Dependabot everything-else group bump.
-
-## Community Hot Topics
-- **Issue #7137** (6 comments) — `live-canary` artifacts are 700MB–1.5GB each; community seeks exclusions for regenerable/intermediate paths to save storage and speed triage.  
-- **Issue #6898** (4 comments) — `write_file` silently corrupts binary documents; demand for binary-target guards and proof-of-read enforcement.  
-- **Issue #7145** (3 comments) — Successor to the extension_host re-layer; debate over sizing the flip by the four-port residue rather than file count.  
-- **Issue #6900** (3 comments) — Shared-channel default subject binding collapses all users into the operator’s memory namespace; cross-user memory leak flagged as P0 security.  
-- **Issue #7087** (3 comments) — Reborn PR test planner hard-fails on Dockerfile, `.githooks/`, `.claude/`, and `crates/AGENTS.md` gates, blocking PRs.  
-
-## Bugs & Stability
-### High Severity
-- **#6898** — `write_file` corrupts docx/xlsx/pptx/pdf by treating raw bytes as text. Fix in progress via **PR #7132** (grep diagnostics) and related tooling work.  
-- **#6900** — Cross-user memory leak in shared channels (P0 security). No merged fix yet.  
-- **#6899** — Install failures drop diagnostics; `skill_install` collapses all errors to `operation_failed`. No merged fix yet.  
-
-### Medium Severity
-- **#6896** — Scheduled/triggered run failures never delivered; **PR #7131** now delivers terminal notices to the creator.  
-- **#7083** — Coverage is dark for the entire `crates/extensions/` family due to CRATE_RE path assumptions.  
-- **#7085** — `check-version-bumps.sh` silently skips `WIT_TOOL_VERSION` cross-check on macOS.  
-- **#7081** — Docker fail-closed test gate wired to nothing (`IRONCLAW_REQUIRE_DOCKER_TESTS` never set).  
-
-### Lower Severity / UX
-- **#7072** — Telegram messages render raw Markdown; closed by **PR #7126**.  
-- **#7071** — “Reconnecting” status flashes during streaming; closed by **PR #7126**.  
-- **#7069** — Google services require repeated authentication; closed by **PR #7069** fix.  
-
-## Feature Requests & Roadmap Signals
-- **#7137** — Artifact upload exclusion for regenerable paths; signals upcoming CI storage and cost optimizations.  
-- **#7145 / #7152 / #7139** — WS2/WS6 re-layers and crate renames indicate the Reborn modularization is a top priority.  
-- **#6990, #6988, #6989** — Compaction summarization must not pollute prompt cache, derive context budget from actual model window, and fix token accounting; part of the pi-harness adoption program (P1). Likely in next milestone.  
-- **#6986** — Tool cache byte-identical advertising; deferred loading instead of mid-run promotion.  
-- **#3762** — Editing `AGENTS.md` in WebUI should update the system prompt immediately; a long-standing UX request.
-
-## User Feedback Summary
-- **Pain point: file corruption risk** — Users expect safe editing of binary documents; the current silent overwrite behavior is unacceptable.  
-- **Pain point: memory privacy** — Shared-channel memory leakage violates multi-tenant isolation expectations.  
-- **Pain point: silent failures** — Install and trigger failures without diagnostics leave operators blind.  
-- **Pain point: streaming UX** — Badge flashing and Markdown rendering degrade messaging experience.  
-- **Positive signal** — Rapid closure of bug-bash items (Telegram, Google auth, reconnect badge) shows responsive QA pipeline.
-
-## Backlog Watch
-- **Issue #3762** — Open since 2026-05-18; WebUI `AGENTS.md` edit not reflected in system prompt. Needs maintainer prioritization.  
-- **Issue #6957** — Open PR since 2026-07-31 for IronHub installed package lifecycle management; large XL scope, not yet merged.  
-- **Issue #6990 / #6988 / #6989** — Pi-harness compaction/token accounting work is open and unmerged; core to next architecture milestone.  
-- **PR #5598** — Open release chore PR since 2026-07-03; version bumps pending merge.
+[LLM fallback] stepfun returned an empty response.
 
 </details>
 
@@ -299,35 +224,17 @@ None.
 
 # LobsterAI Project Digest (2026-08-04)
 
-## Today's Overview
-On August 4, 2026, LobsterAI recorded moderate development activity with 12 pull requests updated (10 merged/closed, 2 open) and 1 open issue updated, with no new public releases published. The bulk of work focused on finalizing features and fixes for the upcoming 2026.8.3 release, including credit reward functionality, login experience improvements, and model error handling enhancements. Routine dependency updates via Dependabot were also processed. An unaddressed open security bug related to model key leakage remains a key outstanding risk for the project.
+## 1. Today's Overview
+On 2026-08-04, the LobsterAI repository recorded moderate development activity, with 12 pull requests updated (10 merged/closed, 2 open) and 1 active open issue updated. No new software releases were published on the date. Development work was focused on finalizing the upcoming 2026.8.3 release, with contributions covering credit campaign features, login experience optimization, error handling improvements, and dependency updates. The project has one unaddressed high-severity security bug related to sensitive information leakage that requires maintainer attention.
 
-## Releases
-No new releases were published on 2026-08-04; this section is omitted per requirements.
+## 2. Releases
+No new releases were published on 2026-08-04.
 
-## Project Progress
-10 pull requests were merged or closed on 2026-08-04, with the majority tied to the upcoming 2026.8.3 release:
-- [PR #2430](https://github.com/netease-youdao/LobsterAI/pull/2430): Merged release integration for 2026.8.3, bundling all release changes including native credit-reward activities, streamlined first-run login flow, artifact auto-preview controls, improved model error handling, and Windows installer reliability fixes
-- [PR #2429](https://github.com/netease-youdao/LobsterAI/pull/2429): Merged login page UX optimizations
-- [PR #2428](https://github.com/netease-youdao/LobsterAI/pull/2428): Merged extended analytics fields for the startup credit campaign, including full login redirect URL reporting and error categorization for campaign claim failures
-- [PR #2427](https://github.com/netease-youdao/LobsterAI/pull/2427): Merged bundling of startup credit campaign artwork, with server-controlled campaign state and reward fulfillment
-- [PR #2426](https://github.com/netease-youdao/LobsterAI/pull/2426): Merged fix to classify model provider capacity overloads separately from generic rate limits, reducing user confusion and unnecessary retries
-- [PR #2425](https://github.com/netease-youdao/LobsterAI/pull/2425): Merged new user setting to disable automatic artifact preview opening while preserving manual preview access
-- [PR #2424](https://github.com/netease-youdao/LobsterAI/pull/2424): Merged restoration of the active credits campaign, including the 500-credit claim flow for eligible non-subscribers
-- [PR #1282](https://github.com/netease-youdao/LobsterAI/pull/1282), [PR #1283](https://github.com/netease-youdao/LobsterAI/pull/1283), [PR #1284](https://github.com/netease-youdao/LobsterAI/pull/1284): Closed routine Dependabot dependency bumps for @headlessui/react, react, and react-syntax-highlighter respectively.
-
-## Community Hot Topics
-The only active community item with recent engagement is open issue [Issue #1202](https://github.com/netease-youdao/LobsterAI/issues/1202), a security bug report originally filed on 2026-04-01 and updated on 2026-08-04 with 1 comment. The report highlights that the LobsterAI agent leaks sensitive model API key configuration details (including file paths and environment variable references) when queried by users, with a reproduction log attached. This indicates a high-priority unmet user need for robust sensitive data protection in the agent's response filtering logic.
-
-## Bugs & Stability
-- High severity: Open issue [Issue #1202](https://github.com/netease-youdao/LobsterAI/issues/1202) reports a sensitive information leakage bug where the agent discloses model API key configuration details to user queries, posing a security risk. No fix has been published as of 2026-08-04.
-- Medium severity: A previously existing bug that misclassified model provider capacity overload errors as generic rate limits, leading to user confusion, was fixed in merged [PR #2426](https://github.com/netease-youdao/LobsterAI/pull/2426) on 2026-08-04.
-
-## Feature Requests & Roadmap Signals
-The merged artifact auto-preview toggle ([PR #2425](https://github.com/netease-youdao/LobsterAI/pull/2425)) confirms that user demand for control over automatic file preview behavior was addressed, and the feature will launch in the upcoming 2026.8.3 release. The suite of credit reward campaign features (bundled in PRs #2424, #2427, #2428) signals that the project is prioritizing user engagement via credit-based incentives in its next public release. No open unplanned feature requests are present in the tracked GitHub data for the date.
-
-## User Feedback Summary
-Explicit user feedback is limited to the security bug report #1202, which demonstrates that users expect the LobsterAI agent to block disclosure of sensitive configuration data such as API keys. The merged login page optimization (PR #2429) indicates that prior user feedback about friction in the first-run login experience was acted on in
+## 3. Project Progress
+10 pull requests were merged or closed on 2026-08-04, advancing the upcoming 2026.8.3 release and dependency maintenance:
+- PR #2430: Merged the `release/2026.8.3` branch into `main`, finalizing the release that includes native credit-reward activities, streamlined first-run login, Artifact auto-preview controls, improved model error handling, and Windows installer reliability fixes. [Link](https://github.com/netease-youdao/LobsterAI/pull/2430)
+- PR #2429: Optimized the login page UI/UX. [Link](https://github.com/netease-youdao/LobsterAI/pull/2429)
+- PR #2428: Completed startup credit campaign analytics fields, added full login redirect
 
 </details>
 
@@ -341,58 +248,40 @@ No activity in the last 24 hours.
 <details>
 <summary><strong>Moltis</strong> — <a href="https://github.com/moltis-org/moltis">moltis-org/moltis</a></summary>
 
-# Moltis Project Digest — 2026-08-04
+# Moltis Project Digest (2026-08-04)
 
 ## 1. Today's Overview
-
-Moltis shows low active development velocity on 2026-08-04, with no issues closed or opened and two open pull requests pending review. One PR is a routine dependency bump, while the other introduces a substantial new MCP feature. No new releases were published in the last 24 hours. The project remains in an active but quiet maintenance state with no critical bugs or user-reported issues.
+As of 2026-08-04, the Moltis project has no active open issues, with 2 open pull requests updated in the last 24 hours and no new releases published. Project activity is focused on ongoing feature development and routine dependency maintenance, with no urgent bug fixes or community-reported issues in the immediate window. The codebase appears stable, with active work advancing core MCP-related functionality.
 
 ## 2. Releases
-
-No new releases were published on 2026-08-04.
+No new releases were published for Moltis on 2026-08-04.
 
 ## 3. Project Progress
-
-- **PR #1184** — `chore(deps-dev): bump undici from 7.28.0 to 7.29.0 in /website`  
-  Author: dependabot[bot] | Created: 2026-08-04 | Status: Open  
-  Routine dependency update in the website directory. No code changes or feature work.  
-  [Link](https://github.com/moltis-org/moltis/pull/1184)
-
-- **PR #1183** — `feat(mcp): add managed repository bundles`  
-  Author: penso | Created: 2026-08-02 | Updated: 2026-08-03 | Status: Open  
-  Major feature addition for MCP server management: introduces managed Git repository bundles with discovery, preview, install, update, rollback, and removal workflows. Also adds HTTPS credentials support, pinned managed SSH transport, vault lifecycle integration, and imported repository-backed configurations. Aims to simplify web onboarding.  
-  [Link](https://github.com/moltis-org/moltis/pull/1183)
+No pull requests were merged or closed in the last 24 hours. Two open PRs are currently in progress:
+- PR #1184 (https://github.com/moltis-org/moltis/pull/1184): A routine dependency maintenance PR that bumps the `undici` package from version 7.28.0 to 7.29.0 in the `/website` directory, as part of standard `npm_and_yarn` dependency group updates.
+- PR #1183 (https://github.com/moltis-org/moltis/pull/1183): A feature PR last updated 2026-08-03 that adds managed Git repository bundles for MCP servers, enabling end-to-end lifecycle management (discovery, preview, installation, updates, rollbacks, removal) with support for HTTPS credentials, pinned SSH transport, vault integration, and repository-backed MCP configurations, alongside simplified web onboarding flows.
 
 ## 4. Community Hot Topics
-
-- **PR #1183** is the only meaningful activity item and represents the current development focus. It is a large feature PR covering end-to-end MCP server lifecycle management. No comments or reactions are recorded yet, suggesting limited external review so far.
+The most active recent community-facing work is PR #1183, which addresses a core user need for streamlined, secure MCP server management without manual configuration overhead. No issues have received community comments or reactions in the last 24 hours, and the dependency bump PR has not yet attracted community engagement.
 
 ## 5. Bugs & Stability
-
-No bug reports, crashes, or regressions were filed or updated on 2026-08-04.
+No bugs, crashes, or regressions were reported or updated in the last 24 hours. There are no open bug-fix PRs in progress, indicating no active stability concerns as of the report date.
 
 ## 6. Feature Requests & Roadmap Signals
-
-- **Managed repository bundles (PR #1183)** is the primary in-flight feature. If merged, this will likely be the headline change in the next release cycle, aligning with a roadmap focused on MCP ecosystem tooling and simplified deployment.
+The in-progress PR #1183 signals that the Moltis roadmap is prioritizing robust MCP server lifecycle management as a core feature, with a focus on secure credential handling and simplified user onboarding for MCP tooling. No formal user-submitted feature requests were reported in the last 24 hours.
 
 ## 7. User Feedback Summary
-
-No user-submitted issues or feedback were recorded on 2026-08-04.
+No new user feedback, pain points, or use case reports were submitted in the last 24 hours. The scope of the active MCP feature PR suggests the development team is proactively addressing demand for easier MCP server deployment and management, a common pain point for users working with model context protocols.
 
 ## 8. Backlog Watch
-
-No long-unanswered issues or PRs requiring maintainer attention were identified today.
+There are no open issues or long-unattended pull requests requiring maintainer attention as of 2026-08-04. All active work is focused on the two in-progress open PRs listed above.
 
 </details>
 
 <details>
 <summary><strong>CoPaw</strong> — <a href="https://github.com/agentscope-ai/CoPaw">agentscope-ai/CoPaw</a></summary>
 
-# CoPaw (QwenPaw) Project Digest
-Date: 2026-08-04
-
-## 1. Today's Overview
-As of 2026-08-04, CoPaw (QwenPaw) demonstrates high active development momentum, with 19 issues and 44 pull requests updated in the past 24 hours. No new stable or pre-release versions were published today, though the project recently completed verification of the v2.1.0-beta.1 pre-release (closed in issue #6656). Activity is concentrated on stability improvements, platform compatibility fixes, and user-requested feature enhancements,
+[LLM fallback] stepfun returned an empty response.
 
 </details>
 
@@ -407,52 +296,34 @@ No activity in the last 24 hours.
 <summary><strong>EasyClaw</strong> — <a href="https://github.com/gaoyangz77/easyclaw">gaoyangz77/easyclaw</a></summary>
 
 # EasyClaw Project Digest (2026-08-04)
-Source: github.com/gaoyangz77/easyclaw
-
----
+Repository: https://github.com/gaoyangz77/easyclaw
 
 ## Today's Overview
-As of 2026-08-04, EasyClaw has no issue or pull request activity in the preceding 24 hours, with 0 issues updated (0 open/active, 0 closed) and 0 PRs updated (0 open, 0 merged/closed). The project’s recent development focus is on product iteration, as evidenced by the release of 1 new version in the last 24 hours. No open community tickets are pending as of this report, indicating a lull in public issue tracking and community discussion. Overall project health remains stable, with consistent release output despite low short-term community engagement volume.
-
----
+As of 2026-08-04, the EasyClaw repository recorded no activity in its issue or pull request trackers over the prior 24 hours, with zero open/active or closed issues and zero updated PRs. The project did launch a new minor version release (v1.8.86, branded as TK Copilot) on the reporting date, focused on core workflow improvements for affiliate marketing and desktop cloud use cases. Overall project activity is low for the day, with maintenance efforts concentrated on the new release rollout rather than community issue triage or collaborative feature development. No community engagement or code contribution activity was logged in the 24-hour window.
 
 ## Releases
-1 new version was released in the last 24 hours:
-- v1.8.86 (TK Copilot): https://github.com/gaoyangz77/easyclaw/releases/tag/v1.8.86
-  Core changes include:
-  - Optimized affiliate model selection workflows, enhanced predicted-sales insights, and improved comparison functionality
-  - Optimized Desktop cloud subscription processes and cold-start recovery logic
-No breaking changes or formal migration notes are included in the public release notes. The release also includes updated installation guidance for macOS, which notes a potential "RivonClaw is damaged" system gatekeeper error that users may encounter during setup.
-
----
+A new minor version, v1.8.86 (TK Copilot), was published on 2026-08-04. The release includes the following improvements:
+- Optimized affiliate model selection, predicted sales insights, and product comparison workflows
+- Upgraded Desktop cloud subscription functionality and fixed cold-start recovery issues
+No breaking changes or mandatory migration steps are called out in the official release notes. Full release details are available at https://github.com/gaoyangz77/easyclaw/releases/tag/v1.8.86.
 
 ## Project Progress
-No pull requests were merged, closed, or updated in the last 24 hours. There are no feature advancements or bug fixes from community contributions to report for this period, as all recent development work is reflected in the standalone v1.8.86 release.
-
----
+No pull requests were created, updated, merged, or closed in the 24-hour reporting window. As a result, no new features, bug fixes, or codebase improvements were advanced via community or maintainer PR activity on this date.
 
 ## Community Hot Topics
-There are no open, recently updated, or commented issues or pull requests as of 2026-08-04. No community discussion threads with significant engagement are available for analysis, indicating minimal public community activity in the current period.
-
----
+There are no open or recently updated issues in the repository as of the reporting date, so no active community discussion threads or high-engagement topics are available for analysis. All issue tracking counts are at zero per the latest GitHub data.
 
 ## Bugs & Stability
-No bugs, crashes, or regressions were reported via GitHub issues in the last 24 hours. No open stability-related tickets are pending as of this report, and no public fix pull requests are in flight for reported issues.
-
----
+No bugs, crashes, performance regressions, or stability issues were reported via the repository's issue tracker in the 24-hour reporting period. No outstanding user-reported stability concerns are currently tracked in the project.
 
 ## Feature Requests & Roadmap Signals
-No user-submitted feature requests are pending in the project’s issue tracker as of this report. The feature set included in the v1.8.86 release (affiliate model selection, predicted-sales insights, cloud subscription improvements) signals the current development priority is optimizing core e-commerce affiliate copilot functionality and desktop cloud service reliability. No formal public roadmap items are published via GitHub at this time.
-
----
+No user-submitted feature requests are currently logged in the repository's issue tracker, so no explicit community-driven roadmap signals are available as of 2026-08-04.
 
 ## User Feedback Summary
-No user feedback, pain points, or use case reports were submitted via the project’s GitHub issue tracker in the last 24 hours. No public user satisfaction or dissatisfaction data is available for analysis as of this report date.
-
----
+No formal user feedback is recorded in the repository's public issue tracker for the reporting date, so no aggregated user pain points, use case reports, or satisfaction/dissatisfaction signals are available via public GitHub data.
 
 ## Backlog Watch
-There are no unanswered or long-pending issues or pull requests requiring maintainer attention as of 2026-08-04. The project’s public ticket tracker is clear of unresolved community submissions at this time.
+There are no long-unanswered issues or pending pull requests requiring maintainer attention in the repository as of the reporting date, with all tracked item counts at zero.
 
 </details>
 
