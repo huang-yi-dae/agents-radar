@@ -1,58 +1,74 @@
 # AI Open Source Trends 2026-08-05
 
-> Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-05 03:46 UTC
+> Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-05 05:02 UTC
 
 ---
 
-# AI Open Source Trends Report (2026-08-05)
+# AI Open Source Trends Report — 2026-08-05
 
 ## 1. Today's Highlights
-Today's GitHub trending AI/ML data shows surging community focus on two high-priority segments: production-ready AI agent tooling and democratized LLM deployment infrastructure. Seven of the 18 trending repositories are dedicated to agent development, including new tools for agent memory governance, enterprise agent security, and cross-framework agent compatibility. Low-resource LLM inference is also seeing breakout attention, with AirLLM earning over 1,700 stars in a single day for enabling 70B parameter LLM inference on a 4GB consumer GPU. RAG tooling continues to mature, with emerging innovations focused on reducing cost and improving privacy for production deployments. Domain-specific AI applications for scientific research, finance and content creation are also gaining significant traction, indicating the market is shifting beyond generic AI tooling to tailored vertical solutions.
 
----
+Agent memory and persistent context emerged as the dominant theme, with TencentCloud's team-level memory hub and several session-persistence tools drawing significant star growth. A surge of "skill pack" repositories for AI coding clients (Claude Code, Cursor, Codex) signals rapid commoditization of agent capabilities into shareable, versioned units. PDF processing is being reinvented for AI pipelines — firecrawl's Rust-based inspector gained 2,540 stars in a day for smart scanned/text routing. Edge inference remains hot with AirLLM's 70B-on-4GB-GPU approach, while DeepSeek-Reasonix's terminal agent is gaining traction through prefix-cache optimization. Security for enterprise AI agents (Uber's ADR) is emerging as a distinct product category.
 
 ## 2. Top Projects by Category
 
 ### 🔧 AI Infrastructure
-| Project | Stars | Description |
-|---------|-------|-------------|
-| [firecrawl/pdf-inspector](https://github.com/firecrawl/pdf-inspector) | ⭐0 (+2,540 today) | Fast Rust library for PDF inspection, classification and text extraction, critical for building AI data pipelines that process unstructured document inputs. |
-| [lyogavin/airllm](https://github.com/lyogavin/airllm) | ⭐0 (+1,711 today) | Enables inference of 70B parameter LLMs on a single 4GB GPU, dramatically lowering hardware barriers for LLM deployment. |
-| [vllm-project/vllm](https://github.com/vllm-project/vllm) | ⭐88,207 (total) | High-throughput, memory-efficient open-source LLM inference and serving engine widely adopted for production LLM deployments. |
-| [0xPlaygrounds/rig](https://github.com/0xPlaygrounds/rig) | ⭐8,173 (total) | Modular, scalable Rust framework for building production-grade LLM applications, targeting high-performance use cases. |
-| [picovoice/picollm](https://github.com/Picovoice/picollm) | ⭐316 (total) | On-device LLM inference tool powered by X-Bit quantization, enabling private, low-latency LLM execution without cloud dependency. |
+
+- [firecrawl/pdf-inspector](https://github.com/firecrawl/pdf-inspector) — ⭐0 (+2,540 today): Rust-based PDF inspection and classification library that detects scanned vs text-based documents for intelligent extraction routing.
+- [lyogavin/airllm](https://github.com/lyogavin/airllm) — ⭐0 (+1,711 today): Enables 70B parameter LLM inference on a single 4GB GPU through memory-efficient partitioning techniques.
+- [vllm-project/vllm](https://github.com/vllm-project/vllm) — ⭐88,210: High-throughput LLM inference and serving engine, remaining the backbone of production deployments.
+- [livekit/agents](https://github.com/livekit/agents) — ⭐0 (+432 today): Framework for building realtime voice AI agents with audio/video capabilities.
+- [ollama/ollama](https://github.com/ollama/ollama) — ⭐177,809: Leading local model runtime, now supporting Kimi, GLM, DeepSeek, Qwen and other frontier models out of the box.
 
 ### 🤖 AI Agents / Workflows
-| Project | Stars | Description |
-|---------|-------|-------------|
-| [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | ⭐0 (+1,111 today) | Team-level memory hub for AI agents that converts conversations, docs and code into reusable, governed memory assets shared across agent frameworks. |
-| [uber/ADR](https://github.com/uber/ADR) | ⭐0 (+148 today) | Enterprise-grade AI agent security and observability tool deployed at Uber, providing threat detection and security benchmarking for production agent systems. |
-| [livekit/agents](https://github.com/livekit/agents) | ⭐0 (+432 today) | Open-source framework for building realtime voice, video and text AI agents with built-in media handling capabilities. |
-| [esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) | ⭐0 (+922 today) | DeepSeek-optimized terminal AI coding agent engineered for prefix-cache stability, designed for long-running development workflows. |
-| [HKUDS/nanobot](https://github.com/HKUDS/nanobot) | ⭐46,629 (total) | Ultra-lightweight, self-hosted personal AI agent framework with built-in WebUI, memory, MCP support and multi-agent workflow capabilities. |
-| [CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio) | ⭐49,417 (total) | AI productivity studio with 300+ pre-built assistants, autonomous agent support and unified access to leading frontier LLMs. |
+
+- [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) — ⭐0 (+1,111 today): Team-level memory hub converting conversations, docs, and code into four reusable governance-friendly memory assets for AI agents.
+- [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) — ⭐0 (+2,297 today): AI-routed skill pack for security research — reverse engineering and penetration testing toolchains that self-evolve, compatible with multiple AI coding clients.
+- [obra/superpowers](https://github.com/obra/superpowers) — ⭐0 (+653 today): Agentic skills framework and software development methodology designed for production agent workflows.
+- [esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) — ⭐0 (+922 today): DeepSeek-native terminal AI coding agent optimized for prefix-cache stability for long-running sessions.
+- [EveryInc/compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) — ⭐0 (+40 today): Official Compound Engineering plugin providing shared agent capabilities across Claude Code, Codex, and Cursor.
+- [browser-use/video-use](https://github.com/browser-use/video-use) — ⭐0 (+320 today): Video editing automated through coding agents, extending the browser-use paradigm to multimedia.
 
 ### 📦 AI Applications
-| Project | Stars | Description |
-|---------|-------|-------------|
-| [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) | ⭐0 (+783 today) | 21-lesson official Microsoft course for getting started with generative AI development, a top learning resource for new AI developers. |
-| [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | ⭐32,657 (total) | The #1 agent skills library for scientific research, with 158 ready-to-use skills and 100+ scientific databases used by 170,000+ scientists worldwide. |
-| [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | ⭐43,053 (total) | AI tool that automatically converts topics or documents into native PowerPoint decks with charts, transitions and audio narration, eliminating manual presentation creation work. |
-| [666ghj/BettaFish](https://github.com/666ghj/BettaFish) | ⭐41,947 (total) | Multi-agent public opinion analysis assistant that aggregates cross-platform data to break information silos and predict public sentiment trends. |
-| [OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB) | ⭐71,389 (total) | Open data platform for financial analysts, quants and AI agents, providing multi-source market data and analysis tools for AI-powered financial decision making. |
+
+- [uber/ADR](https://github.com/uber/ADR) — ⭐0 (+148 today): Enterprise AI agent security platform — observability, security benchmarking, and threat detection, deployed at Uber scale.
+- [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) — ⭐0 (+783 today): 21-lesson course for getting started with generative AI, maintained by Microsoft.
 
 ### 🧠 LLMs / Training
-| Project | Stars | Description |
-|---------|-------|-------------|
-| [skyzh/tiny-llm](https://github.com/skyzh/tiny-llm) | ⭐4,441 (total) | Hands-on course for systems engineers to learn LLM inference serving by building a tiny vLLM + Qwen stack optimized for Apple Silicon. |
-| [llm-jp/awesome-japanese-llm](https://github.com/llm-jp/awesome-japanese-llm) | ⭐1,423 (total) | Curated overview of Japanese LLM development, resources and model releases, a key reference for multilingual LLM research. |
-| [chrisliu298/awesome-llm-unlearning](https://github.com/chrisliu298/awesome-llm-unlearning) | ⭐617 (total) | Curated resource repository for machine unlearning in large language models, a critical emerging field for LLM compliance and safety. |
-| [AarambhDevHub/aarambh-studio](https://github.com/AarambhDevHub/aarambh-studio) | ⭐62 (total) | Pure Rust decoder-only LLM built from scratch using the Candle framework, with no Python or PyTorch dependency, featuring Gated DeltaNet and sparse attention. |
+
+- [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) — ⭐225,615: The agent that grows with you — general-purpose agent harness with evolution and personalization capabilities over time.
 
 ### 🔍 RAG / Knowledge
-| Project | Stars | Description |
-|---------|-------|-------------|
-| [infiniflow/ragflow](https://github.com/infiniflow/ragflow) | ⭐86,844 (total) | Leading open-source RAG engine that combines advanced retrieval capabilities with agent functionality to create a superior context layer for LLMs
+
+- [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) — ⭐102,615: Converts any codebase and documents into a queryable knowledge graph via deterministic AST parsing — no vector store required.
+- [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) — ⭐89,597: Captures agent session activity, compresses it with AI, and injects relevant context into future sessions across multiple agent CLIs.
+- [infiniflow/ragflow](https://github.com/infiniflow/ragflow) — ⭐86,847: Leading open-source RAG engine fusing retrieval with agent capabilities for a superior LLM context layer.
+- [mem0ai/mem0](https://github.com/mem0ai/mem0) — ⭐62,550: Universal memory layer for AI agents, providing persistent knowledge across sessions and agents.
+- [topoteretes/cognee](https://github.com/topoteretes/cognee) — ⭐29,785: Self-hosted knowledge graph engine giving AI agents persistent long-term memory across sessions.
+
+## 3. Trend Signal Analysis
+
+The strongest signal today is the **commoditization of agent skills and memory**. The overnight success of skill-pack repositories (reverse-skill at +2,297 stars, superpowers at +653) indicates the community is shifting from building agents from scratch to assembling reusable, shareable capability units. These packs work across multiple coding clients — Claude Code, Cursor, Cline, Codex — suggesting a cross-platform skill standard is emerging organically.
+
+**Agent memory is the new database layer.** TencentDB-Agent-Memory's team-level approach and the sustained growth of claude-mem, mem0, and cognee point toward memory infrastructure becoming a first-class architectural concern, distinct from RAG. The Tencent entry is particularly notable — cloud vendors are recognizing agent memory as a database product category.
+
+**PDF/data ingestion is being re-architected for AI consumers.** Firecrawl's pdf-inspector addresses the scanned-vs-text routing problem that plagues enterprise RAG pipelines. This is a pragmatic infrastructure gap being filled with serious engineering (Rust, +2,540 stars in a day).
+
+**Enterprise security for agents is emerging as a dedicated category.** Uber open-sourcing its agent security platform (observability, benchmarking, threat detection) signals that production deployments are now large enough to warrant specialized security tooling.
+
+**Efficient inference continues to fragment the serving stack.** AirLLM's 70B-on-4GB-GPU approach (+1,711) and DeepSeek-Reasonix's prefix-cache engineering (+922) show optimization at the extremes — minimal hardware and long-running stability respectively.
+
+## 4. Community Hot Spots
+
+- **Agent skill packs** — [reverse-skill](https://github.com/zhaoxuya520/reverse-skill) and [superpowers](https://github.com/obra/superpowers) are pioneering a new distribution model for agent capabilities; watch for a standard format to emerge across coding clients.
+
+- **Cross-session agent memory** — [claude-mem](https://github.com/thedotmack/claude-mem) and [TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) are attacking context persistence from different angles (individual vs team); both are gaining momentum rapidly.
+
+- **Codebase knowledge graphs** — [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) at 102K stars is proving deterministic AST parsing plus knowledge graphs can rival vector-based code understanding without embedding infrastructure.
+
+- **Enterprise AI security** — [uber/ADR](https://github.com/uber/ADR) is the first major open-source agent security platform from a hyperscale user; expect a cluster of tooling around agent observability, benchmarking, and threat detection.
+
+- **Low-resource inference** — [airllm](https://github.com/lyogavin/airllm) continues to push the boundary of what's possible on consumer hardware, opening up local LLM development to developers without GPU clusters.
 
 ---
 *This digest is auto-generated by [agents-radar](https://github.com/huang-yi-dae/agents-radar).*

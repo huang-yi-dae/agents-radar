@@ -1,4 +1,86 @@
 {
-  "zh": {},
-  "en": {}
+  "zh": {
+    "ai-cli": [
+      "OpenCode 用量 API 需求获 126👍 全场最高",
+      "Codex 回复错乱问题 81 评论居首引热议",
+      "Claude Code 模型降级争议激烈，获 21👍",
+      "Qwen Code 发布 v0.21.6-preview.0 新版本",
+      "Copilot CLI 24h 内 MCP 问题集中爆发",
+      "跨设备远程控制成多工具共同热门诉求"
+    ],
+    "ai-agents": [
+      "OpenClaw 24h 内 Issue 与 PR 双双达 500 条",
+      "两个 P0 级数据丢失风险问题仍在推进中",
+      "steipete 提交 4 个稳定性修复 PR 被合并",
+      "修复 Slack 线程参与过期时间被重置问题",
+      "修复 Mattermost 跨团队同名频道错误投递",
+      "PDF 无文本渲染失败提供可操作错误信息"
+    ],
+    "ai-trending": [
+      "firecrawl/pdf-inspector 今日涨 2540 星",
+      "airllm 让 70B 模型在 4GB 显存运行",
+      "affaan-m/ECC 达 23.7 万星，Agent 技能包爆发",
+      "TencentDB-Agent-Memory 今日涨 1111 星",
+      "DeepSeek-Reasonix 涨 922 星，专注编码 Agent",
+      "livekit/agents 实时语音 Agent 框架涨 432 星"
+    ],
+    "ai-web": [
+      "OpenAI 更新 GPT Live 连续语音交互页面",
+      "Anthropic 今日零新增，或为发布间歇期",
+      "连续语音交互强调对话自然延续能力",
+      "OpenAI 叙事重心向多模态实时交互倾斜",
+      "今日信息密度极低，仅 1 个独立页面",
+      "建议对比 Anthropic 近 7 日发布频率"
+    ],
+    "ai-hn": [
+      "苹果与 OpenAI 互撕霸榜，合计超 600 分",
+      "OpenAI 反驳苹果：Apple is getting this wrong",
+      "OpenAI 因歧视美国工人被罚 320 万美元",
+      "白宫被曝将开源模型排除在测试框架外",
+      "Bending Spoons 拟 12.8 亿美元收购 Airtable",
+      "技术干货帖被边缘化，社区偏八卦化"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Security fixes: SSRF, command injection across tools",
+      "Claude Code v2.1.222 patches worktree isolation bypass",
+      "Codex MCP leaks 9+ GB RSS on macOS and Windows",
+      "Plugins and extension ecosystems growing rapidly",
+      "Windows remains second-class platform across tools",
+      "MCP protocol support depth key differentiator"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs in 24 hours",
+      "Focus on stability, session-state corruption fixes",
+      "No new releases published in last 24 hours",
+      "Slack/Mattermost thread expiry bug fixed",
+      "Subagent completion delivery issues remain",
+      "Maintainer-review bottleneck: many stuck issues"
+    ],
+    "ai-trending": [
+      "Agent memory and persistent context dominant theme",
+      "firecrawl/pdf-inspector gains 2,540 stars in a day",
+      "AirLLM runs 70B models on 4GB GPU",
+      "Skill pack repositories for Claude Code, Cursor surge",
+      "Uber's ADR: enterprise AI agent security emerging",
+      "DeepSeek-Reasonix terminal agent gains traction"
+    ],
+    "ai-web": [
+      "OpenAI announces Continuous Voice Interaction with GPT Live",
+      "No new Anthropic content; quiet period",
+      "OpenAI pushes real-time interaction capabilities",
+      "Metadata-only capture; text not retrieved",
+      "Two new OpenAI articles, same URL slug",
+      "Anthropic paused; steady release cadence historically"
+    ],
+    "ai-hn": [
+      "Apple-OpenAI clash over ex-employee data theft",
+      "OpenAI settles $3.2M DOJ probe over discrimination",
+      "White House excludes open models from AI testing",
+      "Flowise announces shutdown; industry contraction signs",
+      "LLMs proven to run on $10 microcontroller",
+      "AI-generated stories rated better than human-written"
+    ]
+  }
 }
