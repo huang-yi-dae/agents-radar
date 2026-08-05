@@ -1,6 +1,6 @@
 # AI CLI Tools Community Digest 2026-08-05
 
-> Generated: 2026-08-05 03:24 UTC | Tools covered: 7
+> Generated: 2026-08-05 03:32 UTC | Tools covered: 7
 
 - [Claude Code](https://github.com/anthropics/claude-code)
 - [OpenAI Codex](https://github.com/openai/codex)
@@ -15,7 +15,7 @@
 
 ## Cross-Tool Comparison
 
-> LLM generation failed: 401 Authentication Fails, Your api key: ****mXka is invalid
+> LLM generation failed: StepFun request failed: Connection error.
 
 
 ---

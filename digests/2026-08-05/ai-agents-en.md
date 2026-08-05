@@ -1,6 +1,6 @@
 # OpenClaw Ecosystem Digest 2026-08-05
 
-> Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-05 03:24 UTC
+> Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-05 03:32 UTC
 
 - [OpenClaw](https://github.com/openclaw/openclaw)
 - [NanoBot](https://github.com/HKUDS/nanobot)
@@ -26,7 +26,7 @@
 
 ## Cross-Ecosystem Comparison
 
-> LLM generation failed: 401 Authentication Fails, Your api key: ****mXka is invalid
+> LLM generation failed: StepFun request failed: Connection error.
 
 
 ---
@@ -43,7 +43,7 @@
 <details>
 <summary><strong>Zeroclaw</strong> — <a href="https://github.com/zeroclaw-labs/zeroclaw">zeroclaw-labs/zeroclaw</a></summary>
 
-⚠️ Summary generation failed.
+[LLM fallback] stepfun returned an empty response.
 
 </details>
 
