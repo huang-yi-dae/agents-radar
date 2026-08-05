@@ -6,13 +6,14 @@
  *   OPENAI_BASE_URL    - endpoint override (default: https://api.stepfun.com/step_plan/v1)
  *   OPENAI_MODEL       - model name (default: step-3.7-flash)
  *
- * OFFICIAL RESPONSE SHAPE (confirmed from StepFun docs):
- * - `message.content` is the final assistant text we should use for reports.
+ * OFFICIAL RESPONSE SHAPE (confirmed from StepFun docs / live responses):
+ * - `message.content` is usually the final assistant text.
  * - Reasoning models also return `message.reasoning` and `message.reasoning_content`,
- *   but these are internal thinking traces. The model's `content` may already embed
- *   reasoning/thinking blocks when the prompt requests structured reasoning.
- * - Prepending or falling back to `reasoning_content` can double-wrap thinking
- *   content and leak internal reasoning into the daily digest.
+ *   but some StepFun response shapes put the user-facing answer in
+ *   `reasoning_content` while leaving `content` empty.
+ * - We therefore prefer `content` first, but fall back to `reasoning_content`
+ *   when needed, then aggressively strip thinking traces so the daily digest
+ *   only keeps the user-facing report text.
  *
  * Refs:
  * - https://platform.stepfun.com/docs/zh/api-reference/chat/chat-completion-create
@@ -106,9 +107,16 @@ export class StepFunProvider extends OpenAICompatibleProvider {
     }
 
     const message = response.choices?.[0]?.message;
-    const rawText = typeof message?.content === "string" ? message.content : "";
+    const rawText =
+      typeof message?.content === "string" && message.content.trim()
+        ? message.content
+        : typeof (message as { reasoning_content?: unknown })?.reasoning_content === "string" &&
+            (message as { reasoning_content?: string }).reasoning_content!.trim()
+          ? (message as { reasoning_content?: string }).reasoning_content!
+          : "";
 
-    // Always prefer `content`; never use internal reasoning fields as final output.
+    // Prefer `content`, but accept `reasoning_content` as a fallback when StepFun
+    // returns the final answer there instead of `content`.
     const cleanedText = STEPFUN_THINKING_PATTERNS.reduce(
       (text, pattern) => text.replace(pattern, "").trim(),
       rawText,
