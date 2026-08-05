@@ -1,6 +1,6 @@
 # AI CLI 工具社区动态日报 2026-08-05
 
-> 生成时间: 2026-08-05 03:18 UTC | 覆盖工具: 7 个
+> 生成时间: 2026-08-05 03:24 UTC | 覆盖工具: 7 个
 
 - [Claude Code](https://github.com/anthropics/claude-code)
 - [OpenAI Codex](https://github.com/openai/codex)
