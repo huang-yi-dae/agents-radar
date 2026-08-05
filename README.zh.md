@@ -60,10 +60,10 @@ export GITHUB_TOKEN=ghp_xxxxx
 export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 
 # 方式 B: StepFun
-export LLM_PROVIDER=stepfun
+# export LLM_PROVIDER=stepfun
 export OPENAI_API_KEY=sk-xxxxxxxx
 export OPENAI_BASE_URL=https://api.stepfun.com/step_plan/v1
-export OPENAI_MODEL=step-3.7-flash
+# export OPENAI_MODEL=step-3.7-flash
 
 # 方式 C: OpenAI 兼容端点
 export LLM_PROVIDER=openai
