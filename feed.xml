@@ -6,16 +6,16 @@
     <description>AI 开源生态每日简报 · Daily AI ecosystem digest</description>
     <language>zh-CN</language>
     <atom:link href="https://huang-yi-dae.github.io/agents-radar/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 05 Aug 2026 03:18:43 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 03:24:49 +0000</lastBuildDate>
     <item>
       <title>AI CLI 工具社区动态日报 2026-08-05</title>
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-cli</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-cli</guid>
       <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI CLI 工具社区动态日报 2026-08-05 生成时间: 2026-08-05 03:18 UTC | 覆盖工具: 7 个 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills 横向对比 LLM generation failed: 401 Authentication Fails, Your api key: ****mXka is invalid 各工具详细报告 Claude Code — anthropics/claude-code Claude Code Skills 社区热点 数据来源: anthropics/skills ⚠️ Skills 摘要生成失败。 ⚠️ 摘要生成失败。 OpenAI Codex — openai/codex ⚠️ 摘要生成失败。 Gemini CLI — google-gemini/gemini-cli ⚠️ 摘要生成失败。 GitHub Copilot CLI — github/c...</description>
+      <description>AI CLI 工具社区动态日报 2026-08-05 生成时间: 2026-08-05 03:24 UTC | 覆盖工具: 7 个 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills 横向对比 LLM generation failed: 401 Authentication Fails, Your api key: ****mXka is invalid 各工具详细报告 Claude Code — anthropics/claude-code Claude Code Skills 社区热点 数据来源: anthropics/skills ⚠️ Skills 摘要生成失败。 ⚠️ 摘要生成失败。 OpenAI Codex — openai/codex ⚠️ 摘要生成失败。 Gemini CLI — google-gemini/gemini-cli ⚠️ 摘要生成失败。 GitHub Copilot CLI — github/c...</description>
       <content:encoded><![CDATA[<h1>AI CLI 工具社区动态日报 2026-08-05</h1>
 <blockquote>
-<p>生成时间: 2026-08-05 03:18 UTC | 覆盖工具: 7 个</p>
+<p>生成时间: 2026-08-05 03:24 UTC | 覆盖工具: 7 个</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/anthropics/claude-code">Claude Code</a></li>
@@ -91,10 +91,10 @@
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-cli-en</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-cli-en</guid>
       <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI CLI Tools Community Digest 2026-08-05 Generated: 2026-08-05 03:18 UTC | Tools covered: 7 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills Cross-Tool Comparison LLM generation failed: 401 Authentication Fails, Your api key: ****mXka is invalid Per-Tool Reports Claude Code — anthropics/claude-code Claude Code Skills Highlights Source: anthropics/skills ⚠️ Skills summary generation failed. ⚠️ Summary generation failed. OpenAI Codex — open...</description>
+      <description>AI CLI Tools Community Digest 2026-08-05 Generated: 2026-08-05 03:24 UTC | Tools covered: 7 Claude Code OpenAI Codex Gemini CLI GitHub Copilot CLI Kimi Code CLI OpenCode Qwen Code Claude Code Skills Cross-Tool Comparison LLM generation failed: 401 Authentication Fails, Your api key: ****mXka is invalid Per-Tool Reports Claude Code — anthropics/claude-code Claude Code Skills Highlights Source: anthropics/skills ⚠️ Skills summary generation failed. ⚠️ Summary generation failed. OpenAI Codex — open...</description>
       <content:encoded><![CDATA[<h1>AI CLI Tools Community Digest 2026-08-05</h1>
 <blockquote>
-<p>Generated: 2026-08-05 03:18 UTC | Tools covered: 7</p>
+<p>Generated: 2026-08-05 03:24 UTC | Tools covered: 7</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/anthropics/claude-code">Claude Code</a></li>
@@ -170,10 +170,10 @@
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-agents</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-agents</guid>
       <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <description>OpenClaw 生态日报 2026-08-05 Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-05 03:18 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw 项目深度报告 ⚠️ 摘要生成失败。 横向生态对比 LLM generation failed: 401 Authentication Fails, Your api key: ****mXka is invalid 同赛道项目详细报告 NanoBot — HKUDS/nanobot ⚠️ 摘要生成失败。 Zeroclaw — zeroclaw-labs/zeroclaw ⚠️ 摘要生成失败。 PicoClaw — sipeed/picoclaw ⚠️ 摘要生成失败。 NanoClaw — qwibitai/nanoclaw ⚠️ 摘要生成失败。 NullClaw — n...</description>
+      <description>OpenClaw 生态日报 2026-08-05 Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-05 03:24 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw 项目深度报告 ⚠️ 摘要生成失败。 横向生态对比 LLM generation failed: 401 Authentication Fails, Your api key: ****mXka is invalid 同赛道项目详细报告 NanoBot — HKUDS/nanobot ⚠️ 摘要生成失败。 Zeroclaw — zeroclaw-labs/zeroclaw ⚠️ 摘要生成失败。 PicoClaw — sipeed/picoclaw ⚠️ 摘要生成失败。 NanoClaw — qwibitai/nanoclaw ⚠️ 摘要生成失败。 NullClaw — n...</description>
       <content:encoded><![CDATA[<h1>OpenClaw 生态日报 2026-08-05</h1>
 <blockquote>
-<p>Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-05 03:18 UTC</p>
+<p>Issues: 500 | PRs: 500 | 覆盖项目: 13 个 | 生成时间: 2026-08-05 03:24 UTC</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/openclaw/openclaw">OpenClaw</a></li>
@@ -281,10 +281,10 @@
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-agents-en</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-agents-en</guid>
       <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <description>OpenClaw Ecosystem Digest 2026-08-05 Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-05 03:18 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw Deep Dive ⚠️ Summary generation failed. Cross-Ecosystem Comparison LLM generation failed: 401 Authentication Fails, Your api key: ****mXka is invalid Peer Project Reports NanoBot — HKUDS/nanobot ⚠️ Summary generation failed. Zeroclaw — zeroclaw-labs/zeroclaw ⚠️...</description>
+      <description>OpenClaw Ecosystem Digest 2026-08-05 Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-05 03:24 UTC OpenClaw NanoBot Zeroclaw PicoClaw NanoClaw NullClaw IronClaw LobsterAI TinyClaw Moltis CoPaw ZeptoClaw EasyClaw OpenClaw Deep Dive ⚠️ Summary generation failed. Cross-Ecosystem Comparison LLM generation failed: 401 Authentication Fails, Your api key: ****mXka is invalid Peer Project Reports NanoBot — HKUDS/nanobot ⚠️ Summary generation failed. Zeroclaw — zeroclaw-labs/zeroclaw ⚠️...</description>
       <content:encoded><![CDATA[<h1>OpenClaw Ecosystem Digest 2026-08-05</h1>
 <blockquote>
-<p>Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-05 03:18 UTC</p>
+<p>Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-05 03:24 UTC</p>
 </blockquote>
 <ul>
 <li><a href="https://github.com/openclaw/openclaw">OpenClaw</a></li>
@@ -500,10 +500,10 @@
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-trending</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-trending</guid>
       <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI 开源趋势日报 2026-08-05 数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-05 03:18 UTC ⚠️ 趋势报告生成失败。 本日报由 agents-radar 自动生成。</description>
+      <description>AI 开源趋势日报 2026-08-05 数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-05 03:24 UTC ⚠️ 趋势报告生成失败。 本日报由 agents-radar 自动生成。</description>
       <content:encoded><![CDATA[<h1>AI 开源趋势日报 2026-08-05</h1>
 <blockquote>
-<p>数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-05 03:18 UTC</p>
+<p>数据来源: GitHub Trending + GitHub Search API（含 AI 与大数据 / 数据分析 / 数据挖掘趋势） | 生成时间: 2026-08-05 03:24 UTC</p>
 </blockquote>
 <hr>
 <p>⚠️ 趋势报告生成失败。</p>
@@ -516,10 +516,10 @@
       <link>https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-trending-en</link>
       <guid isPermaLink="true">https://huang-yi-dae.github.io/agents-radar/#2026-08-05/ai-trending-en</guid>
       <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-      <description>AI Open Source Trends 2026-08-05 Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-05 03:18 UTC ⚠️ Trending report generation failed. This digest is auto-generated by agents-radar.</description>
+      <description>AI Open Source Trends 2026-08-05 Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-05 03:24 UTC ⚠️ Trending report generation failed. This digest is auto-generated by agents-radar.</description>
       <content:encoded><![CDATA[<h1>AI Open Source Trends 2026-08-05</h1>
 <blockquote>
-<p>Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-05 03:18 UTC</p>
+<p>Sources: GitHub Trending + GitHub Search API (AI, big data, data analysis, data mining trends) | Generated: 2026-08-05 03:24 UTC</p>
 </blockquote>
 <hr>
 <p>⚠️ Trending report generation failed.</p>
