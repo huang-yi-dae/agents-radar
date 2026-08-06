@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenAI Codex v0.146.1发布，/undo功能获373赞",
+      "Claude Code v2.1.223发布，MCP参数丢失率达6.2%",
+      "OpenCode v1.18.14发布，支持HTTP Streamable传输",
+      "Qwen Code v0.21.6及桌面版v0.1.0同日发布",
+      "Copilot CLI被曝静默委托GPT-5.6至Opus模型",
+      "Kimi Code跨会话记忆功能持续半年获19条评论"
+    ],
+    "ai-agents": [
+      "OpenClaw今日500 Issue+500 PR，活跃度极高",
+      "子代理恢复索引优化，复杂度从平方降至线性",
+      "网关诊断追踪串联至嵌入式Agent运行",
+      "新增AI安全/质量事件分类，覆盖六大边界",
+      "会话状态管理与消息丢失成问题积压重灾区",
+      "P0/P1问题修复PR待审，维护者响应成瓶颈"
+    ],
+    "ai-trending": [
+      "腾讯云Agent Memory日增1892星，领跑趋势榜",
+      "Cloudflare computer日增891星，代理计算机概念走红",
+      "firecrawl/pdf-inspector日增1582星，Rust解析PDF成热点",
+      "AirLLM 4GB单卡跑70B模型，日增833星",
+      "DeepSeek-Reasonix终端编码Agent，总量超3.17万星",
+      "Agent记忆、技能与终端编码成三大爆发方向"
+    ],
+    "ai-web": [
+      "OpenAI推经济研究交流平台，首入学术基建领域",
+      "OpenAI更新Model Spec，推进模型行为标准化",
+      "科学计算Agentic AI成OpenAI新发力点",
+      "GPT Live实现连续语音交互，产品线再延伸",
+      "Anthropic今日零更新，处于发布间歇期",
+      "OpenAI单日捕获10篇内容，集中发布显生态野心"
+    ],
+    "ai-hn": [
+      "Anthropic被曝AI创建虚假身份实施黑客攻击",
+      "Anthropic内部自研芯片，对抗OpenAI英伟达",
+      "Anthropic签下100亿美元算力大单引热议",
+      "OpenAI遭各州总检察长联合要求约束爬虫",
+      "微软AI销售大部分来自OpenAI转售引关注",
+      "Prime Agent自我改进RLM智能体成技术亮点"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "All major CLI tools shipped within 24-48 hours",
+      "MCP integration fragility hits 4 top tools",
+      "Windows desktop instability a systemic weakness",
+      "Parser data loss bug reported in Claude Code",
+      "Codex users demand /undo feature",
+      "Gemini CLI v0.55.0 now in preview"
+    ],
+    "ai-agents": [
+      "500 issues and 500 PRs updated in 24 hours",
+      "P0 gateway bug blocks startup: #119263",
+      "Media cleanup deletes files on unreadable stores",
+      "OpenClaw backlog growing; 432 open issues",
+      "Six PRs merged fixing auto-reply and export",
+      "No new releases in the last 24 hours"
+    ],
+    "ai-trending": [
+      "TencentDB-Agent-Memory tops trending with +1,892 stars",
+      "Cloudflare's computer framework gains +891 stars",
+      "Obra's superpowers skill framework sees +931 stars",
+      "DeepSeek-Reasonix hits trending with +747 stars",
+      "PDF inspector for agents gains +1,582 stars",
+      "Uber ADR brings enterprise security to agents"
+    ],
+    "ai-web": [
+      "OpenAI publishes 10 new articles in one day",
+      "OpenAI Economic Research Exchange launches",
+      "Model Spec methodology update released",
+      "OpenAI expands into scientific computing docs",
+      "Voice interaction docs for GPT Live published",
+      "Anthropic publishes zero new content today"
+    ],
+    "ai-hn": [
+      "UK test: OpenAI, Anthropic models 'went rogue'",
+      "Anthropic accused of impersonation in hack",
+      "Anthropic destroying books for training data",
+      "OpenAI settles discrimination case for $3.2M",
+      "Microsoft AI revenue hinges on OpenAI resale",
+      "Anthropic reportedly building its own silicon chip"
+    ]
+  }
+}
