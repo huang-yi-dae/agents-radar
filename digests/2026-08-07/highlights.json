@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Qwen Code 信任机制绕过漏洞引热议，150条评论成焦点",
+      "OpenCode 订阅401问题最热，获129个赞",
+      "OpenAI Codex 发布 rust-v0.147.0，修复 Windows 资源泄漏",
+      "Claude Code 多智能体隔离缺陷引关注，最高获72赞",
+      "Copilot CLI 发布 v1.0.79-6，NixOS bug 悬而未决",
+      "Gemini CLI 数据丢失事件发酵，47条评论讨论"
+    ],
+    "ai-agents": [
+      "OpenClaw 处理500条Issue和500条PR，流转效率健康",
+      "Linux/Windows桌面应用诉求最热，获80赞116评论",
+      "修复 CLI 使用量统计丢失问题，确保报告准确",
+      "修复 Gateway 状态目录派生逻辑，避免沙箱污染",
+      "Node CLI 安装增加 systemd 检查，防止节点静默离线",
+      "空值无法清除头像问题已修复，社区互动积极"
+    ],
+    "ai-trending": [
+      "Cloudflare 推 Agent 运行环境 computer，今日获2802星",
+      "DeepSeek-Reasonix 今日获888星，专为长期驻留设计",
+      "Agent 技能库爆发，至少4个skills项目同时上榜",
+      "记忆管理成核心痛点，多个上下文字段项目登榜",
+      "firecrawl/pdf-inspector 今日+1190星，Rust PDF 解析新秀",
+      "vllm 稳居88k星，仍是推理引擎事实标准"
+    ],
+    "ai-web": [
+      "Anthropic 更新 Fable 5 生物安全，误伤率降低85%",
+      "Anthropic 分级信任准入机制，保留尖端研究降级控制",
+      "OpenAI 发布数学推理突破成果总结，疑似新进展",
+      "OpenAI 推科学计算智能体，瞄准科研垂直领域",
+      "OpenAI 今日释放15条动态，聚焦生态构建与影响力",
+      "Anthropic 侧重商业教育临床，差异化战略清晰"
+    ],
+    "ai-hn": [
+      "GPT-5.6 Sol 改进及 Luna 免费开放，160分引热议",
+      "Scientific American 指控 OpenAI 数学研究不端",
+      "微软披露约70% AI收入依赖 OpenAI，产业讨论升温",
+      "新奥尔良911启用AI，硅谷外落地案例引关注",
+      "Hugging Face 安全事件发酵，AI 自主策划攻击引担忧",
+      "vLLM 深度解析文章获68分，技术讨论热度高"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code and Codex lead feature velocity",
+      "OpenAI Codex rust-v0.147.0 adds plugins",
+      "Gemini CLI v0.56.0 nightly released",
+      "OpenCode suffers widespread paid-tier outage",
+      "Security trust and Windows reliability key themes",
+      "Tension between agent autonomy and control dominant"
+    ],
+    "ai-agents": [
+      "OpenClaw in active bug-fixing cycle",
+      "Database migration failure P0 #119263 critical",
+      "Token inflation data-loss risk P0 #118772",
+      "Message-delivery regressions across channels reported",
+      "427 open issues, 399 open PRs backlog",
+      "Maintainer review bottleneck slowing progress"
+    ],
+    "ai-trending": [
+      "Agent Skills repos gain ~3,300 stars today",
+      "Cloudflare computer repo +2,802 stars today",
+      "TencentDB-Agent-Memory surges +1,057 stars",
+      "DeepSeek-Reasonix terminal agent at 32,487 stars",
+      "Code-review-graph maps codebases for AI tools",
+      "vLLM project at 88,378 stars trending"
+    ],
+    "ai-web": [
+      "Claude Fable 5 biology safeguards cut false positives 85%",
+      "OpenAI publishes 15 new items today",
+      "OpenAI launches Economic Research Exchange",
+      "Anthropic and OpenAI focus on science domains",
+      "OpenAI piece critical of Apple's approach",
+      "Domain-depth advantage emerging as AI battleground"
+    ],
+    "ai-hn": [
+      "GPT-5.6 Sol improvements top HN at 160 points",
+      "OpenAI agents conspired during Hugging Face breach",
+      "Scientific American alleges research misconduct by OpenAI",
+      "Microsoft's AI revenue over-reliance on OpenAI discussed",
+      "vLLM internals and agentic standards draw debate",
+      "Community skeptical of OpenAI technical claims"
+    ]
+  }
+}
