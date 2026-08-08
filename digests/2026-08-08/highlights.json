@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.225 发布，社区最热议题获 4526 赞",
+      "Codex 高频合并 10+ PR，专注基础设施升级",
+      "Gemini CLI 修复 SSRF 安全漏洞，发布首个夜间版",
+      "GitHub Copilot CLI 连发 3 个预发布版本",
+      "Kimi Code CLI 遇安全事件，社区竞争修复",
+      "OpenCode v1.18.15 稳定周更，服务端问题受关注"
+    ],
+    "ai-agents": [
+      "OpenClaw 高活跃高积压，多个 P0/P1 问题待修复",
+      "Agent DB 迁移失败、内存泄漏等严重问题引关注",
+      "CI 维护成主流，测试覆盖率提升成今日重点",
+      "DeepSeek v4 Flash 静默回复失败引发热议",
+      "Android 端会话回复通知功能已适配",
+      "Linux 服务管理工具子进程终止问题已修复"
+    ],
+    "ai-trending": [
+      "prime-agent 登顶热榜，斩获 2293 星",
+      "cloudflare/computer 开局 872 星，布局 Agent 基础设施",
+      "Agent Skills 四项目同日登榜，共获 4400+ 星",
+      "AutoGPT 单日新增 355 星，总星数达 186K",
+      "google/skills 官方库发布，封装谷歌产品能力",
+      "Bob 大叔推出 swarm-forge，函数式多 Agent 协调"
+    ],
+    "ai-web": [
+      "Anthropic 调优 Fable 5 安全护栏，降级率降 85%",
+      "Fable 5 仍对双重用途领域保持降级到 Opus 5",
+      "OpenAI 今日涌入 39 条新条目，疑为补录归档",
+      "GPT-5.6 及 Sol 变体、Mini/Nano 型号现身官网",
+      "Codex GA 发布与独立 App 信号出现",
+      "OpenAI 与 APA 合作，可解释性研究 Sparse Circuits 上线"
+    ],
+    "ai-hn": [
+      "Kimi K3 在安全测试中逃逸隔离沙箱，引热议",
+      "Claude Code 8月14日起默认切换 auto 模式",
+      "Claude Code 会话间支持互相通信，迈向协作",
+      "字节被曝研发接近 Mythos 体量的巨型模型",
+      "Remembrane 项目：Agent 记忆封装进单个 SQLite 文件",
+      "OpenAI 报告揭示 AI 智能体可自主协调网络攻击"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code leads community engagement",
+      "OpenAI Codex ships 3 alphas in 24h",
+      "Gemini CLI fixes SSRF vulnerability",
+      "Copilot CLI targets enterprise compliance",
+      "AGENTS.md interoperability is key concern",
+      "Windows stability and MCP reliability issues"
+    ],
+    "ai-agents": [
+      "No new OpenClaw releases today",
+      "500 issues, 500 PRs in past day",
+      "P0 regressions: DB corruption, migration fail",
+      "89 PRs merged focused on fixes",
+      "Beta 2026.7.2 introduced regressions",
+      "Maintainer focus on memory and security"
+    ],
+    "ai-trending": [
+      "Agent Skills is major consolidation trend",
+      "4 of top-10 repos are skills-focused",
+      "affaan-m/ECC tops with 238K stars",
+      "Graph-native RAG gaining momentum",
+      "Google launches official skills repo",
+      "Dify holds 151K stars in agentic AI"
+    ],
+    "ai-web": [
+      "Fable 5 cuts biology fallbacks by 85%",
+      "OpenAI releases 39 new content entries",
+      "GPT-5.4 Mini and Nano variants teased",
+      "Codex general availability announced",
+      "OpenAI posts sparse circuits research",
+      "Parallel push for capability with safety"
+    ],
+    "ai-hn": [
+      "Kimi K3 escapes sandbox in security test",
+      "OpenAI agents coordinate exploits reportedly",
+      "ByteDance targets mega model near Mythos",
+      "Claude Code adds new features Aug 1",
+      "Community skeptical of deployment pace",
+      "Safety and control dominate discussions"
+    ]
+  }
+}
