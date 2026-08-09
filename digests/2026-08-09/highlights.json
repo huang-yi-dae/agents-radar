@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 计费争议持续三周，184👍功能请求引关注",
+      "OpenAI Codex 发布 rust-v0.148.0-alpha.5，Windows 问题密集",
+      "Gemini CLI 代理稳定性 P1 问题集中，v0.56.0-nightly 发布",
+      "Qwen Code v0.21.8 发布，多会话协调成主线",
+      "OpenCode 128👍功能提案，PR 密集活跃",
+      "跨会话状态与记忆成多工具共同功能方向"
+    ],
+    "ai-agents": [
+      "OpenClaw 发布 v2026.6.34，强化浏览器与网络边界安全",
+      "OpenClaw v2026.6.33 限制恶意响应，排除 Telegram 凭证",
+      "OpenClaw 处理 500 条 Issues 与 500 条 PRs，吞吐量大",
+      "维护者审阅与决策环节积压，P0/P1 稳定性问题持续活跃",
+      "新版本迁移需确认自定义 DNS 或浏览器来源配置",
+      "关闭/合并比例偏低，Issue 约 10%，PR 约 37%"
+    ],
+    "ai-trending": [
+      "AI Agent Skills 赛道爆发，Google 等团队日增超 5,000 Stars",
+      "hermes-agent 以 22.7 万 Stars 登顶 ai-agent 主题榜",
+      "minimind 2小时从零训练 64M 参数 LLM 持续升温",
+      "dify、open-webui、langchain 均破 14 万 Stars",
+      "zvec 与 celld 上榜，AI 能力下沉至基础设施层",
+      "ollama 已支持 Kimi-K2.6、GLM-5.2 等最新模型"
+    ],
+    "ai-web": [
+      "OpenAI 16 篇内容高密度发布，构成明显发布潮",
+      "GPT-5.4 旗舰迭代，另推 Mini 与 Nano 轻量级路线",
+      "GPT-5.3 Codex Spark 发布，聚焦编程场景",
+      "GPT-5.6 SOL 改进条目暗示细粒度质量迭代",
+      "开发者生态成核心叙事，三条内容指向编程场景",
+      "Anthropic 今日零新增，与 OpenAI 形成鲜明对比"
+    ],
+    "ai-hn": [
+      "OpenAI 针对 Hugging Face 意外攻击事件刷屏，334分346评论",
+      "Claude Code 默认启用 Auto 模式引自主性争议",
+      "Claude Code 跨会话通信功能上线，引多代理协作讨论",
+      "AI 解决 25 年科学难题，HN 零评论显冷静",
+      "LLM 文件系统设计评测论文发布，关注度不高",
+      "AI 代理记忆层可用纯 Go 标准库构建引讨论"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code leads community engagement with 184 upvotes",
+      "Codex and Gemini CLI iterate quickly on infrastructure",
+      "Windows reliability remains largest friction area across tools",
+      "Session-state management universally fragile across all tools",
+      "Billing transparency emerging as trust issue for Codex",
+      "Claude Code v2.1.226 patch released same day"
+    ],
+    "ai-agents": [
+      "OpenClaw shows 500 issues, 500 PRs in 24 hours",
+      "Two new releases focus on network and secret hardening",
+      "DeepSeek v4 silent reply failure has 179 comments",
+      "Memory leaks and session-state corruption persist",
+      "Maintainer steipete pushing large refactors through pipeline",
+      "51 issues closed, 186 PRs merged in last day"
+    ],
+    "ai-trending": [
+      "Agent Skills repos explode across ecosystem today",
+      "NousResearch hermes-agent hits 227k stars",
+      "prime-agent gains 2,483 stars in single day",
+      "Vectorless RAG approaches gaining traction as alternatives",
+      "Financial trading agent toolkit TauricResearch/TradingAgents maturing",
+      "Self-hosted privacy-first agent model consolidating"
+    ],
+    "ai-web": [
+      "OpenAI publishes 16 new articles today",
+      "GPT-5.4, Mini and Nano model tiers revealed",
+      "GPT-5.3 Codex Spark variant announced",
+      "OpenAI Economic Research Exchange launched",
+      "Partnership with APA for responsible AI",
+      "Anthropic quiet with no new content published"
+    ],
+    "ai-hn": [
+      "OpenAI security incident targeting Hugging Face dominates",
+      "Claude Code Auto Mode default sparks debate",
+      "OpenAI training models while coordinating exploits criticized",
+      "YouTube mistakenly penalized Kurzgesagt video",
+      "Prominent researcher departs from OpenAI",
+      "AI societal impacts discussion emerging in South Korea"
+    ]
+  }
+}
