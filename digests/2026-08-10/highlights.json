@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 安全过滤器误报成社区焦点，单日新增 15+ 条 issue",
+      "OpenAI Codex 自定义状态栏功能获 150 赞，高赞需求密度最高",
+      "Gemini CLI 发布 v0.56.0-nightly，但暴露 3 个 P1 级 bug",
+      "GitHub Copilot CLI 遭遇 MCP 生态问题集中爆发，24h 新增 20+ issue",
+      "Kimi Code CLI 跨会话记忆呼声最高，最热 issue 达 27 条评论",
+      "OpenCode 剪贴板失效获 110 赞，网关稳定性遭遇信任危机"
+    ],
+    "ai-agents": [
+      "OpenClaw 24 小时 500 issue 500 PR，高吞吐迭代状态",
+      "DeepSeek v4 Flash 静默回复失败复发，196 条评论热议",
+      "多个 P1 级 Bug 积压无 fix PR，长期风险在累积",
+      "Slack Enterprise Grid 路由修复 PR 密集提交，维护者活跃",
+      "会话稳定性成焦点，多个 P1 修复 PR 待合并",
+      "消息丢失/重复发送类稳定性问题占据多个高优先级 Issue"
+    ],
+    "ai-trending": [
+      "prime-agent 单日 +2356 stars 登顶，自改进 RLM Agent 引关注",
+      "Google 连发两个 Agent Skills 项目，加速技能标准化布局",
+      "addyosmani/agent-skills 获 680 stars，主打生产级工程技能",
+      "weathernext 开源，DeepMind 天气预测模型引科学计算关注",
+      "cherry-studio 持续攀升，AI 生产力工作站需求旺盛",
+      "DeepSeek-Reasonix 专为终端优化，垂直模型工具链成熟"
+    ],
+    "ai-web": [
+      "OpenAI 单日发布 13 条新内容，呈平台化扩张态势",
+      "GPT-5.6 密集技术发布，模型效率与 ChatGPT 体验双线推进",
+      "OpenAI 与 APA 合作，加速垂直生态布局",
+      "GPT Live 推出连续语音交互，语音交互体验升级",
+      "Anthropic 今日零更新，与 OpenAI 战略节奏形成鲜明对比",
+      "OpenAI 布局学术研究者与经济学家场景，构建应用壁垒"
+    ],
+    "ai-hn": [
+      "如何用 LLM 当苏格拉底式导师学习，获 398 分 228 评论成爆款",
+      "社区从关注 AI 能力转向关注隐私与权力影响",
+      "ByteDance 预训练 10T 参数模型，剑指 Anthropic 引军备竞赛讨论",
+      "自托管模型无关的多智能体助手 Pacific Slate 发布，切中隐私焦虑",
+      "开发者兴起自托管编码 LLM 浪潮，探索摆脱云端 API",
+      "Qwen 3.8 与 Claude Opus 5 证明基准分无法预测实际费用成共识"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code ClAudit false positives hit 13+ issues",
+      "Copilot CLI MCP handshake and fail-closed flaws",
+      "Gemini CLI nightly v0.56.0 released",
+      "Windows weakest platform across all CLI tools",
+      "Session portability and fallback now baseline expectations",
+      "Kimi Code CLI minimal activity with one PR"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs in 24h",
+      "No new releases; maintenance and stabilization phase",
+      "Silent reply failures and duplication bugs persist",
+      "Slack Enterprise Grid support a critical issue",
+      "177 PRs merged, backlog growing faster than resolution",
+      "Session state corruption among top P1 concerns"
+    ],
+    "ai-trending": [
+      "prime-agent gains 2,356 stars, leads agentic coding",
+      "Agent Skills movement gains traction: google/skills",
+      "Ollama now supports Kimi, GLM-5.2, MiniMax, DeepSeek",
+      "GraphRAG transition continues with code-graph-rag",
+      "Harvey Labs launches for legal AI benchmarking",
+      "Google DeepMind debuts weathernext for applied science"
+    ],
+    "ai-web": [
+      "OpenAI publishes 13 new metadata-only articles",
+      "GPT-5.6 productization push signals detected",
+      "OpenAI expands into academia and economic research",
+      "Building Abundant Intelligence framing piece published",
+      "Anthropic silent for second consecutive crawl",
+      "OpenAI indexing blocks full article text retrieval"
+    ],
+    "ai-hn": [
+      "How I use LLMs to learn complex topics tops HN",
+      "Rogue AI behavior sparks safety concerns online",
+      "70% of AI revenue from OpenAI and Anthropic noted",
+      "Debate on labs rivaling government power emerges",
+      "Qwen 3.8 vs Claude Opus 5 cost-aware comparison",
+      "ByteDance pretraining 10T parameter model raises questions"
+    ]
+  }
+}
