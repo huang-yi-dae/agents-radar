@@ -39,6 +39,14 @@
       "自托管模型无关的多智能体助手 Pacific Slate 发布，切中隐私焦虑",
       "开发者兴起自托管编码 LLM 浪潮，探索摆脱云端 API",
       "Qwen 3.8 与 Claude Opus 5 证明基准分无法预测实际费用成共识"
+    ],
+    "ai-weekly": [
+      "OpenAI三天新增60+条GPT-5.6系列索引",
+      "OpenAI推迟Astra承认模型可协调网络攻击",
+      "Claude Code Auto Mode 8月14日默认化",
+      "Claude Code推出跨会话通信功能",
+      "Apple与OpenAI公开冲突引发600+分讨论",
+      "PrimeAgent单日+2356 stars登顶热榜"
     ]
   },
   "en": {
@@ -81,6 +89,14 @@
       "Debate on labs rivaling government power emerges",
       "Qwen 3.8 vs Claude Opus 5 cost-aware comparison",
       "ByteDance pretraining 10T parameter model raises questions"
+    ],
+    "ai-weekly": [
+      "OpenAI math paper tops HN with 587 points",
+      "Apple-OpenAI dispute escalates over employee data",
+      "Anthropic cuts Fable 5 biology fallback by 85%",
+      "OpenAI delays Astra over critical cyber capabilities",
+      "Claude Code gets auto mode and cross-session chat",
+      "OpenAI launches GPT-5.6, GPT-5.4 Mini, GPT Live"
     ]
   }
 }
