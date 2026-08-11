@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.227发布，跨端会话同步成最热需求获120赞",
+      "Codex Windows 11卡顿问题严重，81赞登顶issue榜",
+      "Gemini CLI v0.56.0-nightly发布，但多代理挂起问题待解",
+      "Qwen Code Fleet架构RFC引热议，多代理协作成焦点",
+      "OpenCode v1.18.16发布，VS Code插件受关注",
+      "Copilot CLI企业策略误伤个人开发者，成治理新焦点"
+    ],
+    "ai-agents": [
+      "OpenClaw日500条Issue和PR，社区活跃度爆表",
+      "OpenClaw无新版本发布，silent reply bug仍复现",
+      "35个导出名称冲突重构PR关闭，改善代码健康度",
+      "2026.8.1 beta.2候选版本签名通过CI验证",
+      "UI本地化文件自动同步，多语言支持保持最新",
+      "高优先级修复dev-roster网关setup chat失败的PR待跟进"
+    ],
+    "ai-trending": [
+      "prime-agent日增2642星登顶，自进化RLM智能体爆火",
+      "agency-agents日增1349星，AI代理机构概念走红",
+      "ComfyUI日增922星，扩散模型工具链持续高热",
+      "firecrawl日增835星，LLM数据获取基础设施受宠",
+      "semantica首登Trending获970星，图原生Agent基础设施兴起",
+      "agent-skills日增659星，生产级编码技能库受追捧"
+    ],
+    "ai-web": [
+      "Anthropic发布Claude Sonnet 5，Agent能力下放性价比高",
+      "Claude研究版将黎曼猜想零点占比从41.6%提升至67.2%",
+      "OpenAI Daybreak网络安全项目持续扩张，聚焦攻防",
+      "Anthropic更新《构建高效AI Agent》指南，回归简单组合",
+      "OpenAI多条线并进，深入学术科研、金融、医疗行业",
+      "Sonnet 5定价$2/M tokens，Agent应用成本门槛大降"
+    ],
+    "ai-hn": [
+      "14MB的agentic LLM亮相，边缘端智能体引热议",
+      "$250 FPGA跑LLM达21000 tok/s，颠覆性价比认知",
+      "Claude黎曼猜想研究登HN热榜，获161分113评论",
+      "OpenAI GPT 5.6 Cyber发布，安全伦理讨论升温",
+      "Claude/GPT知识截止日期逆向分析引关注",
+      "Claude AI内容水印机制引发社区广泛讨论"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.227 ships, regression-heavy",
+      "Codex alpha focuses on Windows fixes",
+      "Gemini CLI fixes SSRF, OAuth security",
+      "Copilot CLI sees no merged PRs today",
+      "Qwen Code matures with nightly builds",
+      "Cross-tool pain: Windows, context, policy bugs"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs in 24h",
+      "OpenClaw triages 90 issues, 164 PRs merged",
+      "Beta stabilization for 2026.8.1 release line",
+      "Refactor consolidates coercion helpers",
+      "Release candidate rebased for CI evaluation",
+      "Focus on beta regressions, auth reliability"
+    ],
+    "ai-trending": [
+      "prime-agent +2,642 stars, self-improving RL agent",
+      "agency-agents +1,349, AI agency workflows",
+      "firecrawl +835, web context API soars",
+      "ComfyUI +922, dominates diffusion UI space",
+      "Graph-native RAG: semantica, code-graph-rag surge",
+      "agent-skills +659, engineering skills library"
+    ],
+    "ai-web": [
+      "Anthropic: Claude improves Riemann bound to 67.2%",
+      "Result validated by external mathematicians",
+      "Anthropic resurfaces agent-building guide",
+      "Claude Sonnet 5: agentic at lower cost",
+      "OpenAI: ChatGPT for Academic Researchers",
+      "OpenAI pushes clinician, Daybreak cybersecurity"
+    ],
+    "ai-hn": [
+      "HN debates Claude's Riemann Hypothesis progress",
+      "Skepticism on humanizing LLM outputs",
+      "GPT-5.6-Cyber release sparks discussion",
+      "14MB agentic model gains traction",
+      "Sub-$300 FPGA runs LLM at 21k tok/s",
+      "Bifurcated sentiment: progress vs AI slop"
+    ]
+  }
+}
