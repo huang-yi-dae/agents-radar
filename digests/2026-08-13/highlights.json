@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Windows 端崩溃成众矢之的，多家 CLI 稳定性遭质疑",
+      "Claude Code v2.1.229 发布，Linux 桌面请求关闭引热议",
+      "OpenAI Codex 官方密集合并稳定性补丁，macOS 资源耗尽未解",
+      "Gemini CLI v0.56.0-nightly 遇子代理误报挂起难题",
+      "Kimi Code CLI 社区冷淡，Memory System 诉求高但无回应",
+      "Qwen Code 长任务卡死，被对比称『Kimi Code 完胜』"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时500 Issue 500 PR，社区热度爆棚",
+      "Telegram/Discord 等聊天通道集成成最大痛点",
+      "维护者 steipete 狂提8个PR，修复 Web UI 与会话管理",
+      "Discord 入口阻塞致命Bug获修复，兼容性风险引关注",
+      "PR #119909 修复 P0 级会话历史误删严重故障",
+      "Microsoft Teams 媒体限制 Bug 已被成功修复"
+    ],
+    "ai-trending": [
+      "semantica 图原生AI基础设施首登榜，单日+845星",
+      "orca 被称为『Agent 时代的IDE』，单日+1235星",
+      "diagram-design 单日狂揽+2855星，AI制图成新热点",
+      "14MB微型模型 needle 发布，端侧AI加速向手机渗透",
+      "ragflow 以 87.5k stars 持续领跑 RAG 开源赛道",
+      "macro：用共享AI记忆串联团队协作的『AI原生平台』"
+    ],
+    "ai-web": [
+      "Anthropic 红队发布多智能体系统风险预警清单",
+      "Anthropic 研究：再培训就业率仅提升2~3个百分点",
+      "OpenAI 单日更新42篇，Daybreak 模型登陆 AWS",
+      "OpenAI 连发 Codex 5.3 系列、Spark、App 等新品",
+      "Anthropic 聚焦AI社会学，OpenAI 狂推产品商业化",
+      "ChatGPT Health 健康功能与 Rosalind 生物防御计划发布"
+    ],
+    "ai-hn": [
+      "伪装 ClaudeBot 等AI爬虫漏洞扫描，引发安全担忧",
+      "国会致信 OpenAI 要求澄清 HuggingFace 安全事故",
+      "开源工具 OJCP 欲定义 AI 代理可消费的职位协议",
+      "Decant 工具上线，可视化你的 Token 消耗",
+      "极简编码代理 DLLM 直建 llama.cpp，无中间层",
+      "YC 项目用 AI 代理发现新材料，获 114 分热评"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.229 ships with active fixes",
+      "OpenAI Codex macOS syspolicyd leak sparks debate",
+      "Community shifts from features to reliability work",
+      "Cache invalidation costs dominate CLI discussions",
+      "MCP server lifecycle fragility a top concern",
+      "Kimi, Qwen, OpenCode join cross-tool comparison"
+    ],
+    "ai-agents": [
+      "OpenClaw backlog persists with 500 issues, PRs",
+      "Maintainer steipete merges 13 PRs in a day",
+      "Silent reply failures hit 91 comment thread",
+      "Memory trust tagging raises 45 comment debate",
+      "Subagent completion delivery remains unreliable",
+      "Session-lane starvation bugs stay open for months"
+    ],
+    "ai-trending": [
+      "Diagram Design tops charts with +2,855 stars",
+      "Agency-agents surges +1,873 stars today",
+      "StablyAI Orca gains +1,235 stars for agents",
+      "Semantica builds graph-native AI infrastructure",
+      "Needle packs 14MB foundation model for edge",
+      "Ollama now supports Kimi, GLM-5.2, MiniMax"
+    ],
+    "ai-web": [
+      "Anthropic publishes multiagent failure modes research",
+      "OpenAI pushes Daybreak models on AWS",
+      "Rosalind Biodefense and ChatGPT Health launch",
+      "GPT Live and GPT-5.3 Codex tiers revealed",
+      "Anthropic: retraining yields modest $1K/yr gain",
+      "OpenAI adds 42 articles in product blitz"
+    ],
+    "ai-hn": [
+      "Bot spoofing ClaudeBot raises security concerns",
+      "Researchers steal reasoning traces from APIs",
+      "AI agent economy infrastructure shows momentum",
+      "Interview standards assume costly AI tools",
+      "Golang course mixes up language and board game",
+      "Discovered Materials launches YC P26 AI agents"
+    ]
+  }
+}
