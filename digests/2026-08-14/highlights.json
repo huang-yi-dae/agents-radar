@@ -1,0 +1,45 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 跨会话消息投递回归，7 条 issue 互相印证成大事故",
+      "Codex 多代理 V2 拒绝新模型 gpt-5.6-luna，社区 36 赞求兼容",
+      "Gemini CLI 子代理误报 GOAL 成功，引发可靠性大讨论",
+      "Copilot CLI 发布 v1.0.80-0/-1 补丁，Agent effort 配置受关注",
+      "Qwen Code 每日多版本迭代，Windows 安装器问题引热议",
+      "六大 CLI 竞争从'能用'转向'可靠'，MCP 稳定性成共同痛点"
+    ],
+    "ai-agents": [
+      "OpenClaw 24 小时 issues 与 PR 均达 500 条上限，活跃度爆表",
+      "388 条 PR 待合并，合并管线或成 OpenClaw 下一步瓶颈",
+      "修复会话结束后仍显示'运行中'徽章的卡死问题已就绪",
+      "模型切换错误被误报为未知错误，修复将提升可观测性",
+      "doctor --fix 无法恢复 Codex OAuth 凭据的问题待解决",
+      "steipete 提交多项 UI 修复，含 IME 输入框卡死问题"
+    ],
+    "ai-trending": [
+      "Anthropic 官方发布 skills 公共仓库，Agent Skills 生态加速成型",
+      "NVIDIA 推出 Switchyard，跨模型流量路由工具新增 408 星",
+      "cactus-compute/needle：14MB 基础模型，登顶端侧 AI 热榜",
+      "diagram-design 为 Claude Code 设计 29 种图表，今日增速第一",
+      "holaOS：开源一站式 AI Agent 工作区，支持 100+ 工具集成",
+      "RAG 向图原生升级，semantica 将知识图谱引入上下文管理"
+    ],
+    "ai-web": [
+      "Anthropic 未发布模型将黎曼猜想零点占比下限从 41.6% 提升至 67.2%",
+      "Claude 生成形式化可验证证明，获领域顶级专家外部审查认可",
+      "OpenAI 两天内发布 GPT-5.2 至 GPT-5.6 多模型迭代，速度惊人",
+      "OpenAI 预告'理论物理学新结果'，AI for Science 再下一城",
+      "Anthropic 定位转变：以'AI 安全与科学发现'为核心使命的研究机构",
+      "OpenAI 今日新增 95 篇内容，Codex 产品矩阵全面升级"
+    ],
+    "ai-hn": [
+      "Codex 登陆 Linux 桌面端预览，以 443 分登顶 HN 热榜",
+      "Cerebras 将 GPT-5.6 Sol 推理加速 14 倍，获 420 分热议",
+      "Anthropic 文本水印技术引发用户强烈不满，舆论持续发酵",
+      "传 Anthropic 以 60 亿美元收购 Decart，并筹备 2 万亿美元 IPO",
+      "Anthropic 发布概念推理指数，挑战传统基准测试方法",
+      "Google 研究：前沿 LLM'知道但回忆不出'，揭示检索瓶颈"
+    ]
+  },
+  "en": {}
+}
