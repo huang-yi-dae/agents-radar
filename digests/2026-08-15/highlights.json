@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.233 周更，Advisor 无响应问题引 96 赞热议",
+      "OpenAI Codex 日更 5 个 α 版本，权限系统重构中",
+      "Gemini CLI v0.56.0-nightly 发布，修复 PTY 泄漏",
+      "Copilot CLI v1.0.81 发布，含 Atlassian MCP 热修复",
+      "Kimi Code CLI 24h 无新提交，迭代明显放缓",
+      "OpenCode 遭遇 P0 级时间戳回绕事故，V2 架构迁移"
+    ],
+    "ai-agents": [
+      "OpenClaw 24h 内 500 条 Issue 与 PR，但无新版本发布",
+      "P0 缺陷积压：网关内存泄漏与文件工具路径错误",
+      "Silent reply failures 反复出现，单 issue 评论达 94 条",
+      "合并 PR 仅 19%，大量工作积压待维护者处理",
+      "Web UI 大规模重构中，多 PR 依赖链较长",
+      "引入安装策略警告确认机制，增强安全边界"
+    ],
+    "ai-trending": [
+      "semantica 单日涨 1181 星，图原生基础设施替代向量库",
+      "GitHub 官方推出 spec-kit，探索 AI 原生 SDLC",
+      "14MB 微型模型 needle 登榜，端侧 AI 竞赛延伸",
+      "holaOS 单日涨 769 星，一站式 AI Agent 工作空间",
+      "macro 用 Rust 构建 AI 原生团队协作空间，涨 436 星",
+      "hermes-agent 23 万星，长期学习型 Agent 框架"
+    ],
+    "ai-web": [
+      "Anthropic 发布文本水印技术细节，对标 EU AI Act",
+      "OpenAI 单日新增 140 篇内容，全面刷屏",
+      "OpenAI 密集发布青少年安全与心理健康蓝图",
+      "ChatGPT 广告测试与国防合作引争议",
+      "Anthropic 公开水印三底线：无质量损失、无成本、无追溯",
+      "Anthropic 发布劳动力再培训宏观经济研究"
+    ],
+    "ai-hn": [
+      "Claude Code 官方最佳实践登顶，130 分 87 评论",
+      "Graft 用 hooks 削减 grep 42% token，引热议",
+      "Anthropic 八月风险评估报告发布，52 分 48 评论",
+      "文本水印技术原理引发技术辩论，41 分 53 评论",
+      "Mole 终端深度研究代理，简化多步研究任务",
+      "LLM 时代代码审查必要性成社区讨论焦点"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code stable v2.1.233 with frequent releases",
+      "Codex rust v0.148.0-alpha.14-18 in rapid alpha",
+      "Gemini CLI v0.56.0-nightly on nightly cadence",
+      "Copilot CLI hit MCP OAuth regressions, fixed fast",
+      "Kimi Code CLI seeks memory-system improvements",
+      "Windows/macOS performance issues plague all CLI tools"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues and PRs in 24 hours",
+      "Silent message-loss failures and OOM crashes top concerns",
+      "Security install policy now requires operator acknowledgement",
+      "97 PRs merged/closed today in OpenClaw",
+      "xAI startup validation bug fixed in PR #123904",
+      "Control UI redesign wave from a single contributor"
+    ],
+    "ai-trending": [
+      "cactus-compute/needle: 14MB on-device model, +662 stars",
+      "semantica-agi/semantica up +1,181, graph-native context",
+      "github/spec-kit formalizes spec-driven AI development",
+      "holaboss-ai/holaOS: agent workspace with 100+ integrations",
+      "citrolabs/ego-lite: fastest browser for AI agents",
+      "OSINT tools holehe and SpiderFoot trend alongside AI"
+    ],
+    "ai-web": [
+      "Anthropic reveals Claude's invisible text watermarking tech",
+      "Watermarking aligns with EU AI Act compliance strategy",
+      "Anthropic publishes worker retraining economic research",
+      "OpenAI signal: Dali Rajic hire as new CRO",
+      "GPT-5.6 'Sol' preview spotted in OpenAI URL slugs",
+      "OpenAI 'Ultrafast' and 'Trusted Access for Cyber' pages found"
+    ],
+    "ai-hn": [
+      "Top post: maximizing Claude Code sessions gains traction",
+      "Anthropic's August 2026 Risk Report sparks debate",
+      "WSJ piece on Dario's wife fuels institutional skepticism",
+      "'RIP Claude' essay stirs mixed community sentiment",
+      "Contract-grade verifier for LLM GPU kernels on arXiv",
+      "OpenAI IPO trajectory and talent exodus draw concern"
+    ]
+  }
+}
