@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 多账户支持呼声最高，获346👍",
+      "OpenAI Codex 连发两个 alpha 版，修复 Windows 性能",
+      "Gemini CLI 发布 v0.56.0，聚焦 Subagent 可靠性",
+      "GitHub Copilot CLI 遭 OAuth 回归，NixOS 兼容告急",
+      "Qwen Code 发布 preview 版，/review 可靠性成焦点",
+      "OpenCode 计费故障引发热议，grok-4.5 不可用"
+    ],
+    "ai-agents": [
+      "OpenClaw 发布 v2026.8.1-beta.2，新增 Secret 绑定",
+      "GPT-5.6 Ultra 支持与运行时切换正式落地",
+      "Slack 重复评论投递问题已修复，消息可靠性提升",
+      "Feishu 流式卡片内容丢失问题得到解决",
+      "记忆系统稳定性成核心痛点，多项 P1 未关闭",
+      "PR 合并率仅 11%，维护者审查成瓶颈"
+    ],
+    "ai-trending": [
+      "cactus-compute/needle 14MB 超轻量模型，主打端侧",
+      "GitHub spec-kit 官方规范驱动工具今日 +892 stars",
+      "unsloth 推出本地 UI，一键运行训练主流 LLM",
+      "CLI-Anything 让所有软件 Agent 原生，新增 118 星",
+      "ego-lite 共享登录态，成 AI 代理效率神器",
+      "公共 API 列表项目今日新增 2260 stars 登顶"
+    ],
+    "ai-web": [
+      "Anthropic 发布多智能体系统安全前瞻报告",
+      "Anthropic 官宣 Claude 将内置文本水印",
+      "OpenAI 任命新首席营收官，加速商业化",
+      "OpenAI 推出 Ultrafast 预览，疑似推理优化",
+      "OpenAI 牵手美国心理学会，推动负责任 AI",
+      "OpenAI 与 Rosalind 合作，押注生物安全"
+    ],
+    "ai-hn": [
+      "AI 制药深度剖析：炒作与真实进展的鸿沟",
+      "OpenAI 上市前人才流失引 ' 巨大红旗 '",
+      "OpenAI 欧洲广告月底上线，引发商业争议",
+      "Anthropic CEO 妻子 Epstein 关联成社区热点",
+      "开发者用 Claude 造浏览器却遭全网嫌弃",
+      "AI 数学突破报道遇冷，评论数归零显疲劳"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code issue hits 346 👍 on connectors",
+      "OpenAI Codex ships alpha .19/.20 fixes",
+      "Gemini CLI subagent MAX_TURNS bug is P1",
+      "Copilot CLI stable 1.0.80, MCP OAuth issues",
+      "Kimi CLI users suspect quota reduction",
+      "No stable releases from any tool in 24h"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.8.1-beta.2 released",
+      "Secret egress host binding added",
+      "GPT-5.6 Ultra runtime switching included",
+      "500 issues, 500 PRs updated in 24h",
+      "Windows cron and process leak bugs persist",
+      "Moderate throughput bottleneck: 22 issues closed"
+    ],
+    "ai-trending": [
+      "Needle: 14MB model for tiny devices",
+      "Unsloth adds local LLM training UI",
+      "GitHub spec-kit gains 892 stars today",
+      "ego-lite: browser for AI agents, +545 stars",
+      "Diagram-design repo for Claude Code hits 1,600+ stars",
+      "Cursor plugins spec officially released"
+    ],
+    "ai-web": [
+      "Anthropic releases multiagent red team report",
+      "Claude's EU watermarking mechanism detailed",
+      "OpenAI announces 'Ultrafast' product preview",
+      "OpenAI hires CRO, expands enterprise push",
+      "Rosalind Biodefense initiative launched",
+      "OpenAI partners with APA on responsible AI"
+    ],
+    "ai-hn": [
+      "OpenAI talent exodus flags IPO concerns",
+      "Ads coming to OpenAI Europe this month",
+      "Anthropic IPO hinges on $190-200B forecast",
+      "HN sentiment sours on lab leadership",
+      "AI content backlash grows in comments",
+      "Curiosity remains for scientific AI applications"
+    ]
+  }
+}
