@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code会话限额异常：13+独立报告，最高获22👍",
+      "OpenAI Codex Windows卡顿：106评论、85👍高热度",
+      "Gemini CLI v0.56.0-nightly：批量修复SSR Agent",
+      "GitHub Copilot CLI 1.0.80引入多处回归，PR停滞",
+      "OpenCode Ctrl+C冲突：49👍，付费模型故障受关注",
+      "Qwen Code v0.21.11-nightly：多智能体Bug修复快"
+    ],
+    "ai-agents": [
+      "OpenClaw今日500+更新，关闭40个Issues，社区活跃",
+      "Web UI重构：新增安装策略警告审阅功能",
+      "修复多行输入时聊天窗口跳动，优化阅读体验",
+      "doctor命令修复：旧配置迁移错误不再静默吞掉",
+      "P1级问题聚焦：消息投递静默失败与会话卡死",
+      "新Release为Gateway CPU性能剖析数据归档"
+    ],
+    "ai-trending": [
+      "端侧模型needle仅14MB，今日新增443 stars",
+      "unsloth本地UI成Trending黑马，单日+572",
+      "ollama支持Kimi-K2.6、GLM-5.2等最新模型",
+      "vllm凭借PagedAttention成生产部署主流",
+      "Rust框架rig获8284 stars，吸引系统级开发者",
+      "Picovoice picollm X-Bit量化实现端侧推理"
+    ],
+    "ai-web": [
+      "OpenAI任命Dali Rajic为首席营收官，加速商业化",
+      "GPT-5.6新版本迭代与Ultrafast速度层级预览",
+      "Sora页面同日更新，暗示视频模型重大发布",
+      "OpenAI发布企业AI落地实践案例，深耕B端",
+      "Anthropic官网今日零更新，静默期引人关注",
+      "OpenAI一天5条更新，模型、商业化多线并进"
+    ],
+    "ai-hn": [
+      "Anthropic营收Q2达115亿美元，IPO估值引热议",
+      "Anthropic文本水印技术引发社区强烈反感",
+      "Stripe收购OpenRouter，Nvidia缩减OpenAI投资担保",
+      "实验：LLM只看五年级以下内容，能力边界引200+讨论",
+      "Anthropic多智能体系统研究：理论到工程差距大",
+      "Ask HN：有无公司从AI代码回归手写？109条反思"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code bug reports heavy on silent behavior",
+      "OpenAI Codex merged 17 PRs today",
+      "Session lifecycle management is top pain point",
+      "Multi-agent orchestration reliability issues rise",
+      "Security concerns over sandbox bypasses emerge",
+      "Billing and quota transparency complaints grow"
+    ],
+    "ai-agents": [
+      "OpenClaw shows 500 issues and PRs updated",
+      "460 active issues indicate heavy triage load",
+      "106 PRs merged or closed in 24 hours",
+      "Session-state integrity bugs are main focus",
+      "Maintainer bandwidth flagged as key bottleneck",
+      "New diagnostic CPU-profile artifact released"
+    ],
+    "ai-trending": [
+      "Needle ships 14MB foundation model for edge",
+      "Unsloth gains 572 stars for local training UI",
+      "PageIndex hits 35k stars for vectorless RAG",
+      "Omarchy enters Linux-for-AI agent era",
+      "Cordis pushes spatiotemporal composability paradigm",
+      "vLLM remains de facto standard at 89k stars"
+    ],
+    "ai-web": [
+      "OpenAI accelerates with five new posts today",
+      "Dali Rajic named OpenAI Chief Revenue Officer",
+      "GPT-5.6 improvement announced in URL slug",
+      "New 'Ultrafast' product signals latency focus",
+      "Anthropic publishes nothing, quiet streak continues",
+      "Competitive gap widens in content cadence"
+    ],
+    "ai-hn": [
+      "Claude system prompts release tops HN at 526",
+      "Two separate Claude outages spark trust debate",
+      "Stripe-OpenRouter $7B acquisition draws buzz",
+      "Fifth-grade-only LLM study scores 234 points",
+      "Anthropic watermarking feature fuels control debate",
+      "Skepticism grows toward AI leaders' messaging"
+    ]
+  }
+}
