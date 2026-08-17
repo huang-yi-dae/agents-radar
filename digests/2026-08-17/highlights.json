@@ -39,6 +39,14 @@
       "实验：LLM只看五年级以下内容，能力边界引200+讨论",
       "Anthropic多智能体系统研究：理论到工程差距大",
       "Ask HN：有无公司从AI代码回归手写？109条反思"
+    ],
+    "ai-weekly": [
+      "OpenAI发布GPT-5.6，与Cerebras合作实现14倍推理加速",
+      "Anthropic将黎曼猜想零点占比下界提升至67.2%",
+      "Anthropic公开系统提示词，登HN热榜526分222评论",
+      "Stripe收购OpenRouter，Nvidia缩减OpenAI投资担保",
+      "Claude Sonnet 5发布，Opus级能力下放低价位",
+      "OpenAI任命Dali Rajic为CRO，年收入超400亿美元"
     ]
   },
   "en": {
@@ -81,6 +89,14 @@
       "Fifth-grade-only LLM study scores 234 points",
       "Anthropic watermarking feature fuels control debate",
       "Skepticism grows toward AI leaders' messaging"
+    ],
+    "ai-weekly": [
+      "Claude improves Riemann zeta bound to 67.2%",
+      "OpenAI previews GPT-5.6 'Sol' with Ultrafast mode",
+      "Codex arrives on Linux desktop in ChatGPT app",
+      "Anthropic details text watermarking for EU AI Act",
+      "Anthropic Frontier Red Team warns on multi-agent risks",
+      "OpenAI hires Dali Rajic as first CRO"
     ]
   }
 }
