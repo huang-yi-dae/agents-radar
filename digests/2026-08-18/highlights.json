@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 社区聚焦交互体验，消息队列与键位绑定成热议",
+      "OpenAI Codex 投入企业代理网络与沙箱加固，发布 rust-v0.148.0-alpha.21",
+      "Qwen Code 依托自动化 review 基础设施走出差异化路线",
+      "Kimi Code CLI 完全停摆无任何活动，或已停止维护",
+      "头部工具普遍短板：Windows 稳定性、子代理可见性、MCP 认证",
+      "Copilot CLI 会话生命周期管理失守，远端会话无法恢复"
+    ],
+    "ai-agents": [
+      "OpenClaw 今日 500 Issues 500 PRs，关闭率仅 4% 讨论积压",
+      "OpenClaw 合并 PR 完善插件安装安全边界，建立完整可信链路",
+      "队列系统共享容量分配修复，解决生产故障资源争用问题",
+      "Control UI 增加安装策略警告审阅能力，管理员可确认风险安装",
+      "macOS 签名发布流程获修复，稳定性可用性成今日主旋律",
+      "项目活跃讨论但缓慢收口，维护者带宽或是主要瓶颈"
+    ],
+    "ai-trending": [
+      "AI 安全爆发：Anthropic-Cybersecurity-Skills 带来 817 个结构化技能",
+      "strix 开源 AI 渗透测试工具跻身 Trending，安全工程化成刚需",
+      "ai-memory 解决多 Agent 厂商交接痛点，今日 +207 星",
+      "career-ops AI 求职助手受热捧，本地 CLI 中完成职位评估",
+      "Rust 地位巩固：nautilus_trader、ai-memory、llmfit 均以 Rust 为核心",
+      "omlx 专为 Apple Silicon 优化 LLM 推理，SSD 缓存加持"
+    ],
+    "ai-web": [
+      "Anthropic 全天零新增内容，或处于重大发布前夜蓄力期",
+      "OpenAI 8月17日大规模发布：GPT-5.4、GPT-5.5、Sora 2 密集登场",
+      "OpenAI 发布 GPT OSS Safeguard，疑似开源安全新举措",
+      "OpenAI 加入 Ports Pike 项目，跨领域合作再下一城",
+      "Healthbench 发布，生命科学领域评测基准再添新丁",
+      "8月18日仅4条新增，GPT OSS Safeguard 出现重复条目"
+    ],
+    "ai-hn": [
+      "GPT-5.6 Sol 获评 OpenAI 最强视觉模型，HN 297 分热议",
+      "GPT-5.6 Sol 价格减半，直指 DeepSeek 等低价开源竞争",
+      "llama.cpp 发布 v0.1.0 正式版，本地推理生态走向成熟",
+      "Speko (YC S26) 要做语音 AI 界的 OpenRouter，90 分讨论",
+      "终端写小说工具 1667 引 90 条评论，AI 创作边界受关注",
+      "Doberman 看门狗工具防止 Claude 删除数据库，安全性受关注"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code hits v2.1.234 with new env var",
+      "OpenAI Codex ships rust-v0.148.0-alpha.21",
+      "Gemini CLI fixes subagent disable, TUI hang",
+      "Copilot CLI faces MCP OAuth regressions",
+      "MCP integration is key differentiator across tools",
+      "Windows remains weakest platform across all tools"
+    ],
+    "ai-agents": [
+      "OpenClaw in stability-critical phase, 480 open issues",
+      "20 issues closed vs 480 open in 24h",
+      "133 PRs merged, 367 still open",
+      "No new releases today for OpenClaw",
+      "Backlog risk from needs-maintainer-review labels",
+      "Message delivery loss, session-state corruption rampant"
+    ],
+    "ai-trending": [
+      "ai-memory (Rust) gains +207 stars today",
+      "claude-mem addresses persistent agent context",
+      "Anthropic-Cybersecurity-Skills adds 817 skills",
+      "strix (AI pentesting) rockets +598 stars",
+      "llmfit tests models against your hardware",
+      "Rust consolidates as AI tooling language of choice"
+    ],
+    "ai-web": [
+      "OpenAI releases GPT-5.4 and Sora 2",
+      "OpenAI launches ChatGPT Atlas, Personal Finance",
+      "OpenAI introduces GPT-OSS Safeguard (open source)",
+      "New HealthBench benchmark for healthcare AI",
+      "OpenAI joins Ports Pike Project",
+      "Anthropic silent, no new content today"
+    ],
+    "ai-hn": [
+      "GPT 5.6 Sol praised as best vision model",
+      "OpenAI cuts vision model prices by 50%",
+      "Anthropic under fire for 'war on open source'",
+      "CEO's 'crisis of trust' remarks draw criticism",
+      "Leaked report: Anthropic agents 'killing rivals'",
+      "Fast.ai author essay sparks reflective debate"
+    ]
+  }
+}
