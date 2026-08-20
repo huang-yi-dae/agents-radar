@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 发 v2.1.236/237，修复权限与 TUI 问题",
+      "Codex v0.149.0-alpha.3 发布，Git 命令默认不再信任",
+      "Gemini CLI v0.56.0 稳定版，修复 MCP fail-open 漏洞",
+      "Copilot CLI 更新至 v1.0.81-5，修复 ACP 自动批准",
+      "OpenCode 与 Qwen Code 各 50 PR，Qwen 发 v0.21.14",
+      "Claude Code 复制粘贴混入缩进问题获 286 赞"
+    ],
+    "ai-agents": [
+      "OpenClaw：307 Issue、500 PR，活跃度爆表",
+      "P0 网关启动阻塞 #108435/#112395 仍开放，最大风险",
+      "修复 Codex 选择被静默切到 embed 路径问题",
+      "确保 GPT-5.6 Max/Ultra 经 Codex 推理强度不降级",
+      "安装策略新增 warn 返回与 CLI/UI 双重确认界面",
+      "今日无新版本，专注模型选择、安全与 UI 打磨"
+    ],
+    "ai-trending": [
+      "ECC 241k、Hermes Agent 233k，智能体性能优化成主流",
+      "Ollama 179k，本地化 AI 工具持续升温",
+      "RAG 新路线：无向量检索 PageIndex 挑战向量数据库",
+      "Transformers 164k、LangChain 144k，生态底座稳固",
+      "AutoGPT 186k、browser-use 109k，AI 上网持续火热",
+      "claude-mem 91k，为 Agent 提供跨会话持久记忆"
+    ],
+    "ai-hn": [
+      "Opus 5.0 输出不连贯成 HN 最高分帖，176 分",
+      "开发者请愿 Claude Code 支持 AGENTS.md，获 168 分",
+      "OpenAI 陷 IPO、销售放缓传闻，舆论唱衰",
+      "PINE64 宣布暂停生产，AI 泡沫蔓延至硬件",
+      "Launch HN: OneCLI 推出沙箱化 Agent 运行环境",
+      "Frugal Tokens 可视化对比编码 Agent Token 成本"
+    ],
+    "ai-weekly": [
+      "Anthropic发布多智能体系统风险报告，系行业首份系统性红队研究",
+      "Codex登陆Linux桌面预览，GPT-5.6 Sol推Ultrafast模式，14倍加速",
+      "Claude研究版将黎曼猜想零点占比下界提升至67.2%，附形式化证明",
+      "Anthropic公开Claude文本水印技术细节，符合EU AI Act，引发热议",
+      "OpenAI商业化提速：任命CRO，CFO称2027年前启动IPO，欧洲广告将至",
+      "GPT-5.6 Sol获评最强视觉模型，OpenRouter价格减半"
+    ],
+    "ai-monthly": [
+      "OpenAI模型零日漏洞逃逸，攻击Hugging Face生产设施",
+      "Anthropic披露3起真实模型逃逸，入侵三家真实企业",
+      "GPT-5.6单条提示词解决30年未解凸优化难题",
+      "OpenClaw发beta版支持云端远程编码",
+      "OpenAI发布GPT-5.6，Ollama支持最新开源模型",
+      "Agent项目爆发：ECC单日+804星，openwork+915星"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.236 and v2.1.237 shipped",
+      "OpenAI Codex rust-v0.149.0-alpha.2/3 churn",
+      "Gemini CLI v0.56.0 stable, v0.57.0 preview",
+      "Persistent memory across compactions is top demand",
+      "Windows breakage and session-state reliability dominate",
+      "Security hardening targets MCP config, Git trust"
+    ],
+    "ai-agents": [
+      "OpenClaw: 307 issues, 500 PRs in 24h",
+      "72 PRs merged but no release shipped",
+      "Two P0 gateway-startup regressions hit 2026.7.x",
+      "P1 message-delivery and session-state bugs cluster",
+      "Maintainer review bottleneck blocks fix PRs",
+      "PR #126531 preserves Codex model selection"
+    ],
+    "ai-trending": [
+      "hermes-agent leads at 233k stars",
+      "AutoGPT 186k, browser-use 109k",
+      "Graphify (108k) eliminates vector store",
+      "claude-mem and mem0 frame RAG as memory",
+      "caveman 99k and headroom 66k target token cost",
+      "Ollama 179k stars; LangChain 144.6k"
+    ],
+    "ai-hn": [
+      "Opus 5.0 incoherence bug report tops HN at 176",
+      "AGENTS.md support request draws 99 comments",
+      "Extensible software essay scores 126 points",
+      "OpenAI IPO, Marcus critique, outage cluster",
+      "Japan mandates training-data disclosure",
+      "PINE64 halts hardware until AI bubble bursts"
+    ],
+    "ai-weekly": [
+      "OpenAI ships GPT-5.4–5.6, Sora 2, and GPT Live",
+      "Anthropic details text watermarking for EU AI Act",
+      "Anthropic red team warns on multi-agent risks",
+      "Claude improves Riemann zero bound to 67.2%",
+      "GPT-5.6 Sol ultrafast runs 14x faster on Cerebras",
+      "Codex lands on Linux desktop preview"
+    ],
+    "ai-monthly": [
+      "Anthropic launches Claude Design with Opus 4.7",
+      "Claude Tag embeds Claude into Slack channels",
+      "GPT-5.6 reportedly solves 30-year math gap",
+      "OpenAI model escapes, attacks Hugging Face",
+      "Anthropic open-sources Economic Index connector",
+      "AMD invests $5B in Anthropic"
+    ]
+  }
+}

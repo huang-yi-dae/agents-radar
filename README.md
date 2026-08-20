@@ -60,16 +60,15 @@ export GITHUB_TOKEN=ghp_xxxxx
 export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 
 # Option B: StepFun
-# export LLM_PROVIDER=stepfun
+export LLM_PROVIDER=stepfun
 export OPENAI_API_KEY=sk-xxxxxxxx
 export OPENAI_BASE_URL=https://api.stepfun.com/step_plan/v1
-# export OPENAI_MODEL=step-3.7-flash
+export OPENAI_MODEL=step-3.7-flash
 
 # Option C: OpenAI-compatible endpoint
 export LLM_PROVIDER=openai
 export OPENAI_API_KEY=sk-xxxxxxxx
 export OPENAI_BASE_URL=https://api.deepseek.com
-export OPENAI_MODEL=deepseek-v4-flash
 
 # Option D: GitHub Copilot (uses GITHUB_TOKEN)
 # export LLM_PROVIDER=github-copilot
@@ -82,6 +81,8 @@ export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write fi
 
 pnpm start
 pnpm start:local
+
+You can also create `.env.local` for local runs; `pnpm start:local` loads it automatically.
 ```
 
 
@@ -112,7 +113,9 @@ pnpm install
 wrangler deploy
 ```
 
-## Telegram Channel
+## Notifications
+
+The daily workflow can send a Telegram notification when `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` are set. The message includes links to all reports for that day plus the Web UI and RSS feed.
 
 **[t.me/agents_radar](https://t.me/agents_radar)**
 
@@ -189,7 +192,7 @@ New articles are detected by comparing sitemap `lastmod` timestamps against a pe
 - Fetches issues, pull requests, and releases updated in the last 24 hours across all tracked repos
 - Tracks trending Claude Code Skills — sorted by community engagement, not recency
 - Generates a per-tool summary for each CLI repository and a cross-tool comparative analysis
-- Generates a deep OpenClaw project report plus a cross-ecosystem comparison against 10 peer projects
+- Generates a deep OpenClaw project report plus a cross-ecosystem comparison against 12 peer projects
 - Scrapes official Anthropic and OpenAI web content via sitemaps; detects new articles incrementally
 - Monitors GitHub Trending daily + searches 6 AI topic tags; classifies repos by dimension and extracts trend signals
 - Fetches top-30 AI stories from Hacker News (last 24h, ranked by points); generates community sentiment report
@@ -219,24 +222,49 @@ openclaw_peers:
     name: My Agent
 ```
 
-### 3. Add Secrets
+### 3. Add secrets
 
+The daily, weekly, and monthly workflows all use three OpenAI-style env vars plus `GITHUB_TOKEN`:
+
+| Secret | Purpose |
+|--------|---------|
+| `OPENAI_API_KEY` | API key for the chosen LLM provider |
+| `OPENAI_BASE_URL` | Provider base URL |
+| `OPENAI_MODEL` | Model name |
+| `GITHUB_TOKEN` | Automatically provided by GitHub Actions |
+
+The current daily workflow is configured for DeepSeek. If you switch providers, update the secrets and the workflow env block together.
+
+Optional Telegram secrets:
+
+| Secret | Purpose |
+|--------|---------|
+| `TELEGRAM_BOT_TOKEN` | Telegram bot token |
+| `TELEGRAM_CHAT_ID` | Telegram chat/channel/group ID |
+
+> If neither Telegram secret is set, the notification step is silently skipped.
 Go to **Settings → Secrets and variables → Actions** and add:
 
 | Secret | Required | Description |
 |--------|----------|-------------|
-| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, or `openrouter` |
+| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, `openrouter`, or `stepfun` |
 | `ANTHROPIC_API_KEY` | if Anthropic | API key — works with both Anthropic and Kimi Code |
-| `ANTHROPIC_BASE_URL` | optional | API endpoint override. Set to `https://api.kimi.com/coding/` for Kimi Code; leave unset for Anthropic |
+| `OPENAI_API_KEY` | API key |
 | `OPENAI_API_KEY` | API key |
 | `OPENAI_BASE_URL` | optional | OpenAI-compatible endpoint override |
-| `OPENROUTER_API_KEY` | if OpenRouter | OpenRouter API key |
+| `OPENAI_MODEL` | optional | Model name override; defaults vary by provider |
 | `TELEGRAM_BOT_TOKEN` | optional | Telegram bot token from [@BotFather](https://t.me/BotFather). If set, a message is sent after each digest run |
 | `TELEGRAM_CHAT_ID` | optional | Telegram chat/channel/group ID to send notifications to |
 
 > `GITHUB_TOKEN` is provided automatically by GitHub Actions. When using `github-copilot` as the provider, the same `GITHUB_TOKEN` is used for LLM calls.
 
 **Setting up Telegram notifications** (optional):
+1. Message [@BotFather](https://t.me/BotFather) on Telegram, create a bot, and copy the token
+2. Add the bot to your channel/group, or start a DM with it
+3. Get the chat ID via [@userinfobot](https://t.me/userinfobot) or the [getUpdates](https://core.telegram.org/bots/api#getupdates) API
+4. Add `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` as repository secrets
+
+> If neither secret is set, the notification step is silently skipped.
 1. Message [@BotFather](https://t.me/BotFather) on Telegram, create a bot, and copy the token
 2. Add the bot to your channel/group, or start a DM with it
 3. Get the chat ID via [@userinfobot](https://t.me/userinfobot) or the [getUpdates](https://core.telegram.org/bots/api#getupdates) API
@@ -250,7 +278,9 @@ Confirm the workflow is enabled in the **Actions** tab.
 
 To test immediately, go to **Actions → Daily Agents Radar → Run workflow**.
 
-> **First run note**: The web content step will fetch up to 50 articles (25 per site) and may take a few extra minutes. Subsequent runs are fast — only new articles are processed.
+Current remote default: DeepSeek. If you change provider secrets, also update the workflow env block.
+
+> **First run note**: The web content step fetches up to 50 articles (25 per site) on the first run and may take extra minutes. Later runs only process new articles, so they are faster.
 
 ## LLM providers
 
@@ -259,12 +289,14 @@ Set `LLM_PROVIDER` to choose which model backend powers the digest generation. D
 | Provider | `LLM_PROVIDER` | Required env vars | Default model |
 |----------|---------------|-------------------|---------------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
-| StepFun | `stepfun` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `step-3.7-flash` |
-| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
+| StepFun | `stepfun` | `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `OPENAI_MODEL` | `step-3.7-flash` |
+| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `OPENAI_MODEL` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
-Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `STEPFUN_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
+All OpenAI-compatible providers use the same three env vars: `OPENAI_API_KEY`, `OPENAI_BASE_URL`, and `OPENAI_MODEL`.
+
+Override the model name with `OPENAI_MODEL` for `openai` and `stepfun`, `ANTHROPIC_MODEL` for `anthropic`, `GITHUB_COPILOT_MODEL` for `github-copilot`, or `OPENROUTER_MODEL` for `openrouter`.
 
 The provider abstraction lives in `src/providers/` — each provider is a separate file implementing the `LlmProvider` interface. Adding a new provider only requires creating a new file and registering it in the factory.
 
@@ -281,7 +313,7 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 export LLM_PROVIDER=openai
 export OPENAI_API_KEY=sk-xxxxxxxx
 export OPENAI_BASE_URL=https://api.deepseek.com
-export OPENAI_MODEL=deepseek-v4-flash
+export OPENAI_MODEL=deepseek-chat
 
 # Option C: GitHub Copilot (uses GITHUB_TOKEN)
 # export LLM_PROVIDER=github-copilot
@@ -294,6 +326,8 @@ export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write fi
 
 pnpm start
 pnpm start:local
+
+You can also create `.env.local` for local runs; `pnpm start:local` loads it automatically.
 ```
 
 
@@ -304,7 +338,7 @@ Files are written to `digests/YYYY-MM-DD/`:
 | File | Content | GitHub Issue label |
 |------|---------|-------------------|
 | `ai-cli.md` | CLI digest — cross-tool comparison + per-tool details | `digest` |
-| `ai-agents.md` | OpenClaw deep report + cross-ecosystem comparison + 10 peer details | `openclaw` |
+| `ai-agents.md` | OpenClaw deep report + cross-ecosystem comparison + 12 peer details | `openclaw` |
 | `ai-web.md` | Official web content report (only written when new content exists) | `web` |
 | `ai-trending.md` | GitHub AI trending report — repos classified by dimension + trend signals (only written when data is available) | `trending` |
 | `ai-hn.md` | Hacker News AI community digest — top stories + sentiment analysis (only written when fetch succeeds) | `hn` |
@@ -335,7 +369,7 @@ Each report is generated in both Chinese (`ai-cli.md`) and English (`ai-cli-en.m
 
 `ai-agents.md` / `ai-agents-en.md` structure:
 ```
-Issues: N | PRs: N | Projects covered: 10
+Issues: N | PRs: N | Projects covered: 12
 
 ## OpenClaw Deep Dive
   Today's summary / Releases / Project progress / Community highlights /

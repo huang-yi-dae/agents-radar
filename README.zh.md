@@ -69,7 +69,6 @@ export OPENAI_BASE_URL=https://api.stepfun.com/step_plan/v1
 export LLM_PROVIDER=openai
 export OPENAI_API_KEY=sk-xxxxxxxx
 export OPENAI_BASE_URL=https://api.deepseek.com
-export OPENAI_MODEL=deepseek-v4-flash
 
 # 方式 D: GitHub Copilot（使用 GITHUB_TOKEN）
 # export LLM_PROVIDER=github-copilot
@@ -82,6 +81,9 @@ export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write fi
 
 pnpm start
 pnpm start:local
+
+You can also create `.env.local` for local runs; `pnpm start:local` loads it automatically.
+也可以用 `.env.local` 存本地环境变量，`pnpm start:local` 会自动读取。
 ```
 
 
@@ -112,7 +114,11 @@ pnpm install
 wrangler deploy
 ```
 
-## Telegram 频道
+## Notifications
+
+The daily workflow can send a Telegram notification when `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` are set. The message includes links to all reports for that day plus the Web UI and RSS feed.
+
+日报工作流会在设置 `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` 后自动推送 Telegram 通知，消息中包含当天各报告、Web UI 和 RSS 的直达链接。
 
 **[t.me/agents_radar](https://t.me/agents_radar)**
 
@@ -189,7 +195,7 @@ LLM 负责过滤非 AI 项目，将结果按维度分类（AI 基础工具 / AI 
 - 抓取所有追踪仓库过去 24 小时内更新的 Issues、PR 和 Releases
 - 追踪热门 Claude Code Skills，按社区参与度而非时间排序
 - 为每个 CLI 仓库生成单独摘要，并输出跨工具横向对比分析
-- 生成 OpenClaw 深度项目报告，并与 10 个同赛道项目进行横向对比
+- 生成 OpenClaw 深度项目报告，并与 12 个同赛道项目进行横向对比
 - 通过 Sitemap 抓取 Anthropic 和 OpenAI 官网内容，增量检测新文章
 - 每日监测 GitHub Trending + 搜索 6 个 AI 主题标签，按维度分类并提炼趋势信号
 - 抓取 Hacker News 过去 24 小时 AI 热门帖子（top 30，按分数排序），生成社区情绪报告
@@ -221,15 +227,28 @@ openclaw_peers:
 
 ### 3. 添加 Secrets
 
-进入 **Settings → Secrets and variables → Actions**，添加以下密钥：
+进入 **Settings → Secrets and variables → Actions**，添加以下 Secrets：
 
-| Secret | 必填 | 说明 |
+| Secret | 用途 |
+|--------|------|
+| `OPENAI_API_KEY` | 当前供应商的 API key |
+| `OPENAI_BASE_URL` | API 地址 |
+| `OPENAI_MODEL` | 模型名称 |
+| `GITHUB_TOKEN` | GitHub Actions 自动提供 |
+
+当前 daily 工作流默认走 DeepSeek；切换供应商时请同步修改 Secrets 和工作流 env。
+
+可选 Telegram Secrets：
+
+| Secret | 用途 |
+|--------|------|
+| `TELEGRAM_BOT_TOKEN` | Telegram bot token |
+| `TELEGRAM_CHAT_ID` | 接收通知的频道 / 群组 / 用户 ID |
+
+> 两个 secret 均未设置时，通知步骤静默跳过，不影响正常运行。
 |--------|------|------|
-| `LLM_PROVIDER` | 可选 | `anthropic`（默认）、`openai`、`github-copilot`、`openrouter` |
+| `LLM_PROVIDER` | 可选 | `anthropic`（默认）、`openai`、`github-copilot`、`openrouter`、`stepfun` |
 | `ANTHROPIC_API_KEY` | Anthropic 时 | API 密钥，兼容 Anthropic 和 Kimi Code |
-| `ANTHROPIC_BASE_URL` | 可选 | API 地址覆盖。使用 Kimi Code 时设置为 `https://api.kimi.com/coding/`，使用 Anthropic 时留空 |
-| `OPENAI_API_KEY` | API 密钥 |
-| `OPENAI_BASE_URL` | 可选 | OpenAI 兼容端点覆盖 |
 | `OPENROUTER_API_KEY` | OpenRouter 时 | OpenRouter API 密钥 |
 | `TELEGRAM_BOT_TOKEN` | 可选 | Telegram bot token，从 [@BotFather](https://t.me/BotFather) 获取。设置后每次 digest 完成自动推送通知 |
 | `TELEGRAM_CHAT_ID` | 可选 | 接收通知的 Telegram 频道 / 群组 / 用户 ID |
@@ -243,6 +262,12 @@ openclaw_peers:
 4. 在仓库 Secrets 中添加 `TELEGRAM_BOT_TOKEN` 和 `TELEGRAM_CHAT_ID`
 
 > 两个 secret 均未设置时，通知步骤静默跳过，不影响正常运行。
+1. 向 [@BotFather](https://t.me/BotFather) 创建 bot，复制 token
+2. 将 bot 加入频道 / 群组，或直接与 bot 私聊
+3. 通过 [@userinfobot](https://t.me/userinfobot) 获取 chat ID
+4. 在仓库 Secrets 中添加 `TELEGRAM_BOT_TOKEN` 和 `TELEGRAM_CHAT_ID`
+
+> 两个 secret 均未设置时，通知步骤静默跳过，不影响正常运行。
 
 ### 3. 启用工作流
 
@@ -250,7 +275,9 @@ openclaw_peers:
 
 如需立即测试，进入 **Actions → Daily Agents Radar → Run workflow** 手动触发。
 
-> **首次运行说明**：网页内容步骤将抓取最多 50 篇文章（每站 25 篇），可能需要额外几分钟。后续运行仅处理新内容，速度更快。
+当前远端默认使用 DeepSeek；更换供应商 Secrets 后，记得同步修改工作流 env。
+
+> **首次运行说明**：网页内容步骤在首次运行时会抓取最多 50 篇文章（每站 25 篇），可能需要额外几分钟。后续运行只处理新内容，速度更快。
 
 ## LLM 模型供应商
 
@@ -259,8 +286,8 @@ openclaw_peers:
 | 供应商 | `LLM_PROVIDER` | 所需环境变量 | 默认模型 |
 |--------|---------------|------------|----------|
 | Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
-| StepFun | `stepfun` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `step-3.7-flash` |
-| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL` | `gpt-4o` |
+| StepFun | `stepfun` | `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `OPENAI_MODEL` | `step-3.7-flash` |
+| OpenAI | `openai` | `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `OPENAI_MODEL` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 
@@ -281,7 +308,6 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 export LLM_PROVIDER=openai
 export OPENAI_API_KEY=sk-xxxxxxxx
 export OPENAI_BASE_URL=https://api.deepseek.com
-export OPENAI_MODEL=deepseek-v4-flash
 
 # 方式 C: GitHub Copilot（使用 GITHUB_TOKEN）
 # export LLM_PROVIDER=github-copilot
@@ -294,6 +320,9 @@ export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write fi
 
 pnpm start
 pnpm start:local
+
+You can also create `.env.local` for local runs; `pnpm start:local` loads it automatically.
+也可以用 `.env.local` 存本地环境变量，`pnpm start:local` 会自动读取。
 ```
 
 
@@ -304,7 +333,7 @@ pnpm start:local
 | 文件 | 内容 | GitHub Issue 标签 |
 |------|------|------------------|
 | `ai-cli.md` | CLI 简报 — 跨工具横向对比 + 各工具详细报告 | `digest` |
-| `ai-agents.md` | OpenClaw 深度报告 + 横向生态对比 + 10 个同赛道项目详情 | `openclaw` |
+| `ai-agents.md` | OpenClaw 深度报告 + 横向生态对比 + 12 个同赛道项目详情 | `openclaw` |
 | `ai-web.md` | 官网内容报告（仅在有新内容时生成） | `web` |
 | `ai-trending.md` | GitHub AI 趋势热榜 — 按维度分类 + 趋势信号分析（仅在有数据时生成） | `trending` |
 | `ai-hn.md` | Hacker News AI 社区动态 — 热门帖子分类 + 情绪分析（仅在抓取成功时生成） | `hn` |
@@ -332,7 +361,7 @@ pnpm start:local
 
 `ai-agents.md` 结构：
 ```
-Issues: N | PRs: N | 覆盖项目: 10 个
+Issues: N | PRs: N | 覆盖项目: 12 个
 
 ## OpenClaw 项目深度报告
   今日速览 / 版本发布 / 项目进展 / 社区热点 /
